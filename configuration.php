@@ -1,6 +1,4 @@
 <?php
-$url = parse_url(getenv("DATABASE_URL"));
-
 class JConfig {
 	public $offline = '0';
 	public $offline_message = 'Ce site est en maintenance.<br /> Merci de revenir ultérieurement.';
@@ -14,9 +12,9 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host;
-	public $user;
-	public $password;
+	public $host = 'dokku-mysql-blog';
+	public $user = 'mysql';
+	public $password = '94b56da7a4a835e8';
 	public $db = 'blog';
 	public $dbprefix = 'blog_';
 	public $live_site = '';
@@ -65,10 +63,4 @@ class JConfig {
 	public $feed_email = 'author';
 	public $cookie_domain = '';
 	public $cookie_path = '';
-
-	public function __construct() {
-		$this->host = $url["host"];
-		$this->user = $url["user"];
-		$this->password = $url["pass"];
-	}
 }
