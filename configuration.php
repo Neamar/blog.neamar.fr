@@ -14,9 +14,9 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = $url["host"];
-	public $user = $url["user"];
-	public $password = $url["pass"];
+	public $host;
+	public $user;
+	public $password;
 	public $db = 'blog';
 	public $dbprefix = 'blog_';
 	public $live_site = '';
@@ -65,4 +65,10 @@ class JConfig {
 	public $feed_email = 'author';
 	public $cookie_domain = '';
 	public $cookie_path = '';
+
+	public function __construct() {
+		$this->host = $url["host"];
+		$this->user = $url["user"];
+		$this->password = $url["pass"];
+	}
 }
