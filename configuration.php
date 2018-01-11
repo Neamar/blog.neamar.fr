@@ -1,4 +1,6 @@
 <?php
+$url = parse_url(getenv("DATABASE_URL"));
+
 class JConfig {
 	public $offline = '0';
 	public $offline_message = 'Ce site est en maintenance.<br /> Merci de revenir ultérieurement.';
@@ -12,10 +14,10 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = 'db2238.1and1.fr';
-	public $user = 'dbo312382846';
-	public $password = 'x:>%8ND0I7Dh:Z/';
-	public $db = 'db312382846';
+	public $host = $url["host"];
+	public $user = $url["user"];
+	public $password = $url["pass"];
+	public $db = 'blog';
 	public $dbprefix = 'blog_';
 	public $live_site = '';
 	public $secret = 'Z2lnYoV0VGC159M0';
@@ -53,8 +55,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = '/homepages/38/d222425658/htdocs/Blog/logs';
-	public $tmp_path = '/homepages/38/d222425658/htdocs/Blog/tmp';
+	public $log_path = '/tmp';
+	public $tmp_path = '/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $MetaRights = '';
