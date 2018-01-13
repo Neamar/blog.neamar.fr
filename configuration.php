@@ -17,9 +17,9 @@ class JConfig {
 	public $password = '94b56da7a4a835e8';
 	public $db = 'blog';
 	public $dbprefix = 'blog_';
-	public $live_site = '';
+	public $live_site = 'https://blog.neamar.fr';
 	public $secret = 'Z2lnYoV0VGC159M0';
-	public $gzip = '0';
+	public $gzip = '1';
 	public $error_reporting = 'default';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '';
@@ -59,7 +59,7 @@ class JConfig {
 	public $session_handler = 'database';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '0';
-	public $force_ssl = '0';
+	public $force_ssl = '2';
 	public $feed_email = 'author';
 	public $cookie_domain = '';
 	public $cookie_path = '';
