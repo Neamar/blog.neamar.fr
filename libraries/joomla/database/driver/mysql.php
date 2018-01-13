@@ -75,13 +75,13 @@ class JDatabaseDriverMysql extends JDatabaseDriverMysqli
 		// Make sure the MySQL extension for PHP is installed and enabled.
 		if (!function_exists('mysql_connect'))
 		{
-			throw new RuntimeException('Could not connect to MySQL.');
+			throw new RuntimeException('Could not connect to MySQL (no mysql_connect).');
 		}
 
 		// Attempt to connect to the server.
 		if (!($this->connection = @ mysql_connect($this->options['host'], $this->options['user'], $this->options['password'], true)))
 		{
-			throw new RuntimeException('Could not connect to MySQL.');
+			throw new RuntimeException('Could not connect to MySQL (invalid options).');
 		}
 
 		// Set sql_mode to non_strict mode
