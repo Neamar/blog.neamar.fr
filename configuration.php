@@ -17,7 +17,7 @@ class JConfig {
 	public $password = '94b56da7a4a835e8';
 	public $db = 'blog';
 	public $dbprefix = 'blog_';
-	public $live_site = 'https://newblog.teamward.xyz';
+	public $live_site = 'https://blog.neamar.fr';
 	public $secret = 'Z2lnYoV0VGC159M0';
 	public $gzip = '1';
 	public $error_reporting = 'default';
