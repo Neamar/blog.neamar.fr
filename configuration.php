@@ -12,10 +12,10 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = 'dokku-mysql-blog';
+	public $host = 'dokku-mysql-blog7';
 	public $user = 'mysql';
-	public $password = '94b56da7a4a835e8';
-	public $db = 'blog';
+	public $password = 'e3757eb6d5162781';
+	public $db = 'blog7';
 	public $dbprefix = 'blog_';
 	public $live_site = 'https://blog.neamar.fr';
 	public $secret = 'Z2lnYoV0VGC159M0';
