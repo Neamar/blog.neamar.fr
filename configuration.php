@@ -12,10 +12,10 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = 'dokku-mysql-blog7';
+	public $host = 'dokku-mysql-blog';
 	public $user = 'mysql';
-	public $password = 'e3757eb6d5162781';
-	public $db = 'blog7';
+	public $password = '94b56da7a4a835e8';
+	public $db = 'blog';
 	public $dbprefix = 'blog_';
 	public $live_site = 'https://newblog.teamward.xyz';
 	public $secret = 'Z2lnYoV0VGC159M0';
