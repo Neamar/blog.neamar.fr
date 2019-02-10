@@ -3,20 +3,20 @@
  * @package     Joomla.Plugin
  * @subpackage  Finder.Categories
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined('JPATH_BASE') or die;
+defined('_JEXEC') or die;
 
-require_once JPATH_ADMINISTRATOR . '/components/com_finder/helpers/indexer/adapter.php';
+use Joomla\Registry\Registry;
+
+JLoader::register('FinderIndexerAdapter', JPATH_ADMINISTRATOR . '/components/com_finder/helpers/indexer/adapter.php');
 
 /**
  * Smart Search adapter for Joomla Categories.
  *
- * @package     Joomla.Plugin
- * @subpackage  Finder.Categories
- * @since       2.5
+ * @since  2.5
  */
 class PlgFinderCategories extends FinderIndexerAdapter
 {
@@ -130,18 +130,18 @@ class PlgFinderCategories extends FinderIndexerAdapter
 			{
 				// Process the change.
 				$this->itemAccessChange($row);
-
-				// Reindex the category item.
-				$this->reindex($row->id);
 			}
+
+			// Reindex the category item.
+			$this->reindex($row->id);
 
 			// Check if the parent access level is different.
 			if (!$isNew && $this->old_cataccess != $row->access)
 			{
 				$this->categoryAccessChange($row);
 			}
-
 		}
+
 		return true;
 	}
 
@@ -199,14 +199,11 @@ class PlgFinderCategories extends FinderIndexerAdapter
 			 */
 			foreach ($pks as $pk)
 			{
-				/* TODO: The $item variable does not seem to be used at all
-				$query = clone($this->getStateQuery());
+				$query = clone $this->getStateQuery();
 				$query->where('a.id = ' . (int) $pk);
 
-				// Get the published states.
 				$this->db->setQuery($query);
 				$item = $this->db->loadObject();
-				*/
 
 				// Translate the state.
 				$state = null;
@@ -256,6 +253,7 @@ class PlgFinderCategories extends FinderIndexerAdapter
 
 		// Need to import component route helpers dynamically, hence the reason it's handled here.
 		$path = JPATH_SITE . '/components/' . $item->extension . '/helpers/route.php';
+
 		if (is_file($path))
 		{
 			include_once $path;
@@ -264,44 +262,48 @@ class PlgFinderCategories extends FinderIndexerAdapter
 		$extension = ucfirst(substr($item->extension, 4));
 
 		// Initialize the item parameters.
-		$registry = new JRegistry;
+		$registry = new Registry;
 		$registry->loadString($item->params);
 		$item->params = $registry;
 
-		$registry = new JRegistry;
+		$registry = new Registry;
 		$registry->loadString($item->metadata);
 		$item->metadata = $registry;
 
 		/*
-		 * Add the meta-data processing instructions based on the category's
+		 * Add the metadata processing instructions based on the category's
 		 * configuration parameters.
 		 */
-		// Add the meta-author.
+		// Add the meta author.
 		$item->metaauthor = $item->metadata->get('author');
 
-		// Handle the link to the meta-data.
+		// Handle the link to the metadata.
 		$item->addInstruction(FinderIndexer::META_CONTEXT, 'link');
 		$item->addInstruction(FinderIndexer::META_CONTEXT, 'metakey');
 		$item->addInstruction(FinderIndexer::META_CONTEXT, 'metadesc');
 		$item->addInstruction(FinderIndexer::META_CONTEXT, 'metaauthor');
 		$item->addInstruction(FinderIndexer::META_CONTEXT, 'author');
+
+		// Deactivated Methods
 		// $item->addInstruction(FinderIndexer::META_CONTEXT, 'created_by_alias');
 
 		// Trigger the onContentPrepare event.
 		$item->summary = FinderIndexerHelper::prepareContent($item->summary, $item->params);
 
 		// Build the necessary route and path information.
-		$item->url = $this->getURL($item->id, $item->extension, $this->layout);
+		$item->url = $this->getUrl($item->id, $item->extension, $this->layout);
 
 		$class = $extension . 'HelperRoute';
+
 		if (class_exists($class) && method_exists($class, 'getCategoryRoute'))
 		{
 			$item->route = $class::getCategoryRoute($item->id, $item->language);
 		}
 		else
 		{
-			$item->route = ContentHelperRoute::getCategoryRoute($item->slug, $item->catid);
+			$item->route = ContentHelperRoute::getCategoryRoute($item->id, $item->language);
 		}
+
 		$item->path = FinderIndexerHelper::getContentPath($item->route);
 
 		// Get the menu title if it exists.
@@ -339,7 +341,7 @@ class PlgFinderCategories extends FinderIndexerAdapter
 	protected function setup()
 	{
 		// Load com_content route helper as it is the fallback for routing in the indexer in this instance.
-		include_once JPATH_SITE . '/components/com_content/helpers/route.php';
+		JLoader::register('ContentHelperRoute', JPATH_SITE . '/components/com_content/helpers/route.php');
 
 		return true;
 	}
@@ -371,7 +373,7 @@ class PlgFinderCategories extends FinderIndexerAdapter
 		$a_id = $query->castAsChar('a.id');
 		$case_when_item_alias .= $query->concatenate(array($a_id, 'a.alias'), ':');
 		$case_when_item_alias .= ' ELSE ';
-		$case_when_item_alias .= $a_id.' END as slug';
+		$case_when_item_alias .= $a_id . ' END as slug';
 		$query->select($case_when_item_alias)
 			->from('#__categories AS a')
 			->where($db->quoteName('a.id') . ' > 1');
@@ -391,6 +393,7 @@ class PlgFinderCategories extends FinderIndexerAdapter
 	{
 		$query = $this->db->getQuery(true)
 			->select($this->db->quoteName('a.id'))
+			->select($this->db->quoteName('a.parent_id'))
 			->select('a.' . $this->state_field . ' AS state, c.published AS cat_state')
 			->select('a.access, c.access AS cat_access')
 			->from($this->db->quoteName('#__categories') . ' AS a')
