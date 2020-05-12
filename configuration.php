@@ -14,7 +14,7 @@ class JConfig {
 	public $dbtype = 'mysql';
 	public $host = 'dokku-mysql-blog';
 	public $user = 'mysql';
-	public $password = '94b56da7a4a835e8';
+	public $password = 'e2427b30ac24a624'; // PHP I SHIT IN YOUR MOUTH this could be a nice thing read from getenv() but now, this stupid language is too fucking old and useless to do even ONE THING CORRECTLY. (and if you're reading this the password is useless for you, DB only runs on the docker network)
 	public $db = 'blog';
 	public $dbprefix = 'blog_';
 	public $live_site = 'https://blog.neamar.fr';
