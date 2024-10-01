@@ -37,7 +37,7 @@ function utf8_is_valid($str) {
 
     for($i = 0; $i < $len; $i++) {
 
-        $in = ord($str{$i});
+        $in = ord($str[$i]);
 
         if ( $mState == 0) {
 
@@ -178,4 +178,3 @@ function utf8_compliant($str) {
     // some valid sequences
     return (preg_match('/^.{1}/us',$str,$ar) == 1);
 }
-
