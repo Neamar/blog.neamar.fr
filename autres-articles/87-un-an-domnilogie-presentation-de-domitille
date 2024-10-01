@@ -11,7 +11,7 @@
 	<title>[Un an d'omnilogie] Présentation de Domitille</title>
 	<link href="https://blog.neamar.fr/autres-articles/87-un-an-domnilogie-presentation-de-domitille" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,101 +61,101 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				[Un an d'omnilogie] Présentation de Domitille			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=80efb3fcd39b95ece39929464873a1e963618365" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-02-22T13:54:05+00:00" itemprop="dateCreated">
 						Created: 22 February 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Pour fêter les un an du site <a href="http://omnilogie.fr">omnilogie.fr</a>, les admins se dévoilent !</p>
 
 <p>Dans cet article : <a href="http://omnilogie.fr/Omnilogistes/Domitille">Domitille</a>.</p>
 
- 
+
 
 <h2>Domitille : les propositions</h2>
-<p>Vous avez sans doute remarqué dans la liste des omnilogistes que mon nom, Domitille, était encadré par deux petites barres vertes. Votre curiosité légendaire (vous êtes quand même lecteur d’omnilogie) et votre esprit déductif m’ont donc directement classée dans la catégorie <strong>admin</strong> d’omnilogie (dernière entrée dans ce cercle très fermé) et plus précisément taggeur. Pour ceux qui ne savent pas ce que désigne ce mot sachez qu’il veut dire à la fois tout&hellip; et rien &nbsp;! </p> 
- 
-<p>Précisons un peu ma tâche. Inscrit sur omnilogie vous avez remarqué qu’il existe depuis quelque temps un espace «&nbsp; proposition d’article &nbsp;». Ceci est mon territoire, une petite parcelle du site qui m’a été assignée et sur laquelle je règne en maîtresse incontestée (souvenez-vous de la métaphore, on m’a offert un fouet). Ne vous inquiétez pas je ne suis pas tyrannique mais gare à celui qui ne respecte pas les règles&hellip; </p> 
- 
-<p>Quel est donc réellement mon travail &nbsp;? Je lis, re-lis, re-re-lis encore et toujours vos propositions. Je corrige les fautes éventuelles, reformule en cas de besoin, vérifie les liens&hellip; Mais ce n’est que la première partie. <br /> 
-À la longue je commence à connaître toutes les propositions et ceux qui les ont réservées et c’est là qu’arrive la seconde partie. Un jour, quelqu’un décide d’écrire un omni (ce que j’attendais avec impatience). Je lis donc l’article en avant première (l’un des rares privilèges des admins) et je regarde s’il traite l’une des idées proposées. Si c’est la cas je vérifie que ce n’est pas quelqu’un d’autre qui l’avait réservé et je relie alors la proposition à l’article. S’il advenait que vous ayez la malheureuse envie de traiter un sujet réservé par un autre, tremblez pauvres mortels, je saurais trouvez un châtiment dont vous vous souviendrez (du moins jusqu’au moment où vous irez nourrir les poissons). </p> 
- 
+<p>Vous avez sans doute remarqué dans la liste des omnilogistes que mon nom, Domitille, était encadré par deux petites barres vertes. Votre curiosité légendaire (vous êtes quand même lecteur d’omnilogie) et votre esprit déductif m’ont donc directement classée dans la catégorie <strong>admin</strong> d’omnilogie (dernière entrée dans ce cercle très fermé) et plus précisément taggeur. Pour ceux qui ne savent pas ce que désigne ce mot sachez qu’il veut dire à la fois tout&hellip; et rien &nbsp;! </p>
+
+<p>Précisons un peu ma tâche. Inscrit sur omnilogie vous avez remarqué qu’il existe depuis quelque temps un espace «&nbsp; proposition d’article &nbsp;». Ceci est mon territoire, une petite parcelle du site qui m’a été assignée et sur laquelle je règne en maîtresse incontestée (souvenez-vous de la métaphore, on m’a offert un fouet). Ne vous inquiétez pas je ne suis pas tyrannique mais gare à celui qui ne respecte pas les règles&hellip; </p>
+
+<p>Quel est donc réellement mon travail &nbsp;? Je lis, re-lis, re-re-lis encore et toujours vos propositions. Je corrige les fautes éventuelles, reformule en cas de besoin, vérifie les liens&hellip; Mais ce n’est que la première partie. <br />
+À la longue je commence à connaître toutes les propositions et ceux qui les ont réservées et c’est là qu’arrive la seconde partie. Un jour, quelqu’un décide d’écrire un omni (ce que j’attendais avec impatience). Je lis donc l’article en avant première (l’un des rares privilèges des admins) et je regarde s’il traite l’une des idées proposées. Si c’est la cas je vérifie que ce n’est pas quelqu’un d’autre qui l’avait réservé et je relie alors la proposition à l’article. S’il advenait que vous ayez la malheureuse envie de traiter un sujet réservé par un autre, tremblez pauvres mortels, je saurais trouvez un châtiment dont vous vous souviendrez (du moins jusqu’au moment où vous irez nourrir les poissons). </p>
+
 <p>Si vous vous demandez comment je suis arrivée là sachez que moi aussi j’ai découvert omnilogie grâce à Neamar que je connais depuis plus de 17&nbsp;ans (ne cherchez pas le lien qui nous unit j’aime à laisser planer un certain mystère &nbsp;! ). J’ai trouvé l’idée géniale et depuis je suis accro (mais avouez que cette addiction là est plutôt bonne pour la santé &nbsp;! ). Allez, longue vie à omnilogie. </p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -182,7 +183,7 @@ jQuery(window).on('load',  function() {
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -191,6 +192,6 @@ jQuery(window).on('load',  function() {
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

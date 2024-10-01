@@ -11,7 +11,7 @@
 	<title>Les photos qui ont fait l'Histoire</title>
 	<link href="https://blog.neamar.fr/autres-articles/41-les-photos-qui-ont-fait-lhistoire" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,71 +61,71 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Les photos qui ont fait l'Histoire			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=6eb6861879b1f93235dc956c766963eca6b174f7" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-11-10T21:51:13+00:00" itemprop="dateCreated">
 						Created: 10 November 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Une fois n'est pas coutume, profitons de l'occasion historique qui se présente à nous en analysant la puissance de l'image. Vous allez découvrir seize photographies qui ont fait le tour du monde à leurs époques, et qui, de nos jours encore, continuent d'orner nos manuels d'histoire ou de hanter nos publicités. Tous ces clichés ont un point commun : représenter une émotion forte dans un contexte historique difficile ou novateur. Du premier pas sur la Lune à la guerre du Vietnam en passant par le mur de Berlin, des photographies puissantes qui restent vecteurs de frissons d'angoisse ou de joie.</p>
 
 <p>Note : premier billet à quatre mains de ce blog, rédigé en collaboration avec <strong><a href="http://lagile.blog.jeuxvideo.com/1443837/Les-photos-qui-ont-fait-l-Histoire/">Lagile</a></strong> que vous retrouverez aussi au poste de censeur sur <a href="http://omnilogie.fr">Omnilogie</a>.</p>
 
- 
+
 <h2><strong><tt>1930</tt></strong> :&nbsp;Adolf Hitler pendant un discours</h2>
 
 <p style="text-align:center;"><img src="http://blog.neamar.fr/images/stories/ImagesDuMonde/Adolf_Hitler_Orateur.jpg" alt="Adolf Hitler Orateur" style="width:80%;"/></p>
@@ -214,25 +215,25 @@ jQuery(window).on('load',  function() {
 <p>Le 11&nbsp;septembre 2001, quatre avions de ligne sont détournés de leur trajectoire. Deux finiront par s'écraser contre les tours du World Trade Center vers 9&nbsp;heures du matin (heure américaine), provoquant la mort de 3&nbsp;000 personnes. Le plus marquant a été que la chute des tours fut filmée et vue en direct par des millions de personnes à travers le monde, provoquant un choc psychologique important. <br />
 <a href="http://fr.wikipedia.org/wiki/11_septembre_2001">Pour en savoir plus&hellip; </a></p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -260,7 +261,7 @@ jQuery(window).on('load',  function() {
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -269,6 +270,6 @@ jQuery(window).on('load',  function() {
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

@@ -11,7 +11,7 @@
 	<title>Problème avec Mochiads et les leaderboards en Flash</title>
 	<link href="https://blog.neamar.fr/autres-articles/55-stayontop-mochiads-leaderboard-flash-flex-dynamic" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Problème avec Mochiads et les leaderboards en Flash			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=aab796a4f3b5de42ec966613fbf136248d9c6455" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-12-14T19:06:59+00:00" itemprop="dateCreated">
 						Created: 14 December 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Jeune et moins jeune développeur d'AS3, peut-être <a href="http://neamar.fr/Res/Compiler_AS3/">compilez-vous des animations Flash depuis votre Linux en utilisant la méthode de Tonton Neamar</a>.<br />
 Si vous avez décidé d'arrondir vos fins de mois en utilisant Mochiads et son système de leaderboards, vous pourriez être confronté à un petit problème blasant mais simple à corriger.<br />
@@ -132,7 +133,7 @@ at mochi.as3::MochiServices$/stayOnTop()
 at mochi.as3::MochiScores$/showLeaderboard()
 </pre>
 
- 
+
 <p>Il faut reconnaitre que l'API fournie par Mochimedia est concise et efficace... à condition de savoir s'en servir. Le code par défaut fonctionne peut-être pour les heureux possesseurs de l'IDE d'Adobe, mais pour ceux qui utilisent le compilateur AS3 de Flex il faut louvoyer entre les nids de poule pour afficher ces satanées publicités et panneau de meilleurs scores.</p>
 
 <p>La définition du problème tient en deux mots : <strong>objet dynamique</strong>. Pour fonctionner, les objets de Mochi doivent être placés dans un objet d'affichage dynamique, ce qui n'est pas le cas de la majorité des classes (et de <tt>Sprite</tt> en particulier).</p>
@@ -165,25 +166,25 @@ MochiScores.showLeaderboard( { boardID: boardID, onClose: gotoMenu, score:score,
 
 <p>Bon code à vous !</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -211,7 +212,7 @@ MochiScores.showLeaderboard( { boardID: boardID, onClose: gotoMenu, score:score,
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -220,6 +221,6 @@ MochiScores.showLeaderboard( { boardID: boardID, onClose: gotoMenu, score:score,
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

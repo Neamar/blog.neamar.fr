@@ -11,7 +11,7 @@
 	<title>Trouver un cycle hamiltonien sur un graphe</title>
 	<link href="https://blog.neamar.fr/autres-articles/129-algorithme-cycle-hamiltonien-graphe" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Trouver un cycle hamiltonien sur un graphe			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=c039d2bbfe3613f29ff6e59d68b8f5ef41c93e90" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-06-08T19:49:31+00:00" itemprop="dateCreated">
 						Created: 08 June 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p><em>Ce blog carbure actuellement à un rythme délirant, mais ne vous inquiétez pas ça va se calmer. D'abord, parce que j'en ai marre d'écrire en permanence, et ensuite parce qu'Icosien approche de la sortie !</em></p>
 
@@ -134,7 +135,7 @@ Renseignements pris, toutes les villes ne sont pas vraiment reliées entre elles
 
 <p>Je vous laisse réfléchir au chemin que vous prendriez… et dans la suite, nous verrons comment résoudre algorithmiquement ce problème&nbsp;! </p>
 
- 
+
 <h2>Présentation du problème</h2>
 <p>Les contraintes posées (passer une fois par chaque ville en utilisant les arêtes, finir au point de départ) sont la définition d'un <a href="http://mathworld.wolfram.com/HamiltonianCycle.html">cycle hamiltonien</a>. </p>
 
@@ -276,25 +277,25 @@ Trouvé : 0
 <p>Pour les visuels (et aussi pour vous féliciter d'avoir suivi cet article) voici le résultat :<br />
 <img src="/images/stories/Prog/EulrisGraphe/Hamilton/Hamiltonien.png" alt="Circuit hamiltonien du dodécahédron" title="Graphe d'exemple">	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -322,7 +323,7 @@ Trouvé : 0
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -331,6 +332,6 @@ Trouvé : 0
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

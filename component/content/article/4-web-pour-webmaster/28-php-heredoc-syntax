@@ -11,7 +11,7 @@
 	<title>Blog de Neamar</title>
 	<link href="https://blog.neamar.fr/component/content/article/4-web-pour-webmaster/28-php-heredoc-syntax" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,72 +61,72 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				La syntaxe heredoc en PHP			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=ad58f07cb9d472ea76065440690ca6ba39cf2e71" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-18T19:13:50+00:00" itemprop="dateCreated">
 						Created: 18 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Et voilà que vous avez un long texte récupéré dans des circonstances assez louches à mettre dans une variable PHP pour le traiter (qui sait ? <tt>preg_replace_callback</tt>, <tt>diff</tt>, <tt>levenshtein</tt>, ... les raisons sont multiples et ne nous concernent pas forcément).</p>
 
 <p>Le problème, c'est que votre texte est bourré de <strong>'</strong> et <strong>"</strong>.<br />
 Attendez avant de vouloir échapper chacun de ces caractères ! Vous pouvez faire plus simple.</p>
 
- 
+
 <p>La solution s'appelle la <strong>syntaxe Heredoc</strong> ; elle va vous permettre de récupérer le texte sans soucis.<br />
 Il s'agit d'une sorte d'équivalent PHP du <tt>&lt;![CDATA[</tt> XML.</p>
 
@@ -146,7 +147,7 @@ EOF;
 <p>Petit exemple pour comprendre :</p>
 
 <pre xml:lang="php"><?php
-$MonTresLongTexte=<<<EOF 
+$MonTresLongTexte=<<<EOF
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Aliquam ac turpis libero, ac laoreet magna
 Curabitur posuere posuere vestibulum.
@@ -177,7 +178,7 @@ EOF;
 Autrement dit, vos $variable resteront $variable et ne seront pas remplacés par le contenu de la variable. Pour l'utiliser, il suffit d'entourer d'apostrophes le littéral de début de chaîne (pas celui de fin) :</p>
 
 <pre xml:lang="php"><?php
-$MonTresLongTexte=<<<'EOF' 
+$MonTresLongTexte=<<<'EOF'
 Les ' et " sont correctement échappés sans avoir à se fatiguer, cool non ?
 Les $maVariable ne seront PAS remplacés.
 EOF;
@@ -186,15 +187,15 @@ EOF;
 <p>Il reste un dernier souci : le support pour <strong>nowdoc</strong> est assez récent (PHP 5.3.0) et il se peut que votre serveur ne l'inclue pas encore (il suffit de voir sur cette page, même GesHi qui est censé colorer le code a des soucis). Alors, à vos màj !<br />
 Pour les autres, il reste toujours la méthode "je mets tout dans un fichier et je lis avec <tt>file_get_contents()</tt>).</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
 				<span itemprop="name">
 					Home				</span>
@@ -218,7 +219,7 @@ Pour les autres, il reste toujours la méthode "je mets tout dans un fichier et 
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -227,6 +228,6 @@ Pour les autres, il reste toujours la méthode "je mets tout dans un fichier et 
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

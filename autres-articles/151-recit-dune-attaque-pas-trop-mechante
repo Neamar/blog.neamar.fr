@@ -10,7 +10,7 @@
 	<title>Hacké !</title>
 	<link href="https://blog.neamar.fr/autres-articles/151-recit-dune-attaque-pas-trop-mechante" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -40,11 +40,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -59,65 +60,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Hacké !			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=bef8ae596a91f46c9875dbeec806bb24eeef9104" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-07-12T13:44:43+00:00" itemprop="dateCreated">
 						Created: 12 July 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-13T07:20:40+00:00" itemprop="dateModified">
 					Last Updated: 13 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Rentrant tranquillement de week-end, je découvre un de mes sites dans un état bizarre&nbsp;: </p>
 
@@ -129,7 +130,7 @@ Parse error: syntax error, unexpected '<' in /un/chemin/absolu/index.php on line
 
 <p>En fait, j'allais rapidement comprendre que non...</p>
 
- 
+
 
 <p>Ouverture du sftp, connexion, ouverture du fichier, descente à la ligne 199… et là, c'est le drame. Car sur la ligne 199&nbsp;se trouve un texte qui n'a rien à faire là&nbsp;: </p>
 
@@ -159,7 +160,7 @@ Comme je suis un peu parano, quand je donne des accès FTP à mon serveur (que c
 <li><small><span style="color:gray;">(16&nbsp;: 08&nbsp;: 36)</span></small> 204.16.203.11 se connecte, et envoie (<tt>STOR</tt>) /index.php (auquel il a adjoint la balise script). Comme le contenu précédent n'a pas été modifié, on en déduit (si on en doutait encore&nbsp;! ) que tout ce petit monde est de mèche et travaille ensemble, fragmentant les opérations pour éviter d'être repéré.</li>
 <li><small><span style="color:gray;">(16&nbsp;: 08&nbsp;: 40)</span></small> 70.150.220.35 se connecte, récupère un fichier index.php au fin fond de l'arborescence (à grands coups de <tt>CWD</tt>), le récupère et se déconnecte.</li>
 <li>Et ainsi de suite pour chaque fichier index.php (et scripts js)&nbsp;: à chaque fois une adresse IP différente (173.9.243.213, 68.233.4.27, 74.208.43.175, 68.71.134.23, 208.101.21.82, 150.140.9.29, 87.106.14.44, 74.55.142.202, 195.189.203.1 j'arrête là j'en ai marre)&nbsp;: un qui <tt>SIZE</tt> puis <tt>RETR</tt>, et un qui <tt>STOR</tt>. Une mécanique bien huilée, y a pas à dire.</li>
-<li><small><span style="color:gray;">(16&nbsp;: 10&nbsp;: 08)</span></small> 38.114.169.44 se déconnecte&nbsp;: c'est le dernier à me rendre visite&nbsp;: l'attaque aura pris 1 heure, 38&nbsp;minutes et 10 secondes. 
+<li><small><span style="color:gray;">(16&nbsp;: 10&nbsp;: 08)</span></small> 38.114.169.44 se déconnecte&nbsp;: c'est le dernier à me rendre visite&nbsp;: l'attaque aura pris 1 heure, 38&nbsp;minutes et 10 secondes.
 </li>
 </ol>
 
@@ -178,25 +179,25 @@ Ce qui est marrant, c'est que ces IPs redirigent vers des petits sites (<a href=
 <p>Hé bien… il est constitué de sauts de lignes. Ce n'est donc pas (où ne semble pas être) une attaque javascript… à mon avis, la solution est dans le numéro du port&nbsp;: le script fait télécharger le script sur le port <a href="http://www.auditmypc.com/port/tcp-port-8080.asp">8&nbsp;080</a>, connu pour être utilisé par RingZero. <br />
 Mais dans ce cas, pourquoi passer par un script&nbsp;? Une image aurait fait l'affaire (en la chargeant aussi sur 8&nbsp;080), et aurait gardé le canal ouvert plus longtemps. Mais peut-être qu'il n'y a pas besoin d'un long temps&nbsp;? Et puis, un script qui ne fait rien est bien plus discret qu'une image&nbsp;! </p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -224,7 +225,7 @@ Mais dans ce cas, pourquoi passer par un script&nbsp;? Une image aurait fait l'a
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -233,6 +234,6 @@ Mais dans ce cas, pourquoi passer par un script&nbsp;? Une image aurait fait l'a
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

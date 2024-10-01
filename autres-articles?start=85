@@ -11,7 +11,7 @@
 	<link href="/autres-articles?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
 	<link href="https://blog.neamar.fr/autres-articles?start=85" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,79 +61,79 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="blog" itemscope itemtype="https://schema.org/Blog">
-	
+
 			<h2> 					</h2>
-	
-	
+
+
 			<div class="category-desc clearfix">
 								</div>
-	
-	
+
+
 				<div class="items-leading clearfix">
 							<div class="leading-0"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/57-critique-du-film-avatar-de-james-cameron" itemprop="url">
 						Critique du Film Avatar de James Cameron					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=a1e96480debcd90aa5cd3f5e60962e4db970ab0d" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-12-19T21:57:58+00:00" itemprop="dateCreated">
 						Created: 19 December 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -145,7 +146,7 @@ jQuery(window).on('load',  function() {
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/57-critique-du-film-avatar-de-james-cameron" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -156,61 +157,61 @@ jQuery(window).on('load',  function() {
 
 				</div>
 									</div><!-- end items-leading -->
-	
-	
+
+
 																	<div class="items-row cols-2 row-0 row-fluid clearfix">
 						<div class="span6">
 				<div class="item column-1"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/55-stayontop-mochiads-leaderboard-flash-flex-dynamic" itemprop="url">
 						Problème avec Mochiads et les leaderboards en Flash					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=aab796a4f3b5de42ec966613fbf136248d9c6455" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-12-14T19:06:59+00:00" itemprop="dateCreated">
 						Created: 14 December 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -231,7 +232,7 @@ at mochi.as3::MochiScores$/showLeaderboard()
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/55-stayontop-mochiads-leaderboard-flash-flex-dynamic" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -246,55 +247,55 @@ at mochi.as3::MochiScores$/showLeaderboard()
 														<div class="span6">
 				<div class="item column-2"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/54-apostrophe-arrondie-encodage-windows-linux" itemprop="url">
 						L'apostrophe arrondie, l'encodage et les systèmes d'exploitation					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=0c5d648754b189651e2b606c30545d143b58b4c4" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-12-13T15:10:37+00:00" itemprop="dateCreated">
 						Created: 13 December 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -311,7 +312,7 @@ L'apostrophe Windows ? Quoi qu'est-ce ? En fait, il s'agit de l'apostrophe "joli
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/54-apostrophe-arrondie-encodage-windows-linux" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -328,55 +329,55 @@ L'apostrophe Windows ? Quoi qu'est-ce ? En fait, il s'agit de l'apostrophe "joli
 						<div class="span6">
 				<div class="item column-1"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/51-sms-gratuit-notification-rss-google-calendar-16541700" itemprop="url">
 						Recevoir gratuitement par SMS les nouvelles de son site : côté serveur					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=3da1b4cf50921553e6ae5512a4dead94c650c903" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-11-25T19:11:22+00:00" itemprop="dateCreated">
 						Created: 25 November 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -392,7 +393,7 @@ Maintenant que cette partie est faite, nous allons pouvoir entrer dans le vif du
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/51-sms-gratuit-notification-rss-google-calendar-16541700" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -407,55 +408,55 @@ Maintenant que cette partie est faite, nous allons pouvoir entrer dans le vif du
 														<div class="span6">
 				<div class="item column-2"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/48-skylinks-2" itemprop="url">
 						SkyLinks #2					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=e2a91803deaaa69c46a6803ad79f1f5cf1e971f1" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">SkyRaider</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-11-23T19:28:31+00:00" itemprop="dateCreated">
 						Created: 23 November 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -466,7 +467,7 @@ Maintenant que cette partie est faite, nous allons pouvoir entrer dans le vif du
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/48-skylinks-2" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -479,22 +480,22 @@ Maintenant que cette partie est faite, nous allons pouvoir entrer dans le vif du
 				<!-- end item -->
 							</div><!-- end span -->
 							</div><!-- end row -->
-						
-	
+
+
 				<div class="pagination">
 							<p class="counter pull-right"> Page 18 of 26 </p>
 						<ul class="pagination-list"><li><a title="Start" href="/autres-articles" class="pagenav"><span class="icon-first"></span></a></li><li><a title="Prev" href="/autres-articles?start=80" class="pagenav"><span class="icon-previous"></span></a></li><li class="hidden-phone"><a title="13" href="/autres-articles?start=60" class="pagenav">13</a></li><li class="hidden-phone"><a title="14" href="/autres-articles?start=65" class="pagenav">...</a></li><li class="hidden-phone"><a title="15" href="/autres-articles?start=70" class="pagenav">15</a></li><li class="hidden-phone"><a title="16" href="/autres-articles?start=75" class="pagenav">16</a></li><li class="hidden-phone"><a title="17" href="/autres-articles?start=80" class="pagenav">17</a></li><li class="active hidden-phone"><a>18</a></li><li class="hidden-phone"><a title="19" href="/autres-articles?start=90" class="pagenav">19</a></li><li class="hidden-phone"><a title="20" href="/autres-articles?start=95" class="pagenav">...</a></li><li class="hidden-phone"><a title="21" href="/autres-articles?start=100" class="pagenav">21</a></li><li class="hidden-phone"><a title="22" href="/autres-articles?start=105" class="pagenav">22</a></li><li><a title="Next" href="/autres-articles?start=90" class="pagenav"><span class="icon-next"></span></a></li><li><a title="End" href="/autres-articles?start=125" class="pagenav"><span class="icon-last"></span></a></li></ul> </div>
 	</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
@@ -522,7 +523,7 @@ Maintenant que cette partie est faite, nous allons pouvoir entrer dans le vif du
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -531,6 +532,6 @@ Maintenant que cette partie est faite, nous allons pouvoir entrer dans le vif du
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

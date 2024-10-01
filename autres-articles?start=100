@@ -11,7 +11,7 @@
 	<link href="/autres-articles?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
 	<link href="https://blog.neamar.fr/autres-articles?start=100" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,79 +61,79 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="blog" itemscope itemtype="https://schema.org/Blog">
-	
+
 			<h2> 					</h2>
-	
-	
+
+
 			<div class="category-desc clearfix">
 								</div>
-	
-	
+
+
 				<div class="items-leading clearfix">
 							<div class="leading-0"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/35-message-post-mortem-2" itemprop="url">
 						Message post mortem : étape 2					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=e1845ab5f61d437a92c09a6aa127c6a5af0c3ecf" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-29T15:21:57+00:00" itemprop="dateCreated">
 						Created: 29 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -145,7 +146,7 @@ jQuery(window).on('load',  function() {
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/35-message-post-mortem-2" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -156,61 +157,61 @@ jQuery(window).on('load',  function() {
 
 				</div>
 									</div><!-- end items-leading -->
-	
-	
+
+
 																	<div class="items-row cols-2 row-0 row-fluid clearfix">
 						<div class="span6">
 				<div class="item column-1"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/34-did-you-know" itemprop="url">
 						Le saviez-vous ?					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=2020eba2281e467d74318411e07669ffa2c56906" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-29T12:09:26+00:00" itemprop="dateCreated">
 						Created: 29 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -224,7 +225,7 @@ Je suis tombé sur ces vidéos voilà presque un an, et à chaque fois que je le
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/34-did-you-know" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -239,55 +240,55 @@ Je suis tombé sur ces vidéos voilà presque un an, et à chaque fois que je le
 														<div class="span6">
 				<div class="item column-2"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/32-message-post-mortem-1" itemprop="url">
 						Message post mortem : étape 1					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=bb4d92217ca43f5c8a27ffc3e66185f9fd87b521" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-28T17:24:33+00:00" itemprop="dateCreated">
 						Created: 28 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -309,7 +310,7 @@ Pour cette fois-ci, nous allons voir comment façonner un script qui ne s'exécu
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/32-message-post-mortem-1" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -326,55 +327,55 @@ Pour cette fois-ci, nous allons voir comment façonner un script qui ne s'exécu
 						<div class="span6">
 				<div class="item column-1"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/31-message-post-mortem-0" itemprop="url">
 						Message post mortem : tome 0					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=1d51c1dff0ea1e0d14d73e19b142633588e5f8f2" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-28T16:45:43+00:00" itemprop="dateCreated">
 						Created: 28 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -390,7 +391,7 @@ En effet, nous allons tenter de voir comment faire survivre votre œuvre virtuel
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/31-message-post-mortem-0" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -405,55 +406,55 @@ En effet, nous allons tenter de voir comment faire survivre votre œuvre virtuel
 														<div class="span6">
 				<div class="item column-2"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/autres-articles/30-retrospective-2007-2008-neamar" itemprop="url">
 						Rétrospective 2007 - 2008					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=912d0bdce87ffcae3249b47aee95883af1495535" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-23T17:04:40+00:00" itemprop="dateCreated">
 						Created: 23 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -464,7 +465,7 @@ En effet, nous allons tenter de voir comment faire survivre votre œuvre virtuel
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/autres-articles/30-retrospective-2007-2008-neamar" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -477,22 +478,22 @@ En effet, nous allons tenter de voir comment faire survivre votre œuvre virtuel
 				<!-- end item -->
 							</div><!-- end span -->
 							</div><!-- end row -->
-						
-	
+
+
 				<div class="pagination">
 							<p class="counter pull-right"> Page 21 of 26 </p>
 						<ul class="pagination-list"><li><a title="Start" href="/autres-articles" class="pagenav"><span class="icon-first"></span></a></li><li><a title="Prev" href="/autres-articles?start=95" class="pagenav"><span class="icon-previous"></span></a></li><li class="hidden-phone"><a title="16" href="/autres-articles?start=75" class="pagenav">16</a></li><li class="hidden-phone"><a title="17" href="/autres-articles?start=80" class="pagenav">17</a></li><li class="hidden-phone"><a title="18" href="/autres-articles?start=85" class="pagenav">18</a></li><li class="hidden-phone"><a title="19" href="/autres-articles?start=90" class="pagenav">...</a></li><li class="hidden-phone"><a title="20" href="/autres-articles?start=95" class="pagenav">20</a></li><li class="active hidden-phone"><a>21</a></li><li class="hidden-phone"><a title="22" href="/autres-articles?start=105" class="pagenav">22</a></li><li class="hidden-phone"><a title="23" href="/autres-articles?start=110" class="pagenav">23</a></li><li class="hidden-phone"><a title="24" href="/autres-articles?start=115" class="pagenav">24</a></li><li class="hidden-phone"><a title="25" href="/autres-articles?start=120" class="pagenav">...</a></li><li><a title="Next" href="/autres-articles?start=105" class="pagenav"><span class="icon-next"></span></a></li><li><a title="End" href="/autres-articles?start=125" class="pagenav"><span class="icon-last"></span></a></li></ul> </div>
 	</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
@@ -520,7 +521,7 @@ En effet, nous allons tenter de voir comment faire survivre votre œuvre virtuel
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -529,6 +530,6 @@ En effet, nous allons tenter de voir comment faire survivre votre œuvre virtuel
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

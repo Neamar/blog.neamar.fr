@@ -11,7 +11,7 @@
 	<title>Blog de Neamar</title>
 	<link href="https://blog.neamar.fr/component/content/article/14-reflexions/277-entretien-embauche-reponses" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Faire passer des entretiens d'embauche : les réponses			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=83c8c50e88ba6c57e9731e4841b5ca85a1e83438" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2011-06-10T16:15:00+00:00" itemprop="dateCreated">
 						Created: 10 June 2011					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Suite et fin d'une série d'article relatant mon expérience avec les entretiens d'embauche "du bon côté" du bureau. Cette fois-ci, <a href="http://blog.neamar.fr/component/content/article/14-reflexions/276-questionnaire-embauche">les réponses au formulaire</a> !</p>
 
@@ -128,7 +129,7 @@ jQuery(window).on('load',  function() {
 <li>Troisième article : les <a href="http://blog.neamar.fr/component/content/article/14-reflexions/277-entretien-embauche-reponses">réponses</a>.</li>
 </ul>
 
- 
+
 <h2>Questionnaire</h2>
 <p>Ces questions permettent de vous situer vis à vis de la programmation et de l'informatique en général. Il est <strong>normal</strong> de ne pas tout connaître&nbsp;; )</p>
 <h3>Écriture et lecture de code</h3>
@@ -147,7 +148,7 @@ Objectivement, ce n'est pas du SQL de haut niveau ou propriétaire ; et pourtant
 <pre xml:lang="javascript">
 /**
  * Récupère un objet par son identifiant
- * 
+ *
  * @param string id l'identifiant recherché
  * @return DOMElement l'élément d'identifiant correspondant
  */
@@ -186,7 +187,7 @@ function somme_tableau(array $tableau)
 	{
 		$somme += $element;
 	}
-	
+
 	return $somme;
 }
 </pre>
@@ -202,23 +203,23 @@ class Utilisateur
 {
 	protected $login;
 	protected $password;
-	
+
 	public function __construct($login, $password)
 	{
 		$this->login = $login;
 		$this->password = $password;
 	}
-	
+
 	public function getLogin()
 	{
 		return $this->login;
 	}
-	
+
 	public function setLogin($login)
 	{
 		$this->login = $login;
 	}
-	
+
 	//...
 }
 </pre>
@@ -386,15 +387,15 @@ C'est bien dommage.</p>
 <li>How do you find out the fifth maximum element in an Binary Search Tree in efficient manner. Note: You should not use use any extra space. i.e sorting Binary Search Tree and storing the results in an array and listing out the fifth element.</li>
 <li>What kind of data structure would you use to index annagrams of words? e.g. if there exists the word “top” in the database, the query for “pot” should list that.</li>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
 				<span itemprop="name">
 					Home				</span>
@@ -418,7 +419,7 @@ C'est bien dommage.</p>
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -427,6 +428,6 @@ C'est bien dommage.</p>
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

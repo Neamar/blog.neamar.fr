@@ -11,7 +11,7 @@
 	<link href="/les-liens-du-jeudi?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
 	<link href="https://blog.neamar.fr/les-liens-du-jeudi?start=125" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,79 +61,79 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="blog" itemscope itemtype="https://schema.org/Blog">
-	
+
 			<h2> 					</h2>
-	
-	
+
+
 			<div class="category-desc clearfix">
 								</div>
-	
-	
+
+
 				<div class="items-leading clearfix">
 							<div class="leading-0"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/les-liens-du-jeudi/258-liens-jeudi-neamar-tome-soixante-douze" itemprop="url">
 						Les liens du jeudi, soixante douzième article					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=ccf77a7ebd42ff6722d0d76c8f0e30ebe5157764" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
-					
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2011-02-17T17:31:31+00:00" itemprop="dateCreated">
 						Created: 17 February 2011					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2018-01-13T21:02:45+00:00" itemprop="dateModified">
 					Last Updated: 13 January 2018				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -165,7 +166,7 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/les-liens-du-jeudi/258-liens-jeudi-neamar-tome-soixante-douze" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -176,61 +177,61 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 
 				</div>
 									</div><!-- end items-leading -->
-	
-	
+
+
 																	<div class="items-row cols-2 row-0 row-fluid clearfix">
 						<div class="span6">
 				<div class="item column-1"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/les-liens-du-jeudi/257-liens-jeudi-neamar-tome-soixante-et-onze" itemprop="url">
 						Les liens du jeudi, soixantième et onzième opus					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=21d679d5f6c6d9d51dc125d0dfdfffb4050d277a" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
-					
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2011-02-10T17:57:16+00:00" itemprop="dateCreated">
 						Created: 10 February 2011					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2018-01-13T21:03:05+00:00" itemprop="dateModified">
 					Last Updated: 13 January 2018				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -270,7 +271,7 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/les-liens-du-jeudi/257-liens-jeudi-neamar-tome-soixante-et-onze" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -285,55 +286,55 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 														<div class="span6">
 				<div class="item column-2"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/les-liens-du-jeudi/256-liens-jeudi-neamar-tome-soixante-dix" itemprop="url">
 						Les liens du jeudi, soixantième dixième opus					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=19f624f587b3dfd31ae29c01c0ccb1bd6736c2d3" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
-					
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2011-02-03T16:02:33+00:00" itemprop="dateCreated">
 						Created: 03 February 2011					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2018-01-13T21:03:05+00:00" itemprop="dateModified">
 					Last Updated: 13 January 2018				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -375,7 +376,7 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/les-liens-du-jeudi/256-liens-jeudi-neamar-tome-soixante-dix" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -392,55 +393,55 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 						<div class="span6">
 				<div class="item column-1"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/les-liens-du-jeudi/255-liens-jeudi-neamar-tome-soixante-neuf" itemprop="url">
 						Les liens du jeudi, soixantième neuvième opus					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=a63d50c25e54c87dfdfcd08bdbe808e50314b8d3" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
-					
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2011-01-27T15:00:40+00:00" itemprop="dateCreated">
 						Created: 27 January 2011					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2018-01-13T21:03:05+00:00" itemprop="dateModified">
 					Last Updated: 13 January 2018				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -473,7 +474,7 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/les-liens-du-jeudi/255-liens-jeudi-neamar-tome-soixante-neuf" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -488,55 +489,55 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 														<div class="span6">
 				<div class="item column-2"
 					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					
+
 
 	<div class="page-header">
 					<h2 itemprop="name">
 									<a href="/les-liens-du-jeudi/254-liens-jeudi-neamar-tome-soixante-huit" itemprop="url">
 						Les liens du jeudi, soixantième huitième opus					</a>
 							</h2>
-				
-		
-				
+
+
+
 			</div>
 
-	
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=9c8da8ac8d3b8cac7e77287c79cb16389500b016" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
 
 
 
 		<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
-					
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2011-01-21T14:34:03+00:00" itemprop="dateCreated">
 						Created: 21 January 2011					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2018-01-13T21:03:05+00:00" itemprop="dateModified">
 					Last Updated: 13 January 2018				</time>
-			</dd>			
+			</dd>
 						</dl>
 
 
@@ -576,7 +577,7 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 
 
 
-	
+
 <p class="readmore">
 	<a class="btn" href="/les-liens-du-jeudi/254-liens-jeudi-neamar-tome-soixante-huit" itemprop="url">
 		<span class="icon-chevron-right"></span>
@@ -589,22 +590,22 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 				<!-- end item -->
 							</div><!-- end span -->
 							</div><!-- end row -->
-						
-	
+
+
 				<div class="pagination">
 							<p class="counter pull-right"> Page 26 of 40 </p>
 						<ul class="pagination-list"><li><a title="Start" href="/les-liens-du-jeudi" class="pagenav"><span class="icon-first"></span></a></li><li><a title="Prev" href="/les-liens-du-jeudi?start=120" class="pagenav"><span class="icon-previous"></span></a></li><li class="hidden-phone"><a title="21" href="/les-liens-du-jeudi?start=100" class="pagenav">21</a></li><li class="hidden-phone"><a title="22" href="/les-liens-du-jeudi?start=105" class="pagenav">22</a></li><li class="hidden-phone"><a title="23" href="/les-liens-du-jeudi?start=110" class="pagenav">23</a></li><li class="hidden-phone"><a title="24" href="/les-liens-du-jeudi?start=115" class="pagenav">...</a></li><li class="hidden-phone"><a title="25" href="/les-liens-du-jeudi?start=120" class="pagenav">25</a></li><li class="active hidden-phone"><a>26</a></li><li class="hidden-phone"><a title="27" href="/les-liens-du-jeudi?start=130" class="pagenav">27</a></li><li class="hidden-phone"><a title="28" href="/les-liens-du-jeudi?start=135" class="pagenav">28</a></li><li class="hidden-phone"><a title="29" href="/les-liens-du-jeudi?start=140" class="pagenav">29</a></li><li class="hidden-phone"><a title="30" href="/les-liens-du-jeudi?start=145" class="pagenav">...</a></li><li><a title="Next" href="/les-liens-du-jeudi?start=130" class="pagenav"><span class="icon-next"></span></a></li><li><a title="End" href="/les-liens-du-jeudi?start=195" class="pagenav"><span class="icon-last"></span></a></li></ul> </div>
 	</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
@@ -632,7 +633,7 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -641,6 +642,6 @@ Attention : certains liens contiennent des petites pièces ne convenant pas aux 
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

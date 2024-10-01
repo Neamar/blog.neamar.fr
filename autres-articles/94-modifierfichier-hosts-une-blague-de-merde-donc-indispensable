@@ -11,7 +11,7 @@
 	<title>Jeu de gamin, jeu de vilain</title>
 	<link href="https://blog.neamar.fr/autres-articles/94-modifierfichier-hosts-une-blague-de-merde-donc-indispensable" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,71 +61,71 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Jeu de gamin, jeu de vilain			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=9406dfeed78d442ac13f583a1cb84105683f1613" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-03-16T20:25:48+00:00" itemprop="dateCreated">
 						Created: 16 March 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Bon, on est entre geeks ici&nbsp;: on a tous déjà fait la blague de cacher les icones du bureau d'un ami qui s'absente pour satisfaire un besoin naturel. Ok. C'était drôle au collège, mais maintenant c'est lassant, surtout que tout le monde connaît le truc<sup><a class="footnote" id="Note-1" href="#Ref-1" title="Non&nbsp;? Alors ça vous tombera dessus un jour, c'est Murphy qui l'a dit&nbsp;! ">1</a></sup>. </p>
 
 <p>Mais&nbsp;! Et si on s'amusait de façon un peu plus mature avec les nerfs de notre victime&nbsp;? Allez, je vous propose deux idées bêtes et méchantes pour avoir votre victime à l'usure. Et bien évidemment, tout le monde n'ayant pas une diarrhée chronique permanente, il suffit de quelques secondes pour mettre votre plan machiavélique en action&nbsp;! </p>
 
- 
+
 <h2>Sous Windows</h2>
 <p>À tout seigneur tout honneur, commençons par le système d'exploitation que vous avez le plus de chance de rencontrer. <br />
 Bon, je vous propose de modifier un peu la configuration système, histoire qu'en tapant <tt>http://google.fr</tt> votre victime se retrouve catapulté sur le site de votre choix (hum, je décline toute responsabilité quant au «&nbsp;de votre choix&nbsp;»). </p>
@@ -176,29 +177,29 @@ Bon, soyons franc, votre blague durera peut-être trente secondes&hellip; mais p
 <p>Voilà qui conclut ce post au contenu immature à peu près assuré, faites-en bon usage&nbsp;! </p>
 
 <hr class="footnote court" />
-<ol>	<li><a class="footnote" id="Ref-1" href="#Note-1"><sup>1</sup> <small>&uarr;</small></a> Non&nbsp;? Alors ça vous tombera dessus un jour, c'est <a href="http://omnilogie.fr/O/Murphy_ou_la_loi_de_l%27emmerdement_maximum">Murphy qui l'a dit</a>&nbsp;! 
+<ol>	<li><a class="footnote" id="Ref-1" href="#Note-1"><sup>1</sup> <small>&uarr;</small></a> Non&nbsp;? Alors ça vous tombera dessus un jour, c'est <a href="http://omnilogie.fr/O/Murphy_ou_la_loi_de_l%27emmerdement_maximum">Murphy qui l'a dit</a>&nbsp;!
 </li>
 </ol>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -226,7 +227,7 @@ Bon, soyons franc, votre blague durera peut-être trente secondes&hellip; mais p
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -235,6 +236,6 @@ Bon, soyons franc, votre blague durera peut-être trente secondes&hellip; mais p
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

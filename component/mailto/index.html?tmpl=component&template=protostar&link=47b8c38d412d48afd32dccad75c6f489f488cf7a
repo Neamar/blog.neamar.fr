@@ -9,7 +9,7 @@
 	<title>Blog de Neamar</title>
 	<link href="https://blog.neamar.fr/component/mailto/?tmpl=component&amp;template=protostar&amp;link=47b8c38d412d48afd32dccad75c6f489f488cf7a" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<script src="/media/system/js/core.js"></script>
 	<script src="/media/jui/js/jquery.min.js"></script>
 	<script src="/media/jui/js/jquery-noconflict.js"></script>
@@ -38,7 +38,7 @@ window.setInterval(function(){var r;try{r=window.XMLHttpRequest?new XMLHttpReque
 	<div id="system-message-container">
 	</div>
 
-	
+
 <div id="mailto-window">
 	<h2>
 		Email this link to a friend.	</h2>

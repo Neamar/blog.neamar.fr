@@ -11,7 +11,7 @@
 	<title>Le top 5 des BD : De cape et de crocs</title>
 	<link href="https://blog.neamar.fr/autres-articles/25-de-cape-et-de-crocs-bande-dessinee" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Le top 5 des BD : De cape et de crocs			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=22513e584627c37bef525a8cd01ace87a4d49931" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-09T17:13:28+00:00" itemprop="dateCreated">
 						Created: 09 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Depuis maintenant un an, j'écume le pays de la bande dessinée en lisant quotidiennement deux albums.<br />
 Au fil du temps, j'en ai absorbé un échantillon largement représentatif, dans tous les domaines. Certaines BD ont un scénario digne d'Hollywood [non ce n'est pas un compliment], d'autre un graphisme fait par un gamin de deux ans épileptique qui porte des moufles, écrit de la main gauche et la main droite dans une prise. Mais au milieu de ces déchets qui n'ont pu passer le cap de l'édition qu'en soudoyant honteusement l'éditeur se trouve quelques perles qui valent largement le coup d'œil.</p>
@@ -127,7 +128,7 @@ Au fil du temps, j'en ai absorbé un échantillon largement représentatif, dans
 
 <p>Aujourd'hui : <strong>De Cape et De Croc</strong></p>
 
- 
+
 <p><small>(toutes les images présentées sur cette page sont © Ayroles et Masbou)</small></p>
 
 <h2>De cape et de crocs : <em>Grand Prix des dialogues</em></h2>
@@ -208,25 +209,25 @@ VOUS PASSER À LA BROCHE !</dd>
 <h3>En conclusion...</h3>
 <p>Ceux qui le souhaitent peuvent consulter <a href="http://fr.wikipedia.org/wiki/De_cape_et_de_crocs">Wikipedia</a>. Et pour ceux qui sont déjà convaincus, <a href="http://www.amazon.fr/Cape-Crocs-secret-Janissaire/dp/2840550598/ref=sr_1_2?ie=UTF8&s=books&qid=1255167162&sr=8-2">Amazon</a> vous tend les bras !</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -254,7 +255,7 @@ VOUS PASSER À LA BROCHE !</dd>
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -263,6 +264,6 @@ VOUS PASSER À LA BROCHE !</dd>
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

@@ -11,7 +11,7 @@
 	<title>Changer la touche d'interruption sur le terminal Gnome et rétablir le copier coller</title>
 	<link href="https://blog.neamar.fr/autres-articles/71-changer-la-touche-dinterruption-sur-le-terminal-gnome-et-retablir-le-copier-coller" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Changer la touche d'interruption sur le terminal Gnome et rétablir le copier coller			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=af2084804a484d98f2e5f68befdba5bf5347aea3" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-01-25T20:01:53+00:00" itemprop="dateCreated">
 						Created: 25 January 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Ploum ploum, voilà donc votre terminal tout beau tout neuf. <br />
 
@@ -127,7 +128,7 @@ Mais voilà&nbsp;: impossible de se débarrasser des habitudes ancestrales ; vou
 <p>Dans cet article nous allons voir comment rétablir le copier-coller sur <tt>ctrl-C</tt> / <tt>ctrl-V</tt>, et plus important comment réaffecter la touche d'interruption clavier sur un autre raccourci. <br />
 Tout se passera sur un terminal Gnome de la distribution OpenSuse, mais la marche à suivre est relativement similaire dans les autres cas (voire directe&nbsp;: par exemple, Ubuntu affecte directement <tt>Ctrl + C</tt> au copier). </p>
 
- 
+
 
 <h2>Rétablir les combinaison de touches <tt>ctrl + C</tt> et <tt>ctrl + V</tt> pour le copier-coller dans le terminal</h2>
 
@@ -156,25 +157,25 @@ stty intr ^E
 
 <p>Et voilà, ça marche&nbsp;! Sauf que&hellip; cela ne dure que le temps d'une session&nbsp;; si vous quittez le terminal il faut remarquer la commande <tt>stty intr ^E</tt>. Pour rendre ce comportement persistant, ouvrez votre fichier <tt>. bashrc</tt> avec votre éditeur de texte préféré (par exemple&nbsp;: <tt> gedit ~/.bashrc </tt>) et ajoutez à la fin la commande <tt>stty intr ^E</tt>. Enregistrez, et voilà qui est fait&nbsp;! </p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -202,7 +203,7 @@ stty intr ^E
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -211,6 +212,6 @@ stty intr ^E
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

@@ -11,7 +11,7 @@
 	<title>[Un an d'omnilogie] Présentation de Tanguy</title>
 	<link href="https://blog.neamar.fr/autres-articles/85-un-an-domnilogie-presentation-de-tanguy" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,85 +61,85 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				[Un an d'omnilogie] Présentation de Tanguy			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=2fc43de643f2638ec7de769be526de3b75ba7f6a" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-02-22T13:47:05+00:00" itemprop="dateCreated">
 						Created: 22 February 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Pour fêter les un an du site <a href="http://omnilogie.fr">omnilogie.fr</a>, les admins se dévoilent !</p>
 
 <p>Dans cet article : <a href="http://omnilogie.fr/Omnilogistes/Tanguy">Tanguy</a>.</p>
 
- 
+
 
 <h2>Tanguy : l'accrocheur</h2>
 
-<p>Il paraît que je dois définir mon boulot en tant qu'administrateur sur Omnilogie. Pas facile&nbsp;! Pas facile&nbsp;! </p> 
- 
-<p>Commençons par le début. Moi je suis Tanguy alias Tanguy (Oo Ah&nbsp;! Ben tiens c'est marrant c'est pareil&nbsp;!). </p> 
- 
-<p>Je suis l'accrocheur d'Omnilogie, c'est-à-dire celui qui rédige les accroches (je suis perspicace hein&nbsp;? ). Les accroches sont des questions résumant l'article (aussi appelées problématiques) qui sont ensuite référencées par Google. <br /> 
-C'est grâce à mon boulot que le nombre de visiteurs augmente de jour en jour sur Omnilogie. <br /> 
-En tant qu'accrocheur, je peux faire ce que je veux (sur la page d'accroche seulement&hellip; malheureusement, sniff). </p> 
- 
-<p>J'ai découvert ce site grâce à Neamar, et j'ai commencé à écrire parce que je n'avais pas grand chose à faire en septembre&nbsp;! J'ai intégré le staff des admins d'Omnilogie en octobre dernier. Je souhaite une longue et paisible vie à Omnilogie avec plein d'articles plus intéressants les uns que les autres<sup><a class="footnote" id="Note-1" href="#Ref-1" title="Une fois encore si ce que j'ai dit n'est pas très clair (comme le prénom&hellip; ) vous pouvez me contacter à dieudesaccroches@omnilogie. fr">(1)</a></sup>. </p> 
- 
-<hr class="footnote court" /> 
+<p>Il paraît que je dois définir mon boulot en tant qu'administrateur sur Omnilogie. Pas facile&nbsp;! Pas facile&nbsp;! </p>
+
+<p>Commençons par le début. Moi je suis Tanguy alias Tanguy (Oo Ah&nbsp;! Ben tiens c'est marrant c'est pareil&nbsp;!). </p>
+
+<p>Je suis l'accrocheur d'Omnilogie, c'est-à-dire celui qui rédige les accroches (je suis perspicace hein&nbsp;? ). Les accroches sont des questions résumant l'article (aussi appelées problématiques) qui sont ensuite référencées par Google. <br />
+C'est grâce à mon boulot que le nombre de visiteurs augmente de jour en jour sur Omnilogie. <br />
+En tant qu'accrocheur, je peux faire ce que je veux (sur la page d'accroche seulement&hellip; malheureusement, sniff). </p>
+
+<p>J'ai découvert ce site grâce à Neamar, et j'ai commencé à écrire parce que je n'avais pas grand chose à faire en septembre&nbsp;! J'ai intégré le staff des admins d'Omnilogie en octobre dernier. Je souhaite une longue et paisible vie à Omnilogie avec plein d'articles plus intéressants les uns que les autres<sup><a class="footnote" id="Note-1" href="#Ref-1" title="Une fois encore si ce que j'ai dit n'est pas très clair (comme le prénom&hellip; ) vous pouvez me contacter à dieudesaccroches@omnilogie. fr">(1)</a></sup>. </p>
+
+<hr class="footnote court" />
 <ol>	<li><a class="footnote" id="Ref-1" href="#Note-1"><sup>(1)</sup> <small>&uarr;</small></a> Une fois encore si ce que j'ai dit n'est pas très clair (comme le prénom&hellip; ) vous pouvez me contacter à <span id="cloak66ae5fc38dec023de98975cfcd82dc0c">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
 				document.getElementById('cloak66ae5fc38dec023de98975cfcd82dc0c').innerHTML = '';
 				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
@@ -147,28 +148,28 @@ En tant qu'accrocheur, je peux faire ce que je veux (sur la page d'accroche seul
 				addy66ae5fc38dec023de98975cfcd82dc0c = addy66ae5fc38dec023de98975cfcd82dc0c + '&#111;mn&#105;l&#111;g&#105;&#101;' + '&#46;' + 'fr';
 				var addy_text66ae5fc38dec023de98975cfcd82dc0c = 'd&#105;&#101;&#117;d&#101;s&#97;ccr&#111;ch&#101;s' + '&#64;' + '&#111;mn&#105;l&#111;g&#105;&#101;' + '&#46;' + 'fr';document.getElementById('cloak66ae5fc38dec023de98975cfcd82dc0c').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy66ae5fc38dec023de98975cfcd82dc0c + '\'>'+addy_text66ae5fc38dec023de98975cfcd82dc0c+'<\/a>';
 		</script>
-</li> 
+</li>
 </ol>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -196,7 +197,7 @@ En tant qu'accrocheur, je peux faire ce que je veux (sur la page d'accroche seul
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -205,6 +206,6 @@ En tant qu'accrocheur, je peux faire ce que je veux (sur la page d'accroche seul
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

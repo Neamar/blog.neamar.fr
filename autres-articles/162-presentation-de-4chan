@@ -10,7 +10,7 @@
 	<title>Petite introduction à 4chan</title>
 	<link href="https://blog.neamar.fr/autres-articles/162-presentation-de-4chan" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -40,11 +40,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -59,65 +60,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Petite introduction à 4chan			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=fd81f19600cc1129aec540e1e40e27f6aae15f14" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-07-19T13:49:31+00:00" itemprop="dateCreated">
 						Created: 19 July 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Il m'arrive souvent, au détour d'une conversation, de glisser une référence à 4chan. Référence qui passe le plus souvent inaperçue… pourquoi&nbsp;? Parce que 4chan est un bastion geek, un site <em>underground</em> à nul équivalent. Ce n'est pas un site dédié à la technique, au hacking, et pourtant c'est un des sites les plus nerds que je connaisse. </p>
 
@@ -128,7 +129,7 @@ jQuery(window).on('load',  function() {
 
 <blockquote> <p>4chan, c'est un bouillon de culture, un énorme foutoir sans queue ni tête dirigé uniquement par l'envie du moment, avec un parfait esprit moutonnier. Et avec plusieurs millions de moutons potentiels, des fois ça tâche. </p></blockquote>
 
- 
+
 
 <style type="text/css">
 #maincolumn_full img
@@ -290,35 +291,35 @@ Allez un exemple court, cet article devenant trop long&nbsp;: <a href="http://ww
 <p>Ah si, il me semble important de finir sur une dernière anecdote. Début 2010, le site a subi une attaque de spam pour du CP (souvenez-vous, j'ai expliqué ce que c'est, je ne marquerai pas le mot deux fois). La réaction d'Anonymous a été très intéressante, prouvant que ce site est réellement à prendre au second degré. Les membres se sont insurgés, ont fait leur fêtes aux spammeurs, et sont retournées à leur humour. Preuve qu'il existe une certaine conscience derrière ce système. </p>
 
 <hr class="footnote court">
-<ol>	<li><a class="footnote" id="Ref-1" href="#Note-1"><sup>1</sup> <small>↑</small></a> Un forum de partage d'images anonyme. 
+<ol>	<li><a class="footnote" id="Ref-1" href="#Note-1"><sup>1</sup> <small>↑</small></a> Un forum de partage d'images anonyme.
 </li>
 	<li><a class="footnote" id="Ref-2" href="#Note-2"><sup>2</sup> <small>↑</small></a> Cet article atteindra forcément le point Godwin à un moment ou un autre, autant faire ça tout de suite et en être débarrassé
 </li>
-	<li><a class="footnote" id="Ref-3" href="#Note-3"><sup>3</sup> <small>↑</small></a> Selon la définition, «&nbsp;unité d'information contenue dans un cerveau, échangeable au sein d'une société&nbsp;». En fait, une scène de base détournée et parodiée dont on gave le lecteur jusqu'à la régurgitation. 
+	<li><a class="footnote" id="Ref-3" href="#Note-3"><sup>3</sup> <small>↑</small></a> Selon la définition, «&nbsp;unité d'information contenue dans un cerveau, échangeable au sein d'une société&nbsp;». En fait, une scène de base détournée et parodiée dont on gave le lecteur jusqu'à la régurgitation.
 </li>
 	<li><a class="footnote" id="Ref-4" href="#Note-4"><sup>4</sup> <small>↑</small></a> Prendre la première lettre de chaque mot
 </li>
 </ol>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -346,7 +347,7 @@ Allez un exemple court, cet article devenant trop long&nbsp;: <a href="http://ww
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -355,6 +356,6 @@ Allez un exemple court, cet article devenant trop long&nbsp;: <a href="http://ww
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

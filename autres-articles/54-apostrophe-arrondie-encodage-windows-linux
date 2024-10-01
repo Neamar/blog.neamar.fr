@@ -11,7 +11,7 @@
 	<title>L'apostrophe arrondie, l'encodage et les systèmes d'exploitation</title>
 	<link href="https://blog.neamar.fr/autres-articles/54-apostrophe-arrondie-encodage-windows-linux" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				L'apostrophe arrondie, l'encodage et les systèmes d'exploitation			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=0c5d648754b189651e2b606c30545d143b58b4c4" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-12-13T15:10:37+00:00" itemprop="dateCreated">
 						Created: 13 December 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Si vous laissez vos membres écrire des articles ou des commentaires sur votre site, un jour ou l'autre vous serez confrontés aux problème de <strong>l'apostrophe Windows</strong>.<br />
 L'apostrophe Windows ? Quoi qu'est-ce ? En fait, il s'agit de l'apostrophe "jolie", plus courbée que celle qui orne nos claviers, que Word place automatiquement lorsque vous appuyez sur votre apostrophe "standard". <a href="http://www.wolframalpha.com/input/?i=%27">Wolfram Alpha</a> nous en dit plus :</p>
@@ -128,7 +129,7 @@ L'apostrophe Windows ? Quoi qu'est-ce ? En fait, il s'agit de l'apostrophe "joli
 
 <p>Dans la suite de cet article, nous étudierons l'origine de ce caractère et les problèmes qu'il entraîne.</p>
 
- 
+
 <p>Première question à se poser, d'où vient ce caractère étrange qui s'affiche correctement dans une page encodée en ISO-8859-1 alors qu'il ne fait pas partie du jeu de caractères ?<br />
 Il faut remonter à l'origine de Windows pour comprendre, quand Microsoft se voit obligé d'implémenter de nouveaux charsets pour couvrir une gamme de pays plus vaste. En Occident, la compagnie développe donc le charset Windows-1252 (une extension du standard "Europe de l'Ouest&nbsp;–&nbsp;ISO-8859-1").
 Le problème, c'est que Windows fait plus qu'étendre l'encodage original et modifie certains des caractères de contrôle pour les transformer en caractères imprimables.<br />
@@ -166,25 +167,25 @@ str_replace('',"'",$Texte);
 <li><a href="http://openweb.eu.org/articles/caracteres_illegaux/">Caractères illégaux en HTML</a></li>
 </ul>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -212,7 +213,7 @@ str_replace('',"'",$Texte);
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -221,6 +222,6 @@ str_replace('',"'",$Texte);
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

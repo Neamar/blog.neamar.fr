@@ -11,7 +11,7 @@
 	<link href="/29-commentaires?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
 	<link href="https://blog.neamar.fr/29-commentaires?start=20" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,15 +61,15 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
@@ -76,15 +77,15 @@ jQuery(window).on('load',  function() {
 
 <div>
 	<div class="content-category">
-		
+
 					<h2>
 				Commentaires			</h2>
-		
-							
+
+
 					<div class="category-desc">
 												<div class="clr"></div>
 			</div>
-				
+
 <form action="http://blog.neamar.fr/29-commentaires?start=20" method="post" name="adminForm" id="adminForm" class="form-inline">
 	<fieldset class="filters btn-toolbar clearfix">
 					<div class="btn-group">
@@ -92,7 +93,7 @@ jQuery(window).on('load',  function() {
 						COM_CONTENT__FILTER_LABEL&#160;					</label>
 					<input type="text" name="filter-search" id="filter-search" value="" class="inputbox" onchange="document.adminForm.submit();" title="Content Filter Search" placeholder="COM_CONTENT__FILTER_LABEL" />
 							</div>
-				
+
 		<input type="hidden" name="filter_order" value="" />
 		<input type="hidden" name="filter_order_Dir" value="" />
 		<input type="hidden" name="limitstart" value="" />
@@ -166,7 +167,7 @@ jQuery(window).on('load',  function() {
 
 							<p class="counter pull-right">
 					Page 3 of 3				</p>
-			
+
 			<ul class="pagination-list"><li><a title="Start" href="/29-commentaires" class="pagenav"><span class="icon-first"></span></a></li><li><a title="Prev" href="/29-commentaires?start=10" class="pagenav"><span class="icon-previous"></span></a></li><li class="hidden-phone"><a title="1" href="/29-commentaires" class="pagenav">1</a></li><li class="hidden-phone"><a title="2" href="/29-commentaires?start=10" class="pagenav">2</a></li><li class="active hidden-phone"><a>3</a></li><li class="disabled"><a><span class="icon-next"></span></a></li><li class="disabled"><a><span class="icon-last"></span></a></li></ul>		</div>
 	</form>
 
@@ -176,15 +177,15 @@ jQuery(window).on('load',  function() {
 
 </div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
@@ -212,7 +213,7 @@ jQuery(window).on('load',  function() {
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -221,6 +222,6 @@ jQuery(window).on('load',  function() {
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

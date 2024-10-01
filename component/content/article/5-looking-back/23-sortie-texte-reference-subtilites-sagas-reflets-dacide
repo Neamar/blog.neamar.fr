@@ -11,7 +11,7 @@
 	<title>Blog de Neamar</title>
 	<link href="https://blog.neamar.fr/component/content/article/5-looking-back/23-sortie-texte-reference-subtilites-sagas-reflets-dacide" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,69 +61,69 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Reflets d'Acide épisode 14, encore !			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=43af001c4f3e2dd3fa41642c394cdcd03cbf0ffd" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-04T08:44:13+00:00" itemprop="dateCreated">
 						Created: 04 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>J'en vois déjà me faire les gros yeux, argumentant que j'ai déjà parlé de <a href="http://www.synopsite.com/">Reflets d'Acide épisode 14</a> ces derniers jours. <a href="http://blog.neamar.fr/component/content/article/9-evenements-internet/19-reflets-dacide">C'est vrai, je ne le nie pas</a>. Mais le premier article était avant la sortie, le second [celui-là, suivez un peu] après. </p>
 
- 
+
 
 <p>Tout d'abord, je dédicace ce billet à JBX qui a eu l'aimable amabilité [oui, moi aussi je peux faire des assonances, même si elles sont nulles] de nous fournir le MP3 quelques jours avant la sortie officielle, nous offrant en avant première une heure, une minute et quatre secondes de Reflets d'Acide inédits. Y avait même le texte avec, ce qui nous a bien aidé&nbsp;! </p>
 
@@ -139,15 +140,15 @@ Entres autres, à un moment j'ai pu entendre parler de moi&nbsp;; ce qui est avo
 <hr />
 <p>Petit EDIT : le référencement continue d'avancer, et les <a href="http://neamar.fr/Res/Reflets/LogsSynops14.php">logs du channel #Synops</a> sont bien utiles ! Je les mets ici pour ceux qui en auraient besoin. <strong>Si quelqu'un ne souhaitait pas voir les logs en ligne, qu'il se signale ‑ je les enlèverai</strong>.</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
 				<span itemprop="name">
 					Home				</span>
@@ -171,7 +172,7 @@ Entres autres, à un moment j'ai pu entendre parler de moi&nbsp;; ce qui est avo
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -180,6 +181,6 @@ Entres autres, à un moment j'ai pu entendre parler de moi&nbsp;; ce qui est avo
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

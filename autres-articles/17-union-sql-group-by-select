@@ -11,7 +11,7 @@
 	<title>Maîtriser l'UNION SQL</title>
 	<link href="https://blog.neamar.fr/autres-articles/17-union-sql-group-by-select" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Maîtriser l'UNION SQL			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=43450eacdd9ce3fbc94acc920d9e25fb30ab4a6a" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-09-24T18:52:54+00:00" itemprop="dateCreated">
 						Created: 24 September 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Petite mise en situation...<br />
 Vous êtes l'administrateur d'une base de données relativement conséquente comportant de nombreuses tables traitant de différents sujets sous différentes formes, et vous souhaiteriez vous créer un petit flux indiquant les dernières mises à jour en temps réel ? <em><small>(Toute référence à un webmaster existant ou ayant existé est purement fortuite).</small></em></p>
@@ -126,7 +127,7 @@ Vous êtes l'administrateur d'une base de données relativement conséquente com
 <p>La première solution consisterait à faire autant de requêtes que vous avez de tables, et à comparer "manuellement" chacun des résultats. Long, peu efficace et difficile à maintenir.<br />
 En fait, <tt>SQL</tt> offre une solution simple et agréable, mais peu connue pour ce genre de situations. Mesdames et messieurs, je vous demande de faire un tonnerre d'applaudissements pour <tt>UNION</tt> !</p>
 
- 
+
 
 <h2>Problématique</h2>
 <p>Vous savez peut être faire une jointure <tt>SQL</tt> : cette opération puissante et relativement simple permet de "coller" des données dans vos résultats. Cependant, l'ajout ne crée pas de "nouvelles lignes" (en tout cas, pas dans le sens où nous l'entendons, puisque pour un attribut donné l'ensemble pris par les valeurs reste le même) ; l'opération se contentant d'ajouter des colonnes supplémentaires : en fait, il s'agit d'une insertion de données <strong>à la verticale</strong>. La jointure n'étant pas du tout le but de cet article, je vous laisse vous référer à des liens plus approfondis pour une explication concrète.</p>
@@ -203,25 +204,25 @@ echo '</ol>' . "\n";
 
 <p>Tadaaam ! Les curieux pourront voir ce que cela donne sur cette page [EDIT : page supprimée], taillée pour un affichage sur mobile (code le plus concis possible).</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -249,7 +250,7 @@ echo '</ol>' . "\n";
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -258,6 +259,6 @@ echo '</ol>' . "\n";
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

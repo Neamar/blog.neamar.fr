@@ -11,7 +11,7 @@
 	<title>Des jolis graphiques sans se casser la tête</title>
 	<link href="https://blog.neamar.fr/autres-articles/8-google-chart-api-tool-graphique" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,72 +61,72 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Des jolis graphiques sans se casser la tête			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=5c9423943ccb6982c6118080c752e4b08043990a" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-09-07T14:04:34+00:00" itemprop="dateCreated">
 						Created: 07 September 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Il vous arrive sûrement d'avoir des données à représenter sous forme graphique.</p>
 
 <p>Bien sûr, rien n'empêche de réinventer la roue à chaque fois et de générer votre graphique avec la libraire GD – c'est d'ailleurs ce que je fais pour <a href="http://ccds.neamar.fr/Stats-Visite.php">les statistiques de CCDS</a>.<br />
 Mais la solution la plus rapide et la plus propre serait de passer par une librairie (externe ou interne) qui se chargerait de la génération des images. Si en plus la libraire est externe, c'est toujours cela que votre serveur n'aura pas à assumer ! Dans ce billet, nous examinerons <strong>Google Chart</strong>, une API puissante, fiable et finement paramétrable.</p>
 
- 
+
 
 <p>Les possibilités de Google Chart sont vastes : génération de camemberts en 2D ou en 3D, line-chart, histogrammes, sparkline, radar, diagramme de Venn, planisphère... l'<a href="http://code.google.com/apis/chart/">ensemble est abondamment documenté</a>, presque trop !<br />
 Bien entendu, en plus des différents types de graphique, tout est paramétrable : couleurs, fond, axes, légendes...<br />
@@ -145,25 +146,25 @@ Notons aussi qu'il n'y a pas de limites d'affichage par jour (Google demande jus
 
 <p>Personnellement, j'utilise les services de Google Chart sur différents sites : les <a href="http://neamar.fr/Res/Reflets">références de Reflets d'Acide</a>, les <a href="http://omnilogie.fr/Stats.php">statistiques d'Omnilogie</a>, et les interfaces de recherche pour les sites privés (extrêmement pratique pour représenter les résultats d'un GROUP BY SQL !).</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -191,7 +192,7 @@ Notons aussi qu'il n'y a pas de limites d'affichage par jour (Google demande jus
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -200,6 +201,6 @@ Notons aussi qu'il n'y a pas de limites d'affichage par jour (Google demande jus
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

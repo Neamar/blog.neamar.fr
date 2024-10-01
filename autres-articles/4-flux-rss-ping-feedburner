@@ -11,7 +11,7 @@
 	<title>Le ping de FeedBurner ?</title>
 	<link href="https://blog.neamar.fr/autres-articles/4-flux-rss-ping-feedburner" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,79 +61,79 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Le ping de FeedBurner ?			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=d974ac5a2fce8326ff2f4856f0c6cc9e980327c2" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-09-03T11:30:05+00:00" itemprop="dateCreated">
 						Created: 03 September 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Vous avez un blog/site qui déborde d'actualité, et un <a href="http://fr.wikipedia.org/wiki/Flux_RSS">flux RSS </a>pour maintenir vos lecteurs à jour. Dans un monde ou le terme "instantané" prend tout son sens, avoir quelques minutes de reatrd sur le contenu n'est pas une option négociable.</p>
 <p> </p>
 <p>Surtout si votre site publie un seul article par jour, à heure fixe. Et que des centaines de lecteurs updatent frénétiquement leurs flux pour découvrir le sujet du jour... ce qui est le cas pour <a class="inputbox" href="http://omnilogie.fr" title="Eyh papa, comment on fait pour devenir plus intelligent et se cultiver ?">http://omnilogie.fr</a>. Voyons voir comment résoudre ce dilemme...</p>
- 
+
 <p>Deux solutions :</p>
 <ol>
-<li>Vous avez votre flux RSS maison. Tout est parfait – à condition que vous n'ayez pas fait le crétin en codant votre système de mise en cache.    
+<li>Vous avez votre flux RSS maison. Tout est parfait – à condition que vous n'ayez pas fait le crétin en codant votre système de mise en cache.
 <ul>
 <li><strong>Avantages</strong> : mise à jour instantanée. Vous ne dépendez pas d'un service externe.</li>
 <li><strong>Inconvénients</strong> : surcharge serveur (certains clients s'amusent à configurer leur agrégateur sur une fréquence de mise à jour de trois minutes, dur si vous servez l'intégralité des 10 derniers articles), difficulté d'obtenir des stats fiables (Google Analytics ou autres n'affichent pas les stats sur les documents de ce type. Ou alors je ne suis pas au courant ?)</li>
 </ul>
 </li>
-<li>Vous utiliser une plateforme externe – au hasard <a href="http://feeds.feedburner.com/Omnilogie">FeedBurner</a>.    
+<li>Vous utiliser une plateforme externe – au hasard <a href="http://feeds.feedburner.com/Omnilogie">FeedBurner</a>.
 <ul>
 <li><strong>Avantages</strong> : le trafic est déporté sur un autre serveur, vous pouvez placer des publicités sur les articles, et vous disposez de statistiques assez élaborées sur les différents lecteurs utilisés.</li>
 <li><strong>Inconvénients</strong> : la mise à jour se fait de façon <a href="http://lachal.neamar.fr/Capricant">capricante</a> : en théorie, une fois toutes les demi-heure... mais cela reste à prouver.</li>
@@ -149,25 +150,25 @@ curl_exec($DL);
 curl_close($DL);</pre>
 <p>Et voilà le problème résolu !</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -195,7 +196,7 @@ curl_close($DL);</pre>
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -204,6 +205,6 @@ curl_close($DL);</pre>
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

@@ -11,7 +11,7 @@
 	<title>Désactiver la touche Caps Lock sous Linux</title>
 	<link href="https://blog.neamar.fr/autres-articles/36-disable-caps-lock-linux-xmodmap" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Désactiver la touche Caps Lock sous Linux			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=a77a00ff2c93b75e9ee0ed22ab6685e0fa87cc46" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-31T12:34:19+00:00" itemprop="dateCreated">
 						Created: 31 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Au risque d'exprimer mon opinion personnelle et de sortir de la masse, je tiens à profiter de ce billet pour exprimer ma haine envers la touche <strong>CAPS_LOCK</strong>. Combien de fois vous êtes vous fait avoir à taper un texte avec ce modifieur, et à ne pas pouvoir le repasser en lower-case ?<br />
 Certes, si l'on utilise un éditeur de texte tel Word, Kate, Notepad++ ou autres, des raccourcis existent (respectivement ctrl+F3 et ctrl-U), mais dans la plupart des cas on est bon pour retaper le texte. Horreur et damnation, la hantise de tout fainéant qui se respecte.</p>
@@ -126,7 +127,7 @@ Certes, si l'on utilise un éditeur de texte tel Word, Kate, Notepad++ ou autres
 <p>Sérieusement, qui se sert de cette touche, à part les Kikoolol qui aiment hurler leur incompétence sur tous les forums et autres skymerdes ?<br />
 Au pire, il faut marquer un mot en majuscule (pour le SQL par exemple), et la touche majuscule suffit amplement. Voyons donc comment désactiver ce reliquat inexpugnable des temps anciens...</p>
 
- 
+
 
 <p><img src="/images/stories/capslock.jpg" alt="Caps Lock : pas forcément tout le temps" title="Caps Lock : pas forcément tout le temps" /></p>
 
@@ -143,7 +144,7 @@ lock        Caps_Lock (0x42)
 control     Control_L (0x25),  Control_R (0x69)
 mod1        Alt_L (0x40),  Meta_L (0xcd)
 mod2        Num_Lock (0x4d)
-mod3      
+mod3
 mod4        Super_L (0xce),  Hyper_L (0xcf)
 mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
 </pre>
@@ -185,25 +186,25 @@ Et si de temps en temps vous avez vraiment besoin d'un caps_lock, vous pouvez af
 
 <p><img src="/images/stories/capslock2.jpg" alt="Caps Lock : libérez le démon" title="Caps Lock : libérez le démon" /></p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -231,7 +232,7 @@ Et si de temps en temps vous avez vraiment besoin d'un caps_lock, vous pouvez af
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -240,6 +241,6 @@ Et si de temps en temps vous avez vraiment besoin d'un caps_lock, vous pouvez af
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

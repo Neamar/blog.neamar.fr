@@ -11,7 +11,7 @@
 	<title>Les liens du jeudi, treizième opus</title>
 	<link href="https://blog.neamar.fr/les-liens-du-jeudi/50-liens-jeudi-neamar-tome-treize" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Les liens du jeudi, treizième opus			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=e7a1b4c1e38f3e6392d112a4fa20a0562b28351c" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
-					
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-11-24T20:56:10+00:00" itemprop="dateCreated">
 						Created: 24 November 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2018-01-13T21:03:05+00:00" itemprop="dateModified">
 					Last Updated: 13 January 2018				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Ah, m'asseoir sur un banc, cinq minutes avec toi<br />
 Regarder notre argent qui s'en va</p>
@@ -152,7 +153,7 @@ C'est le football gagnant </p>
 <p>Voilà le cinquantième article de ce blog, déjà ! Que le temps passe vite...<br />
 Mais je ne vais pas m'attarder sur ma vie, les <a href="http://blog.neamar.fr/component/content/category/5-looking-back">rétrospectives</a> sont là pour ça. Vous, vous êtes là pour <a href="http://blog.neamar.fr/component/content/category/3-liens-humour-jeudi">les liens du jeudi</a>, je suppose !</p>
 
- 
+
 <h2>Liens</h2>
 <p>17 Things Worth Knowing About Your Cat (17 chose sà savoir à propos de votre chat – tout en images !)<br /><a href="http://theoatmeal.com/comics/cat_know">http://theoatmeal.com/comics/cat_know</a></p>
 <p>Plus de 100 photographies Tilt-Shift<br /><a href="http://www.instantshift.com/2009/11/13/100-examples-of-brilliant-tilt-shift-photography/">http://www.instantshift.com/2009/11/13/100-examples-of-brilliant-tilt-shift-photography/</a></p>
@@ -188,25 +189,25 @@ Mais je ne vais pas m'attarder sur ma vie, les <a href="http://blog.neamar.fr/co
 <p>You failed at parking !<br /><a href="http://www.youtube.com/watch?v=eG_V4eB5PR4&feature=player_embedded">http://www.youtube.com/watch?v=eG_V4eB5PR4&feature=player_embedded</a></p>
 <p>Comment faire disparaitre des preuves ?<br /><a href="http://www.koreus.com/video/comment-faire-disparaitre-preuves.html">http://www.koreus.com/video/comment-faire-disparaitre-preuves.html</a></p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/les-liens-du-jeudi" class="pathway"><span itemprop="name">Les liens du jeudi</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -234,7 +235,7 @@ Mais je ne vais pas m'attarder sur ma vie, les <a href="http://blog.neamar.fr/co
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -243,6 +244,6 @@ Mais je ne vais pas m'attarder sur ma vie, les <a href="http://blog.neamar.fr/co
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

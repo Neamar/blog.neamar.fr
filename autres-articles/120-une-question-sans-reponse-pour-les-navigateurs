@@ -11,7 +11,7 @@
 	<title>La taille des hn en HTML</title>
 	<link href="https://blog.neamar.fr/autres-articles/120-une-question-sans-reponse-pour-les-navigateurs" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				La taille des hn en HTML			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=93a64869700b94cc7d153c3bcff747b7b8418561" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-06-02T16:30:41+00:00" itemprop="dateCreated">
 						Created: 02 June 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Attention, ce post ne sert à rien. Il n'apportera pas de solution au problème posé, et devrait vous laisser avec plus d'interrogations qu'avant sa lecture. <br />
 Donc un conseil&nbsp;: ne le lisez pas. </p>
@@ -138,7 +139,7 @@ Lisons un extrait de la documentation officielle décrivant les <tt>headings</tt
 <p>La symbiose des deux permet normalement d'avoir un web interopérable&nbsp;; mais ici nous avons un exemple flagrant de problème. <br />
 Vous ne le voyez pas&nbsp;? <q>Visual browsers usually render more important headings in larger fonts</q>&nbsp;: cette phrase est assez ambigue pour vouloir dire tout et son contraire. Et aujourd'hui, nous allons voir  que "son contraire" a été choisi !</p>
 
- 
+
 <p>Continuons de fouiller un peu&nbsp;: on tombe sur «&nbsp;<a href="http://www.w3.org/TR/CSS2/sample.html">default style sheet for HTML4</a>&nbsp;» qui définit la base de la mise en page. <br />
 Un minimum de précision s'impose&nbsp;: depuis CSS1, on a <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/59-presentation-de-la-semantique-web">abandonné l'idée des balises de mise en forme</a> pour proposer une solution purement sémantique dans laquelle les balises n'ont aucune représentation graphique. Aucune&nbsp;? En fait, CSS1 <strong>propose</strong> que chaque navigateur «&nbsp;[ait] une feuille de style par défaut qui présentera les documents de façon raisonnable&nbsp;» (très clair, ça aussi). L'idée est bonne&nbsp;: nos balises sont déconnectées de leur affichage, mais on place des thèmes par défaut qui pourront être modifiés. CSS2 passe de «&nbsp;may&nbsp;» à «&nbsp;must&nbsp;»&nbsp;: <q>conforming user agents <strong>must</strong> apply a default style sheet</q>. </p>
 
@@ -474,25 +475,25 @@ h2 {
 
 <p>Et si vous avez une idée, <a href="http://neamar.fr/Mail.php">n'hésitez pas</a> ;)</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -520,7 +521,7 @@ h2 {
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -529,6 +530,6 @@ h2 {
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

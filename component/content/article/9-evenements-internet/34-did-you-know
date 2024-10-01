@@ -11,7 +11,7 @@
 	<title>Blog de Neamar</title>
 	<link href="https://blog.neamar.fr/component/content/article/9-evenements-internet/34-did-you-know" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,72 +61,72 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Le saviez-vous ?			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=2020eba2281e467d74318411e07669ffa2c56906" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2009-10-29T12:09:26+00:00" itemprop="dateCreated">
 						Created: 29 October 2009					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Pour moi, ça  a été comme une gifle virtuelle.<br />
 Je suis tombé sur ces vidéos voilà presque un an, et à chaque fois que je les retrouve je ne peux m'empêcher de les regarder à nouveau.</p>
 
 <p>Patiemment, les auteurs assènent des vérités. Attention, il ne s'agit pas de ces trivias plus ou moins véridiques que l'on retrouve un peu partout : ce sont des chiffres étayés, validés, scientifiquement prouvés. Et il n'est pas question de la taille du cou d'une girafe ou de la durée d'une guerre : il s'agit uniquement de chiffres et d'avancées dues à l'informatique...</p>
 
- 
+
 
 <p>Certains diront qu'il est facile de faire dériver le sujet ; c'est tout à fait vrai. Mais ici, la vidéo ne cherche pas à montrer un quelconque point de vue, à faire comprendre qu'Internet est le Diable ou Dieu : elle se contente de donner les chiffres, neutres, objectifs. De temps en temps, une petite question pousse le spectateur à s'interroger : est-ce bien ? Est-ce mal ? Qu'est ce que cela signifie pour moi, humain lambda ?</p>
 
@@ -145,15 +146,15 @@ Comme le souligne la troisième vidéo, nous vivons dans des temps exponentiels 
 
 <p><em>For the record</em, on mentionnera que "Shift happens" est un jeu de mot que l'on pourrait traduire littéralement par "Les changements surviennent". L'expression originale étant "Shit happens".</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
 				<span itemprop="name">
 					Home				</span>
@@ -177,7 +178,7 @@ Comme le souligne la troisième vidéo, nous vivons dans des temps exponentiels 
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -186,6 +187,6 @@ Comme le souligne la troisième vidéo, nous vivons dans des temps exponentiels 
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

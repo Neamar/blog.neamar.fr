@@ -10,7 +10,7 @@
 	<title>Un mois de sommeil biphasique</title>
 	<link href="https://blog.neamar.fr/autres-articles/343-sommeil-polyphasique-recit" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -40,11 +40,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -59,65 +60,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Un mois de sommeil biphasique			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=28356e275d2e6a785f06088a7bd2f7f25223b956" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2012-03-02T21:03:09+00:00" itemprop="dateCreated">
 						Created: 02 March 2012					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Voilà plus de deux ans, <a href="http://omnilogie.fr/O/Dormir_moins_pour_travailler_plus_:_le_sommeil_polyphasique">je découvrais le sommeil polyphasique et ses possibilités</a>. Très sceptique au départ sur la capacité de l'homme à jouer avec le sommeil, je finissais par admettre que la quantité de données scientifiques présente ne pouvait être le fruit d'un canular. <br />
 Désormais convaincu, je me donnais pour objectif de tester le système le jour où mon emploi du temps me permettrait de m’accommoder de toutes ces contraintes temporelles. </p>
@@ -126,7 +127,7 @@ Désormais convaincu, je me donnais pour objectif de tester le système le jour 
 
 <p>Le 25 janvier, je me décidais pour un mois de sommeil biphasique, durant toute la durée de février, ce qui me laissait six jours pour trouver mon rythme. <br />
 Cet article relate mes péripéties. </p>
- 
+
 
 <h3>Mes objectifs</h3>
 <p>Le but du sommeil biphasique est de gagner du temps&nbsp;: cependant, cela ne doit pas être au détriment de l'organisme, et même si le corps dort moins il ne doit pas être fatigué. </p>
@@ -212,25 +213,25 @@ Quant à décider si je repartirais sur un rythme biphasique, seul l'avenir me l
 <p>EDIT : avec du recul maintenant, je lie vraiment la maladie au manque de sommeil -- un an après, je ne suis toujours pas retombé malade.<br />
 L'expérience en elle-même fut passionnante et très instructive, j'en retire une capacité d'endormissement bien plus rapide, et la possibilité de faire des siestes réparatrices (ce que je ne savais pas faire avant). Et l'envie de retenter l'expérience est toujours là !</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -258,7 +259,7 @@ L'expérience en elle-même fut passionnante et très instructive, j'en retire u
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -267,6 +268,6 @@ L'expérience en elle-même fut passionnante et très instructive, j'en retire u
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>

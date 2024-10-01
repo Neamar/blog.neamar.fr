@@ -11,7 +11,7 @@
 	<title>Positionnement automatique d'un arbre</title>
 	<link href="https://blog.neamar.fr/autres-articles/107-affichage-graphe-optimise" rel="canonical" />
 	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
 	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 	<style>
 
@@ -41,11 +41,12 @@
 	<script src="/media/jui/js/jquery-migrate.min.js"></script>
 	<script src="/media/system/js/caption.js"></script>
 	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script src="/templates/protostar/js/template.js"></script>
 	<script>
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+			});
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
@@ -60,65 +61,65 @@ jQuery(window).on('load',  function() {
 					<a class="brand pull-left" href="/">
 						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
 					<div class="header-search pull-right">
-						
+
 					</div>
 				</div>
 			</header>
-						
+
 			<div class="row-fluid">
 								<main id="content" role="main" class="span9">
 					<!-- Begin Content -->
-					
+
 					<div id="system-message-container">
 	</div>
 
 					<div class="item-page" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="en-GB" />
-	
-		
+
+
 			<div class="page-header">
 					<h2 itemprop="headline">
 				Positionnement automatique d'un arbre			</h2>
 									</div>
-							
+
 <div class="icons">
-	
+
 					<div class="btn-group pull-right">
 				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
 								<ul class="dropdown-menu">
 																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=47f5ba304b419da8bbc361c4290e4d1c8e51dbb8" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
 														</ul>
 			</div>
-		
+
 	</div>
-			
+
 				<dl class="article-info muted">
 
-		
+
 			<dt class="article-info-term">
 									Details							</dt>
 
 							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
 					Written by <span itemprop="name">Neamar</span>	</dd>
-			
-			
+
+
 										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
-					
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+
 												<dd class="create">
 					<span class="icon-calendar"></span>
 					<time datetime="2010-04-29T12:23:44+00:00" itemprop="dateCreated">
 						Created: 29 April 2010					</time>
-			</dd>			
+			</dd>
 										<dd class="modified">
 				<span class="icon-calendar"></span>
 				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
 					Last Updated: 06 August 2013				</time>
-			</dd>			
+			</dd>
 						</dl>
-	
-	
-				
+
+
+
 								<div itemprop="articleBody">
 		<p>Lors de la réalisation du jeu <a href="http://neamar.fr/Res/AGraphe/">A-Graphe</a>, je m'étais frotté à «&nbsp;la représentation graphique automatisée d'arbres mathématiques&nbsp;». Ouch, dit ainsi ça fait mal. </p>
 
@@ -128,7 +129,7 @@ jQuery(window).on('load',  function() {
 
 <p>Allez, la partie aride est terminée, maintenant on s'amuse !</p>
 
- 
+
 <h2>Pré-requis</h2>
 <p>Pour illustrer mes propos, je passerai encore une fois par le langage ActionScript3 utilisé par Flash. <br />
 Dans les deux cas, je ferai trois tests distincts de la méthode présentée&nbsp;: </p>
@@ -162,16 +163,16 @@ private function placement(Noeud:Node,Rayon:int,Amplitude:Number=2*Math.PI,Angle
 	var Step:Number = Amplitude / Noeud.Enfants.length;
 	//L'angle initial : il suffit de décaler l'angle central par la moitié de l'amplitude. On ajoute aussi la moitié du pas pour équilibrer l'arbre ; sinon l'intervalle n'est pas centré et c'est moche.
 	var Angle:Number = AngleCentral - Amplitude / 2 + Step / 2;
-	
+
 	for each(var Enfant:Node in Noeud.Enfants)
 	{
 		//placer l'enfant relativement au père
 		Enfant.x = Noeud.x + Rayon * Math.cos(Angle);
 		Enfant.y = Noeud.y + Rayon * Math.sin(Angle);
-		
+
 		//Puis demander le placement des enfants de l'enfant (c'est téchenique ça)
 		placement(Enfant, Rayon * .8, Step, Angle);
-		
+
 		//Et incrémenter le pas pour le prochain noeud :
 		Angle += Step;
 	}
@@ -267,7 +268,7 @@ AttractionAutreBout.y = - AttractionBout.y;
 
 //Et appliquer la force aux objets pour le prochain calcul du PFD
 Bout.applyForce(AttractionBout);
-AutreBout.applyForce(AttractionAutreBout);	
+AutreBout.applyForce(AttractionAutreBout);
 </pre>
 
 <pre xml:lang="actionscript3">
@@ -282,7 +283,7 @@ for each(var Force:Vecteur in Forces)
 
 //Puis mise à jour de la vitesse. À ce point là, le vecteur Resultante correspond au vecteur accélération.
 //Il faut noter qu'on fait les calculs à chaque itération : l'intégration du vecteur accéleration pour obtenir le vecteur vitesse se transforme alors en une simple addition.
-Vitesse.ajouter(Resultante);		
+Vitesse.ajouter(Resultante);
 //Ajouter des frottements pour éviter d'avoir les ressorts qui oscillent à l'infini
 Vitesse.scalarMul(FROTTEMENTS);
 
@@ -292,7 +293,7 @@ this.y += Vitesse.y;
 
 //Vidage de la liste des forces pour le prochain calcul
 Forces.splice(0,Forces.length);
-Resultante.reset();	
+Resultante.reset();
 </pre>
 
 <hr class="court">
@@ -301,25 +302,25 @@ Resultante.reset();
 
 <p><a href="/images/stories/Prog/Arbres/Arbre.zip">Télécharger les codes</a>. Le code statique n'est pas optimisé du tout car il incorpore aussi les ressorts et les interactions (sans les afficher bien entendu). Pour passer en mode auto, changez la variable "MODE" avant de compiler.</p>	</div>
 
-	
+
 							</div>
 
-					
+
 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
 			<li>
 			You are here: &#160;
 		</li>
-	
+
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="1">
 			</li>
 					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-				
+
 									<span class="divider">
 						<img src="/media/system/images/arrow.png" alt="" />					</span>
 								<meta itemprop="position" content="2">
@@ -347,7 +348,7 @@ Resultante.reset();
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<hr />
-			
+
 			<p class="pull-right">
 				<a href="#" id="back-top">
 					Back to Top				</a>
@@ -356,6 +357,6 @@ Resultante.reset();
 				&copy; 2024 Blog de Neamar			</p>
 		</div>
 	</footer>
-	
+
 </body>
 </html>
