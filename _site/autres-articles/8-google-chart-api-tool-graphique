@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="google, chart, graphique, api, tool, php" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Des jolis graphiques sans se casser la tête</title>
+	<link href="https://blog.neamar.fr/autres-articles/8-google-chart-api-tool-graphique" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Des jolis graphiques sans se casser la tête			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=5c9423943ccb6982c6118080c752e4b08043990a" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-09-07T14:04:34+00:00" itemprop="dateCreated">
+						Created: 07 September 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Il vous arrive sûrement d'avoir des données à représenter sous forme graphique.</p>
+
+<p>Bien sûr, rien n'empêche de réinventer la roue à chaque fois et de générer votre graphique avec la libraire GD – c'est d'ailleurs ce que je fais pour <a href="http://ccds.neamar.fr/Stats-Visite.php">les statistiques de CCDS</a>.<br />
+Mais la solution la plus rapide et la plus propre serait de passer par une librairie (externe ou interne) qui se chargerait de la génération des images. Si en plus la libraire est externe, c'est toujours cela que votre serveur n'aura pas à assumer ! Dans ce billet, nous examinerons <strong>Google Chart</strong>, une API puissante, fiable et finement paramétrable.</p>
+
+ 
+
+<p>Les possibilités de Google Chart sont vastes : génération de camemberts en 2D ou en 3D, line-chart, histogrammes, sparkline, radar, diagramme de Venn, planisphère... l'<a href="http://code.google.com/apis/chart/">ensemble est abondamment documenté</a>, presque trop !<br />
+Bien entendu, en plus des différents types de graphique, tout est paramétrable : couleurs, fond, axes, légendes...<br />
+Notons aussi qu'il n'y a pas de limites d'affichage par jour (Google demande juste de prévenir si vous ferez plus de 250 000 appels par jour...), et que le service est gratuit et fiable : Google se sert d'ailleurs de cet outil sur différents services (regardez par exemple l'onglet "Tendances" de votre compte <a href="http://www.google.com/reader">Reader</a>, ou les images d'Analytics).</p>
+
+<p>Quelques exemples (faites un clic droit→afficher l'image pour voir les paramètres) :</p>
+<ul>
+<li><img src="http://chart.apis.google.com/chart?cht=lc&chs=200x125&chd=t:40,60,60,45,47,75,70,72" alt=""></li>
+<li><img src="http://chart.apis.google.com/chart?cht=lxy&chs=200x125&chd=t:10,20,40,80,90,95,99|20,30,40,50,60,70,80|-1|5,25,45,65,85&chco=3072F3,ff0000,00aaaa&chls=2,4,1&chm=s,FF0000,0,-1,5|s,0000ff,1,-1,5|s,00aa00,2,-1,5" alt=""></li>
+<li><img src="http://chart.apis.google.com/chart?cht=bvg&chs=190x125&chd=s:hello,world&chbh=a&chco=4d89f9,000000" alt="" /></li>
+<li><img src="http://chart.apis.google.com/chart?cht=p&chd=s:Uf9a&chs=200x100&chl=January|February|March|April" alt="" /></li>
+<li><img src="http://chart.apis.google.com/chart?cht=p3&chd=s:Uf9a&chs=250x100&chl=January|February|March|April" alt="" /> <em>(la même, en 3D)</em></li>
+<li><img src="http://chart.apis.google.com/chart?cht=v&chs=200x100&chd=t:100,80,60,30,25,20,10" alt="" /></li>
+<li><img src="http://chart.apis.google.com/chart?cht=s&chd=t:12,87,75,41,23,96,68,71,34,9|98,60,27,34,56,79,58,74,18,76|84,23,69,81,47,94,60,93,64,54&chxt=x,y&chxl=0:|0|20|30|40|50|60|70|80|90|10|1:|0|25|50|75|100&chs=200x125" alt="" /></li>
+<li><img src="http://chart.apis.google.com/chart?cht=t&chs=440x220&chd=t:0,100,50,32,60,40,43,12,14,54,98,17,70,76,18,29&chco=FFFFFF,FF0000,FFFF00,00FF00&chld=DZEGMGAOBWNGCFKECGCVSNDJTZGHMZZM&chtm=africa&chf=bg,s,EAF7FE" alt="" /></li>
+</ul>
+
+<p>Personnellement, j'utilise les services de Google Chart sur différents sites : les <a href="http://neamar.fr/Res/Reflets">références de Reflets d'Acide</a>, les <a href="http://omnilogie.fr/Stats.php">statistiques d'Omnilogie</a>, et les interfaces de recherche pour les sites privés (extrêmement pratique pour représenter les résultats d'un GROUP BY SQL !).</p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Des jolis graphiques sans se casser la tête				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

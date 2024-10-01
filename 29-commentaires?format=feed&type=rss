@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Blog de Neamar</title>
+		<description><![CDATA[Distributeur de liens !]]></description>
+		<link>http://blog.neamar.fr/29-commentaires</link>
+		<lastBuildDate>Tue, 01 Oct 2024 13:55:30 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://blog.neamar.fr/29-commentaires?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<managingEditor>neamar@neamar.fr (Blog de Neamar)</managingEditor>
+		<item>
+			<title>Oui mais non...</title>
+			<link>http://blog.neamar.fr/29-commentaires/335-oui-mais-non</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/335-oui-mais-non</guid>
+			<description><![CDATA[Le débit de notre côté du PC est rarement limitant, c'est surtout celui du serveur en face (ou des restrictions qu'il applique) qui pose problème !]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Mon, 16 Jan 2012 11:26:46 +0000</pubDate>
+		</item>
+		<item>
+			<title>Oui</title>
+			<link>http://blog.neamar.fr/29-commentaires/317-oui</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/317-oui</guid>
+			<description><![CDATA[Oui, cela fonctionne : dans le fichier de configuration de phpmyadmin, il faut paramétrer les accès en fonction de la personne connectée (regarde dans <tt>$_SERVER</tt>).]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Tue, 25 Oct 2011 13:39:49 +0000</pubDate>
+		</item>
+		<item>
+			<title>Réactions</title>
+			<link>http://blog.neamar.fr/29-commentaires/286-reactions-448320</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/286-reactions-448320</guid>
+			<description><![CDATA[Pour les REGEXP, c'est quand même souvent utile, et là il s'agit d'opérateurs dont on sert tout le temps. Je partais pas dans les backreference ou parenthèses non capturantes non plus !
+
+Pour la classe Utilisateur, effectivement, "modéliser" irait mieux.
+
+Pour l'INSA... ah bon ? En quoi ?
+
+Concernant vi, si tu ne sais pas quitter, c'est quand même la preuve que tu n'as jamais fait de dev sur un serveur. Après si tu me parlais d'emacs ou de nano... pourquoi pas, mais savoir faire le minimum en console est critique pour du web.
+
+Pour le LaTeX, je veux voir si le gars sera capable de rédiger un compte rendu de R&D ou un dossier de documentation proprement ; la question mathématique n'est qu'une excuse car là je suis d'accord que savoir résoudre une série est inutile pour du dev.]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Wed, 15 Jun 2011 11:41:29 +0000</pubDate>
+		</item>
+		<item>
+			<title>CSS</title>
+			<link>http://blog.neamar.fr/29-commentaires/283-css</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/283-css</guid>
+			<description><![CDATA[Nope, #777 == #777777 en CSS.
+
+Après, peut-être que dans d'autres langages qui me sont inconnus, ça vaut #707070 !
+
+Un lien qui en parle : http://www.websiteoptimization.com/speed/tweak/hex/]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Tue, 14 Jun 2011 12:16:59 +0000</pubDate>
+		</item>
+		<item>
+			<title>Télé Travail ?</title>
+			<link>http://blog.neamar.fr/29-commentaires/281-tele-travail</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/281-tele-travail</guid>
+			<description><![CDATA[Mouarf, la planque pour ne pas en glander une... on en rêve tous ! (et on est peu à l'avoir)]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Tue, 14 Jun 2011 09:12:35 +0000</pubDate>
+		</item>
+		<item>
+			<title>LaTeX et complexité</title>
+			<link>http://blog.neamar.fr/29-commentaires/279-latex-et-complexite</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/279-latex-et-complexite</guid>
+			<description><![CDATA[Exact pour la complexité, la question aurait gagnée à être "jusqu'à n".
+
+Pour les maths, c'est du LaTeX. Et j'attendais la réponse "division par zéro" :) (ou pi²/6 pour ceux qui shuntaient le terme initial)]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Mon, 13 Jun 2011 15:33:45 +0000</pubDate>
+		</item>
+		<item>
+			<title>Windows</title>
+			<link>http://blog.neamar.fr/29-commentaires/238-windows</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/238-windows</guid>
+			<description><![CDATA[Si PHP est activé, il n'y a strictement aucune différence avec la marche à suivre indiquée ici. Sinon, il faudra trouver une autre version de l'API Google compatible avec vos désirs....
+
+N'utilisant pas windows server, je ne peux malheureusement pas en dire plus.  Vous trouverez probablement une aide plus appropriée sur un forum traitant de Windows Server... désolé ;)]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Sat, 20 Nov 2010 21:42:34 +0000</pubDate>
+		</item>
+		<item>
+			<title>Dédié</title>
+			<link>http://blog.neamar.fr/29-commentaires/236-dedie</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/236-dedie</guid>
+			<description><![CDATA[Cela ne change strictement rien du moment que le serveur fonctionne en PHP.]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Sat, 20 Nov 2010 20:41:06 +0000</pubDate>
+		</item>
+		<item>
+			<title>Réponse</title>
+			<link>http://blog.neamar.fr/29-commentaires/217-reponse</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/217-reponse</guid>
+			<description><![CDATA[Merci !
+Non, après le passage de la balle on ne voit rien, mais avant oui :D
+Pour les gilets pare balles, c'est juste pour l'intérêt de la nouvelle, effectivement la vélocité des snipers est largement supérieure à la résistance d'une quelconque protection.]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Wed, 06 Oct 2010 11:09:11 +0000</pubDate>
+		</item>
+		<item>
+			<title>Re: Batteyr Widget</title>
+			<link>http://blog.neamar.fr/29-commentaires/196-re-batteyr-widget</link>
+			<guid isPermaLink="true">http://blog.neamar.fr/29-commentaires/196-re-batteyr-widget</guid>
+			<description><![CDATA[Concernant la position GPS, c'est parce que le widget permet d'activer / désactiver le GPS ; il a donc besoin de ces permissions. Cela dit, on ne sait effectivement pas s'il n'en fait pas plus... mais après plusieurs mois d'utilisation, je n'ai jamais vu la petite icone "gps" clignoter sans raison.
+
+Pour le statut des appels... je ne peux pas te répondre.
+
+Il faut aussi que je précise que je n'utilise plus cette application, depuis que j'ai remarqué qu'elle prenait 11Mo de mémoire RAM sans raison.]]></description>
+			<author>neamar@neamar.fr (Neamar)</author>
+			<category>Commentaires</category>
+			<pubDate>Mon, 09 Aug 2010 09:47:55 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="rétrospective, neamar, 2008-2009, omnilogie, histoire d'un livre, ressources, blog, neamar, stack, coin, graphe, flash, lycos, annales, insa, typographe, typo, php" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Blog de Neamar</title>
+	<link href="https://blog.neamar.fr/component/content/article/5-looking-back/37-retrospective-2008-2009-neamar" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Rétrospective 2008 - 2009			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=f5e7c6fb877816741cf521907fbbf95557eb6461" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-11-01T13:08:09+00:00" itemprop="dateCreated">
+						Created: 01 November 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2019-02-11T12:03:53+00:00" itemprop="dateModified">
+					Last Updated: 11 February 2019				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<h2>Rétrospective 2008-2009</h2>
+<p>Et voilà donc la seconde année pour neamar.fr !<br />
+Quoi de neuf ? Pas mal de choses, au final.</p>
+
+<p>Voyons ça un peu plus en détail !</p>
+ 
+
+<h3>Sites web</h3>
+<h4>Ouvertures de site Web</h4>
+<p>L'année 2009 aura vu l'ouverture de trois nouveaux sites complets.</p>
+
+<h5><img src="https://omnilogie.fr/favicon.ico" alt="Omnilogie" />Omnilogie</h5>
+<p>Premier d'entre eux, <a href="https://omnilogie.fr">Omnilogie</a>. Un recueil d'articles sur tous les sujets imaginables, avec pour seule contrainte de ne pas dépasser un écran de texte. Droit, histoire, mathématiques, physique, légendes urbaines, orthographe, typographie, coups de gueule... tous les jours depuis le 23 février, un article est paru à minuit pile. Pas de faux pas, même si certains jours, il a fallu remotiver les troupes pour faire paraître l'article dans les temps ! L'aventure mobilise une trentaine de rédacteurs plus ou moins réguliers, mais qui y mettent tous une bonne volonté qu'on a plaisir à voir.</p>
+
+<p>Le site est codé de zéro, sans CMS ni rien ; ce qui permet donc une rapidité de réponse intéressante et surtout une absence de failles "globales" : je reviendrais sur ce point concernant Joomla!.<br />
+Attention, absence de CMS ne signifie pas "site au rabais" : même si le design minimaliste est autant pour faciliter la lecture que pour éviter d'exhiber mes "talents" artistiques, l'interface d'administration et tout le <em>back-end</em> est patiemment et proprement optimisé après de multiples discussions avec les "super membres" que sont les censeurs, taggers, accrocheurs et administrateurs. Une démocratie bureaucratique, assez intéressante à gérer, qui prend son envol lentement... mais sûrement, l'ajout quotidien de contenu jouant certainement son rôle auprès de l'ami Google.</p>
+
+<h5><img src="https://blog.neamar.fr/templates/siteground-j15-68/favicon.ico" alt="Blog" />Blog.neamar.fr</h5>
+<p>Certains diront que j'ai un train de retard, qu'avoir un blog c'est <em>has been</em>, dépassé, suranné, désuet, obsolète, anachronique, bref périmé.<br />
+Que dois-je répondre ? D'abord, que j'admire leur vocabulaire. Ensuite, que ce blog n'a pas pour but d'étaler ma vie mais de donner une tribune un peu moins cérémonieuse que les <a href="http://neamar.fr/Res">Ressources</a> de Neamar.fr : plusieurs fois, j'avais en effet été contraint de ne rien dire pour ne pas encombrer la section. Or c'est justement le but d'un blog que de s'embarrasser de trucs plus ou moins utiles ! D'où l'intérêt dudit site, qui me permet d'offrir des solutions à quelques problèmes techniques sans remplir les Ressources. Cela permet aussi de poster sans scrupules des liens plus ou moins idiots ; voyez les <a href="https://blog.neamar.fr/accueil/3-liens-humour-jeudi/33-liens-jeudi-neamar-tome-neuf">liens du jeudi</a> qui vont bientôt fêter leurs dixième édition pour une idée du principe.</p>
+<p>Notons au passage que ce blog, tout comme Omnilogie, n'offre pas de fonctions sociales : adieu donc les commentaires et autres trackbacks !<br />
+Ce choix est le fruit d'une discussion avec le comité d'omnilogistes qui a conclu que la plupart des commentaires postés étaient inutiles (cf. Youtube pour une démonstration par l'exemple). Attention, cela ne signifie pas que nous nous enfermons dans un mutisme autarcique : les retours sont toujours les bienvenus, et un formulaire de contact est disponible sur chacun des sites. Cela limite certes, mais c'est un bon compromis – rien du tout, ou une équipe qui passe son temps à modérer : le choix a été fait.</p>
+
+<p>Rajoutons que le blog aura été l'occasion de tester un CMS : Joomla! dans ce cas là. J'avoue être moyennement convaincu par l'expérience : même si l'installation est effectivement rapide, l'ensemble est lourd, doit être mis à jour pour corriger les failles, difficilement personnalisable à 100%, et leeent !</p>
+
+<h5><img src="http://histoiredunlivre.tarna.fr/favicon.ico" alt="Histoire d'un livre" />Histoire d'un livre</h5>
+<p>Je ne suis pas sûr de devoir en parler ici, mais bon... pour être exhaustif, il me faut mentionner <a href="http://histoiredunlivre.tarna.fr/">Histoire d'un livre</a>. Je n'ai pas grand chose à dire, car le site n'a (toujours) pas démarré. Allez, on se remotive ! Un jour, ça démarrera :p</p>
+
+<hr />
+
+
+
+
+<h4>Fermeture de site Web</h4>
+<h5><img src="http://www.multimania.lycos.fr/favicon.ico" alt="Lycos" />Lycos</h5>
+<p>Eh oui, c'est une première... mais le premier site neamar a définitivement fermé ses portes : je parle du <a href="http://membres.lycos.fr/neamart/">site d'énigmes hébergé sur Lycos</a>.<br />
+Je vois toute une brochette de webmasters hurler au scandale – supprimer 300 pages du Web, quelle hérésie ! – aussi vais-je tenter (<a href="http://blog.neamar.fr/component/content/article/5-looking-back/6-fermer-site-pourquoi-lycos">encore !</a>) de me justifer.</p>
+
+<p>D'abord, le site était graphiquement scandaleux. Moche à faire pleurer un skyblogger convaincu, sémantiquement incompréhensible (ah ! les joies des <tt>tables</tt>, <tt>font</tt> et autres htmleries...), lourd (répétition du design à chaque page, ça c'est bon !), non maintenable (bah oui, FrontPage. Pas tapé, pitié.) ; bref les arguments pesaient lourds dans la balance, et le site était un poids que je me trainais aux chevilles depuis trop longtemps. À l'annonce de la fermeture de Lycos, j'ai pensé être débarrassé de "ça", mais ils ont trouvés un repreneur (faut dire, avec les bannières de pub qu'ils imposent sur les quatres coins de la page et les popups, j'ai du mal à comprendre qu'ils puissent passer la clé sous la porte). Donc, à la réception du mail annonçant le "miracle", j'ai fouillé les archives à la recherche du login FTP, et hop ! nettoyage méthodique. Radical, mais efficace. Au cas où, j'ai sauvegardé le contenu avant dans un endroit tenu secret, si un jour j'ai le courage je referais ça mieux qu'avec une page créée à la main pour chaque énigme ! Un jour...</p>
+
+<h5><img src="http://annales.insa-lyon.fr/favicon.ico" alt="Annales" />Annales.insa-lyon</h5>
+<p>Ce n'est pas à proprement parler une fermeture, juste une passation de pouvoir. Vu que je n'ai plus rien à faire sur le site et que la perspective de me mesurer aux départements pour proposer l'intégration de leurs ressources ne m'intéresse guère (merci, j'ai déjà donné), j'ai passé le flambeau à deux jeunes prometteurs. Ils en feront ce qu'ils voudront (enfin, j'ai quand même demandé à garder un accès aux stats par curiosité, pour voir si on pouvait dépasser le score de 4 000 sujets vus en une journée pendant la période des partiels).<br />
+Je leur souhaite une bonne continuation !</p>
+
+<hr />
+
+
+
+
+
+<h4><img src="http://neamar.fr/favicon.ico" alt="Res" />Ressources</h4>
+<p>Ah, sûrement le paragraphe le plus dense... essayons d'organiser tout ça afin de ne pas décrocher le lecteur potentiel (car oui, j'ai conscience que ce post là n'intéresse pas grand monde. Mais je le fais aussi pour tirer un trait sur le passé et me rendre compte des évènements).</p>
+
+<p>Donc, commençons par le commencement : presque juste après la rétrospective de l'année dernière je m'attelais à l'écriture d'un mini roman (ou maxi nouvelle, au choix) relatant les <a href="http://neamar.fr/Res/Enigmes">10 plus belles énigmes</a> (à mon humble goût ; ironiquement la majorité était remasterisée du lycos encore en activité). À ma surprise, le roman plut, et je rempilais donc voilà quelques mois pour le <a href="http://neamar.fr/Res/Enigmes">tome 2</a>, <a href="http://blog.neamar.fr/component/content/article/5-looking-back/22-retour-sur-les-10-plus-belles-enigmes-deuxieme-saison">tombant dans le même piège</a> que celui qui engloutit des dizaines de réalisateurs d'Hollywood.</p>
+
+<p>À côté de cela, je me payais le luxe d'accueillir des articles anglais (<a href="http://neamar.fr/Res/Beekeeping/">Beekeeping</a>, <a href="http://neamar.fr/Res/Soase/">Strategy Guide for Sins of a Solar Empire</a>), et même des <a href="http://neamar.fr/Res/Zombie/">traductions françaises</a> de nouvelles anglaises ; la dernière ressource me faisant découvrir Ouroboros qui est devenu depuis mon avatar sur beaucoup de sites, thanks to <a href="http://www.t-k.ca/">tksmash</a>.</p>
+
+<p>Autre modification pas si importante mais qui dénote un changement de philosophie, c'est la <a href="http://neamar.fr/Res/TXT2JPG/">libération du code source de TXT2JPG</a>. Peut-être ne servira-t-il jamais, mais dans l'idée je suis content de pouvoir contribuer à ressusciter un logiciel que j'avais moi même achevé.<br />
+Je rajouterais d'ailleurs qu'une adaptation online d'un convertisseur de texte en images est disponible sur <a href="http://neamar.fr/Res/OT2J/">Online Txt2Jpg</a> : certes, cela ne gère pas la mise en forme mais l'outil peut être pratique pour les coups de bourre.</p>
+
+<p>Le <em>boulot des vacances</em> pour cette année aura été une expérience sympathique : <a href="http://neamar.fr/Res/DUCK">"Find the D.U.C.K"</a>.<br />
+Bercé pendant toute mon enfance par les aventures de Picsou, je découvrais avec l'âge que certaines étaient plus que de vulgaires comics ; voire même de véritables œuvres d'art littéraire et artistique. Non, je ne plaisante pas : le trait  de Don Rosa est réellement un superbe plaisir, et ses histoires rocambolesques feraient pâlir les scénaristes de <em>Lost</em> (que je ne regarde pas, mais d'après ce qu'on m'a dit...) Si un jour vous avez l'occasion, lisez par exemple "The Crown of The Crusader King" ;)<br />
+Mais retournons au sujet ! Dans chacune des histoires, Don Rosa s'amuse à dissimuler les quatres lettres DUCK dans la première vignette, le jeu étant de les retrouver... ce que propose la page, avec les solutions, évidemment.</p>
+
+<p><em>Last but not least</em>, citons <a href="http://neamar.fr/Res/Reflets/">la page Reflets d'Acide</a> qui s'enrichit d'un épisode ; le 14 et avant-dernier ! Merci à JBX pour l'avance, les péripéties sont <a href="http://blog.neamar.fr/component/content/article/9-evenements-internet/19-reflets-dacide">ici</a> et <a href="http://blog.neamar.fr/component/content/article/5-looking-back/23-sortie-texte-reference-subtilites-sagas-reflets-dacide">là</a>. Il s'agit d'ailleurs d'une des pages les plus vues du site, avec <a href="http://lachal.neamar.fr/Que_nenni">Que Nenni</a>.</p>
+
+
+
+
+
+
+
+<h3>Jeux flash</h3>
+<p>L'année dernière avait été chiche en jeux flash, cette fois je me suis un peu rattrapé... mais pas trop quand même, faut pas pousser non plus !</p>
+
+<h4>Les graphes</h4>
+<p>La série des graphes s'est complétée de <a href="http://neamar.fr/Res/Bgraphe">B-Graphe</a> et <a href="http://neamar.fr/Res/Cgraphe">C-graphe</a>. D-Graphe aurait dû voir le jour, mais le projet était trop ambitieux, et après 5 000 lignes de code il a fallu me rendre à l'évidence : si je voulais continuer de faire ça comme un loisir et non un emploi, il fallait stopper la machine. Une décision difficile, car le jeu semblait bien parti...</p>
+
+<h4>Les stacks</h4>
+<p>Premières série de jeu à utiliser Mochiads, je dois avouer avoir été agréablement surpris par la rétribution ! Plus rentable que Google Adsense, et en plus ils s'occupent eux-même de diffuser le jeu sur de nombreux sites. Un deal qui vaut le coup ! Pour les jeux en eux mêmes, tout a été dit <a href="http://blog.neamar.fr/component/content/article/6-flash-game/5-separating-axis-theorem-stack-serie">ici</a>.</p>
+
+<h4>Life Game</h4>
+<p>Une aventure qui a commencée avec Neamar... on en est déjà à la dixième version, programmées dans 4 langages différents : c'est un peu ma tapisserie de Pénélope. Chaque nouvelle version apporte plus de matériaux, essaie d'améliorer la rapidité et le gameplay... mais au final, le jeu reste difficilement accessible pour le novice, ce qui justifie <a href="http://www.youtube.com/watch?v=X81AEYiWJTQ">la création de vidéos</a>.<br />
+Un jeu pour rêver et perdre du temps... pour ma part, je sais déjà que je continuerai à ajouter des fonctions sur ce canevas infini.</p>
+
+<h3>Hors compétition</h3>
+<p>Que dire de plus avant de conclure ? D'abord, la création d'une <a href="http://neamar.fr/Timeline.php">Timeline</a> de l'intégralité des sites du domaine neamar, pour mettre un peu d'ordre dans les changements. Ensuite, la création d'un <a href="http://twitter.com/neamar">twitter Neamar</a> entretenu assez régulièrement et nourri de liens plus ou moins utiles.</p>
+
+<p>Notons aussi la disparition étalée sur toute l'année de la quasi totalité des <tt>no-follow</tt> sur mes sites ; à l'exception de Wikipedia pour lequel j'applique la loi du Talion pour la punir d'être <a href="http://www.roughtype.com/archives/2007/01/is_wikipedia_a.php">le trou noir du web</a>.</p>
+
+<p>Enfin, cette rétrospective ne serait pas complète si je ne présentais pas le projet le plus chronophage de l'année,  mais peut être aussi le plus gratifiant : j'ai nommé <a href="http://neamar.fr/Res/Typo/">le Typographe</a>.<br />
+Plus qu'une simple page Web, il s'agit d'un véritable logiciel enraciné à bas niveau dans Omnilogie, Ressources, Histoire d'un livre, ... pour la mise en forme des textes dans une typographie correcte : bonjour, ligatures et tirets cadratins ! Adieu, textes dénués de toute sémantique générés comme une brute avec <tt>nl2br()</tt> ! Enfin un cadre propre, personnalisable et réutilisable. Presque un logiciel de traitement de texte vendable !<br />
+De plus, l'ensemble est multilingue : il suffit de charger un fichier de configuration pour qu'il place la ponctuation à la française (avec espaces insécables et autres joyeusetés) ou à l'anglaise (avec tirets full cardratins, point-virgules collés...). Et je ne désespère pas de l'intégrer par défaut à Joomla!</p>
+
+<h3>En conclusion</h3>
+<p>L'année aura été dense, et l'année prochaine s'avère remplie de défis. Continuer de faire vivre Omnilogie, donner le coup de pouce initial à Histoire d'un livre, continuer les jeux Flash (y a déjà des idées !), améliorer le Typographe pour encore plus de puissance... et aussi de nombreux nouveaux challenges à relever ! Mais pour l'instant, il faut que je m'exprime au futur... et je vous donne donc rendez-vous en 2010 pour une prochaine réflexion.</p>
+
+<ul>
+<li>Lachal.neamar.fr : 950 pages ;</li>
+<li>Neamar.fr (dont Ressourcess) : 2768 pages (dont images et formules, sans compter les pages privées) ;</li>
+<li>Omnilogie.Fr : 3526 pages.</li>
+</ul>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Home				</span>
+				<meta itemprop="position" content="1">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default current active"><a href="/" >Blog de Neamar</a></li><li class="item-103"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

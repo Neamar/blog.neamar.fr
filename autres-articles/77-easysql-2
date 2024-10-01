@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="EasySQL, SQL, PHP, admin" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>EasySQL : un exemple d'utilisation du module d'administration de table MySQL</title>
+	<link href="https://blog.neamar.fr/autres-articles/77-easysql-2" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				EasySQL : un exemple d'utilisation du module d'administration de table MySQL			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=2ed7ea4a9d3a8232636c2fca8f31c7159209963a" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-02-06T16:19:25+00:00" itemprop="dateCreated">
+						Created: 06 February 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Sommaire :</p>
+<ul>
+	<li><a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/76-easysql-1">Présentation d'<strong>EasySQL</strong></a></li>
+	<li>(en cours de lecture) <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/77-easysql-2">Comment utiliser <strong>EasySQL</strong></a></li>
+	<li><a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3">Documentation d'<strong>EasySQL</strong></a></li>
+</ul>
+
+<p>Deuxième partie de la série d'article dédiés à <strong>EasySQL</strong>. </p>
+
+<p>Cette fois, nous allons voir comment utiliser le module sur votre site à travers quelques exemples plus ou moins concrets. </p>
+
+<h2>Téléchargement</h2>
+<p>Première étape, télécharger la classe <strong>EasySQL</strong>. <br />
+Le premier fichier (<tt>EasySQL.php</tt>) contient la classe en elle-même. C'est lui qu'il faudra inclure dans vos scripts. <br />
+Le second fichier (<tt>EasySQLHelper.php</tt>) contient les éléments de représentation HTML&nbsp;: par exemple, il indique comment faire un formulaire. Normalement, vous n'avez pas à vous en servir. <br />
+Le troisième fichier (<tt>EasySQLCheckCompat.php</tt>) est facultatif (mais fortement recommandé)&nbsp;: il permet de tester la compatibilité d'une table avec <strong>EasySQL</strong> en affichant toutes les informations importantes. Vous pouvez ne l'inclure qu'au début, effectuer le test, puis le supprimer. </p>
+
+<p>Prêts ? En route !</p>
+
+ 
+
+<p>⇒ <a href="http://blog.neamar.fr/telechargement/EasySQL.zip">Téléchargement de la classe</a></p>
+
+<h2>Utilisation</h2>
+<p>Bon, ça peut paraitre évident, mais il faut uploader les trois fichiers après les avoir extraits. </p>
+
+<p>Ensuite, il faut spécifier une constante qui définira à quelles tables <strong>EasySQL</strong> aura accès&nbsp;: <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3#EASYSQL_PREFIXE"><tt>EASYSQL_PREFIXE</tt></a>. <br />
+Enfin, inclure la classe <tt>EasySQL.php</tt>&nbsp;: </p>
+
+<pre xml:lang="php">
+//Le préfixe des tables.
+//Toutes les tables commençant par 'Blog_' seront manipulables par EasySQL.
+define('EASYSQL_PREFIXE','Blog_');
+
+include('chemin/vers/EasySQL.php');
+</pre>
+
+<h3>La première fois</h3>
+<p>Pour la première utilisation, il peut être intéressant d'utiliser la fonction <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3#checkCompatibility"><tt>EasySQL::checkCompatibility()</tt></a>. Cette fonction prend en paramètre un nom de table, et teste une bonne partie de ce qui pourrait empêcher l'utilisation d'<strong>EasySQL</strong>. Une liste est renvoyée sur l'écran, si aucun élément n'est indiqué comme <strong>FATAL</strong>, c'est que la table semble compatible avec <strong>EasySQL</strong>. </p>
+
+<pre xml:lang="php">
+define('EASYSQL_PREFIXE','Blog_');
+include('chemin/vers/EasySQL.php');
+
+EasySQL::checkCompatibility('Articles');
+</pre>
+<p>Dans notre cas, voici le retour de la fonction :</p>
+<ul>
+<li>Clé étrangère détectée.<br />
+Origine : <tt>Articles.Auteur</tt><br />
+Destination : <tt>Auteurs.ID</tt></li>
+<li><span style="color:green">Cette table semble utilisable avec EasySQL.</span></li>
+</ul>
+<p>Autrement dit, la clé étrangère est correcte et fonctionnelle, et le schéma de la table est correct (clés primary, ...) : rien ne s'oppose à l'administration de la table avec le module !</p>
+
+<h3>Le reste du temps</h3>
+<p>Si votre table est compatible, vous pouvez afficher en quelques lignes une interface d'administration fonctionnelle avec la fonction <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3#getAdminInterface"><tt>EasySQL::getAdminInterface()</tt></a> qui fait la plupart des opérations pour vous&nbsp;: </p>
+
+<pre xml:lang="php">
+define('EASYSQL_PREFIXE','Blog_');
+include('chemin/vers/EasySQL.php');
+
+//Affiche une interface d'administration permettant les opération UPDATE et DELETE.
+//Il suffit de rajouter INSERT dans le tableau d'options pour avoir un formulaire d'insertion aussi...
+echo EasySQL::getAdminInterface(EASYSQL_WORKTABLE,array('UPDATE','DELETE'));
+</pre>
+
+<p>Si vous préférez pouvoir personnaliser un peu, vous pouvez utiliser la version longue&nbsp;: </p>
+
+<pre xml:lang="php">
+<?php
+define('EASYSQL_PREFIXE','Blog_');
+include('chemin/vers/EasySQL.php');
+
+//Un formulaire a été envoyé pour une insertion
+if(isset($_POST['ajout']) && EasySQL::commitInsert($_GET['Table'],$_POST))
+	echo 'Enregistré.';
+
+//Un formulaire a été envoyé pour une mise à jour
+if(isset($_POST['update']) && EasySQL::commitUpdate($_GET['Table'],$_POST))
+	echo 'Modifié.';
+
+//Un formulaire a été envoyé pour des suppressions.
+if(isset($_POST['retrait']))
+	echo 'Enregistrements supprimés : ' . EasySQL::commitDelete($_GET['Table'],$_POST);
+
+//Un formulaire a été envoyé pour sélectionner un enregistrement à mettre à jour
+if(isset($_POST['editValue']))
+{
+	echo '<h2>Modification de données</h2>';
+	EasySQL::getFormUpdate($_GET['Table'],$_POST['editValue'],'update');
+}
+
+//Afficher le formulaire d'insertion
+echo '<h2>Ajout de données</h2>';
+EasySQL::getFormInsert($_GET['Table'],'ajout');
+
+//Afficher le formulaire de mise à jour
+echo '<h2>Édition de données</h2>';
+EasySQL::getFormPreUpdate($_GET['Table']);
+
+//Afficher le formulaire de suppression
+echo '<h2>Suppression de données</h2>';
+EasySQL::getFormDelete($_GET['Table'],'retrait');
+</pre>
+
+<p>Et voilà pour la base&nbsp;! Rien de bien compliqué, comme vous voyez. <br />
+
+<h3>Un peu plus loin...</h3>
+<p>On a vu avec la fonction <tt>EasySQL::checkCompatibility()</tt> qu'une clé étrangère était placée sur la table des articles vers les auteurs. Malheureusement, il s'agit d'un numéro d'ID peu explicite pour l'utilisateur !<br />
+<strong>EasySQL</strong> permet justement de spécifier des <em>étiquettes de clés étrangères</em> : à chaque fois qu'une colonne étrangère doit être affichée, son contenu est remplacé par l'étiquette spécifiée.</p>
+
+<p>Ce n'est pas clair ? Voici le formulaire par défaut :</p>
+<!--INSERT-->
+<form method="post" action="">
+<label for="Titre" style="float:left; width:350px;">Titre de l'article : </label><input type="text" name="Titre" id="Titre" value="" /><br />
+<label for="Auteurs.Auteur" style="float:left; width:350px;">L'auteur : </label>
+<select name="Auteurs.Auteur" id="Auteurs.Auteur"><option value="">(aucun)</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><br />
+<label for="Article">Votre texte :</label><br />
+<textarea name="Article" id="Article" cols="25" rows="5" style="width:98%;"></textarea>
+<br />
+<input type="submit" value="Enregistrer cette ligne sur la table Articles" />
+</form>
+
+<p>Déroulez le champ Auteur : comment savoir qui est l'utilisateur n°2 ? Avec une étiquette de clé étrangère ! On va indiquer à <strong>EasySQL</strong> que la colonne lisible pour un humain est Auteurs.Auteur à l'aide de la fonction <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3#setMeta"><tt>EasySQL::setMeta()</tt></a> :</p>
+
+<pre xml:lang="php">
+define('EASYSQL_PREFIXE','Blog_');
+include('chemin/vers/EasySQL.php');
+
+//Utiliser une étiquette de clé étrangère pour la table Articles : la colonne IDAuteur (un entier) doit être remplacé lors des affichages par le nom de l'auteur dans la table Auteurs.
+EasySQL::setMeta('FKCAPTION',array('Articles'=>array('IDAuteur'=>'Auteurs.Auteur')));
+
+//Afficher une interface d'administration complète, dans laquelle :
+// * Pour les INSERT, le champ de sélection d'un auteur sera une liste déroulante avec le nom des auteurs (plus explicites que l'ID !)
+// * Pour les UPDATE et DELETE, le tableau récapitulatif affichera le nom et pas le numéro.
+echo EasySQL::getAdminInterface(EASYSQL_WORKTABLE,array('INSERT','UPDATE','DELETE'));
+</pre>
+
+<p>Et voici le nouveau formulaire d'insertion (notez que seul l'affichage change, les valeurs derrière sont automatiquement gérées) :</p>
+<!--INSERT-->
+<form method="post" action="">
+<label for="Titre" style="float:left; width:350px;">Titre de l'article : </label><input type="text" name="Titre" id="Titre" value="" /><br />
+<label for="Auteurs.Auteur" style="float:left; width:350px;">L'auteur : </label>
+<select name="Auteurs.Auteur" id="Auteurs.Auteur"><option value="">(aucun)</option><option value="1">Administrateur</option><option value="2">Neamar</option><option value="3">SkyRaider</option></select><br />
+<label for="Article">Votre texte :</label><br />
+<textarea name="Article" id="Article" cols="25" rows="5" style="width:98%;"></textarea>
+<br />
+<input type="submit" value="Enregistrer cette ligne sur la table Articles" />
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+<p><strong>On entre maintenant dans les cas plus complexes, lecture facultative ;)</strong></p>
+
+<h3>Encore plus loin !</h3>
+<p>Progressons dans la complexité et examinons le cas suivant :</p>
+<ul>
+	<li>La première colonne de la table Articles ne se nomme pas ID, mais <tt>IDArticle</tt> (vous aurez une erreur "<strong>FATAL</strong>" si vous lancez <tt>EasySQL::checkCompatibility()</tt>) : il va falloir définir la constante <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3#EASYSQL_ID"><tt>EASYSQL_ID</tt></a>, qui était à "ID" par défaut, pour indiquer le changement.</li>
+	<li>Vous avez une colonne qui s'appelle <tt>Nb.Vues</tt> qui contient le nombre de vues de l'article, et qui est automatiquement détectée (de façon incorrecte) comme une clé étrangère vers la table NB, colonne Vues : il va falloir bloquer ce comportement en désactivant la clé étrangère implicite automatique.</li>
+	<li>Vous avez une colonne <tt>Categorie</tt>, clé étrangère vers la table Categories, mais non signalée comme clé étrangère pour des raisons qui ne regardent que vous (par exemple, table en MyIsam) : il va falloir indiquer manuellement qu'il s'agit d'une clé étrangère. Notez que vous pouvez aussi renommer la colonne, par exemple en <tt>Categorie.ID</tt>, pour rendre la référence implicite.</li>
+</ul>
+
+<p>Voici le code qui solutionne ces trois problèmes :</p>
+<pre xml:lang="php">
+define('EASYSQL_PREFIXE','Blog_');
+define('EASYSQL_ID','IDArticle');//PROBLÈME #1 : réglé.
+include('chemin/vers/EasySQL.php');
+
+//Cf. exemple précédent
+EasySQL::setMeta('FKCAPTION',array('Articles'=>array('Auteur'=>'Auteurs.Auteur','Categorie'=>'Categories.NomCategorie')));
+
+//Désactiver la clé étrangère sur la table Articles, colonne Nb.Vues
+EasySQL::setMeta('DISABLEFKON',array('Articles'=>array('Nb.Vues'=>true)));//PROBLÈME #2 : réglé.
+
+//Signaler la colonne Categorie comme clé étrangère
+EasySQL::setMeta('FKON',array('Articles'=>array('Categorie'=>'Categories.ID')));//PROBLÈME #3 : réglé.
+
+//Afficher une interface d'administration complète et fonctionnelle
+echo EasySQL::getAdminInterface(EASYSQL_WORKTABLE,array('INSERT','UPDATE','DELETE'));
+</pre>
+
+<h3>Le cas des tables MyISAM</h3>
+<p>Dans certains cas, vous serez forcés d'avoir des tables en MyISAM, moteur non relationnel.<br />
+Il faudra donc signaler manuellement les clés étrangères, soit par nommage implicite des colonnes, soit par l'utilisation de <tt>EasySQL::setMeta('FKON')</tt>.
+
+<ul>
+	<li><strong>Déclaration implicite par le nom des colonnes :</strong> cela consiste à donner à votre colonne un nom explicite ; par exemple "Auteur.ID". Malheureusement, MySQL gère bizarrement les colonnes avec des points dedans, et il vaut mieux utiliser un autre symbole, comme le "_". Pensez à signaler ce symbole à EasySQL avec la constante <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3#EASYSQL_FOREIGN"><tt>EASYSQL_FOREIGN</tt></a>.</li>
+	<li><strong>Déclaration explicite par méta-information :</strong> cela consiste à indiquer manuellement quelle colonne fait référence à quoi. Cette solution est plus facile à mettre en &oelig;uvre, mais aussi plus difficile à entretenir. Voir l'exemple précédent et l'utilisation de setMeta avec l'option 'FKON'.</li>
+</ul>
+<p><strong>Note pour les tables en MyISAM : <strong>EasySQL</strong> ne gère absolument pas les contraintes, il se contente d'effectuer bêtement les opérations demandées. Autrement dit, si vous supprimez un tuple de la table maître, la table fille ne sera pas affectée, mais les relations seront bancales.</strong></p>
+
+<p><a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3">Le prochain article sera consacré à la documentation d'EasySQL.</a></p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					EasySQL : un exemple d'utilisation du module d'administration de table MySQL				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

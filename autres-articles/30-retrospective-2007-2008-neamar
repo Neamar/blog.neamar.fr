@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="rétrospective, neamar, 2007, 2008, neamar.fr, ccds.neamar.fr, lachal.neamar.fr" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Rétrospective de l'année 2007-2008 sur neamar.fr : quoi de neuf ? Nouveaux sites, nouveaux jeux et nouveaux services..." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Rétrospective 2007 - 2008</title>
+	<link href="https://blog.neamar.fr/autres-articles/30-retrospective-2007-2008-neamar" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Rétrospective 2007 - 2008			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=912d0bdce87ffcae3249b47aee95883af1495535" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-10-23T17:04:40+00:00" itemprop="dateCreated">
+						Created: 23 October 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Cet article est importé de son ancienne URL vers ce blog pour des raisons de cohérence. Dorénavant, les rétrospectives seront publiées sur ce blog.</p>
+
+ 
+
+<h2>Rétrospective 2007 - 2008</h2>
+<p>Une année vient de s'écouler pour neamar.fr ; que s'est-il passé ?</p>
+<p>Premier site crée (ou plutôt, importé d'une ancienne URL), <strong><a href="http://lachal.neamar.fr">lachal.neamar.fr</a></strong>, dictionnaire capricant anti-ataraxique continue encore aujourd'hui de grossir lentement mais sûrement : des nouvelles histoires, de nouveaux mots...toujours dans la bonne humeur.</p>
+
+<p>Deuxième sous-site crée sur neamar.fr, <strong><a href="http://ccds.neamar.fr">ccds.neamar.fr</a></strong>, plus connu sous le nom de Ça coule de source. Un jeu geek à l'extrême, qui a remporté un succès mitigé : 3&nbsp;000 joueurs... mais ceci était un succès, car le site visait un public assez restreint... et a crée la plus longue discussion de forum sur le bien connu Site Du Zéro : plus de 40 pages ! Sans oublier une communauté assez importante de fans.</p>
+
+<p>Le temps continue de s'écouler... et s'ouvre  <strong><a href="http://neamar.fr">insa.neamar.fr</a></strong>. À la base, le but était de proposer librement des sujets d'interros, de DS ou des annales pour l'INSA de Lyon. Rapidement, le site prend de l'ampleur jusqu'au point de non retour : le site "passe" finalement en conseil de département, et il est décidé qu'il doit être fermé "<em>car les ressources n'appartiennent qu'à leur auteur et ne peuvent être exposé en ligne de telle façon</em>". Au vu de la demande sur le site, on comprenait cependant que c'était la seule plateforme à offrir ce service : plus de 1 000 demandes par jour avant les partiels. Le site réouvrira finalement ses portes dans un nouveau design, et à une nouvelle URL, : annales.insa-lyon.fr (identification requise ; preuve qu'on apprend de ses erreurs).</p>
+
+<p>Vient ensuite la programmation en Flash et en AS3... un vrai bonheur, je dois dire (POO oblige) ! Malgré beaucoup de temps passé à programmer, aucune application finalisée n'est présentée... et c'est donc la section <strong><a href="http://neamar.fr/Res">Ressources</a></strong> qui grille la priorité au Flash en ouvrant ses portes début juillet. Devenue avec le temps un véritable portail, elle n'était à l'origine destinée qu'à héberger certains textes. Mais rapidement viennent s'ajouter des ressources en tout genre, permettant, entres autres, de découvrir Maple (ajoutant au passage au site un module LaTeX), de voir les codes sources d'anciennes applications (un résolveur de sudoku assez spécial entres autres), de lire des tutoriaux sur des points précis de programmation, et ce sont enfin les jeux Flash qui pointent le bout de leurs nez : un pathfinder basique pour commencer, puis un petit jeu de combinatoire nommé <strong>A-Graphe</strong>, qui aura l'honneur de passer en news sur Koreus, amenant près de 40&nbsp; 000 visiteurs en quelques jours. Sort ensuite <strong>B-Graphe</strong>, et au moment où ces lignes sont couchées sur écran, C-Graphe ne tardera plus... la fin de la série étant logiquement (ou plutôt, sémantiquement) prévue avec D-Graphe.</p>
+
+<p>Autre ressource intéressante, un roman apparait : <strong>Stropovitch, le pélerinage du démon</strong>. Le texte était initialement paru sur un forum, ce qui obligeait à passer une dizaine de commentaires entre chaque chapitre, et à passer incessament de page en page... sur près de cinquante pages dans le forum. Relativement rédhibitoire ! Le roman est ici centralisé dans une page unique assez longue (plus de 350 pages à l'impression !) mais qui permet une lecture ininterrompue de cette histoire passionnante (Auteur du roman : <em>Myoketsaru</em>).</p>
+
+<p>Enfin, la section <strong>neamar.fr/Res</strong> ne serait pas ce qu'elle est sans la présence d'une liste quasi-exhaustive des subtilités de <strong>Reflets d'Acide</strong> : plus de neuf cents commentaires disséminés tout autour du texte... un travail de longue haleine récompensé, puisque le maître JBX à mis un lien sur le site de Synops, laissant près de 15&nbsp;000 internautes découvrir les petites références glissées dans le texte.</p>
+<p>En bref, une année chargée... il ne reste plus qu'à espérer que 2009 le sera tout autant ! (EDIT : <a href="http://blog.neamar.fr/component/content/article/5-looking-back/37-retrospective-2008-2009-neamar">la rétrospective 2009 est parue</a>)<br />
+Rendez-vous l'année prochaine pour en reparler...</p>
+<p>Pour conclure sur ces évolutions, voici deux images qui se passent de commentaires : l'une date de 2001, l'autre de 2008. Regardez le nombre de résultats...</p>
+<p><img src="/images/stories/neamar 2001.png" alt="Neamar sur Google en 2001" style="width:75%;"/></p>
+<p><img src="/images/stories/neamar 2008.png" alt="Neamar sur Google en 2008" style="width:75%;"/></p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Rétrospective 2007 - 2008				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

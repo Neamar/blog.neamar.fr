@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Cruciverbe, pour ne plus jamais être coincé devant sa grille de mots fléchés</title>
+	<link href="https://blog.neamar.fr/autres-articles/450-cruciverbe-pour-ne-plus-jamais-etre-coince-devant-sa-grille-de-mots-fleches" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Cruciverbe, pour ne plus jamais être coincé devant sa grille de mots fléchés			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=bd92667f1b4ab510ca2af2b9a55ca189e88c9865" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2018-03-10T15:44:31+00:00" itemprop="dateCreated">
+						Created: 10 March 2018					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2018-03-10T15:44:52+00:00" itemprop="dateModified">
+					Last Updated: 10 March 2018				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Tandis que je migrais les sites Neamar (<a href="https://blog.neamar.fr/autres-articles/449-c-est-dans-les-vieux-torchons">cf. cet article</a>), je me suis rendu compte que plus de 50% des visiteurs de cruciverbiste.neamar.fr, le site de mots croisés, venaient d'un smartphone.</p>
+<p>Après m'être demandé pendant de nombreuses secondes comment des centaines d'utilisateurs avaient pu souffrir d'utiliser une interface aussi peu adaptée au mobile, je me suis motivé à avancer sur un projet qui me tenait à cœur depuis plusieurs années : <a href="https://cruciverbe.fr/definitions">une encyclopédie de définitions pour mots croisés</a>.</p>
+<p>J'en ai profité pour offrir au site son propre nom de domaine, "Cruciverbe". Oui, ça ne veut rien dire (enfin, si, ça signifie « mot croisés » en italien !), mais je trouvais que le terme sonnait bien : le <strong>cruciverbiste</strong> étant la personne qui fait des mots croisés, la <strong>cruciverbie</strong> pourrait bien être le verbe qui définit l'action de faire lesdits mots croisés, et <strong>cruciverbe</strong> l'impératif dudit verbe. De toute façon, après "omnilogie", je n'en suis plus à un néologisme près.</p>
+
+<p>Bref ! Sur ce site, plus de 100 000 définitions de mots croisés.</p>
+
+<p>On y retrouve un peu de tout, comme par exemple :</p>
+<ul>
+<li>Les très classiques : <a href="https://cruciverbe.fr/definitions/tube-de-rouge">Tube de rouge</a> ;</li>
+<li>Les plus originaux : <a href="https://cruciverbe.fr/definitions/tube-de-france-gall-qui-aurait-cartonne-en-39-45">Tube de France Gall qui aurait cartonné en 39-45</a> ;</li>
+<li>De quoi découvrir de nouveaux mots : <a href="https://cruciverbe.fr/definitions/chanter-au-coeur-du-tyrol">Chanteur au cœur du Tyrol</a>;</li>
+<li>Réviser sa mythologie : <a href="https://cruciverbe.fr/definitions/si-elle-avait-ete-espagnole-elle-aurait-massacre-le-francais">Si elle avait été espagnole, elle aurait massacré le français</a> ;</li>
+<li>Ou se creuser la tête pour comprendre : <a href="https://cruciverbe.fr/definitions/souvent-menteur">Souvent menteur</a>.</li>
+</ul>
+
+<p>Pour chaque mot, on peut naviguer entre les définitions similaires ; par exemple <a href="https://cruciverbe.fr/definitions/coupure-au-cinema">pour le mot censure en mots croisés</a>.</p>
+<p>Gardez le site dans un coin de vos favoris pour la prochaine fois que vous vous retrouverez coincé devant une grille un peu trop tenace !</p>
+
+<p>Évidemment, <a href="https://cruciverbe.fr/">le service principal du site -- la recherche par lettres manquantes -- est toujours là</a> !</p> 	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Cruciverbe, pour ne plus jamais être coincé devant sa grille de mots fléchés				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

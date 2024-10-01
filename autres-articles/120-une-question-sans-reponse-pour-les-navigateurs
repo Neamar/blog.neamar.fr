@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="html, questionnement, norme, w3c" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>La taille des hn en HTML</title>
+	<link href="https://blog.neamar.fr/autres-articles/120-une-question-sans-reponse-pour-les-navigateurs" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				La taille des hn en HTML			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=93a64869700b94cc7d153c3bcff747b7b8418561" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-06-02T16:30:41+00:00" itemprop="dateCreated">
+						Created: 02 June 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Attention, ce post ne sert à rien. Il n'apportera pas de solution au problème posé, et devrait vous laisser avec plus d'interrogations qu'avant sa lecture. <br />
+Donc un conseil&nbsp;: ne le lisez pas. </p>
+
+<p>Vous êtes encore là&nbsp;? Vous ne pourrez pas dire que j'ai pas prévenu. Et de toute façon y aura pas de remboursements… <br />
+La question du jour porte sur HTML. </p>
+
+<p>Nous avons d'un côté le W3C qui définit les standards du web. L'intention est louable&nbsp;! <br />
+Lisons un extrait de la documentation officielle décrivant les <tt>headings</tt>&nbsp;: </p>
+
+
+<blockquote> <p>Headings&nbsp;: The H1, H2, H3, H4, H5, H6 elements</p><p>A heading element briefly describes the topic of the section it introduces. Heading information may be used by user agents, for example, to construct a table of contents for a document automatically. </p><p>There are six levels of headings in HTML with H1 as the most important and H6 as the least. Visual browsers usually render more important headings in larger fonts than less important ones. </p></blockquote><div class="auteur">— W3C</div>
+<p>Je n'invente rien, ça vient de <a href="http://www.w3.org/TR/html4/struct/global.html#h-7.5.5">cette page</a>. </p>
+
+<p>D'un autre côté, nous avons les User Agent, plus connus sous le nom de navigateur (ou butineur pour les poétiques). Le navigateur est censé transformer la norme en ligne de code pour avoir le même rendu partout – ça c'est la théorie, après il y a aussi Internet Explorer… </p>
+
+<p>La symbiose des deux permet normalement d'avoir un web interopérable&nbsp;; mais ici nous avons un exemple flagrant de problème. <br />
+Vous ne le voyez pas&nbsp;? <q>Visual browsers usually render more important headings in larger fonts</q>&nbsp;: cette phrase est assez ambigue pour vouloir dire tout et son contraire. Et aujourd'hui, nous allons voir  que "son contraire" a été choisi !</p>
+
+ 
+<p>Continuons de fouiller un peu&nbsp;: on tombe sur «&nbsp;<a href="http://www.w3.org/TR/CSS2/sample.html">default style sheet for HTML4</a>&nbsp;» qui définit la base de la mise en page. <br />
+Un minimum de précision s'impose&nbsp;: depuis CSS1, on a <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/59-presentation-de-la-semantique-web">abandonné l'idée des balises de mise en forme</a> pour proposer une solution purement sémantique dans laquelle les balises n'ont aucune représentation graphique. Aucune&nbsp;? En fait, CSS1 <strong>propose</strong> que chaque navigateur «&nbsp;[ait] une feuille de style par défaut qui présentera les documents de façon raisonnable&nbsp;» (très clair, ça aussi). L'idée est bonne&nbsp;: nos balises sont déconnectées de leur affichage, mais on place des thèmes par défaut qui pourront être modifiés. CSS2 passe de «&nbsp;may&nbsp;» à «&nbsp;must&nbsp;»&nbsp;: <q>conforming user agents <strong>must</strong> apply a default style sheet</q>. </p>
+
+<p>Il s'agit d'une proposition, et on encourage les développeurs à l'utiliser&nbsp;; mais ce n'est pas une obligation. </p>
+
+<p>La feuille de style proposée offre (entres autres) les règles suivantes qui nous intéressent ici&nbsp;: </p>
+
+<pre xml:lang="css">
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h4, p,
+blockquote, ul,
+fieldset, form,
+ol, dl, dir,
+menu            { margin: 1.12em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6, b,
+strong          { font-weight: bolder }
+</pre>
+
+<table style="margin:auto">
+	<thead>
+		<tr>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1,12</td>
+			<td>0,83</td>
+			<td>0,75</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>(C'est les mêmes valeurs pour <a href="http://www.w3.org/TR/CSS2/sample.html">CSS2</a> et <a href="http://www.w3.org/TR/CSS21/sample.html">CSS2,1</a>)<br />
+Si on trace le graphique&nbsp;: </p>
+
+<p style="text-align:center"><img src="/images/stories/Prog/Hn/Officiel.gif" alt="Taille des Hn selon le W3C" /></p>
+
+<p>Maintenant, arrêtons le jargon du W3C et penchons-nous vers le monde réel. <br />
+Allez hop, ni une ni deux on crée une page de test et on examine le résultat (si aucune feuille de style n'est associée). </p>
+
+<pre xml:lang="html4strict">
+<h1>1</h1>
+<h2>2</h2>
+<h3>3</h3>
+<h4>4</h4>
+<h5>5</h5>
+<h6>6</h6>
+</pre>
+
+<p style="text-align:center"><img src="/images/stories/Prog/Hn/HSize.png" alt="Taille des Hn" /></p>
+
+<p>Rien d'étrange à première vue, on a bien une décroissance régulière… et c'est ce qui est étrange&nbsp;: car le graphique proposé par le W3C est discontinu. <br />
+Donc on sort Firebug, on lui demande d'afficher la <a href="resource://gre/res/html.css">feuille de style système de Firefox</a> (le lien ne fonctionne que sur Firefox évidemment&nbsp;! ), et on note les valeurs&nbsp;: </p>
+
+<p style="text-align:center"><img src="/images/stories/Prog/Hn/Firebug.png" alt="Taille des Hn selon Firebug" /></p>
+
+<table style="margin:auto">
+	<thead>
+		<tr>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align:center"><img src="/images/stories/Prog/Hn/Firefox.gif" alt="Taille des Hn selon le W3C" /></p>
+
+<p>Marrant ça, ils ont changé les valeurs de <tt>h4</tt> et <tt>h6</tt>. Pourquoi&nbsp;? Mystère… <br />
+Allons voir chez la concurrence, Google Chrome par exemple&nbsp;: </p>
+
+<p style="text-align:center"><img src="/images/stories/Prog/Hn/Chrome.png" alt="Taille des Hn selon le W3C" /></p>
+
+<table style="margin:auto">
+	<thead>
+		<tr>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Tiens, ils ont les mêmes valeurs que chez Firefox. Et nous voilà irrémédiablement perdus&nbsp;: d'où sortent ces chiffres qui n'ont aucun lien entre eux&nbsp;? Pourquoi le W3C donne une feuille de style aussi discontinue&nbsp;? Chrome a-t-il copié chez Firefox&nbsp;? </p>
+
+<p>Allez, juste pour rire, regardons chez <a href="http://www.iecss.com/ie-6.css">Internet Explorer v6 et v7</a>. Eux, ils expriment leur unité en pt ce qui ne facilite pas la tâche. Comme c'est une police standard, on prend <a href="http://sureshjain.wordpress.com/2007/07/06/53/">12&nbsp;pt = 1em</a> et on <a href="http://www.wolframalpha.com/input/?i=%2824%2C18%2C13.55%2C12%2C10%2C7.55%29%2F12">obtient alors</a>&nbsp;: </p>
+
+<pre xml:lang="css">
+h1 {
+	display: block;
+	font-size: 24pt;
+	font-weight: bold;
+	margin: 14pt 0;
+}
+
+h2 {
+	display: block;
+	font-size: 18pt;
+	font-weight: bold;
+	margin: 14pt 0;
+}
+
+h3 {
+	display: block;
+	font-size: 13.55pt;
+	font-weight: bold;
+	margin: 14pt 0;
+}
+
+...
+</pre>
+
+<table style="margin:auto">
+	<thead>
+		<tr>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,13</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,63</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Encore des différences, mais pas sur les mêmes éléments&nbsp;! <br />
+Allez, toujours pour rire voyons le <a href="http://www.iecss.com/ie-8.css">CSS d'IE8</a>&nbsp;: cette fois ils sont passés en em (ce qui est bien plus cohérent, mais bon avec IE… ). </p>
+
+<p>Leurs valeurs&nbsp;? </p>
+
+<table style="margin:auto">
+	<thead>
+		<tr>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Tiens, les voilà calés sur Firefox et Chrome… j'en perds mon latin. Et qu'on ne vienne pas me dire qu'en fait c'est Firefox le copieur, les valeurs sont restées les mêmes depuis la <a href="http://hell.meiert.org/core/css/firefox-0.8.css">v0,8</a> (y a un sacré bout de temps). </p>
+
+<p>Et je vous épargne Safari qui a décidé d'utiliser sa propre unité (le quirk-em, __qem) dans <a href="http://hell.meiert.org/core/css/safari-3.1.2.css">sa feuille de style</a>. En fait non, je ne vous l'épargne pas&nbsp;: </p>
+
+<pre xml:lang="css">
+h1 {
+    display: block;
+    font-size: 2em;
+    margin: .67__qem 0 .67em 0;
+    font-weight: bold
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin: .83__qem 0 .83em 0;
+    font-weight: bold
+}
+
+...
+</pre>
+
+<table style="margin:auto">
+	<thead>
+		<tr>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Oui, c'est encore la même. J'y comprends rien. Doit y avoir quelqu'un qui a défini ces valeurs comme «&nbsp;ultimes&nbsp;», mais qui&nbsp;? Et pourquoi&nbsp;? Moi je vais me coucher, ça me fera du bien. </p>
+
+
+<table style="margin:auto">
+	<caption>Tableau récapitulatif</caption>
+	<thead>
+		<tr>
+			<th>Navigateur</th>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>Navigateur</th>
+			<th>h1</th>
+			<th>h2</th>
+			<th>h3</th>
+			<th>h4</th>
+			<th>h5</th>
+			<th>h6</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>Proposition W3C</td>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1,12</td>
+			<td>0,83</td>
+			<td>0,75</td>
+		</tr>
+		<tr>
+			<td>Firefox &gt; 0,8</td>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+		<tr>
+			<td>Chrome</td>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+		<tr>
+			<td>IE6, IE7</td>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,13</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,63</td>
+		</tr>
+		<tr>
+			<td>IE8</td>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+		<tr>
+			<td>Safari</td>
+			<td>2</td>
+			<td>1,5</td>
+			<td>1,17</td>
+			<td>1</td>
+			<td>0,83</td>
+			<td>0,67</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Et si vous avez une idée, <a href="http://neamar.fr/Mail.php">n'hésitez pas</a> ;)</p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					La taille des hn en HTML				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

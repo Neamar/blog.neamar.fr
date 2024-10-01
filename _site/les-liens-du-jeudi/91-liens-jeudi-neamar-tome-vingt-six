@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="liens, jeudi, lol" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Les liens du jeudi, vingt-sixième opus</title>
+	<link href="https://blog.neamar.fr/les-liens-du-jeudi/91-liens-jeudi-neamar-tome-vingt-six" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-105">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Les liens du jeudi, vingt-sixième opus			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=9aaf3331dda9a5db64a22f8b687e1402dc8ff5ee" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-03-04T13:47:12+00:00" itemprop="dateCreated">
+						Created: 04 March 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2018-01-13T21:03:05+00:00" itemprop="dateModified">
+					Last Updated: 13 January 2018				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Tous les jeudis, une compilation de liens plus ou moins utiles et intéressants pour se tenir au courant des dernières nouvelles du Web, et (sou-)rire un minimum.<br />
+Une liste compilée depuis différentes sources : <a href="http://twitter.com/neamar">Twitter</a> bien sûr, mais aussi <a href="http://neamar.stumbleupon.com/">StumbleUpon</a>, <a href="http://www.google.com/reader/shared/user/16820300681529559932/label/NeamarWorld">Google Reader</a>, MSN, mes mails et autres pérégrinations sur la toile.</p>
+
+<p>Moisson de la semaine : 69 liens.</p>
+<p><a href="http://blog.neamar.fr/component/content/category/3-liens-humour-jeudi">Retrouvez tous les liens du jeudi ici</a></p>
+ 
+
+
+
+<h1 style="clear:both;">Liens</h1>
+<p>Pressé ? <a href="#" onclick="openAllLiens()">Cliquez pour ouvrir tous les liens d'un seul coup</a> !</p>
+<script type="text/javascript">
+<!--
+	function openAllLiens()
+	{
+	window.open("http://tumourrasmoinsbete.blogspot.com/2010/02/mardi-dhiver-lasers.html");
+	window.open("http://www.abstrait-concret.com/2010/02/22/simo-hayha-le-sniper-finlandais-qui-tua-plus-de-700-hommes-en-trois-mois/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A AbstraitConcret %28Abstrait %3F Concret - ARTICLES%29&utm_content=Google Reader");
+	window.open("http://omnilogie.fr/O/365_omnilogismes");
+	window.open("http://mcadams.posc.mu.edu/home.htm");
+	window.open("http://www.psikopat.com/html/spirale.htm");
+	window.open("http://www.lexisarte.com/Autres/Echec-et-mat.html");
+	window.open("http://tumblog.activeden.net/post/395234001/clients-from-hell");
+	window.open("http://www.fivefingercoding.com/xhtml-and-css/scrolling-transparent-background-effect");
+	window.open("http://css-tricks.com/examples/OnePageResume/");
+	window.open("http://www.brain-magazine.com/index.php?option=com_content&view=article&id=3325:un-peu-de-poesie-avant-le-week-end&catid=92:putes&Itemid=69");
+	window.open("http://danstonchat.com/top50.html");
+	window.open("http://www.thrillist.com/popup/110043/turtlepose.jpg/things%2520got%2520weird");
+	window.open("http://www.apartmenttherapy.com/sf/how-to/how-to-cover-up-dings-in-wooden-furniture-home-hacks-109198");
+	window.open("http://cereales.lapin.org/index.php?number=1052#strips");
+	window.open("http://monsieurzebre.com/?p=97");
+	window.open("http://www.aharef.info/2006/05/websites_as_graphs.htm");
+	window.open("http://www.ahmedrabieh.com/?p=161");
+	window.open("http://fr2.php.net/manual/fr/function.mysql-stat.php");
+	window.open("http://desencyclopedie.wikia.com/wiki/Geek");
+	window.open("http://copybot.wordpress.com/2009/04/07/the-50-most-interesting-articles-on-wikipedia/");
+	window.open("http://en.wikipedia.org/wiki/Who_put_Bella_in_the_Wych_Elm%3F");
+	window.open("http://www.koreus.com/jeu/mining-truck.html");
+	window.open("http://www.koreus.com/jeu/magnx.html");
+	window.open("http://blog.twitter.com/2008/05/its-not-rocket-science-but-its-our-work.html");
+	window.open("http://fr.wikipedia.org/wiki/Douzaine_de_boulanger");
+	window.open("http://bazinga.fr/");
+	window.open("http://www.miller-mccune.com/culture-society/triumph-of-the-cyborg-composer-8507/");
+	window.open("http://blogs.lexpansion.com/antimatiere/2010/03/1-rue-lara-croft.php");
+	window.open("http://www.dailymail.co.uk/femail/article-1251929/The-perfect-man-geek-facial-stubble--womens-secret-turn-ons-revealed.html");
+	window.open("http://www.zcorrecteurs.fr/forum/sujet-2222-le-saviez-vous.html");
+	window.open("http://www.korben.info/google-en-chiffres.html");
+	window.open("http://info.sfr.fr/france/articles/Mylene-Farmer-chute-sur-le-perron-de-Elysee,131893/?sfrintid=HPM_actu_MEA2_portail");
+	window.open("http://slydnet.com/web/ilovepdf-fusionner-recouper-des-fichiers-pdf/");
+	window.open("http://www.facegroupe.fr/");
+	window.open("http://worldfamousdesignjunkies.com/illustration/the-internet-is-breaking/attachment/logos/");
+	window.open("http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html");
+	window.open("http://qntm.org/suicide");
+	window.open("http://www.codeslate.com/2007/01/you-dont-bury-survivors.html");
+	window.open("http://www.codinghorror.com/blog/2006/07/separating-programming-sheep-from-non-programming-goats.html");
+	window.open("http://www.9kik.com/2010/02/not-very-super-effective.html");
+	}
+-->
+</script>
+
+<div class="ldjvignettes" style="margin:auto">
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=tumourrasmoinsbete.blogspot.com) no-repeat">
+		<h2>Tu mourras moins bête: Mardi d'hiver, lasers</h2>
+		<span class="LDJPreview"><a href="http://tumourrasmoinsbete.blogspot.com/2010/02/mardi-dhiver-lasers.html"><img src="/images/LDJ/6624c2b0dfa90fac0faa6fd27981477c.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.abstrait-concret.com) no-repeat">
+		<h2>Simo Hayha, le sniper serial killer</h2>
+		<span class="LDJPreview"><a href="http://www.abstrait-concret.com/2010/02/22/simo-hayha-le-sniper-finlandais-qui-tua-plus-de-700-hommes-en-trois-mois/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A AbstraitConcret %28Abstrait %3F Concret - ARTICLES%29&utm_content=Google Reader"><img src="/images/LDJ/93ca3e5d13b99d0ee5f6d0e742226057.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=omnilogie.fr) no-repeat">
+		<h2>365 omnilogismes !</h2>
+		<span class="LDJPreview"><a href="http://omnilogie.fr/O/365_omnilogismes"><img src="/images/LDJ/1e4c4a0812c0d6f8346bf10bbf98d8a0.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=mcadams.posc.mu.edu) no-repeat">
+		<h2>JFK / The Kennedy Assassination Home Page</h2>
+		<span class="LDJPreview"><a href="http://mcadams.posc.mu.edu/home.htm"><img src="/images/LDJ/6fee4e18713ac5e9a4455a6499846480.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.psikopat.com) no-repeat">
+		<h2>..:: Le disk wahouuu ::..</h2>
+		<span class="LDJPreview"><a href="http://www.psikopat.com/html/spirale.htm"><img src="/images/LDJ/9a6ad0963e0fe78ddd243ce11a33b954.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.lexisarte.com) no-repeat">
+		<h2>Échec et mat | Autres</h2>
+		<span class="LDJPreview"><a href="http://www.lexisarte.com/Autres/Echec-et-mat.html"><img src="/images/LDJ/f7561660cad034d1ee12f99055b51930.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=tumblog.activeden.net) no-repeat">
+		<h2>ActiveDen</h2>
+		<span class="LDJPreview"><a href="http://tumblog.activeden.net/post/395234001/clients-from-hell"><img src="/images/LDJ/03ee7a95b6991067192c27099be40b5d.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.fivefingercoding.com) no-repeat">
+		<h2>CSS Trick For A Scrolling Transparent Background Effect</h2>
+		<span class="LDJPreview"><a href="http://www.fivefingercoding.com/xhtml-and-css/scrolling-transparent-background-effect"><img src="/images/LDJ/8fc27196bce6eed074b8d6970775b9b7.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=css-tricks.com) no-repeat">
+		<h2>One Page Resume</h2>
+		<span class="LDJPreview"><a href="http://css-tricks.com/examples/OnePageResume/"><img src="/images/LDJ/dcb390b015a8c49050f2b0ee6bd0bd07.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.brain-magazine.com) no-repeat">
+		<h2>Un peu de poésie avant le week end</h2>
+		<span class="LDJPreview"><a href="http://www.brain-magazine.com/index.php?option=com_content&view=article&id=3325:un-peu-de-poesie-avant-le-week-end&catid=92:putes&Itemid=69"><img src="/images/LDJ/dba5e86430788ddd8711e3c17f5de4ae.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=danstonchat.com) no-repeat">
+		<h2>Top 50 DTC</h2>
+		<span class="LDJPreview"><a href="http://danstonchat.com/top50.html"><img src="/images/LDJ/af4174d212272fe5a4be0ee56803511b.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.thrillist.com) no-repeat">
+		<h2>things got weird</h2>
+		<span class="LDJPreview"><a href="http://www.thrillist.com/popup/110043/turtlepose.jpg/things%2520got%2520weird"><img src="/images/LDJ/bf64a7907d1fbc1ba49c6133058451a3.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.apartmenttherapy.com) no-repeat">
+		<h2>How To Cover Up Dings in Wooden Furniture Home Hacks | Apartment Therapy San Francisco</h2>
+		<span class="LDJPreview"><a href="http://www.apartmenttherapy.com/sf/how-to/how-to-cover-up-dings-in-wooden-furniture-home-hacks-109198"><img src="/images/LDJ/455e57daeb24b6b093529998c316e38d.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=cereales.lapin.org) no-repeat">
+		<h2>la meilleure des punitions || les céréales du dimanche matin [fr]</h2>
+		<span class="LDJPreview"><a href="http://cereales.lapin.org/index.php?number=1052#strips"><img src="/images/LDJ/7b4c95ad020cd65174f83eab3c4a59ca.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=monsieurzebre.com) no-repeat">
+		<h2>La femme du geek</h2>
+		<span class="LDJPreview"><a href="http://monsieurzebre.com/?p=97"><img src="/images/LDJ/8213e75619e627f864522a1f5ea34309.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.aharef.info) no-repeat">
+		<h2>Aharef: Websites as graphs</h2>
+		<span class="LDJPreview"><a href="http://www.aharef.info/2006/05/websites_as_graphs.htm"><img src="/images/LDJ/05fea84b9698a38d9ca5d5cdfb97f058.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.ahmedrabieh.com) no-repeat">
+		<h2>30 Rich Data Visualization Tools</h2>
+		<span class="LDJPreview"><a href="http://www.ahmedrabieh.com/?p=161"><img src="/images/LDJ/9137dce23e3e3d5adcd61df1871fcf94.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=fr2.php.net) no-repeat">
+		<h2>PHP: mysql_stat - Manual</h2>
+		<span class="LDJPreview"><a href="http://fr2.php.net/manual/fr/function.mysql-stat.php"><img src="/images/LDJ/1490c610b8cf869a414a939a0196e4bc.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=desencyclopedie.wikia.com) no-repeat">
+		<h2>Geek - Désencyclopédie</h2>
+		<span class="LDJPreview"><a href="http://desencyclopedie.wikia.com/wiki/Geek"><img src="/images/LDJ/cbc44a83a5a0262f7898f37f42e4c522.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=copybot.wordpress.com) no-repeat">
+		<h2>The 50 most interesting articles on Wikipedia</h2>
+		<span class="LDJPreview"><a href="http://copybot.wordpress.com/2009/04/07/the-50-most-interesting-articles-on-wikipedia/"><img src="/images/LDJ/be2570c069e62195daeae87c48815839.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=en.wikipedia.org) no-repeat">
+		<h2>Who put Bella in the Wych Elm? - Wikipedia, the free encyclopedia</h2>
+		<span class="LDJPreview"><a href="http://en.wikipedia.org/wiki/Who_put_Bella_in_the_Wych_Elm%3F"><img src="/images/LDJ/1b58bf274ca465d0a4fb45600c424f18.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.koreus.com) no-repeat">
+		<h2>Mining Truck</h2>
+		<span class="LDJPreview"><a href="http://www.koreus.com/jeu/mining-truck.html"><img src="/images/LDJ/0c4296e547600656d1a5b9b32d9e4ed8.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.koreus.com) no-repeat">
+		<h2>Magnx</h2>
+		<span class="LDJPreview"><a href="http://www.koreus.com/jeu/magnx.html"><img src="/images/LDJ/5309b67586dfffe5e2d5a9a0c8cbabef.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=blog.twitter.com) no-repeat">
+		<h2>Twitter Blog: It's Not Rocket Science, But It's Our Work</h2>
+		<span class="LDJPreview"><a href="http://blog.twitter.com/2008/05/its-not-rocket-science-but-its-our-work.html"><img src="/images/LDJ/3caf7c6ace9dfc31f3fcc99b23927d03.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=fr.wikipedia.org) no-repeat">
+		<h2>Douzaine de boulanger</h2>
+		<span class="LDJPreview"><a href="http://fr.wikipedia.org/wiki/Douzaine_de_boulanger"><img src="/images/LDJ/d097164d157497d81504cd5c38d04f6f.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=bazinga.fr) no-repeat">
+		<h2>Bazinga !</h2>
+		<span class="LDJPreview"><a href="http://bazinga.fr/"><img src="/images/LDJ/5c41c30fb8907be587bcead89a097542.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.miller-mccune.com) no-repeat">
+		<h2>Triumph of the Cyborg Composer</h2>
+		<span class="LDJPreview"><a href="http://www.miller-mccune.com/culture-society/triumph-of-the-cyborg-composer-8507/"><img src="/images/LDJ/d99cb87e6e53bd40edbbb5a5f6edeb7e.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=blogs.lexpansion.com) no-repeat">
+		<h2>J'habite 1 rue Lara Croft</h2>
+		<span class="LDJPreview"><a href="http://blogs.lexpansion.com/antimatiere/2010/03/1-rue-lara-croft.php"><img src="/images/LDJ/1431a1cd071e72ad6dcabb08f7a0869c.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.dailymail.co.uk) no-repeat">
+		<h2>L'homme parfait est... geek ?</h2>
+		<span class="LDJPreview"><a href="http://www.dailymail.co.uk/femail/article-1251929/The-perfect-man-geek-facial-stubble--womens-secret-turn-ons-revealed.html"><img src="/images/LDJ/365b7aaf2d7d5e58e9a38d9908c856bb.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.zcorrecteurs.fr) no-repeat">
+		<h2>Le saviez-vous ?</h2>
+		<span class="LDJPreview"><a href="http://www.zcorrecteurs.fr/forum/sujet-2222-le-saviez-vous.html"><img src="/images/LDJ/a6d6e776f2409cc0e7bee5c6520cd081.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.korben.info) no-repeat">
+		<h2>Google en chiffres</h2>
+		<span class="LDJPreview"><a href="http://www.korben.info/google-en-chiffres.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A KorbensBlog-UpgradeYourMind %28Korben%27s Blog - Upgrade Your Mind%29&utm_content=Google Reader"><img src="/images/LDJ/cbf2057de47228d7c8cc1eecdb83d5f0.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=info.sfr.fr) no-repeat">
+		<h2>Mylène Farmer chute sur le perron de l'Elysée : actualités sur le mobile et sur le web avec SFR</h2>
+		<span class="LDJPreview"><a href="http://info.sfr.fr/france/articles/Mylene-Farmer-chute-sur-le-perron-de-Elysee,131893/?sfrintid=HPM_actu_MEA2_portail"><img src="/images/LDJ/7071aabfa12972c43ce481f5c9cc0977.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=slydnet.com) no-repeat">
+		<h2>Outil pour fusionner et recouper des fichiers PDF</h2>
+		<span class="LDJPreview"><a href="http://slydnet.com/web/ilovepdf-fusionner-recouper-des-fichiers-pdf/"><img src="/images/LDJ/497c1c524afd01c8dc2ed90b994d369c.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.facegroupe.fr) no-repeat">
+		<h2>Facegroupe - le classement des meilleurs groupes Facebook</h2>
+		<span class="LDJPreview"><a href="http://www.facegroupe.fr/"><img src="/images/LDJ/c30ce147eca64925d8b6010f6a29ccb6.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=worldfamousdesignjunkies.com) no-repeat">
+		<h2>World Famous Design Junkies </h2>
+		<span class="LDJPreview"><a href="http://worldfamousdesignjunkies.com/illustration/the-internet-is-breaking/attachment/logos/"><img src="/images/LDJ/c92a360715226aed6b77fc230e29a2fc.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.codinghorror.com) no-repeat">
+		<h2>Coding Horror: Why Can't Programmers.. Program?</h2>
+		<span class="LDJPreview"><a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html"><img src="/images/LDJ/3a822d0c89687153c2d01e928a977617.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=qntm.org) no-repeat">
+		<h2>Suicide Linux @ Things Of Interest</h2>
+		<span class="LDJPreview"><a href="http://qntm.org/suicide"><img src="/images/LDJ/2cbee12b87efdad1df9d9271b41257a5.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.codeslate.com) no-repeat">
+		<h2>On n'enterre pas les survivants : récit d'une interview.</h2>
+		<span class="LDJPreview"><a href="http://www.codeslate.com/2007/01/you-dont-bury-survivors.html"><img src="/images/LDJ/53c2afab97c8c549cf436ff28d5ac510.jpeg" /></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.codinghorror.com) no-repeat">
+		<h2>Coding Horror: Separating Programming Sheep from Non-Programming Goats</h2>
+		<span class="LDJPreview"><a href="http://www.codinghorror.com/blog/2006/07/separating-programming-sheep-from-non-programming-goats.html"><img src="/images/LDJ/fcdf4c9eaa7393e6f639b459b800d6e9.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.9kik.com) no-repeat">
+		<h2>Omegle !</h2>
+		<span class="LDJPreview"><a href="http://www.9kik.com/2010/02/not-very-super-effective.html"><img src="/images/LDJ/709dda50dd77e5b8d1a307b01f60919a.jpeg" /></a></span>
+
+	</div>
+
+<h1 style="clear:both;">Images</h1>
+<p>Pressé ? <a href="#" onclick="openAllImages()">Cliquez pour ouvrir tous les liens d'un seul coup</a> !</p>
+<script type="text/javascript">
+<!--
+	function openAllImages()
+	{
+	window.open("http://xkcd.com/703/");
+	window.open("http://abstrusegoose.com/244");
+	window.open("http://static.pcinpact.com/images/bd/news/80596-dvd-legal-illegal-pirate-consommateur.jpg");
+	window.open("http://static.pcinpact.com/images/bd/news/80588-dvd-legal-dvd-illegal-message-avertissement.jpg");
+	window.open("http://comics.com/zoom/311342/");
+	window.open("http://www.flickr.com/photos/brindleyimages/3803523186/sizes/o/in/pool-1014374%40N24/");
+	window.open("http://img2.generation-nt.com/evolution-part-marche-janvier-windows_0902F801C800560611.png");
+	window.open("http://abstrusegoose.com/246");
+	window.open("http://photoshopdisasters.blogspot.com/2010/02/magazine-get-low-down.html");
+	window.open("http://photoshopdisasters.blogspot.com/2010/03/honda-splat.html");
+	window.open("http://farm5.static.flickr.com/4007/4365152223_a026981156_b.jpg");
+	window.open("http://s-ec-sm.buzzfeed.com/static/imagebuzz/terminal01/2010/2/25/14/ninja-deer-7207-1267127559-9.jpg");
+	window.open("http://imgsrv.gocomics.com/dim/?fh=d7850564ab45cbc98456416f0bcbd17e");
+	window.open("http://img-2007-11.photosight.ru/21/2422342.jpg");
+	window.open("http://awesome.good.is/transparency/web/1002/almighty-dollar/transparency.jpg");
+	}
+-->
+</script>
+
+<div class="ldjvignettes" style="margin:auto">
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=xkcd.com) no-repeat">
+
+		<h2>xkcd: Honor Societies</h2>
+		<span class="LDJPreview"><a href="http://xkcd.com/703/"><img src="/images/LDJ/f1c398d8b97e277bc561d3096a6d3a78.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=abstrusegoose.com) no-repeat">
+		<h2>Abstruse Goose : The Creation - part 2</h2>
+		<span class="LDJPreview"><a href="http://abstrusegoose.com/244"><img src="/images/LDJ/fb7fe6d622e74a2f6b9f2d710891037d.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=static.pcinpact.com) no-repeat">
+
+		<h2>To hack or not to hack ?</h2>
+		<span class="LDJPreview"><a href="http://static.pcinpact.com/images/bd/news/80596-dvd-legal-illegal-pirate-consommateur.jpg"><img src="/images/LDJ/dbf233c3ca4ffd9bb4a6ff333d98e157.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=static.pcinpact.com) no-repeat">
+		<h2>To hack or not to hack ?</h2>
+		<span class="LDJPreview"><a href="http://static.pcinpact.com/images/bd/news/80588-dvd-legal-dvd-illegal-message-avertissement.jpg"><img src="/images/LDJ/99cc90bbd7c49d200538be5bf345129a.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=comics.com) no-repeat">
+
+		<h2>Comics.com</h2>
+		<span class="LDJPreview"><a href="http://comics.com/zoom/311342/"><img src="/images/LDJ/8eb8536c2934c28436134284d64bf4a9.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.flickr.com) no-repeat">
+		<h2>Vieille barrière...</h2>
+		<span class="LDJPreview"><a href="http://www.flickr.com/photos/brindleyimages/3803523186/sizes/o/in/pool-1014374%40N24/"><img src="/images/LDJ/7afa0e03f1089d6bffc6fa553b98a4d7.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=img2.generation-nt.com) no-repeat">
+
+		<h2>Parts de marché Windows</h2>
+		<span class="LDJPreview"><a href="http://img2.generation-nt.com/evolution-part-marche-janvier-windows_0902F801C800560611.png"><img src="/images/LDJ/fe8b46de2530b4d4a714ff8da98a8429.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=abstrusegoose.com) no-repeat">
+		<h2>Abstruse Goose : Cute Baby</h2>
+		<span class="LDJPreview"><a href="http://abstrusegoose.com/246"><img src="/images/LDJ/aead875a630ebd0b12745cdd3e08646a.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=photoshopdisasters.blogspot.com) no-repeat">
+
+		<h2>PhotoshopDisasters: A Magazine: Get The Low Down</h2>
+		<span class="LDJPreview"><a href="http://photoshopdisasters.blogspot.com/2010/02/magazine-get-low-down.html"><img src="/images/LDJ/b15b76569dccf488cf4dc6b4de29bd30.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=photoshopdisasters.blogspot.com) no-repeat">
+		<h2>PhotoshopDisasters: Honda: Splat!</h2>
+		<span class="LDJPreview"><a href="http://photoshopdisasters.blogspot.com/2010/03/honda-splat.html"><img src="/images/LDJ/df6ad973db3e9f31d794ec40a58e6d82.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=farm5.static.flickr.com) no-repeat">
+
+		<h2>Internet Explorer et CSS</h2>
+		<span class="LDJPreview"><a href="http://farm5.static.flickr.com/4007/4365152223_a026981156_b.jpg"><img src="/images/LDJ/6a2d95f74527a3a2937cc07264100a89.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=s-ec-sm.buzzfeed.com) no-repeat">
+		<h2>Le daim Jésus</h2>
+		<span class="LDJPreview"><a href="http://s-ec-sm.buzzfeed.com/static/imagebuzz/terminal01/2010/2/25/14/ninja-deer-7207-1267127559-9.jpg"><img src="/images/LDJ/41fc84fdff00f13d0c4cb86aed9ba39d.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=imgsrv.gocomics.com) no-repeat">
+
+		<h2>Calvin et Hobbes</h2>
+		<span class="LDJPreview"><a href="http://imgsrv.gocomics.com/dim/?fh=d7850564ab45cbc98456416f0bcbd17e"><img src="/images/LDJ/6b8b1d58f36362bf817d883e7dbe64fc.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=img-2007-11.photosight.ru) no-repeat">
+		<h2>Double arc en ciel :)</h2>
+		<span class="LDJPreview"><a href="http://img-2007-11.photosight.ru/21/2422342.jpg"><img src="/images/LDJ/1629ec2917dce26c96391b04db0f8cd7.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=awesome.good.is) no-repeat">
+
+		<h2>La richesse des religions</h2>
+		<span class="LDJPreview"><a href="http://awesome.good.is/transparency/web/1002/almighty-dollar/transparency.jpg"><img src="/images/LDJ/827902be229c4fef1cae4a89be81cc85.jpeg" /></a></span>
+	</div>
+
+<h1 style="clear:both;">Vidéos</h1>
+<p>Pressé ? <a href="#" onclick="openAllVidéos()">Cliquez pour ouvrir tous les liens d'un seul coup</a> !</p>
+<script type="text/javascript">
+<!--
+	function openAllVidéos()
+	{
+	window.open("http://www.youtube.com/watch?v=SXmv8quf_xM");
+	window.open("http://www.youtube.com/watch%3Fv%3D-3lppfJv8IQ");
+	window.open("http://www.youtube.com/watch?v=72hXhJUl6L0");
+	window.open("http://www.youtube.com/watch?v=uZOjFcqH_Jk&feature=aso");
+	window.open("http://www.youtube.com/watch?v=a5837LcDHfE");
+	window.open("http://vimeo.com/9641036");
+	window.open("http://www.youtube.com/watch?v=ijpH6an-JIQ&feature=player_embedded");
+	window.open("http://www.youtube.com/watch?v=Suugn-p5C1M&feature=player_embedded");
+	window.open("http://www.koreus.com/video/branche-lignes-electriques.html");
+	window.open("http://video.kamaz.fr/n-essaie-pas-d-etre-le-plus-malin-v911.html");
+	window.open("http://www.youtube.com/watch%3Fv%3DUdc_R36pVCU");
+	window.open("http://www.youtube.com/watch%3Fv%3D0zYYCCsSjkw");
+	window.open("http://www.youtube.com/watch%3Fv%3DeQb02O2CG9w");
+	window.open("http://www.collegehumor.com/video%3A1929479");
+	}
+-->
+</script>
+
+<div class="ldjvignettes" style="margin:auto">
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>YouTube - How to view someones IP address and connection speed!</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=SXmv8quf_xM"><img src="/images/LDJ/fa0a2bbad45e03442afa5b239f55288b.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>YouTube - Why people don't walk cats.</h2>
+
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch%3Fv%3D-3lppfJv8IQ"><img src="/images/LDJ/a8fd4b33035c6e8b55580e3cccb3a788.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>Pas sérieuses, les étudiantes coréennes</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=72hXhJUl6L0"><img src="/images/LDJ/3319dcabb9ade066f8e578ffdc592c09.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>YouTube- reprise sud coréenne de nuit de folie du groupe Début de soirée</h2>
+
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=uZOjFcqH_Jk&feature=aso"><img src="/images/LDJ/4c45fab12957114549901ed994238a0b.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>YouTube - The Internet Revealed: A film about IXPs</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=a5837LcDHfE"><img src="/images/LDJ/06014c0c912280be6ffb216b57fe67d4.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=vimeo.com) no-repeat">
+		<h2>Internet en chiffres</h2>
+
+		<span class="LDJPreview"><a href="http://vimeo.com/9641036"><img src="/images/LDJ/705a5c8bfa1eeca3451212c11505e776.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>YouTube - Lego - The Force Unleashed</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=ijpH6an-JIQ&feature=player_embedded"><img src="/images/LDJ/7c2f99521313f24fc28c7a08da8b3c8b.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>YouTube - Shockwave traffic jams recreated for first time</h2>
+
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=Suugn-p5C1M&feature=player_embedded"><img src="/images/LDJ/d9a027dcee5647ef8250df09235f43d7.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.koreus.com) no-repeat">
+		<h2>Branche sur lignes électriques</h2>
+		<span class="LDJPreview"><a href="http://www.koreus.com/video/branche-lignes-electriques.html"><img src="/images/LDJ/305ca0f533963c1885875865f7a63afa.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=video.kamaz.fr) no-repeat">
+		<h2>N'essaie pas d'être le plus malin</h2>
+
+		<span class="LDJPreview"><a href="http://video.kamaz.fr/n-essaie-pas-d-etre-le-plus-malin-v911.html"><img src="/images/LDJ/3050c98b67cec6660fed58a858b65504.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>Les japonais...</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch%3Fv%3DUdc_R36pVCU"><img src="/images/LDJ/c9c045cf966e9d43c32a0da0b36733ca.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>Le reportage le plus générique du monde</h2>
+
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch%3Fv%3D0zYYCCsSjkw"><img src="/images/LDJ/7972e7c04fcbf2c51b97a5a71e0b8d39.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>Test de pilotage ;)</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch%3Fv%3DeQb02O2CG9w"><img src="/images/LDJ/7e94718dc42386d883d16e32793de184.jpeg" /></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.collegehumor.com) no-repeat">
+		<h2>Des gros durs romantiques ?</h2>
+
+		<span class="LDJPreview"><a href="http://www.collegehumor.com/video%3A1929479"><img src="/images/LDJ/aa73b8621496715b87f5598c5a8cec9d.jpeg" /></a></span>
+	</div><p style="clear:both">Rendez-vous la semaine prochaine pour de nouvelles aventures !</p>
+</div>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/les-liens-du-jeudi" class="pathway"><span itemprop="name">Les liens du jeudi</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Les liens du jeudi, vingt-sixième opus				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105 current active"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

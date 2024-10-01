@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Liens pour internaute en recherche d'inspiration</title>
+	<link href="https://blog.neamar.fr/autres-articles/378-liens-pour-internaute-en-recherche-dinspiration" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Liens pour internaute en recherche d'inspiration			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=24d44e5a51c65cf44934d828ee8c8b8c908a01a2" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2012-07-09T14:47:09+00:00" itemprop="dateCreated">
+						Created: 09 July 2012					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2018-01-14T00:18:31+00:00" itemprop="dateModified">
+					Last Updated: 14 January 2018				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Depuis maintenant quelques mois, avec mon ami Marouane, nous publions chaque jour un lien "inspirant" sous le hashtag #linkoftheday.</p>
+
+<p>Ces liens pointent vers des pages exaltant l'humain et le social ; motivant à changer sa vie pour le mieux.<br />
+Aujourd'hui, nous avons filtré tous ces liens de façon à n'en conserver que la fine fleur.<br />
+Dix liens, dont cinq vidéos. Du contenu qui ne peut pas vous laisser indifférent, à lire et à relire.</p>
+
+ 
+
+<p><a href="#" onclick="openAllLiens()">Cliquez pour ouvrir tous les liens d'un seul coup</a> !</p>
+<script type="text/javascript">
+<!--
+	function openAllLiens()
+	{
+		window.open("http://listverse.com/2011/07/04/10-lesser-known-economic-issues/");
+		window.open("http://thumbpress.com/sometimes-all-you-need-is-a-little-inspiration-to-keep-rolling/");
+		window.open("http://www.swaroopch.com/blog/serious-before-startup/");
+		window.open("http://www.di.net/blog/wp-content/uploads/2010/09/the-holstee-manifesto1.jpg");
+		window.open("http://30.media.tumblr.com/tumblr_lvpaewpvrf1qee5cto1_500.png");
+		window.open("http://www.ted.com/talks/dan_pink_on_motivation.html");
+		window.open("http://www.ted.com/talks/michael_norton_how_to_buy_happiness.html");
+		window.open("http://www.ted.com/talks/lang/en/simon_sinek_how_great_leaders_inspire_action.html");
+		window.open("http://www.youtube.com/watch?v=fW8amMCVAJQ");
+		window.open("http://www.youtube.com/watch?v=zoOAyhy5qTg");
+	}
+-->
+</script>
+
+<div class="ldjvignettes" style="margin:auto">
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=listverse.com) no-repeat">
+		<h2>10 Lesser Known Economic Issues</h2>
+		<span class="LDJPreview"><a href="http://listverse.com/2011/07/04/10-lesser-known-economic-issues/"><img src="/images/LDJ/n_e3a00088428a8381b2ee27f1a53c72cd.jpeg" alt="10 Lesser Known Economic Issues"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=thumbpress.com) no-repeat">
+		<h2>Sometimes All You Need Is A Little Inspiration to Keep Rolling</h2>
+		<span class="LDJPreview"><a href="http://thumbpress.com/sometimes-all-you-need-is-a-little-inspiration-to-keep-rolling/"><img src="/images/LDJ/n_7e36802b5d51a54d483f53eb01b1baef.jpeg" alt="Sometimes All You Need Is A Little Inspiration to Keep Rolling"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.swaroopch.com) no-repeat">
+		<h2>10 things I wish I was serious about before starting a startup</h2>
+		<span class="LDJPreview"><a href="http://www.swaroopch.com/blog/serious-before-startup/"><img src="/images/LDJ/n_d311d2c832b6ca4e377efe0396d6c74a.jpeg" alt="10 things I wish I was serious about before starting a startup"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.di.net) no-repeat">
+		<h2>Life.</h2>
+		<span class="LDJPreview"><a href="http://www.di.net/blog/wp-content/uploads/2010/09/the-holstee-manifesto1.jpg"><img src="/images/LDJ/n_95be886bc4c766c74c0dc994793d53e7.jpeg" alt="Life."/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=30.media.tumblr.com) no-repeat">
+		<h2>Dear optimist, pessimist and realist</h2>
+		<span class="LDJPreview"><a href="http://30.media.tumblr.com/tumblr_lvpaewpvrf1qee5cto1_500.png"><img src="/images/LDJ/n_d7d80407aa415c17355452a0bb7b60c9.jpeg" alt="Dear optimist, pessimist and realist"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.ted.com) no-repeat">
+		<h2>The surprising science of motivation</h2>
+		<span class="LDJPreview"><a href="http://www.ted.com/talks/dan_pink_on_motivation.html"><img src="/images/LDJ/n_ef2c6c367e10dd6c6a6c13cc8a941c25.jpeg" alt="The surprising science of motivation"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.ted.com) no-repeat">
+		<h2>How to buy happiness</h2>
+		<span class="LDJPreview"><a href="http://www.ted.com/talks/michael_norton_how_to_buy_happiness.html"><img src="/images/LDJ/n_dd95e02140a6268816d718e7c72b1e5e.jpeg" alt="How to buy happiness"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.ted.com) no-repeat">
+		<h2>How great leaders inspire action</h2>
+		<span class="LDJPreview"><a href="http://www.ted.com/talks/lang/en/simon_sinek_how_great_leaders_inspire_action.html"><img src="/images/LDJ/n_27cc73fed1a450c19c526cf0bee1a15a.jpeg" alt="How great leaders inspire action"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>Leadership Lessons from Dancing Guy</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=fW8amMCVAJQ"><img src="/images/LDJ/n_43e55cf83894afcaf0628db41615c042.jpeg" alt="Leadership Lessons from Dancing Guy"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.youtube.com) no-repeat">
+		<h2>9 stories, 18 minutes for things that matter</h2>
+		<span class="LDJPreview"><a href="http://www.youtube.com/watch?v=zoOAyhy5qTg"><img src="/images/LDJ/n_e07c45a1f477383d64202905931e6506.jpeg" alt="9 stories, 18 minutes for things that matter"/></a></span>
+</div>
+</div>
+</div>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Liens pour internaute en recherche d'inspiration				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

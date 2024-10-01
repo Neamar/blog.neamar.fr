@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="sémantique, web, typographie, contenu, html, xhtml, css" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Blog de Neamar</title>
+	<link href="https://blog.neamar.fr/component/content/article/4-web-pour-webmaster/59-presentation-de-la-semantique-web" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Présentation de la sémantique Web			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=7698b74b42dcae9d227ee80767a51afebd8db37f" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-12-24T17:48:15+00:00" itemprop="dateCreated">
+						Created: 24 December 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Petite introduction à l'importance de la sémantique.</p>
+
+<p>Qu'on s'y entende bien&nbsp;: tenter de résumer en quelques lignes la sémantique serait comme de vouloir expliquer à un aveugle un panorama somptueux avec trente mots. <br />
+
+La notion de sémantique se construit au fur et à mesure des expériences, s'apprend souvent sur le tas et se conceptualise difficilement. </p>
+
+<p>Mais qu'importe, je vais ici tenter d'en faire une présentation. Je n'ai ni la prétention, ni l'ambition d'en faire plus, mais j'espère que le peu que j'en dirai sera compréhensible. </p>
+
+ 
+<p>Avant de définir la notion même de sémantique, un petit saut dans le temps me semble utile. </p>
+
+<h2>Back in the 90's</h2><p>Au début du Web, les pages Internet étaient mises en forme en HTML. Ce langage mélange dans un même fichier style et contenu&nbsp;: autrement dit, le nom des balises indiquait non pas la fonction, mais la façon dont le texte devait être mis en forme. <tt>&lt;b&gt;</tt> demandait au navigateur de mettre le texte en gras (bold), <tt>&lt;i&gt;</tt>de le mettre en italique (italic), <tt>&lt;u&gt;</tt> de le souligner (underline). <br />
+
+À priori, rien à redire&nbsp;: tout comme le fait un logiciel de traitement de texte type Word, on contrôle parfaitement ce que l'on fait. Ou en tout cas, on en a l'impression&hellip; car les problèmes surgissent rapidement. </p>
+
+<p>Imaginons donc un site communautaire sur lequel de multiples auteurs rédigent des articles. Certains aiment mettre leurs titres en gros, d'autre les soulignent et les graissent&hellip; rapidement, on assiste à un foisonnement de <strong>style</strong> pour une même <strong>fonction</strong>. </p>
+
+<p>En quoi cela pose-t-il un problème&nbsp;? <br />
+
+D'abord, le lecteur est perdu entre les titres, sous-titres et sous-sous-titres qui ne sont pas forcément cohérents entre eux (l'un les mettra en orange clignotant, l'autre non). <br />
+Ensuite, l'auteur doit appliquer de multiples balises pour afficher un unique titre. S'il a choisi de mettre en orange, gras et souligné, <em>chacun</em> de ses titres sera codé lourdement&nbsp;: <tt>&lt;font color="orange"&gt;&lt;b&gt;&lt;u&gt;Mon titre&lt;/u&gt;&lt;/b&gt;&lt;/font&gt;</tt>. On le voit&nbsp;: c'est moche (plus de balises que de contenu), peu fonctionnel (il est facile de faire une faute en tapant les multiples balises), peu évolutif (si un jour, le Webmaster décide de passer son site en fond orange, tous les titres deviendront illisibles [orange sur orange] et l'auteur devra modifier manuellement chacun des titres de chacun de ses articles pour corriger le problème). <br />
+
+Enfin, les moteurs de recherche ou les personnes souffrant de problèmes d'accessibilité qui passent par là auront du mal à suivre l'article de façon cohérente et à le découper en sections. </p>
+
+<p>Bref, une catastrophe à tous les points de vue&nbsp;! </p>
+
+<h2>Zorro est arrivé&nbsp;! </h2><p>Se rendant compte de ces problèmes, «&nbsp;on&nbsp;» inventa le xHTML&nbsp;: une évolution du langage HTML qui se voulait plus «&nbsp;sémantique&nbsp;» (on y arrive&nbsp;! ). <br />
+
+Sémantique, cela signifie qu'une balise ne code pas pour de la mise en forme mais pour une idée, une représentation abstraite. Exit les balises <tt>bold</tt>, bienvenue à la balise <tt>emphase</tt>&nbsp;! Exit les combinaisons tordues, bienvenue à la balise <tt>titre</tt>&nbsp;! Ces balises n'indiquent pas la façon dont le contenu doit être présenté, mais la fonction du contenu à l'intérieur du texte. <br />
+Le lecteur attentif se posera immédiatement la question&nbsp;: comment met-on en forme un titre abstrait&nbsp;? Très bonne question&hellip; qui trouve sa réponse avec un seul mot&nbsp;: CSS. <br />
+CSS est un nouveau langage qui permet de «&nbsp;thémer&nbsp;» ses balises en dehors du texte&nbsp;: un unique fichier externe pour tout le site contient l'intégralité des informations pour la mise en forme. Le webmaster précisera par exemple que les balises titres de premier niveau (il y en a six, qui permettent ainsi d'avoir la structure hiérarchique habituelle titre / chapitre / sous chapitre / partie / paragraphe / sous paragraphe) seront affichées graissés, soulignées et en orange. Vous ne voyez pas le changement&nbsp;? Et pourtant, il est primordial&nbsp;! Une unique balise peut renfermer plusieurs informations d'affichage. Et toutes ces informations sont centralisées au même endroit&nbsp;: en modifiant un unique fichier, on modifie toutes les occurrences de la balise sur le site. Pas besoin d'ouvrir manuellement chaque page pour la reconfigurer, seul le fichier principal de configuration compte. Miraculeux, non&nbsp;? C'est un rêve qui devient réalité&nbsp;: la forme (le CSS) séparée du fond (le HTML), le contenu distinct du contenant. </p>
+
+<p>Mais il n'y a pas que le webmaster à sauter d'allégresse&nbsp;! Les visiteurs sont heureux aussi. (Moins de code à charger, puisqu'il suffit de récupérer une seule fois le fichier de mise en forme pour l'ensemble du site. )</p>
+
+<h2>Le véritable point fort de la sémantique</h2><p>C'est tout&nbsp;? Mais alors, la sémantique, c'est juste pour les fainéants qui ont la flemme d'ouvrir leurs pages&nbsp;! Et puis réduire le débit, on s'en fiche&nbsp;! On a tous de l'ADSL maintenant&hellip; </p>
+
+<p>C'est vrai (encore que modifier manuellement des dizaines de milliers de pages soit lassant). Mais attendez, il reste un as dans la manche de la sémantique&hellip; et cet as, c'est Google&nbsp;! </p>
+
+<p>Car quand Big-G visite votre site, s'il croise une balise «&nbsp;titre principal&nbsp;» (<tt>&lt;h1&gt;</tt>, pour header1), il sait que cela correspond à une information capitale de la page. Inversement, s'il rencontre une balise petit (<tt>small</tt>), il saura que le contenu présenté ici est annexe et pas forcément utile ou primordial sur cette page. <br />
+Si deux pages présentent le même mot clé, l'un dans une balise <tt>h1</tt> et l'autre dans une balise <tt>small</tt>, il est probable que le premier soit affiché en priorité dans la liste. Logique, puisque le webmaster informe que ce mot clé est la raison d'être de la page, tandis que le deuxième signale que le mot clé est présenté en annexe, et donc pas forcément traité explicitement dans le reste de la page. </p>
+
+<p>À ce point là, vous devriez avoir compris que la <strong>sémantique</strong> correspond à toutes les informations <em>au-delà du texte</em>. </p>
+
+<h2>Aller plus loin que le xHTML de base</h2><p>Tout va très bien dans le meilleur des mondes&nbsp;? Hé non, car HTML n'implémente pas forcément toutes les balises nécessaires. </p>
+
+<p>Un exemple concret s'impose. Si vous lisez des périodiques, vous aurez remarqué que leurs représentations des siècles en chiffres romains n'est pas écrit en capitales, mais en petites capitales (<tt>small-caps</tt>, <a href="http://neamar.fr/Res/Typographe/Aide/?b=si%25E8cle%252Ccentury">un exemple est présent ici</a>). Comment reproduire cet effet&nbsp;? xHTML n'offre malheureusement pas de balises toutes prêtes nommée <tt>&lt;century&gt;</tt>&nbsp;! <br />
+
+Pas de panique, il y a une solution&hellip; qui passe par des éléments «&nbsp;vides de sens&nbsp;», neutres. On les nomme <tt>&lt;span&gt;</tt> et <tt>&lt;div&gt;</tt>. <br />
+Si je place un texte dans une balise span, il ne se passera rien. Le lecteur ne saura même pas que la balise est présente&nbsp;: elle est entièrement transparente. <br />
+En fait, ces balises sont utilisées avec un attribut spécial que l'on appelle <tt>class</tt> (et que l'on peut appliquer à n'importe quelle balise, j'y reviendrais). <br />
+
+Ces classes sont libres, c'est-à-dire que vous pouvez choisir vous même comment vous les nommez et comment vous les utilisez. </p>
+
+<p>Nous pouvons donc définir une classe <tt>century</tt> qui mettra en petites majuscules et ajoutera automatiquement un <sup>e</sup> derrière. Tout cela est possible avec les règles CSS, et il suffira de marquer <tt>&lt;span class="century"&gt;XIX&lt;/span&gt;</tt> pour obtenir le rendu voulu. Et si un jour on décide de remplacer le <sup>e</sup> par un <sup>ème</sup>, cela ne posera aucun problème, puisque cette information <em>sémantiquement vide</em> n'est pas codée directement dans le texte, mais dans le style. </p>
+
+<p>Comme je le disais, on peut aussi <em>classer</em> une balise normale&nbsp;; ce qui permet par exemple de designer différemment le premier sous titre de chaque section, ou de définir différents types d'emphase (mot important, mot traduit, mot étranger&hellip; ). Les possibilités sont presques infinies&nbsp;! </p>
+
+<p>L'utilisation de la sémantique permet donc de garder un contenu cohérent et facilement éditable, sans pour autant sacrifier à la mise en forme du texte. </p>
+
+<h2>Dangers à éviter</h2><p>Attention cependant, deux écueils se présentent à l'éditeur de contenu «&nbsp;sémantique&nbsp;». </p>
+
+<p>Le premier, c'est de vouloir abuser des bonnes choses. Après tout, si Google apprécie les titres, pourquoi ne pas mettre tout mon texte en titre&nbsp;? Il suffit de dire dans le CSS que la balise titre doit s'afficher comme du texte normal, et l'utilisateur n'en saura rien&hellip; et j'aurais floué Google. Dans le concept, c'est vrai&hellip; dans la pratique, des générations de webmasters s'y sont tentés et Google n'est pas bête&nbsp;; il sait détecter une utilisation abusive. De plus, si vous procédez ainsi, du contenu secondaire sera mis en avant dans les résultats de recherche au détriment du vrai contenu&nbsp;: bref, vous y perdez plus que ce que vous y gagnez. </p>
+
+<p>Seconde idée, encapsuler sans réfléchir. Je mets mon article dans une boîte qui contient deux articles qui est dans une boîte avec tous les articles que je place dans une boîte qui contient le contenu de la colonne centrale de mon site, laquelle boîte est doublée avec une classe différente que je place dans une boîte englobant l'intégralité de mon site que je place dentre les balises <tt>body</tt>. Stop&nbsp;! On peut effectivement obtenir ce type d'architecture si votre contenu est complexe, mais préférez toujours une structure simple et concise. Dans la même optique, minimisez le nombre de tableaux&nbsp;: sémantiquement, un tableau permet de représenter des données, pas de paramétrer la façon dont ces données doivent être affichées&nbsp;! C'est le cheval de bataille des webmasters modernes&nbsp;: éradiquer l'ennemi <tt>&lt;table&gt;</tt> lorsqu'il est utilisé pour faire un design en colonnes (menu à gauche, contenu au milieu, informations à droite par exemple). </p>
+
+<h2>En conclusion</h2><p>Voilà qui clôt cette introduction sommaire au problème complexe de la sémantique. <br />
+J'espère que dorénavant, vous saurez réfléchir au texte, mais aussi aux informations implicites qu'il doit transporter avec lui. Plus que Google, c'est l'ensemble de vos lecteurs qui le ressentira et l'appréciera&nbsp;! </p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Home				</span>
+				<meta itemprop="position" content="1">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default current active"><a href="/" >Blog de Neamar</a></li><li class="item-103"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

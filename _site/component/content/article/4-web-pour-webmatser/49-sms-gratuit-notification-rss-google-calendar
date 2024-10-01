@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="webmaster, geek, sms, google, calendar, agenda, configuration, php, serveur, zend" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Blog de Neamar</title>
+	<link href="https://blog.neamar.fr/component/content/article/4-web-pour-webmatser/49-sms-gratuit-notification-rss-google-calendar" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Recevoir gratuitement par SMS les nouvelles de son site : côté Google			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=e2428a8e45efcd637b5b0ccab4219301efe45d17" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-11-23T19:03:17+00:00" itemprop="dateCreated">
+						Created: 23 November 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Webmasters de tous poils, rien de plus frustrant que de se couper de ses créations, même pour quelques heures. Et si un problème bloquait l'accès au site ? Et si quelqu'un rédigeait un nouvel article sur tel blog communautaire ? De nombreuses fois, l'astuce du flux RSS chargé en permanence ne suffit pas, que ce soit parce que la connexion réseau ne le permet pas ou tout simplement parce qu'aucun PC n'est disponible à proximité.</p>
+
+<p>Aujourd'hui, nous allons configurer un système de réception de notification.<br />
+Vous pourrez le configurer à votre guise, pour recevoir un mail, une notification dans votre agenda Google, ou mieux, un SMS.</p>
+
+<p>Pré-requis :</p>
+<ul>
+<li>Un compte Google ;</li>
+<li>Un serveur web hébergeant PHP 5.2.4 ou supérieur ;</li>
+<li>Les extensions PHP suivantes : <tt>ctype</tt>, <tt>dom</tt>, <tt>libxml</tt>, <tt>spl</tt>, <tt>standard</tt>, <tt>openssl</tt> (normalement inclues par défaut dans la plupart des configurations, même gratuites).</li>
+</ul>
+
+<p>Tout est prêt ? <em>Let's go...</em></p>
+ <h2>Explication du concept</h2>
+<p>Nous allons utiliser Google Calendar (en français, Google Agenda) qui permet d'envoyer des SMS gratuitement à tout mobile.<br />
+Le paramétrage des notifications (comme un flux RSS) se fera donc en étapes :</p>
+
+<h3>Côté Google</h3>
+<p>(<a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmatser/49-sms-gratuit-notification-rss-google-calendar">premier article</a>)
+<ol>
+<li>Création d'un compte Google "helper" qui partagera l'agenda ;</li>
+<li>Partage de l'agenda ;</li>
+<li>Enregistrement du mobile ;</li>
+<li>Réglage des notifications ;</li>
+<li>Premier test...</li>
+</ol>
+<h3>Côté serveur</h3>
+<p>(second article, à paraître)
+<ol>
+<li>Installation de l'API Google ;</li>
+<li>Création du fichier de notification ;</li>
+<li>Dernier test.</li>
+</ol>
+
+<h2>Création d'un compte Google "helper" qui partagera l'agenda</h2>
+<p>Nous allons devoir nous connecter depuis le serveur sur un site externe, ce qui implique de laisser en clair dans le code source login et mot de passe d'un compte Google. Pour ne pas prendre de risques (et aussi pour faciliter les notifications lors de l'étape serveur), nous allons devoir créer un compte Google "annexe" qui ne sera utilisé que pour l'agenda. Remplissez donc le <a href="https://www.google.com/accounts/NewAccount?hl=fr">formulaire d'inscription à Google</a> en indiquant l'adresse mail de votre site (ce n'est pas obligé, mais cela aidera à la mémorisation).<br />
+Félicitations, vous venez de terminer la première étape.</p>
+
+<h2>Partage de l'agenda</h2>
+<p>Après avoir vérifié votre compte, rendez-vous sur <a href="http://www.google.com/calendar">http://www.google.com/calendar</a> et connectez-vous si nécessaire. Il se peut qu'on vous affiche un texte de présentation, sautez-le. L'interface doit ressembler à ceci :<br />
+<img src="/images/stories/agenda1.png" alt="Agenda Google" style="max-width:80%;"/>
+</p>
+
+<p>Cliquez sur paramètres :<br />
+<img src="/images/stories/agendaparametres.png" alt="Paramètres de l'agenda" />
+</p>
+
+<p>Dans la fenêtre qui s'affiche, cliquez sur "Partager cet agenda", et entrez successivement l'adresse de toutes les personnes qui peuvent être intéressées ; par exemple tous les membres du staff d'administration. Si vous le souhaitez, vous pouvez bien entendu n'entrer que votre compte Google principal (le vrai, bien entendu, pas celui que vous avez crée à la première étape).<br />
+Pendant que vous êtes dans les options, vous pouvez changer le nom de l'agenda pour quelque chose de plus explicite qu'une adresse mail.<br />
+Pensez à enregistrer toutes vos modifications !<br />
+Vous en avez fini avec les modifications du compte helper, déconnectez-vous (bouton en haut à droite).</p>
+
+<hr id="nouvelutilisateur"/>
+<p>Nouvelle étape : connectez-vous avec votre compte Google principal. Une nouvelle fois, rendez-vous sur <a href="http://www.google.com/calendar">http://www.google.com/calendar</a> : l'agenda partagé devrait alors apparaître dans la colonne de gauche, miracle !</p>
+
+<h2>Enregistrement du mobile</h2>
+<p>Ce paragraphe décrit la marche à suivre pour recevoir les alertes par SMS. Si vous ne souhaitez pas communiquer votre numéro, vous pourrez vous rabattre sur les mails ou les notificationss, mais vous perdez le principal intérêt ;)</p>
+
+<p>À nouveau, cliquez sur paramètres, toujours dans le pod "Mes agendas".</p>
+Allez dans l'onglet "configuration du mobile", et suivez les instructions. Vous devriez recevoir un SMS avec un code de confirmation, rentrez-le. Vous devriez avoir quelque chose dans ce goût là :<br />
+<img src="/images/stories/agendasms.png" alt="Configuration du téléphone dans Google Agenda" style="max-width:80%;"/><br />
+Cliquez sur "Enregistrer".</p>
+
+<h2>Réglage des notifications</h2>
+<p>Toujours dans le pod "Mes agendas", sélectionnez "Paramètres", et en face de la ligne avec l'agenda partagé, cliquez sur "Notifications". Dans la ligne "Rappels", supprimez toutes les notifications présentes et ajoutez un rappel SMS, délai 1 minute (vous pouvez modifier le type du rappel, mais pas sa durée, vous comprendrez dans la seconde partie pourquoi). Enregistrez.
+</p>
+
+<h2>Premier test...</h2>
+<p><em>Cette partie doit être faite par l'administrateur du site qui utilise les notifications. Si vous êtes simple utilisateur, n'allez pas plus loin : tout est prêt.</em></p>
+
+<p>Ouf, nous avons presque fini. Par acquit de conscience, testons le dispositif...<br />
+Reconnectez-vous sur votre compte d'aide, retournez sur l'agenda et sélectionnez "Nouvel Événement". Marquez un titre, faites-le commencer dans 5 minutes, et enlevez toutes les notifications (nous sommes côté helper, pas du côté qui connait votre numéro).<br />
+5 minutes après, vous devriez avoir un SMS de tonton Google contenant le titre. Miracle !<br />
+Petite explication : en créant l'événement, il s'est automatiquement propagé sur votre compte principal, que vous avez configuré pour ajouter une notification par défaut (chaque utilisateur peut placer des rappels différents sur le même événement).</p>
+
+<p><a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmatser/51-sms-gratuit-notification-rss-google-calendar">Dans le prochain article, nous verrons comment interconnecter votre serveur Web avec Google Calendar</a>.</p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Home				</span>
+				<meta itemprop="position" content="1">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default current active"><a href="/" >Blog de Neamar</a></li><li class="item-103"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="mysql, rand, aléatoire, hasard, explain" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Sélectionner un élément au hasard dans une table MySQL</title>
+	<link href="https://blog.neamar.fr/autres-articles/113-rand-element-hasard-mysql-rapide" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Sélectionner un élément au hasard dans une table MySQL			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=70a67556e45d0451935ba312a39dc16ffffb0430" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-05-14T10:29:27+00:00" itemprop="dateCreated">
+						Created: 14 May 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Sur la plupart des sites dits «&nbsp;2.0&nbsp;», vous trouverez quelque part un petit module «&nbsp;Un article au hasard&nbsp;», et un «&nbsp;Dernier article&nbsp;». </p>
+
+<p>Souvent, le programmeur derrière ne se pose malheureusement pas de questions pour récupérer cet enregistrement… et pourtant, il devrait&nbsp;! Car selon les méthodes utilisées et la taille de la table, il peut améliorer sa requête de plusieurs ordres de grandeur. </p>
+
+<p>On est parti pour voir ça… </p>
+
+ 
+<h2>Protocole de test</h2>
+<h3>Tables</h3>
+<p>J'effectue les tests sur une table moyennement chargée (10&nbsp;000 enregistrements) nommée <tt>BENCH_Table</tt> dans la suite, simulant une bonne base d'articles. <br />
+Les calculs se font sur la colonne ID, qui est notée comme <tt>PRIMARY auto_increment</tt>. </p>
+
+<h3>Requêtes SQL</h3>
+<h4><tt>BENCHMARK</tt></h4>
+<p>Pour tester les requêtes SQL présentées ici, je me suis servi de l'instruction <a href="http://dev.mysql.com/doc/refman/5.0/en/information-functions.html#function_benchmark"><tt>BENCHMARK</tt></a> qui permet de calculer plusieurs fois une expression. </p>
+
+<p>Pour cet article, j'ai effectué les requêtes 10&nbsp;000&nbsp;000&nbsp;de fois, sauf contre-ordre (dans certains cas vraiment peu optimisés, il aurait fallu des heures de calcul, montrant l'inadéquation de la solution). Cette valeur assez large permet d'obtenir un résultat fiable. </p>
+
+<p>Petit exemple de requête avec <tt>BENCHMARK</tt>&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Répéter 10 000 000 de fois la récupération du titre de l'élément 5
+SELECT BENCHMARK(10000000,(
+
+SELECT Titre
+FROM BENCH_Table
+WHERE ID = 5
+))
+</pre>
+
+
+<p>Attention&nbsp;! <tt>BENCHMARK</tt> renvoie toujours 0. Pour récupérer le temps de la requête, il faut utiliser autre chose&nbsp;: le client MySQL en ligne de commande par exemple, qui affiche le temps passé. </p>
+
+<h4><tt>EXPLAIN</tt></h4>
+<p>Pour justifier le temps obtenu et l'expliquer, j'utiliserai <a href="http://dev.mysql.com/doc/refman/5.0/en/explain.html"><tt>EXPLAIN</tt></a>, une instruction indispensable pour les gestionnaires de base de données qui affiche le schéma prévu par le compilateur. Une requête <tt>EXPLAIN</tt> n'exécute pas la demande, mais la compile et affiche les plans de l'exécuteur (je simplifie). <tt>EXPLAIN</tt> est un vaste sujet, je n'entrerai pas dans le détail et décrirai uniquement les résultats obtenus au cours des tests. Pour un cours complet sur <tt>EXPLAIN</tt>, <a href="http://dev.mysql.com/doc/refman/5.0/en/using-explain.html">RTFM</a>&nbsp;! </p>
+
+<p>Petit exemple de requête avec EXPLAIN&nbsp;: </p>
+
+<pre xml:lang="sql">
+EXPLAIN SELECT Titre
+FROM BENCH_Table
+WHERE ID = 5
+</pre>
+
+<p>Et le résultat&nbsp;: </p>
+
+<table class="data" id="table_results">
+<thead>
+<tr>
+	<th>id
+	</th><th>select_type
+	</th><th>table
+	</th><th>type
+	</th><th>possible_keys
+	</th><th>key
+	</th><th>key_len
+	</th><th>ref
+	</th><th>rows
+	</th><th>Extra
+	</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+	<td align="right" class=" nowrap">1</td>
+	<td>SIMPLE</td>
+	<td>BENCH_Table</td>
+	<td>const</td>
+	<td>PRIMARY</td>
+	<td>PRIMARY</td>
+	<td>4</td>
+	<td>const</td>
+	<td align="right" class=" nowrap">1</td>
+	<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Sélectionner un élément aléatoire</h2>
+<p>C'est sûrement la partie la plus intéressante… mais aussi la plus délaissée par les webmasters&nbsp;! </p>
+
+<h3>Présentation de RAND()</h3>
+<p>Dès que l'on parle d'aléatoire, on aura besoin d'une fonction génératrice de nombres pseudo-aléatoires. En MySQL, il s'agit de l'instruction <a href="http://dev.mysql.com/doc/refman/5.0/en/mathematical-functions.html#function_rand"><tt>RAND()</tt></a>, classée avec les fonctions mathématiques. <tt>RAND()</tt> renvoie un nombre aléatoire flottant entre 0&nbsp;et 1 (1 non compris). </p>
+
+<h3>Sélectionner un élément aléatoire</h3>
+<p>Si vous vous promenez un peu sur les forums, c'est toujours la même solution qui est donnée&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Tri par rand
+SELECT ID FROM BENCH_Table
+ORDER BY RAND()
+LIMIT 1
+</pre>
+
+<p>C'est logique&nbsp;: on trie aléatoirement et on ne récupère que le premier élément. Sauf que… c'est long, très long&nbsp;: sur la table de tests décrite ci-dessus, il faut 7,6&nbsp;secondes pour effectuer 1&nbsp;000 calculs. Si j'avais pris les 100&nbsp;000&nbsp;000 prévus, on serait donc à <strong>21&nbsp;heures de calcul</strong>… presque une journée&nbsp;! <br />
+Pourquoi est-ce si long&nbsp;? Il va falloir jouer du <tt>EXPLAIN</tt>&nbsp;: </p>
+
+<pre xml:lang="sql">
+EXPLAIN SELECT ID FROM BENCH_Table
+ORDER BY RAND()
+LIMIT 1
+</pre>
+
+<p>Que voit-on dans la colonne Extra&nbsp;? «&nbsp;Using index&nbsp;; Using temporary&nbsp;; Using filesort&nbsp;». Ouch, expliquons un peu. </p>
+
+<ul>
+	<li>«&nbsp;Using index&nbsp;»&nbsp;: ça c'est bien&nbsp;; on n'utilise que le fichier d'index. Bon, sur une vraie requête, il y a de fortes chances que vous récupériez autre chose que l'ID (par exemple, le titre de l'article sélectionné aléatoirement) auquel cas cet avantage disparaîtra&nbsp;; sauf si votre index contient ID et Titre. </li>
+	<li>«&nbsp;Using temporary&nbsp;»&nbsp;: ah, moins bien. Pour calculer les résultats, MySQL est obligé de créer une table temporaire – ici, qui contient les valeurs attribuées par RAND() à chaque colonne. </li>
+	<li>«&nbsp;Using filesort&nbsp;»&nbsp;: il va y avoir une phase de tri supplémentaire à la fin pour classer les lignes. </li>
+</ul>
+<p>On comprend mieux&nbsp;: lors de l'exécution, MySQL va ajouter à chaque ligne une colonne contenant la valeur de <tt>RAND()</tt> (soit 10&nbsp;000&nbsp;nouvelles valeurs), puis trier sur cette colonne et ne récupérer que le plus petit résultat. <br />
+Faut-il dire en quoi c'est stupide&nbsp;? Trier est une opération coûteuse (au mieux en <span class="TexTexte">O(n × log(n))</span>), alors qu'on ne veut récupérer qu'un élément et qu'on se fiche d'avoir une table triée. C'est un peu comme si en PHP vous faisiez ceci pour récupérer la plus petite valeur d'un tableau&nbsp;: </p>
+
+<pre xml:lang="php">
+<?php
+/**
+* Solution sale
+*/
+
+//Chargement du tableau
+$MonTableau = listeValeurs();
+
+//Tri du tableau
+asort($MonTableau)
+
+//Récupération du premier élément
+$Min = $MonTableau[0];
+
+/**
+* Solution optimisée, propre
+*/
+
+//Chargement du tableau
+$MonTableau = listeValeurs();
+
+//Récupération du minimum sans tri inutile
+$Min = min($MonTableau);
+?>
+</pre>
+
+<p>Mais, comment faire alors&nbsp;? Hé bien, on réfléchit. Allez allez, on se creuse un peu la tête… <br />
+Déjà, on ne veut plus de <tt>ORDER BY</tt>. C'est une perte de temps et de mémoire pour ce qui nous intéresse… <br />
+La première idée, c'est de ruser avec une <em>sub-query</em>, un <tt>SELECT</tt> à l'intérieur de <tt>SELECT</tt>. </p>
+
+<p>Par exemple&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Sélection d'un élément
+SELECT ID
+FROM BENCH_Table
+WHERE ID =
+	(
+	SELECT CEIL( COUNT(*) * RAND( ) )
+	FROM BENCH_Table
+	)
+</pre>
+
+<p>À priori, c'est bien&nbsp;! On calcule la sous-requête, on obtient alors un nombre aléatoire entier, et on récupère cet ID. Comme on récupère à partir d'un index, l'opération «&nbsp;=&nbsp;» sera extrêmement rapide et tout devrait aller pour le mieux. <br />
+Sauf que… exécuter <strong>une seule fois</strong> cette requête demande <strong>14s</strong>&nbsp;! Tu parles d'une amélioration… qu'est ce qui a bien pu se passer&nbsp;? Encore une fois, <tt>EXPLAIN</tt> est notre ami&nbsp;: </p>
+
+<table class="data" id="table_results">
+<thead><tr>
+<th>id
+</th><th>select_type
+</th><th>table
+</th><th>type
+</th><th>possible_keys
+</th><th>key
+</th><th>key_len
+</th><th>ref
+</th><th>rows
+</th><th>Extra
+</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right" class=" nowrap">1</td>
+<td>PRIMARY</td>
+<td>BENCH_TABLE</td>
+<td>index</td>
+<td><i>NULL</i></td>
+<td>PRIMARY</td>
+<td>4</td>
+<td><i>NULL</i></td>
+<td align="right" class=" nowrap">10000</td>
+<td>Using where; Using index</td>
+</tr>
+
+<tr class="even">
+<td align="right" class=" nowrap">2</td>
+<td>UNCACHEABLE SUBQUERY</td>
+<td>BENCH_TABLE</td>
+<td>index</td>
+<td><i>NULL</i></td>
+<td>PRIMARY</td>
+<td>4</td>
+<td><i>NULL</i></td>
+<td align="right" class=" nowrap">10000</td>
+<td>Using index</td>
+</tr>
+</tbody>
+</table>
+
+<p>La deuxième ligne nous informe de notre erreur&nbsp;: <tt>UNCACHEABLE SUBQUERY</tt>. Autrement dit, il va falloir recalculer la sous-requête sur chaque ligne&nbsp;! (Une bref lecture du manuel sur la page <a href="http://dev.mysql.com/doc/refman/5.0/en/query-cache-operation.html">«&nbsp;How the query cache operates&nbsp;»</a> aurait pu nous renseigner&nbsp;: la présence d'un <tt>RAND()</tt> empêche la mise en cache. )</p>
+
+<p>Forcément, calculer un <tt>CEIL( COUNT( * ) * RAND( ) )</tt> sur 10&nbsp;000 lignes, c'est coûteux… </p>
+
+<p>J'ai un peu cherché comment forcer la mise en cache d'une requête, sans résultat. Alors j'ai arrêté de pleurnicher, et j'ai fait fonctionner à nouveau la matière grise. <br />
+L'idée&nbsp;? Utiliser un <tt>JOIN</tt>. On sélectionne une valeur aléatoire dans ce <tt>JOIN</tt>, et on joint notre table dessus. Pour ceux qui ne seraient pas familiers avec les différentes jointures, précisons que <tt>JOIN</tt> fonctionne «&nbsp;des deux côtés&nbsp;»&nbsp;: c'est une sorte de fonction «&nbsp;intersection&nbsp;», contrairement à un <tt>LEFT JOIN</tt> / <tt>RIGHT JOIN</tt> qu'on pourrait qualifier d'«&nbsp;union&nbsp;» – oui, je simplifie, mais encore une fois ce n'est pas le but de l'article. </p>
+
+<p>Donc, un <tt>JOIN</tt>&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Jointure de l'élément
+SELECT ID
+FROM BENCH_Table
+JOIN
+	(
+	SELECT FLOOR( COUNT( * ) * RAND( ) ) AS ValeurAleatoire
+	FROM BENCH_Table
+	) AS V ON BENCH_Table.ID = V.ValeurAleatoire
+</pre>
+
+<p>Cette fois, les performances sont au rendez-vous&nbsp;: sur 10&nbsp;000&nbsp;000&nbsp;de tests, on ne monte qu'à <strong>1,278s</strong> (à comparer avec la presque-journée de la première solution). </p>
+
+<p>Un petit <tt>EXPLAIN</tt> pour la route&nbsp;: </p>
+
+<table class="data" id="table_results">
+<thead><tr>
+<th>id
+</th><th>select_type
+</th><th>table
+</th><th>type
+</th><th>possible_keys
+</th><th>key
+</th><th>key_len
+</th><th>ref
+</th><th>rows
+</th><th>Extra
+</th></tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right" class=" nowrap">1</td>
+<td>PRIMARY</td>
+<td>&lt;derived2&gt;</td>
+<td>system</td>
+<td><i>NULL</i></td>
+<td><i>NULL</i></td>
+<td><i>NULL</i></td>
+<td><i>NULL</i></td>
+<td align="right" class=" nowrap">1</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr class="even">
+<td align="right" class=" nowrap">1</td>
+<td>PRIMARY</td>
+<td>BENCH_Table</td>
+<td>const</td>
+<td>PRIMARY</td>
+<td>PRIMARY</td>
+<td>4</td>
+<td>const</td>
+<td align="right" class=" nowrap">1</td>
+<td>Using index</td>
+</tr>
+
+<tr class="odd">
+<td align="right" class=" nowrap">2</td>
+<td>DERIVED</td>
+<td>BENCH_Table</td>
+<td>index</td>
+<td><i>NULL</i></td>
+<td>PRIMARY</td>
+<td>4</td>
+<td><i>NULL</i></td>
+<td align="right" class=" nowrap">8352</td>
+<td>Using index</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>Ce qui est intéressant ici, c'est la colonne type&nbsp;: </p>
+
+<ul>
+	<li>«&nbsp;system&nbsp;»&nbsp;: c'est le mieux qu'on puisse rêver, la table n'a qu'une seule ligne. </li>
+	<li>«&nbsp;const&nbsp;»&nbsp;: ici aussi, il n'y a qu'une seule ligne qui sera calculée au tout début de la requête. Notez que si on n'avait pas de contraintes <tt>PRIMARY</tt> (ou <tt>UNIQUE</tt>) l'optimiseur ne pourrait rien dire et serait obligé de lire. </li>
+	<li>«&nbsp;index&nbsp;»&nbsp;: c'est moins superbe, il faut lire chaque ligne – mais on utilise un index, ce qui accélère les choses. </li>
+</ul>
+<p>Par acquit de conscience, j'ai testé avec <tt>COUNT(*)</tt> et <tt>MAX(ID)</tt> (je suis en InnoDB, ça a peut-être son importance)&nbsp;: le résultat est mieux avec <tt>COUNT(*)</tt>. À la réflexion, ça paraît logique vu que <tt>MAX(ID)</tt> est obligé de lire toutes les lignes et de comparer à chaque fois avec le maximum courant. Je pensais cependant qu'il suffisait de lire la dernière ligne du fichier d'index… à priori non donc. </p>
+
+<h3>Note sur les tables «&nbsp;creuses&nbsp;»</h3>
+<p>Les techniques exposées ici fonctionnent parfaitement si vous ne supprimez pas de lignes de votre table. <br />
+Sinon, vous risquez d'avoir un problème et de ne récupérer aucune ligne (cas <tt>V.ValeurAleatoire = un_index_supprimé</tt>). Il faut modifier légèrement la requête pour prendre en compte ce genre de cas&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Jointure de l'élément avec gestion des index supprimés
+--La différence ? LA jointure se fait sur >=, et pas sur =
+SELECT ID
+FROM BENCH_Table
+JOIN
+	(
+	SELECT FLOOR( COUNT( * ) * RAND( ) ) AS ValeurAleatoire
+	FROM BENCH_Table
+	) AS V ON BENCH_Table.ID >= V.ValeurAleatoire
+LIMIT 1
+</pre>
+
+<p>Forcément, ça ira un peu moins vite (20 secondes, une bonne perte quand même)… </p>
+
+<h3>Et dans le futur</h3>
+<p>Forcément, on se prend à rêver de pouvoir exécuter le code suivant&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Code imaginaire, NE FONCTIONNE PAS
+SELECT ID
+FROM BENCH_Table
+LIMIT FLOOR( COUNT( * ) * RAND( ) ),1
+</pre>
+
+<p>Mais ce n'est pas pour tout de suite… dommage&nbsp;! </p>
+
+<h3>Encore une idée</h3>
+<p>On peut aussi coupler deux langages (on choisit un enregistrement en PHP/<em>Whatever</em>, puis on le récupère) ou avec des variables SQL&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Utilisation d'une variable aléatoire
+SELECT @ValeurAleatoire := (RAND() * COUNT(*)) FROM BENCH_Table;
+SELECT ID FROM BENCH_Table WHERE ID = @ValeurAleatoire; 
+</pre>
+
+<p>Mais là, je ne peux pas benchmarker&nbsp;! En théorie, ça marche… </p>
+
+<h2>Récupérer le dernier élément</h2>
+<p>Deuxième section donc, pour récupérer le dernier élément. </p>
+
+<p>C'est encore plus simple que pour le <tt>RAND()</tt>, et les trois approches décrites ci-dessus sont possibles&nbsp;: </p>
+
+<pre xml:lang="sql">
+--Sous requête
+SELECT ID
+FROM BENCH_Table
+WHERE ID =
+	(
+	SELECT MAX( ID )
+	FROM BENCH_Table
+	)
+</pre>
+
+<pre xml:lang="sql">
+--Tri ID DESC
+SELECT ID
+FROM BENCH_Table
+ORDER BY ID DESC
+LIMIT 1 
+</pre>
+
+<pre xml:lang="sql">
+--Jointure
+SELECT ID
+FROM BENCH_Table
+JOIN (SELECT MAX(ID) AS Max FROM BENCH_Table) AS M ON M.Max = BENCH_Table.ID
+</pre>
+
+<p>Les résultats sont dans un mouchoir de poche&nbsp;: <strong>356ms</strong> pour la sous-requête, <strong>366ms</strong> pour le tri décroissant, et <strong>441ms</strong>. </p>
+
+<p>Si la sous-requête fonctionne bien ici, c'est parce qu'elle peut être mise en cache et n'a pas à être recalculée à chaque ligne. Un <tt>EXPLAIN</tt> nous indique «&nbsp;Select tables optimized away&nbsp;». </p>
+
+<p>Le tri décroissant lui se fait sur un index («&nbsp;using index&nbsp;»), ce qui explique sa vélocité. </p>
+
+<p>La jointure est un peu défavorisée (trois jointures) et devraient donc être oubliée pour ce cas particulier. </p>
+
+<h2>Conclusion</h2>
+<p>En conclusion&nbsp;: pour un élément aléatoire, ne pas utiliser <tt>ORDER BY RAND()</tt>&nbsp;! En revanche, pour récupérer le dernier élément tout se vaut à peu près niveau temps de calcul. Pour la mémoire, c'est une autre paire de manches&nbsp;! </p>
+
+<p>Et surtout, réfléchir à ce qu'on veut et ce qui est fait&nbsp;: la distinction est importante&nbsp;! </p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Sélectionner un élément au hasard dans une table MySQL				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

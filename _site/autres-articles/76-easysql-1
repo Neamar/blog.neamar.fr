@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="EasySQL, SQL, PHP, admin" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>EasySQL : présentation du module d'administration de table MySQL</title>
+	<link href="https://blog.neamar.fr/autres-articles/76-easysql-1" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				EasySQL : présentation du module d'administration de table MySQL			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=1984740b4658ce6fef22a71e07848feba4fd200f" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-02-05T12:21:02+00:00" itemprop="dateCreated">
+						Created: 05 February 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Sommaire :</p>
+<ul>
+	<li>(en cours de lecture) <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/76-easysql-1">Présentation d'<strong>EasySQL</strong></a></li>
+	<li><a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/77-easysql-2">Comment utiliser <strong>EasySQL</strong></a></li>
+	<li><a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/78-easysql-3">Documentation d'<strong>EasySQL</strong></a></li>
+</ul>
+
+<p>Aujourd'hui je vais vous présenter une petite classe maison qui permet d'administrer une base de données sans connaissances techniques. </p>
+
+<p>Ce module est né d'un constat&nbsp;: l'interface d'administration d'un site est toujours la même. <br />
+D'abord, un module pour insérer du nouveau contenu dans les tables. <br />
+
+Un module pour éditer du contenu déjà en mémoire. <br />
+Et un module pour en supprimer. <br />
+Bref&nbsp;: les trois instructions SQL de manipulation, <tt>INSERT</tt>, <tt>UPDATE</tt>, <tt>DELETE</tt>. </p>
+
+<p>Prenons l'exemple d'un blog constitué &ndash; pour simplifier &ndash; de trois tables&nbsp;: les auteurs, les articles, les commentaires. <br />
+
+Pour chacune de ces tables, on a besoin des trois opérations citées plus haut&nbsp;: faut-il développer neuf pages, qu'il faudra mettre à jour si on modifie le schéma des tables&nbsp;? </p>
+
+<p>D'où l'arrivée d'<strong>EasySQL</strong>. </p>
+
+ 
+
+<h2>Présentation</h2>
+<p>Si vous avez déjà développé un ou plusieurs sites web, vous vous êtes sûrement rendus compte que la réalisation de l'interface d'administration pouvait être assez fastidieuse, alors que très peu de personnes en profiteront.<br />
+De façon basique, c'est toujours la même chose : permettre aux administrateurs d'insérer, de mettre à jour et de supprimer des données dans la base de données.</p>
+
+<p>En soi, vous pourriez leur mettre <strong>PhpMyAdmin</strong>, ce qui conviendrait largement.. sauf que ! <strong>PhpMyAdmin</strong> est lourd, pas forcément intuitif pour un utilisateur lambda qui se retrouvera noyé dans le jargon technique, et offre trop de possibilités : même s'ils sont administrateurs, vous ne voulez pas forcément qu'ils puissent modifier le schéma de la table, ou supprimer des tables systèmes.</p>
+
+<p>Plutôt de de développer une page pour chaque table, j'ai fini par créer <strong>EasySQL</strong>, une classe PHP qui permet d'administrer les données d'une table (uniquement ses données ; pas la structure). Le but était d'avoir quelque chose d'assez souple pour être utilisable dans tous les cas, et d'assez intuitif pour que même un technophobe puisse s'en sortir !</p>
+
+<h2>Concrètement, à quoi sert EasySQL ?</h2>
+
+<p>Ce module se charge de vos <tt>INSERT</tt>, <tt>UPDATE</tt>, <tt>DELETE</tt>&nbsp;: vous lui indiquez juste sur quelle(s) table(s) il doit travailler, et il fera son boulot en affichant des formulaires, en enregistrant les demandes de l'utilisateur, en contrôlant la cohérence des valeurs&hellip;</p>
+
+<p><strong>EasySQL</strong> est conçu pour une utilisation relationnelle&nbsp;: ainsi, dans le formulaire d'ajout d'article, le nom de l'auteur ne sera pas un champ de texte mais une liste déroulante avec la liste des auteurs déjà inscrits sur le site. Idem pour les commentaires&nbsp;: la colonne indiquant à quel article se réfère le commentaire sera une liste déroulante avec la liste des articles&nbsp;! Et l'ensemble est hautement configurable pour faciliter au maximum l'administration : ce sera d'ailleurs <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/77-easysql-2">l'objet du second article que de donner des exemples utilisables</a>.<br />
+
+Bien évidemment, le but est de minimiser le code pour utiliser la classe&nbsp;: toutes ces données sont donc générées intelligemment, par inférence du type de la colonne, de son nom, des clés étrangères&hellip; même si des paramètres permettent de reprendre la main sur les choix automatiques. Théoriquement, le code de votre côté ne dépassera pas 20 lignes !</p>
+
+<h2>Tu peux donner des exemples d'utilisation ?</h2>
+<p>Comme une image vaut mieux qu'un long discours, quelques exemples vont suivre&hellip; </p>
+
+<h3>Ajout de données</h3>
+<p>Cet exemple illustre l'ajout d'un article sur la table Articles. <br />
+Schéma de la table&nbsp;: </p>
+<ul>
+	<li><tt>Titre</tt>&nbsp;: VARCHAR(50) ;</li>
+	<li><tt>Categorie</tt>&nbsp;: VARCHAR(50), noté comme une clé étrangère sur la table <em>Categorie</em> (voir plus bas pour la gestion des références) ;</li>
+	<li><tt>Article</tt>&nbsp;: TEXT. Par défaut, EasySQL n'affiche qu'un textarea, mais vous pouvez facilement le configurer pour afficher votre interface d'édition préférée.</li>
+</ul>
+
+<h4>Formulaire généré automatiquement&nbsp;:</h4>
+<!--INSERT-->
+<form method="post" action="">
+<label for="Titre" style="float:left; width:350px;">Titre de l'article : </label><input type="text" name="Titre" id="Titre" value="" /><br />
+<label for="Categories_Categorie" style="float:left; width:350px;">La catégorie dans laquelle on doit ranger l'article : </label><select name="Categories_Categorie" id="Categories_Categorie"><option value="">(aucun)</option><option value="1">Infos Blog</option><option value="2">News</option><option value="3">Technique</option></select><br />
+<label for="Article">Votre texte :</label><br />
+<textarea name="Article" id="Article" cols="25" rows="25" style="width:98%;"></textarea>
+<br />
+<input type="submit" value="Enregistrer cette ligne sur la table Articles" />
+</form>
+
+
+
+<h3>Modification de données</h3>
+<p>La modification des données se fait en deux étapes&nbsp;: d'abord l'affichage d'un tableau avec la liste des tuples et un bouton «&nbsp;Éditer&nbsp;», puis un formulaire pour modifier les données sélectionnées. </p>
+
+<p>Cet exemple illustre la modification d'un auteur dans la table Auteurs. <br />
+Types&nbsp;: </p>
+<ul>
+	<li><tt>Pseudo</tt>&nbsp;: VARCHAR(50) ;</li>
+	<li><tt>Password</tt>&nbsp;: VARCHAR(40)&nbsp;: EasySQL crypte automatiquement les colonnes nommées <tt>Password</tt> avec l'algorithme <a href="http://fr2.php.net/sha1">sha1</a>. </li>
+</ul>
+
+
+
+
+<h4>Pré-modifications</h4>
+<p>La liste des lignes en mémoire&nbsp;: </p>
+
+<!--PREUPDATE-->
+<table><caption>Édition en ligne</caption>
+<thead>
+	<tr>
+		<th>ID</th>
+		<th>Pseudo</th>
+		<th>Password</th>
+	</tr>
+</thead>
+
+<tbody>
+	<tr>
+		<td><form method="post" action="">
+		<input type="hidden" value="3" name="editValue" id="editValue" />
+		<input type="submit" value="Éditer" />
+		</form>
+		</td>
+		<td>Lambda</td>
+		<td>482fbdf856c5a7b9f6d7767c7ead2574b94aaffg</td>
+	</tr>
+
+	<tr>
+		<td><form method="post" action="">
+		<input type="hidden" value="2" name="editValue" id="editValue" />
+		<input type="submit" value="Éditer" />
+		</form>
+		</td>
+		<td>Niemand</td>
+		<td>de4d30f58d6e58cc894461503f5a9a1j242e4811</td>
+	</tr>
+
+	<tr>
+		<td><form method="post" action="">
+		<input type="hidden" value="1" name="editValue" id="editValue" />
+		<input type="submit" value="Éditer" />
+		</form>
+		</td>
+		<td>Neamar</td>
+		<td>73439211c0fb5c64b4455accccb02cece92969ea</td>
+	</tr>
+
+	<tr>
+		<td><form method="post" action="">
+		<input type="hidden" value="1" name="editValue" id="editValue" />
+		<input type="submit" value="Éditer" />
+		</form>
+		</td>
+		<td>SuperUser</td>
+		<td>593gceg967c5a7b9f6d8856c7ead278hu5srrtty</td>
+	</tr>
+</tbody>
+</table>
+
+
+
+<h4>Modifications</h4>
+<p>Voilà le formulaire obtenu après clic sur le bouton «&nbsp;Éditer&nbsp;» de la ligne Neamar&nbsp;: </p>
+
+<!--UPDATE-->
+<form method="post" action="">
+<label for="Pseudo" style="float:left; width:350px;">Pseudonyme de l'utilisateur : </label><input type="text" name="Pseudo" id="Pseudo" value="Neamar" /><br />
+<label for="Password" style="float:left; width:350px;">Mot de passe (sha1) : </label><input type="password" name="Password" id="Password" value="73439211c0fb5c64b4455accccb02cece92969ea" /><br />
+<input type="submit" value="Modifier cette ligne sur Utilisateurs" />
+</form>
+
+
+<h3>Suppression</h3>
+<p>La suppression se fait par un tableau qui affiche l'intégralité des lignes. Il suffit de cocher une petite croix en regard de chaque ligne que l'on souhaite supprimer pour nettoyer la table</p>
+
+<!--DELETE-->
+<form method="post" action="">
+<input type="hidden" value="1" name="retrait" id="retrait" /><table><caption>Suppression de lignes de la table Articles</caption>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Titre</th>
+			<th>Categorie</th>
+
+			<th>Article</th>
+		</tr>
+
+	</thead>
+	<tbody>		<tr>
+			<td><input type="checkbox" name="delete-Articles-3" id="delete-Articles-3" /></td>
+			<td><label for="delete-Articles-3">Économie de Hong-Kong</label></td>
+			<td><label for="delete-Articles-3">Bienvenue à Hong Kong</label></td>
+
+			<td><label for="delete-Articles-3">Hong-Kong est l’un des Quatre Dragons Asiatiques (avec la Corée du Sud, Singapour et Taïwan), et à ce titre est très riche. Elle se classe en effet à la huitième place en termes de parité de pouvoir d...</label></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="delete-Articles-2" id="delete-Articles-2" /></td>
+			<td><label for="delete-Articles-2">Géographie de Hong Kong</label></td>
+			<td><label for="delete-Articles-2">Bienvenue à Hong Kong</label></td>
+			<td><label for="delete-Articles-2">Hong-Kong est composé d’une partie continentale et quelques deux cents quarante-trois îles, situé à l’extrémité sud-est du delta de la rivière des Perles, et situé aux frontières du Guangdong. On trou...</label></td>
+
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="delete-Articles-1" id="delete-Articles-1" /></td>
+			<td><label for="delete-Articles-1">Histoire de Hong Kong</label></td>
+			<td><label for="delete-Articles-1">Bienvenue à Hong Kong</label></td>
+			<td><label for="delete-Articles-1">Hong-Kong est l’un des ports et l’une des places financières les plus importants du monde, et il s’agit du meilleur moyen d’entrer en contact avec la Chine. L’histoire de cette ville est riche, et per...</label></td>
+		</tr>
+
+	</tbody>
+</table>
+<input type="submit" value="Supprimer ces lignes de Articles" />
+</form>
+
+
+
+<h2>Autour d'<strong>EasySQL</strong></h2>
+<h3>Limitations</h3>
+<ul>
+	<li><em>Technique</em>&nbsp;: la première colonne doit être auto-increment, et de préférence Primary (ce n'est pas obligatoire mais très fortement recommandé)</li>
+
+	<li><em>Pratique</em>&nbsp;: une seule modification à la fois, impossible par exemple de «&nbsp;modifier le titre de tous les articles écrits par X&nbsp;» en une seule fois&nbsp;; le but n'est pas d'offrir un shell SQL mais une interface simple. </li>
+</ul>
+<h3>Conseils</h3><ul>
+	<li><em>Technique</em>&nbsp;: préférez le moteur InnoDB pour vos tables (sauf si vous ne souhaitez pas gérer des relations). MyISAM (par défaut) est aussi supporté mais les contraintes ne sont plus gérées ; voir l'article suivant pour une présentation d'<strong>EasySQL</strong> avec MyISAM. </li>
+	<li><em>Pratique</em>&nbsp;: <strong>EasySQL</strong> se prête plus à l'administration de petites tables que de vraies bases&nbsp;: si vos tables ont plus de 100&nbsp;000 tuples, les interfaces d'édition et de suppression (qui affichent toutes les lignes) perdront toute utilité. </li>
+
+</ul>
+<p>⇒ <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmaster/77-easysql-2">Dans le prochain article, nous verrons comment utiliser concrètement EasySQL&hellip;</a></p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					EasySQL : présentation du module d'administration de table MySQL				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

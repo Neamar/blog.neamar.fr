@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="AS3 snippet, double clic, listener, listeners" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>AS3 snippet : les listeners contre-intuitifs</title>
+	<link href="https://blog.neamar.fr/autres-articles/127-as3-snippets-double-click-keyboard" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				AS3 snippet : les listeners contre-intuitifs			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=00c96b5dac40e36f7e84fd97e12d522a13bf60fa" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-06-06T20:35:55+00:00" itemprop="dateCreated">
+						Created: 06 June 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>AS3 snippet : gérer les évènements double clic et claviers.</p>
+
+<p>La quasi-totalité des listeners d'actionscript3 sont directs, sauf ces deux là qui nécessitent un minimum de préparation / connaissance.</p>
+
+ 
+<h2>Double Clic</h2>
+<p>Il faut penser à spécifier explicitement la propriété <tt>doubleClickEnabled</tt> à <tt>true</tt>, sinon l'évènement n'est jamais déclenché.<br />
+
+Exemple :</p>
+
+<pre xml:lang="actionscript3">
+function onDoubleClick(e:MouseEvent)
+{
+	trace("Double clic.");
+}
+
+
+UnSprite.doubleClickEnabled = true;
+UnSprite.addEventListener(MouseEvent.DOUBLE_CLICK, onDoubleClick);
+</pre>
+
+<p>Quelques mots sur l'optimisation lors du choix des objets :</p>
+<ul>
+<li>En Flex, utilisez un <tt>Sprite</tt> pour les formes vectorielles qui nécessitent la souris.</li>
+<li><tt>MovieClip</tt> est bien plus lourd et a des possibilités malheureusement inutilisables sans l'IDE d'Adobe (entre autres, gestion d'une timeline. Sans compter qu'il est <tt>dynamic</tt>).</li>
+<li>Si vous n'avez pas besoin d'interactions souris, pensez à <tt>Shape</tt> qui est encore plus léger.</li>
+<li>Attention, les objets <tt>Bitmap</tt> n'étendent pas <tt>InteractiveObject</tt>, n'essayez pas de leur ajouter des listeners pour savoir si l'utilisateur bouge la souris ;) Si nécessaire, placez-les dans un objet <tt>Sprite</tt> sur lequel vous pourrez alors enregistrer les écouteurs.</li>
+</ul>
+
+<h2>Clavier</h2>
+<p>La gestion du <em>bubble</em> sur le clavier est un peu chaotique. Pour être sûr de récupérer tous les évènements, inscrivez-vous directement sur le stage (ce qui implique d'ajouter le listener depuis la classe principale, ou de faire transiter un objet <tt>Stage</tt> sur tous les objets...)</p>
+
+<pre xml:lang="actionscript3">
+function onKey(e:KeyboardEvent):void
+{
+	if (e.keyCode == 39)
+		getNextLevel();
+}
+
+//Bien :
+stage.addEventListener(KeyboardEvent.KEY_UP, onKey);
+
+//Pas bien (l'évènement ne sera jamais dispatché) :
+addEventListener(KeyboardEvent.KEY_UP, onKey);
+</pre>
+
+<p>Un petit mot pour les lecteurs curieux : Icosien avance bien, la banque de niveaux grossit, celle des bugs décroît... bientôt la phase de tests, n'hésitez pas à vous signaler pour en faire partie ;)</p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					AS3 snippet : les listeners contre-intuitifs				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

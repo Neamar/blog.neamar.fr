@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="entretien d'embauche, questionnaire, faire passer un entretien, recruteur, stage" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Faire passer des entretiens d'embauche : le questionnaire</title>
+	<link href="https://blog.neamar.fr/autres-articles/276-questionnaire-embauche" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Faire passer des entretiens d'embauche : le questionnaire			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=e833e28aba4fb6e03081293f340a243c9da9a0d3" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2011-06-10T13:57:39+00:00" itemprop="dateCreated">
+						Created: 10 June 2011					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Deuxième partie d'une série d'articles sur mon expérience pour la réalisation d'entretien d'embauche.</p>
+<ul>
+<li>Premier article : l'<a href="http://blog.neamar.fr/component/content/article/14-reflexions/275-entretien-embauche">entretien</a>.</li>
+<li>Deuxième article : le <a href="http://blog.neamar.fr/component/content/article/14-reflexions/276-questionnaire-embauche">questionnaire</a>.</li>
+<li>Troisième article : les <a href="http://blog.neamar.fr/component/content/article/14-reflexions/277-entretien-embauche-reponses">réponses</a>.</li>
+</ul>
+
+<p>Après l'<a href="http://blog.neamar.fr/component/content/article/14-reflexions/275-entretien-embauche">entretien</a>, on passait donc au questionnaire. </p>
+
+ 
+
+<p>Il faut d'abord que je le contextualise&nbsp;: je recherchais des développeurs PHP stagiaires pour une application Zend (donc en MVC) utilisant Doctrine. L'application fait déjà plus d'un million de lignes. </p>
+
+<p>Je l'avais fait faire à quelques collègues, qui avaient mis une dizaine de minutes à le réaliser et m'avaient conseillé quelques éclaircissements dans les questions. <br />
+Le formulaire contient une vingtaine de questions basiques, décomposées en deux parties&nbsp;: code, et connaissances informatiques. </p>
+
+<p>Soyons franc&nbsp;: pour moi, un score inférieur à 12&nbsp;indiquait des lacunes critiques pour le poste et pour la programmation en général. J'allais être surpris&nbsp;: 12&nbsp;est probablement la meilleure note que j'ai eu&hellip; les stagiaires ne sont plus ce qu'ils étaient, et trouver des passionés est difficile&nbsp;! </p>
+
+<p>La deuxième question était&nbsp;: fallait-il corriger devant la personne&nbsp;? C'était l'avantage d'avoir réalisé le formulaire moi-même&nbsp;: je pouvais expliquer aux gens leurs erreurs&hellip; oui, mais étaient-ils intéressés&nbsp;? Mettez-vous à leur place&nbsp;: un entretien d'embauche pendant lequel le recruteur vous mettrait le nez dans vos erreurs&hellip; pas très agréable. Finalement, j'ai décidé de laisser le choix&nbsp;: «&nbsp;Voulez-vous faire la correction maintenant&nbsp;?&nbsp;» De façon intéressante, la plupart des gens disent «&nbsp;oui&nbsp;», au point que je compris rapidement que «&nbsp;non&nbsp;» signifiait «&nbsp;je n'ai pas été capable de répondre à une seule question et je ne sais pas ce que je fous là, j'ai essayé de te gruger à l'oral mais ce questionnaire me démasque&nbsp;». </p>
+
+<p>Enfin, assez parlé. Je vous mets uniquement les questions ici, et les réponses dans un prochain article. Si vous avez 15&nbsp;minutes devant vous et un minimum d'expérience en Web, n'hésitez pas à le faire&nbsp;; vous me direz ce que vous en pensez. </p>
+
+<h2>Questionnaire</h2>
+<p>Ces questions permettent de vous situer vis-à-vis de la programmation et de l'informatique en général. Il est <strong>normal</strong> de ne pas tout connaître ;).</p>
+<h3>Écriture et lecture de code</h3>
+<h4>Que fait la requête SQL suivante&nbsp;: </h4>
+<pre xml:lang="sql">
+SELECT Marque, AVG(Prix)
+FROM Produits
+GROUP BY Marque
+</pre>
+
+<p>Réponse&nbsp;: </p>
+
+<h4>En javascript (ou un framework JS que vous préciserez), comment peut-on récupérer un objet par son identifiant (attribut <tt>id</tt> en HTML)&nbsp;? </h4>
+<pre xml:lang="javascript">
+/**
+ * Récupère un objet par son identifiant
+ * 
+ * @param string id l'identifiant recherché
+ * @return DOMElement l'élément d'identifiant correspondant
+ */
+function getById(id)
+{
+   return
+}
+</pre>
+
+<h4>Que fait l'expression CSS suivante&nbsp;? Pouvez-vous donner un fragment de code HTML sur lequel elle s'appliquerait&nbsp;? </h4>
+<pre xml:lang="css">
+#space .space_list  a:hover{
+	background:#777777;
+}
+</pre>
+<p>Réponse&nbsp;: </p>
+
+<h4>Pouvez-vous rédiger en PHP (ou autre si inconnu) une fonction prenant un tableau en paramètre et renvoyant la somme des éléments de tableau&nbsp;? </h4>
+<pre xml:lang="php">
+&lt;?php
+/**
+ * Calcule la somme des valeurs du tableau.
+ *
+ * @param array $tableau le tableau sur lequel effectuer la somme
+ *
+ * @return int la somme
+ */
+function somme_tableau(array $tableau)
+{
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+}
+</pre>
+
+<h4> Pouvez-vous rédiger en PHP (ou autre si inconnu) une classe modélisant un utilisateur (propriétés et fonctions à votre discrétion)&nbsp;? </h4>
+<pre xml:lang="php">
+&lt;?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+
+<h4>Pouvez-vous rédiger en PHP (ou autre si inconnu) un programme affichant tous les nombres de 1 à 50, en remplaçant les multiples de 3&nbsp;par <tt>ping</tt>, les multiples de 5&nbsp;par <tt>pong</tt> et les multiples de 3&nbsp;et 5 par <tt>pingpong</tt>&nbsp;? </h4>
+<pre xml:lang="php">
+&lt;?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+<h4>Écrivez une expression régulière basique permettant de valider une date de naissance (au format <tt>JJ/MM/AAAA</tt>)</h4>
+<p>Regexp&nbsp;: </p>
+
+<h4>Que pensez-vous du code suivant&nbsp;? </h4>
+<pre xml:lang="php">
+&lt;?php
+$v = $_GET["prenom"];
+echo "Bonjour $v !";
+
+include('sql_connect.php');
+
+$reply = mysql_query("INSERT INTO Visiteurs VALUES('" . $v . "')");
+
+include('../../pages/' . $v . '.html');
+die();
+</pre>
+
+<p>Réponse&nbsp;: </p>
+
+<h4>Écrivez en pseudo-algorithme un code calculant de façon récursive la factorielle d'un nombre <tt>n</tt>. </h4>
+<p>Pour rappel, <tt>factorielle(5) = 5 * 4 * 3 * 2 * 1</tt>. </p>
+<pre>
+fonction factorielle(n)
+
+
+
+
+
+
+
+
+</pre>
+<h3>Connaissances informatiques</h3>
+<h4>En programmation orientée objet, quelle est la particularité d'une classe abstraite&nbsp;? </h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>Rapidement, comment représenter des données hiérarchiques dans une base de données&nbsp;? </h4>
+
+<p>Par exemple, un arbre de catégories&nbsp;: une catégorie principale qui peut avoir un ou plusieurs enfants, qui peuvent eux-même avoir un ou plusieurs enfants, etc. <br />
+Réponse&nbsp;: </p>
+
+<h4>Quand peut-on dire d'un graphe qu'il admet un parcours hamiltonien&nbsp;? </h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>Comment quitte-t-on l'éditeur de texte vi&nbsp;? </h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>Comment ouvrir une console sous Windows et afficher son adresse IP (sur Internet et/ou sur la box)&nbsp;? </h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>Quelle est la complexité (en notation grand O) d'un algorithme affichant tous les nombres de 1 à <tt>n</tt>, en remplaçant les multiples de 3&nbsp;par <tt>ping</tt>, les multiples de 5&nbsp;par <tt>pong</tt> et les multiples de 3&nbsp;et 5 par <tt>pingpong</tt>&nbsp;? (cf. questions code)</h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>Quelle entreprise possède Youtube&nbsp;? </h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>En MVC, qui effectue les requêtes SQL permettant de récupérer un objet dont une des propriétés devra être affichée&nbsp;? </h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>Quel nombre suit <tt>F</tt> en hexadécimal&nbsp;? </h4>
+<p>Réponse&nbsp;: </p>
+
+<h4>$\sum_{i=0}^{\infty} \frac{1}{i^2} = ?$</h4>
+<p>Réponse&nbsp;: </p>
+
+<h3>Bonus</h3>
+
+<p>You're the captain of a pirate ship and your crew gets to vote on how the gold is divided up. If fewer than half of the pirates agree with you, you die. How do you recommend apportioning the gold in such a way that you get a good share of the booty, but still survive&nbsp;? </p>
+
+<h3>Code</h2>
+Et comme je suis sympa, je vous mets le code du formulaire sur <a href="https://gist.github.com/1002676">ce gist</a>.	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Faire passer des entretiens d'embauche : le questionnaire				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

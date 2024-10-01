@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="neamar, commentaire, interactivité" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Pourquoi on ne peut pas commenter chez Neamar ?</title>
+	<link href="https://blog.neamar.fr/autres-articles/98-commentaires-site-neamar" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Pourquoi on ne peut pas commenter chez Neamar ?			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=2f2a2092f5b641ee84d991bef590f5be72595e3e" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-03-29T20:10:39+00:00" itemprop="dateCreated">
+						Created: 29 March 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<blockquote> <p>Dis tonton Neamar, tu trouves pas que tes sites font pas très ouèbe 2.0&nbsp;? C'est vrai quoi, on peut même pas commenter&nbsp;! </p></blockquote>
+
+<p>Hum. La franchise m'impose de répondre sans ambages ni <a class="Ancre" href="http://lachal.neamar.fr/Atermoiement">atermoiements</a>&nbsp;: «&nbsp;oui&nbsp;». <br />
+
+Mais mon côté cartésien me dicte d'expliquer les méandres qui m'ont amenés jusqu'à cette position peu courante sur les rivages de l'Internet&hellip; </p>
+
+ <p>Car il faut nuancer&nbsp;: si on ne peut pas commenter, je n'ai rien contre le côté «&nbsp;collaboratif&nbsp;» du web, bien au contraire&nbsp;: il suffit de voir les presque 10&nbsp;000&nbsp;membres de <a href="http://ccds.neamar.fr/">Ça coule de source</a> pour voir que je n'ai rien contre les comptes utilisateurs&nbsp;! <br />
+
+Mieux encore&nbsp;; j'adore héberger des textes qui ne sont pas de moi &ndash; avec, faut-il le préciser l'accord (voire la demande) de l'auteur. La section Ressources regorge d'exemples&nbsp;: de <a href="http://neamar.fr/Res/Stropovitch/">Stropovitch</a> au travail plus que collaboratif de <a href="http://neamar.fr/Res/Reflets">Reflets d'Acide</a>, on voit que j'aime avoir des retours ou simplement collaborer. </p>
+
+<p>En fait, les deux seuls endroits où l'on pourrait décemment me reprocher de ne pas laisser la possibilité de commenter, c'est <a href="http://omnilogie.fr">Omnilogie</a> et <a href="http://blog.neamar.fr">ce blog</a>. </p>
+
+<p>Pour Omnilogie, c'est un choix <em>mene</em>, <em>mene</em>, <em>tekel</em>, <em>upharsin</em>. On en a longuement devisé avec Anthony et l'<a class="Ancre" href="http://lachal.neamar.fr/Areopage">aréopage</a> des admins, pour en arriver à la conclusion qu'un système de commentaires apportait peu mais impliquait beaucoup. <br />
+Apportait peu, parce que la plupart des commentaires sur les sites web se réduisent à l'expression de l'<a class="Ancre" href="http://lachal.neamar.fr/Assentiment">assentiment</a> (ou non) de l'auteur dudit commentaire&nbsp;: «&nbsp;super article&nbsp;», «&nbsp;<em>pulchre, bene, recte</em>&nbsp;»<sup><a class="footnote" id="Note-1" href="#Ref-1" title="Je vous accorde que celui-là est moins courant que les autres !">1</a></sup> «&nbsp;nul&nbsp;». Ce qui n'est pas forcément intéressant pour le lecteur&nbsp;! À la rigueur, on pourrait imaginer un système de notations, mais cela implique une hiérarchie subjective dans les articles qui ne m'enchante guère (les articles qui me plaisent ne sont pas les articles qui plaisent à d'autres, l'expérience l'a maintes fois prouvée). <br />
+
+Impliquait beaucoup, parce que les robots et les spammeurs sont légions. Bloquer les uns est &ndash; souvent &ndash; chose facile<sup><a class="footnote" id="Note-2" href="#Ref-2" title="Il suffit de détecter quelques mots anacréontiques bien choisis, tels la petite pilule bleue, ou d'imposer une image au visiteur pour passer le test de Turing inversé. ">2</a></sup>, censurer les autres est plus complexe. D'abord, parce que certains apportent un réel contenu (dont le but reste d'attirer le visiteur vers un site annexe), et qu'il faut dès lors définir une limite sur ce qui est de l'ajout pertinent d'information ou de la simple propagande. Et ce choix ne peut pas être automatisé&nbsp;: il faut donc une personne qui se charge de valider subjectivement les commentaires. Certes, Omnilogie n'est pas Facebook et ne grossirait pas de plus de 50&nbsp;commentaires pas jour (et je suis déjà généreux), mais c'est une charge de travail que je ne me permettrais pas d'imposer à quelqu'un&nbsp;; d'autant qu'il faudrait une confiance absolue dans l'objectivité et la justesse de raisonnement de la personne qui agirait en despote, <em>per fas et nefas</em>. <br />
+Cependant, nous souhaitions garder un moyen de contact avec le Public avec un grand P, ces visiteurs anonymes qui représentent un gros pourcentage des visites et qui ont parfois des remarques intéressantes ou modificatrices, c'est pourquoi il y a quand même une page de contact pompeusement nommée «&nbsp;chat des admins&nbsp;» pour signaler les erreurs potentielles. Mais ça ne va pas plus loin. (En revanche, <a href="http://omnilogie.fr/membres/nouveauMembre. php">les rédactions d'articles</a> sont ouvertes à tous. Oui oui, même à toi, qui me regarde derrière ton écran. )</p>
+
+<p>Pour le blog, c'est un choix plus ambigu et qui sera plus facile à reconsidérer. <br />
+D'abord, il y a le côté technique&nbsp;: Joomla&nbsp;! est un monstre protéiforme horrible à manipuler et déjà alourdi par plusieurs plugins plus ou moins utiles (et moins ou moins optimisés). Ajouter un système de commentaire relève donc du suicide virtuel, de l'acte de cruauté envers ce pauvre serveur qui vous offre la page que vous lisez actuellement. <br />
+Et puis &ndash; en plus des raisons sus-citées pour Omnilogie et qui s'appliquent dans une moindre mesure ici &ndash;, il y a la peur de ne pas avoir assez de commentaires pour être crédible. J'apprécie personnellement peu ces nombreux blogs qui exhibent fièrement leur «&nbsp;0 commentaires&nbsp;»<sup><a class="footnote" id="Note-3" href="#Ref-3" title="Notez le s. ">3</a></sup> sur des articles vieux de plusieurs années&nbsp;; et n'ayant pas la prétention de faire beaucoup mieux je préfère la voi(x|e) du lâche qui est de ne pas affronter le problème. <br />
+
+Vous aurez remarqué qu'il s'agit d'ailleurs d'une spirale vicieuse<sup><a class="footnote" id="Note-4" href="#Ref-4" title="Et non d'un cercle, car les arguments changent avec le temps sans boucler">4</a></sup>, puisque quand le trafic aura atteint un taux «&nbsp;convenable&nbsp;» (à définir un jour&nbsp;! ), les arguments contre les commentaires sur Omnilogie deviendront les arguments contre les commentaires sur ce blog. </p>
+
+<p>Bref, voilà qui est dit. Il ne s'agit pas forcément de décisions irréversibles (je suis d'un naturel <a class="Ancre" href="http://lachal.neamar.fr/Cacochyme">cacochyme</a>), mais pour l'instant les choses resteront telles qu'elles sont. Avec toutes mes excuses pour les nombreuses personnes qui ont des choses passionnantes à raconter et qui se voient contraintes d'utiliser <a href="http://neamar.fr/Mail.php">le formulaire de contact</a>. </p>
+
+<p><em>Ite, missa est</em>. </p>
+
+<p><em>P.S</em>&nbsp;: hum, je m'aperçois à rebours que j'ai oublié de mentionner le <a href="http://lachal.neamar.fr">site des mots moribonds</a> (pas le site, les mots). Les arguments restent <em>grosso-modo</em> les mêmes, en plus du fait de ne pas offrir un réel contenu unique. </p>
+
+<hr class="footnote court" />
+<ol>
+	<li><a class="footnote" id="Ref-1" href="#Note-1"><sup>1</sup> <small>&uarr;</small></a> Je vous accorde que celui-là est moins courant que les autres, les <a class="Ancre" href="http://lachal.neamar.fr/Chantre">chantres</a> <a class="Ancre" href="http://lachal.neamar.fr/Apologetique">apologétiques</a> étant rarement enclins à la <a class="Ancre" href="http://lachal.neamar.fr/Capucinade">capucinade</a> <a class="Ancre" href="http://lachal.neamar.fr/Rhetorique">rhétorique</a> <a class="Ancre" href="http://lachal.neamar.fr/Alambique">alambiquée</a>&nbsp;! </li>
+	<li><a class="footnote" id="Ref-2" href="#Note-2"><sup>2</sup> <small>&uarr;</small></a> Il suffit de détecter quelques mots <a class="Ancre" href="http://lachal.neamar.fr/Anacreontique">anacréontiques</a> bien choisis, tels la petite pilule bleue, ou d'imposer une image au visiteur pour passer le test de Turing inversé. </li>
+	<li><a class="footnote" id="Ref-3" href="#Note-3"><sup>3</sup> <small>&uarr;</small></a> Notez le s. </li>
+	<li><a class="footnote" id="Ref-4" href="#Note-4"><sup>4</sup> <small>&uarr;</small></a> Et non d'un cercle, car les arguments changent avec le temps sans boucler.</li>
+</ol>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Pourquoi on ne peut pas commenter chez Neamar ?				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

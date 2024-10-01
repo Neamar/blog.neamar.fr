@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="ram, mémoire" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Pourquoi parle-t-on de mémoire à accès aléatoire ?</title>
+	<link href="https://blog.neamar.fr/autres-articles/111-rapport-aleatoire-memoire-ram-random" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Pourquoi parle-t-on de mémoire à accès aléatoire ?			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=d315fb5e794d5318c3de337e9a480b9202396b44" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-05-13T12:53:25+00:00" itemprop="dateCreated">
+						Created: 13 May 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Ils sont parmi les premiers <a href="http://omnilogie.fr/1R">acronymes</a> que l'on apprend en informatique&nbsp;: RAM et ROM, respectivement pour Random Access Memory et Read Only Memory. <br />
+Si on comprend facilement qu'une mémoire «&nbsp;Read Only&nbsp;» (lecture seulement, si un anglophobe passe par là) ne change pas avec le temps et reste toujours la même, la pertinence du terme «&nbsp;Random access&nbsp;» (accès aléatoire) peut paraître plus discutable. </p>
+
+<p>Pendant mes jeunes années, j'ai longtemps été obligé de retenir bêtement que «&nbsp;RAM = mémoire vive&nbsp;», ne voyant pas le rapport entre le sigle et son utilisation concrète. Pire, j'ai cru au tout début que cette zone servait uniquement au générateur de nombres aléatoires&nbsp;! <br />
+Et puis j'ai appris je ne sais plus trop comment la vraie signification. Mais j'ai pu constater que de nombreuses personnes baignaient toujours dans l'ignorance, et je me propose donc de partager mon savoir dans un acte de <a href="http://lachal.neamar.fr/Mansuetude">mansuétude</a> d'une extrême <a href="http://lachal.neamar.fr/Munificence">munificence</a>. </p>
+
+ 
+<p>(J'ai un peu honte d'avoir mis un lien «&nbsp;en savoir plus&nbsp;», vu que l'explication tient en quelques lignes&nbsp;; disons juste que c'est pour les statistiques.)</p>
+
+<p>Au tout début de l'informatique, les programmes étaient écrits sur des cartes perforées. D'ailleurs, la représentation théorique d'un ordinateur (la machine de Turing) est un simple ruban infini de 0&nbsp;et de 1&nbsp;; ce qui montre qu'en 70&nbsp;ans l'informatique n'a pas fait d'avancée exceptionnellement novatrice. </p>
+
+<p>Ces cartes perforées étaient déplacées par une machine, à une vitesse forcément finie impliquant que le passage de l'état <span class="TexTexte">n</span> à <span class="TexTexte">n+1</span> prenne un certain temps <span class="TexTexte">t<sub>0</sub></span>. </p>
+
+<p>Imaginez un programme en train de s'exécuter sur cette carte perforée, disons qu'il est à la case 500&nbsp;et que l'instruction sur cette case est un saut vers une autre adresse mémoire (<tt>JMP</tt>, <tt>BRU</tt>, <tt>MOV</tt>… ). Examinons deux situations différentes&nbsp;: </p>
+
+
+<ul>
+<li><strong>Demande de saut vers l'adresse 510</strong>&nbsp;: le ruban doit se décaler de <span class="TexTexte">|510 - 500|</span> = 10 positions, ce qui prend un temps de <span class="TexTexte">10t<sub>0</sub></span>.</li>
+<li><strong>Demande de saut vers l'adresse 10</strong>&nbsp;: le ruban doit se décaler de <span class="TexTexte">|10 - 500|</span> = 490 positions, ce qui prend un temps de <span class="TexTexte">490t<sub>0</sub></span>. 
+</li>
+</ul>
+
+<p>Autrement dit, le temps d'accès à la mémoire dépend de l'adresse en cours et de l'adresse à atteindre&nbsp;: le programmeur consciencieux devra veiller à placer côte-à-côte les instructions qui peuvent être connectées par un saut. Un vrai casse-tête&nbsp;! </p>
+
+<p>Avec la mémoire vive moderne qu'on trouve dans nos PC, le ruban a disparu&nbsp;; et l'accès à n'importe quel élément de la mémoire se fait en temps constant, quelle que soit la position demandée et la position actuelle – un avantage indéniable pour le multitâche et la programmation&nbsp;! <br />
+Autrement dit, deux adresses <strong>choisies aléatoirement</strong> ont le même temps d'accès&nbsp;: et voilà qui explique l'origine du mot&nbsp;;)</p>
+
+<p>Pour conclure, une petite annexe&nbsp;: la mémoire RAM n'est pas forcément volatile (disparition des données à la coupure du courant)&nbsp;! Si les barrettes de RAM à l'intérieur de nos PC le sont par exemple, ce n'est pas le cas d'une clé USB qui est pourtant aussi une mémoire RAM. </p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Pourquoi parle-t-on de mémoire à accès aléatoire ?				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

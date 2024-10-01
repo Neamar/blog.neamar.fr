@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="life game, flash" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Présentation de Life Game</title>
+	<link href="https://blog.neamar.fr/autres-articles/108-jeu-inutile-life-game" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Présentation de Life Game			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=b53b345d11efbe2039ed400ae419e9f4185c1f55" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-04-30T16:45:56+00:00" itemprop="dateCreated">
+						Created: 30 April 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Je m'aperçois avec honte que je n'ai jamais parlé de Life Game sur ce blog. <br />
+Enfin si, une fois, un petit coup d'auto-promo dans les liens du jeudi, tome 12. Mais cette fois, je vais essayer d'en dire un peu plus. </p>
+
+<p>Soyons compatissants pour le neamarophobe (ou noob-neamar) et décrivons en quelques lignes le concept Life Game. Ah, non… c'est impossible. <br />
+Life game est un jeu sans être un jeu, un moteur physique sans en être un, une application indispensable et inutile, un truc pour rêver ou perdre du temps. <br />
+C'est extrêmement difficile de justifier un concept inutile, alors plutôt que d'essayer de dire «&nbsp;pourquoi LG (Life Game) est intéressant&nbsp;», je me contenterai d'expliquer l'applet en lui-même. </p>
+
+<p>Vous arrivez dans un univers tout noir. Par la puissance de votre souris, vous pouvez faire apparaître des particules de différentes natures, qui interagiront pour donner des réactions plus ou moins complexes. Par exemple, un mur de métal, vous faites couler de l'eau dessus, puis vous mettez du feu en dessous… et voilà, vous avez réinventé la casserole. <br />
+Pas convaincu&nbsp;? Faites couler du sable dans une fournaise, récupérer le verre fondu qui en ressort pour des applications encore plus tordues. <br />
+Toujours pas convaincu&nbsp;? Il va falloir essayer pour comprendre l'étendue des possibilités. Soyons clair&nbsp;: il n'y a strictement aucun but. Vous pouvez nettoyer votre écran à tout moment, changer la taille de votre pinceau, faire couler des milliers de particules dans une débauche de trous noirs, le programme n'affichera jamais GAME OVER. Pas plus qu'il n'affichera WELL DONE. En fait, LG est là pour catalyser votre pseudo-créativité en offrant un support de rêverie. Il n'est intéressant qu'avec l'esprit vide et décontracté&nbsp;; sinon on a l'impression de perdre du temps. </p>
+
+ <p>Je ne suis pas sûr de vous avoir convaincu… avant de jouer, quelques vidéos&nbsp;: </p>
+
+
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/X81AEYiWJTQ&hl=fr_FR&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/X81AEYiWJTQ&hl=fr_FR&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/aiC-hp-T1yg&hl=fr_FR&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/aiC-hp-T1yg&hl=fr_FR&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/yO_kTdPVz7s&hl=fr_FR&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/yO_kTdPVz7s&hl=fr_FR&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/9WaKXTM5Bog&hl=fr_FR&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/9WaKXTM5Bog&hl=fr_FR&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+
+<p>Note : ce jeu est codé dans un but ludique, et pas pour la beauté du code. Le modèle objet adopté est souple, mais lent... surtout que ça reste du Flash.</p>
+<p>Note 2 : je me dédie de toutes responsabilités pour le temps perdu sur ce jeu.</p>
+
+<p>Les âmes téméraires trouveront le jeu sur <a href="http://neamar.fr/Res/LifeGame">neamar.fr/Res/LifeGame</a>, les autres peuvent passer leur chemin. </p>
+
+<p style="margin-top:1000px;">Encore là ? Allez, un petit cadeau qui utilise les easter eggs planqués dans le jeu :</p>
+<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/vRFM5B7dK7c&hl=fr_FR&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/vRFM5B7dK7c&hl=fr_FR&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Présentation de Life Game				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

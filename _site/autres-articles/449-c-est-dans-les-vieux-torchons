@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>C'est dans les vieux torchons...</title>
+	<link href="https://blog.neamar.fr/autres-articles/449-c-est-dans-les-vieux-torchons" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				C'est dans les vieux torchons...			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=8c5eba080d85e6981768a84d37e69e9e5626d6cd" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2018-03-10T14:17:45+00:00" itemprop="dateCreated">
+						Created: 10 March 2018					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2018-03-10T15:42:40+00:00" itemprop="dateModified">
+					Last Updated: 10 March 2018				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Oulà.</p>
+<p>Je crois que le dernier article sur ce blog remonte à un tout petit peu moins de quatre ans.</p>
+<p>Dans une optique d'honnêteté compulsive, je dois reconnaître ne pas avoir pris un soin extrême de tous ces petits sites ces dernières années. On a plus de temps libre quand on est étudiant, dirait-on.</p>
+<p>J'étais donc content de laisser vivoter <a href="https://neamar.fr/Res">les ressources de neamar.fr</a>, <a href="https://lachal.neamar.fr">Lachal</a> et <a href="https://omnilogie.fr">Omnilogie</a>.</p>
+<p>Après tout, l'hébergement ne coûtait pas grand chose (deux euros par mois), et si l'on a moins de temps lorsque l'on n'est plus étudiant, on a au moins plus d'argent, et 2 euros par mois n'allaient pas me ruiner.</p>
+<p>"Fast forward" fin décembre 2017, quand mon hébergeur m'informe qu'en tant que client exceptionnel (et durable, plus de dix ans), je vais pouvoir bénéficier d'une bien meilleure qualité de service. Petite astérisque à la fin : le prix de l'abonnement sera maintenant de 10€ HT par mois.</p>
+<p>Arf.</p>
+<p>En d'autres termes : pour vous remercier d'être un client fidèle, voici une augmentation de 500%. Mais on vous garde sur l'ancien hardware, avec une base de données sur un bon vieux disque magnétique.</p>
+<p>Très bien ! Mes dernières aventures web m'avaient de toute façon déjà amené à louer un serveur dédié autrement plus puissant pour <a href="https://teamward.xyz">Teamward</a>, qui supporte un peu plus de mille requêtes par <strong>seconde</strong> (à comparer aux sites Neamar, qui engrangent probablement 20 000 requêtes par <strong>jour</strong> !)</p>
+<p>C'est donc fin décembre que j'entame la longue mgiration d'un écosystème créé en 2007 vers une approche plus moderne. Morceaux choisis :</p>
+<ul>
+<li>En 2007, le mobile n'existait pas. Ni le responsive. Aucun des sites ne fonctionnait sur mobile.</li>
+<li>En 2007, git n'avait pas encore la popularité qu'il a aujourd'hui. Aucun historique de toute la base de code, aucune documentation ou <code>git blame</code>...</li>
+<li>En 2007, prévoyant, j'avais demandé à Apache d'envoyer un Cache-Expire pour tous les CSS et JS en 2017, pensant que d'ici là le web serait mort. Terrible erreur, mais ironique à regarder avec dix ans de retard.</li>
+<li>En 2007, les dégradés étaient du plus bel effet. Cela faisait plusieurs années que je n'étais pas fier du design de neamar.fr en particulier...</li>
+<li>En 2007, Google Chrome n'existait pas.</li>
+<li>En 2007, AWS ou les concepts de "12 factor app" n'avaient pas encore été créés. Les applis écrivaient les images au même endroit que le code, l'ensemble ne pouvait pas scaler, et les secrets étaient directement dans le code.</li>
+<li>En 2007, seules les banques avaient un certificat https (ou presque).</li>
+</ul>
+
+ 
+<p>S'ensuivit une semaine de refactoring pour pouvoir déplacer tous ces sites vers un système plus moderne.</p>
+<p>Depuis janvier, c'est maintenant chose faite : HTTPS pour tout le monde, git pour tout le monde (certains sont publics sur mon Github pour les curieux), et un bien meilleur monitoring. Le tout pour 0€, puisque je payais déjà le serveur;</p>
+<p>Le blog a été le plus dur à migrer, il manque malheureusement certaines images qui ont disparu avec les ravages du temps, mais le contenu est là.</p>
+<p>J'en ai aussi profité pour réparer le twitter d'Omnilogie. Le site a peut-être dix ans, mais son contenu a toujours de la valeur, et c'est toujours un plaisir de relire certains articles de temps en temps !</p>
+<p>Voilà pour un compte-rendu rapide ! Lecteur, sache que rédiger ce petit billet me replonge moi aussi dix ans en arrière... j'espère que tu vas bien ! Vous m'avez tous manqués, en particulier l'équipe d'administration <a href="https://omnilogie;fr">d'Omnilogie</a>  ;)</p>
+<p>Profitez de la nouvelle expérience responsive... et à la revoyure, dans une dizaine d'années ? :)</p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					C'est dans les vieux torchons...				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

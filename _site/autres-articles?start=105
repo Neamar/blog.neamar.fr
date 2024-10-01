@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Articles du blog</title>
+	<link href="/autres-articles?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+	<link href="/autres-articles?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+	<link href="https://blog.neamar.fr/autres-articles?start=105" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-category layout-blog no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="blog" itemscope itemtype="https://schema.org/Blog">
+	
+			<h2> 					</h2>
+	
+	
+			<div class="category-desc clearfix">
+								</div>
+	
+	
+				<div class="items-leading clearfix">
+							<div class="leading-0"
+					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+					
+
+	<div class="page-header">
+					<h2 itemprop="name">
+									<a href="/autres-articles/28-php-heredoc-syntax" itemprop="url">
+						La syntaxe heredoc en PHP					</a>
+							</h2>
+				
+		
+				
+			</div>
+
+	
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=ad58f07cb9d472ea76065440690ca6ba39cf2e71" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+
+
+
+		<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-10-18T19:13:50+00:00" itemprop="dateCreated">
+						Created: 18 October 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+
+
+
+
+<p>Et voilà que vous avez un long texte récupéré dans des circonstances assez louches à mettre dans une variable PHP pour le traiter (qui sait ? <tt>preg_replace_callback</tt>, <tt>diff</tt>, <tt>levenshtein</tt>, ... les raisons sont multiples et ne nous concernent pas forcément).</p>
+
+<p>Le problème, c'est que votre texte est bourré de <strong>'</strong> et <strong>"</strong>.<br />
+Attendez avant de vouloir échapper chacun de ces caractères ! Vous pouvez faire plus simple.</p>
+
+
+
+
+	
+<p class="readmore">
+	<a class="btn" href="/autres-articles/28-php-heredoc-syntax" itemprop="url">
+		<span class="icon-chevron-right"></span>
+		Read more ...	</a>
+</p>
+
+
+
+				</div>
+									</div><!-- end items-leading -->
+	
+	
+																	<div class="items-row cols-2 row-0 row-fluid clearfix">
+						<div class="span6">
+				<div class="item column-1"
+					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+					
+
+	<div class="page-header">
+					<h2 itemprop="name">
+									<a href="/autres-articles/26-analyse-texte-sniper" itemprop="url">
+						Analyse du texte &quot;Le Sniper&quot;					</a>
+							</h2>
+				
+		
+				
+			</div>
+
+	
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=f44bdaa69b7de5eb778cf0d165eb83b09eb9f153" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+
+
+
+		<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-10-13T11:33:29+00:00" itemprop="dateCreated">
+						Created: 13 October 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+
+
+
+
+<p>Un petit article pour analyser <a href="http://neamar.fr/Res/Sniper">le texte du sniper</a>.</p>
+
+
+
+
+	
+<p class="readmore">
+	<a class="btn" href="/autres-articles/26-analyse-texte-sniper" itemprop="url">
+		<span class="icon-chevron-right"></span>
+		Read more ...	</a>
+</p>
+
+
+
+				</div>
+				<!-- end item -->
+							</div><!-- end span -->
+														<div class="span6">
+				<div class="item column-2"
+					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+					
+
+	<div class="page-header">
+					<h2 itemprop="name">
+									<a href="/autres-articles/25-de-cape-et-de-crocs-bande-dessinee" itemprop="url">
+						Le top 5 des BD : De cape et de crocs					</a>
+							</h2>
+				
+		
+				
+			</div>
+
+	
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=22513e584627c37bef525a8cd01ace87a4d49931" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+
+
+
+		<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-10-09T17:13:28+00:00" itemprop="dateCreated">
+						Created: 09 October 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+
+
+
+
+<p>Depuis maintenant un an, j'écume le pays de la bande dessinée en lisant quotidiennement deux albums.<br />
+Au fil du temps, j'en ai absorbé un échantillon largement représentatif, dans tous les domaines. Certaines BD ont un scénario digne d'Hollywood [non ce n'est pas un compliment], d'autre un graphisme fait par un gamin de deux ans épileptique qui porte des moufles, écrit de la main gauche et la main droite dans une prise. Mais au milieu de ces déchets qui n'ont pu passer le cap de l'édition qu'en soudoyant honteusement l'éditeur se trouve quelques perles qui valent largement le coup d'œil.</p>
+
+<p>Cette série d'articles sélectionne les 5 meilleures BDs. Il s'agit à chaque fois d'une série, et chacune vaut la lecture pour différentes raisons que j'essaierai de préciser.</p>
+
+<p>Aujourd'hui : <strong>De Cape et De Croc</strong></p>
+
+
+
+
+	
+<p class="readmore">
+	<a class="btn" href="/autres-articles/25-de-cape-et-de-crocs-bande-dessinee" itemprop="url">
+		<span class="icon-chevron-right"></span>
+		Read more ...	</a>
+</p>
+
+
+
+				</div>
+				<!-- end item -->
+							</div><!-- end span -->
+							</div><!-- end row -->
+																			<div class="items-row cols-2 row-1 row-fluid clearfix">
+						<div class="span6">
+				<div class="item column-1"
+					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+					
+
+	<div class="page-header">
+					<h2 itemprop="name">
+									<a href="/autres-articles/23-sortie-texte-reference-subtilites-sagas-reflets-dacide" itemprop="url">
+						Reflets d'Acide épisode 14, encore !					</a>
+							</h2>
+				
+		
+				
+			</div>
+
+	
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=43af001c4f3e2dd3fa41642c394cdcd03cbf0ffd" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+
+
+
+		<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-10-04T08:44:13+00:00" itemprop="dateCreated">
+						Created: 04 October 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+
+
+
+
+<p>J'en vois déjà me faire les gros yeux, argumentant que j'ai déjà parlé de <a href="http://www.synopsite.com/">Reflets d'Acide épisode 14</a> ces derniers jours. <a href="http://blog.neamar.fr/component/content/article/9-evenements-internet/19-reflets-dacide">C'est vrai, je ne le nie pas</a>. Mais le premier article était avant la sortie, le second [celui-là, suivez un peu] après. </p>
+
+
+
+
+	
+<p class="readmore">
+	<a class="btn" href="/autres-articles/23-sortie-texte-reference-subtilites-sagas-reflets-dacide" itemprop="url">
+		<span class="icon-chevron-right"></span>
+		Read more ...	</a>
+</p>
+
+
+
+				</div>
+				<!-- end item -->
+							</div><!-- end span -->
+														<div class="span6">
+				<div class="item column-2"
+					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+					
+
+	<div class="page-header">
+					<h2 itemprop="name">
+									<a href="/autres-articles/22-retour-sur-les-10-plus-belles-enigmes-deuxieme-saison" itemprop="url">
+						Retour sur les 10 plus belles énigmes, deuxième saison					</a>
+							</h2>
+				
+		
+				
+			</div>
+
+	
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=f7b9a997feccb4757b97b547514fd851dd60534e" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+
+
+
+		<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-10-02T18:08:55+00:00" itemprop="dateCreated">
+						Created: 02 October 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+
+
+
+
+<p>Petite analyse <a href="http://neamar.fr/Res/Enigmes_2">de ce texte sur les 10 plus belles énigmes de mathématiques et de logique</a> qui vient en complément <a href="http://neamar.fr/Res/Enigmes">d'une première saison parue l'année dernière</a>. <br />
+
+
+
+
+	
+<p class="readmore">
+	<a class="btn" href="/autres-articles/22-retour-sur-les-10-plus-belles-enigmes-deuxieme-saison" itemprop="url">
+		<span class="icon-chevron-right"></span>
+		Read more ...	</a>
+</p>
+
+
+
+				</div>
+				<!-- end item -->
+							</div><!-- end span -->
+							</div><!-- end row -->
+						
+	
+				<div class="pagination">
+							<p class="counter pull-right"> Page 22 of 26 </p>
+						<ul class="pagination-list"><li><a title="Start" href="/autres-articles" class="pagenav"><span class="icon-first"></span></a></li><li><a title="Prev" href="/autres-articles?start=100" class="pagenav"><span class="icon-previous"></span></a></li><li class="hidden-phone"><a title="17" href="/autres-articles?start=80" class="pagenav">17</a></li><li class="hidden-phone"><a title="18" href="/autres-articles?start=85" class="pagenav">18</a></li><li class="hidden-phone"><a title="19" href="/autres-articles?start=90" class="pagenav">...</a></li><li class="hidden-phone"><a title="20" href="/autres-articles?start=95" class="pagenav">20</a></li><li class="hidden-phone"><a title="21" href="/autres-articles?start=100" class="pagenav">21</a></li><li class="active hidden-phone"><a>22</a></li><li class="hidden-phone"><a title="23" href="/autres-articles?start=110" class="pagenav">23</a></li><li class="hidden-phone"><a title="24" href="/autres-articles?start=115" class="pagenav">24</a></li><li class="hidden-phone"><a title="25" href="/autres-articles?start=120" class="pagenav">...</a></li><li class="hidden-phone"><a title="26" href="/autres-articles?start=125" class="pagenav">26</a></li><li><a title="Next" href="/autres-articles?start=110" class="pagenav"><span class="icon-next"></span></a></li><li><a title="End" href="/autres-articles?start=125" class="pagenav"><span class="icon-last"></span></a></li></ul> </div>
+	</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Articles du blog				</span>
+				<meta itemprop="position" content="2">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

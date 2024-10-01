@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="montre, modélisation, as3, infinity" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Infinity Looping : reprogrammer une montre</title>
+	<link href="https://blog.neamar.fr/autres-articles/99-infinity-looping-pierre-kunz" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Infinity Looping : reprogrammer une montre			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=deb6dd42207a9035b1fdc54d148d8f01a2e23f27" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-03-30T08:58:59+00:00" itemprop="dateCreated">
+						Created: 30 March 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>En me baladant sur les réalisations de l'éminent <a href="http://drgoulu.com/">Docteur Goulu</a>, je suis tombé sur <a href="http://horlogerie.wordpress.com/2009/02/02/infinity-looping/">cette superbe montre</a> de Pierre Kunz, nommée «&nbsp;Infinity Looping&nbsp;» (depuis renommée Insanity avec un changement de design qui ne lui réussit pas). </p>
+
+<p><img style="max-width:520px" src="http://blog.neamar.fr/images/stories/Prog/Montre/MontreInfinity.png" alt="Montre infinity Looping de Pierre Kunz" title="Montre infinity Looping de Pierre Kunz" /></p>
+
+<p>Après avoir admiré le mécanisme extrêmement simple pour une montre de ce genre, j'avoue avoir été tenté par l'achat &ndash; mais bon, $20&nbsp;000, voilà qui n'entre pas dans mon budget&nbsp;! Tous mes remords de pauvre ont d'ailleurs disparu puisque la montre a été tirée en édition limitée, et n'est plus disponible. Le jour où je serai riche et célèbre, j'écumerai (enfin, je ferai écumer par une armée de secrétaires) le web à la recherche d'un ancien magnat du pétrole devenu pauvre qui revendra sa montre, que je rachèterai alors à quatre fois sa valeur pour le simple plaisir d'acquérir enfin ce joyau mécanique. Mais je m'égare. </p>
+
+<p>Revenons à nos moutons&nbsp;: le jour de ma découverte (dimanche), je me suis lancé le défi de reprogrammer cette montre en deux heures. Pour des raisons indépendantes de ma volonté (ah, j'ai horreur quand le boulot vient s'immiscer dans le weekend&hellip; surtout s'il me coupe en plein élan), j'ai été coupé après une heure trente et n'ai pu reprendre que le lendemain soir. Au final, je pense y avoir passé plus de temps, parce que mes capacités graphiques font passer Picasso pour du réalisme et que j'ai eu du mal à maîtriser Inkscape (superbe logiciel, que je conseille fortement). </p>
+
+<p>Sans plus vous faire languir, voilà le résultat brut&nbsp;; l'analyse suit juste après. </p>
+ <div style="margin:auto; text-align:center;">
+<object type="application/x-shockwave-flash" data="http://blog.neamar.fr/images/stories/Prog/Montre/Watch.swf"" width="375" height="375" >
+	<param name="movie" value="http://blog.neamar.fr/images/stories/Prog/Montre/Watch.swf" />
+	<param name="quality" value="high" />
+	<param name="wmode" value="opaque" />
+	<param name="bgcolor" value="#FFFFFF" />
+	<p>Installez le plugin Flash pour voir l'animation : <a href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr" >Cliquez ici pour le télécharger</a></p>
+</object>
+<p>Pour une raison étrange, 12, 1 et 2 sont mal placés. Je corrigerais ça ce soir.</p>
+</div>
+
+<p>Comme toujours, avant de foncer, une petit étape de réflexion s'est imposée. <br />
+D'abord, je ne voulais pas écrire des centaines de ligne de code&nbsp;: j'ai donc décidé de garder le code pour l'animation, et de faire à part tous les graphismes. </p>
+
+<h2>Graphismes</h2>
+<p>Comme dit plus haut, tous ces fichiers sont créés avec Inkscape et gardés en vectoriel&nbsp;; je ne les exporte en png que pour un affichage sans problème sur ce blog. </p>
+
+<h3>Les engrenages</h3>
+
+<p>C'est la seule partie mécanique de la montre, celle qui fait fonctionner l'ensemble. <br />
+Pour pouvoir les représenter, il a fallu réfléchir un peu&nbsp;: quel rapport leur donner&nbsp;? Combien de dents&nbsp;? <br />
+En fait, les deux problèmes sont reliés. Il faut se rendre compte que pour faire un tour du cadran, le petit engrenage doit faire six tours&nbsp;: on obtient ainsi le rapport de 0,16&nbsp;qui nous resservira tout le temps. <br />
+Arbitrairement, j'ai donc fixé le nombre de dents du gros engrenage à 150, et son rayon à 90 (enfin, arbitrairement&hellip; j'ai tout de même veillé à ce qu'il s'agisse de multiples de 6&nbsp;! ). On en déduit alors la topologie du petit engrenage&nbsp;: 150/6 = 25&nbsp;dents et 90/6 = 15&nbsp;de rayon. Ne restait plus qu'à les représenter&nbsp;! Inkscape a justement <a href="http://inkscapetutorials.wordpress.com/2008/05/01/drawing-gears-in-inkscape-a-howto-by-nicu/">un module très pratique</a> pour créer des engrenages. Pour obtenir des formes compatibles, il faut veiller à conserver le même module (circular pitch) et à ne changer que le nombre de dents&nbsp;; puis une simple homothétie suffit à transformer l'engrenage pour lui donner la taille voulue. <br />
+
+J'obtins ainsi les deux formes suivantes&nbsp;: </p>
+
+<p><img style="max-width:520px" src="http://blog.neamar.fr/images/stories/Prog/Montre/GrosEngrenage.png" alt="Le gros engrenage&nbsp;: 150 dents, 90&nbsp;de rayon" title="Le gros engrenage&nbsp;: 150 dents, 90&nbsp;de rayon" /><br />
+<img style="max-width:520px" src="http://blog.neamar.fr/images/stories/Prog/Montre/PetitEngrenage.png" alt="Le petit engrenage&nbsp;: 150 dents, 90&nbsp;de rayon" title="Le petit engrenage&nbsp;: 150 dents, 90&nbsp;de rayon" /></p>
+
+<p>Pour que les deux engrenages puissent s'emboîter sans souci, j'ai dû appliquer une rotation de 6 degrés au petit avant de lui fusionner ses barres porteuses&nbsp;; ainsi à angle 0&nbsp;les deux formes s'emboîtent&nbsp;: </p>
+
+<p><img style="max-width:520px" src="http://blog.neamar.fr/images/stories/Prog/Montre/Engrenages.png" alt="Le petit engrenage&nbsp;: 150 dents, 90&nbsp;de rayon" title="Le petit engrenage&nbsp;: 150 dents, 90&nbsp;de rayon" /></p>
+
+<h3>La flèche</h3>
+
+<p>Mes talents graphiques se sont exprimés à plein régime&nbsp;! La seule difficulté étant de placer correctement le centre&nbsp;: en effet, décaler les engrenages pour obtenir le centre de rotation est facile, mais trouver le centre de cette forme (l'intersection des croisillons) est plus facile à faire en SVG qu'en code&nbsp;: j'ai donc placé l'origine du dessin au bon endroit pour m'éviter de futurs problèmes. </p>
+
+<p><img style="max-width:520px; max-height:200px;" src="http://blog.neamar.fr/images/stories/Prog/Montre/Fleche.png" alt="La flèche" title="La flèche" /></p>
+
+<h3>Le bras porteur</h3>
+<p>C'est la forme qui m'a pris le plus de temps à concevoir, parce qu'elle doit être à la fois ouverte pour permettre la lecture et assez grosse pour supporter le roulement. Sans compter qu'il faut la centrer correctement sur un élément plein, et faire en sorte que la distance (centre du cercle)-(centre de l'ouverture) corresponde au profil des engrenages&nbsp;! </p>
+
+<p><img style="max-width:520px" src="http://blog.neamar.fr/images/stories/Prog/Montre/Porteur.png" alt="La flèche" title="La flèche" /></p>
+
+<h3>Le ruban</h3>
+
+<p>Paradoxalement, la forme n'aura pas été si dure à obtenir. On peut créer facilement des formes-oïdes avec Inkscape grâce à un <a href="http://docs.huihoo.com/inkscape/guide-2nd/html_fr/Effects-Render.html">outil «&nbsp;spirographe&nbsp;»</a> qui prend en paramètre la taille de l'engrenage porteur (90&nbsp;dans mon cas), la taille de l'engrenage porté (15) et la distance entre le «&nbsp;stylo&nbsp;» et le centre de l'engrenage porté (la hauteur de la flèche). Et voilà comment on obtient ce magnifique ruban&nbsp;: </p>
+
+<p><img style="max-width:520px" src="http://blog.neamar.fr/images/stories/Prog/Montre/Ruban.png" alt="La flèche" title="La flèche" /></p>
+
+<p>Pour ajouter les heures, j'ai utilisé la fonction dédiée pour placer un texte le long d'un chemin. Je n'ai pas trouvé de solutions plus élégantes que de placer des espaces pour avoir les lettres aux bons emplacements&hellip; attention, l'algorithme de calcul du chemin n'est pas facile, l'édition du fichier svg est assez lourde&nbsp;! </p>
+
+<p><img style="max-width:520px; background-color:white;" src="http://blog.neamar.fr/images/stories/Prog/Montre/Fond.png" alt="La flèche" title="La flèche" /></p>
+
+<h2>Le code</h2>
+<p>Et voilà, il ne restait plus qu'à placer correctement tous ces objets sur la scène. <br />
+J'ai choisi d'utiliser ActionScript3, le langage de Flash. Ce choix est uniquement motivé par ma volonté de produire une animation visible sur le web en sortie&nbsp;; cependant le code est adaptable à n'importe quel langage qui permet de manipuler des sprites. <br />
+Il est à noter que j'aurais pu coder l'animation directement en SVG, mais je n'en ai aucune expérience et cela aurait explosé mon crédit d'heures. Pour les curieux, voici <a href="http://tavmjong.free.fr/INKSCAPE/DRAWINGS/clock.svg">un exemple de montre animée en pur svg</a> (attention, cela nécessite un navigateur, et pas le logiciel-qui-se-fait-passer-pour-un-navigateur Internet Explorer). </p>
+
+<p>En soi, le code est extrêmement simple, la seule difficulté étant dans les rotations. En effet, une fois le svg importé dans flash (j'utilise Flex SDK 3, la version libre de Flash), les effets de rotation s'appliquent sur le coin en haut à gauche, et pas par rapport au centre de l'image&nbsp;: un résultat assez étrange quand on s'attend à voir tourner l'engrenage&nbsp;! J'ai donc été obligé de placer manuellement certains des graphismes dans un conteneur abstrait (qui n'a aucune représentation physique)&nbsp;: une fois placé dans ce conteneur de façon convenable, on peut appliquer une rotation au conteneur pour obtenir l'effet voulu. </p>
+
+<p>Ensuite, monter la montre dans le bon sens&nbsp;; de haut en bas&nbsp;: d'abord placer le ruban, puis le gros engrenage, puis le petit, puis le bras porteur, puis la fléchette. Et voilà&nbsp;! </p>
+
+<p>Enfin, animer la montre. Je me suis basée sur l'excellent libraire de tweening <a href="http://www.greensock.com/tweenmax/">TweenMax</a> ce qui me permet de réaliser cette partie en deux lignes de code. </p>
+
+<p>Code complet&nbsp;: </p>
+
+<pre xml:lang="actionscript3">
+package 
+{
+	import com.greensock.easing.Linear;
+	import com.greensock.TweenMax;
+	import flash.display.Sprite;
+	
+	/**
+	 * Une montre fonctionnant selon le principe de l'épitrochoïde.
+	 * Le bras principal indique l'heure à la façon standard (son angle sert de repère) tandis que la petite fléchette donne l'heure et les minutes.
+	 * Même si le temps c'est de l'argent, quand on a assez de monnaie pour acheter cette petite merveille, on n'en est plus à compter les secondes.
+	 * Inspiration : http://horlogerie.wordpress.com/2009/02/02/infinity-looping/
+	 * @author Neamar
+	 */
+	public class Main extends Sprite 
+	{
+		/**
+		 * Liste des constantes permettant de faire fonctionner l'application.
+		 * NOTE : Seules TAILLE et UNITE_TEMPS peuvent être modifiées. LEs autres valeurs ont été choisies à la création de l'application, et sont dépendantes des graphiques ; ne les modifiez pas !
+		 */
+		
+		 //Taille de l'application
+		private static const TAILLE:int = 370;
+		//Durée que met l'aiguille à faire un tour (en secondes). Pour une horloge, placer cette valeur sur 60*60 = 3600 (moche)
+		//La durée que met le petit engrenage pour faire un tour complet est extrapolé de cette valeur en la multipliant par 6.
+		private const UNITE_TEMPS:int = 6;
+		
+		//Le rayon extérieur de l'engrenage principal sur lequel roule le petit engrenage
+		private static const RAYON_GROS_ENGRENAGE:int = 90;
+		//Le rayon extérieur du petit engrenage
+		private static const RAYON_PETIT_ENGRENAGE:int = 15;
+		//La taille des dents des engrenages, ce qui permet de faire s'emboiter deux engrenages dont on connait les rayons extérieurs respectifs.
+		private static const DENTURE:int = 1;
+		
+
+		/**
+		 * Pour garder le code le plus léger possible, tous les graphiques sont dans des fichiers vectoriels SVG.
+		 * Pour les éditer, vous pouvez utiliser Inkscape (par exemple).
+		 */
+		[Embed(source='Fleche.svg')]
+		private var CFleche:Class;
+		[Embed(source='Fond.svg')]
+		private var CRuban:Class;
+		[Embed(source='Porteur.svg')]
+		private var CPorteur:Class;
+		[Embed(source='Gros_Engrenage.svg')]
+		private var CGros_Engrenage:Class;//150 dents
+		[Embed(source='Petit_Engrenage.svg')]
+		private var CPetit_Engrenage:Class;//150/6 = 25 dents
+		
+		/**
+		 * Définir la liste des objets constituants la montre.
+		 * NOTE : certains des objets définis ici sont abstraits et n'existent pas réellement dans le mécanisme ; ils sont simplement là pour réaliser facilement des "changements de repère" afin d'obtenir des rotations cohérentes.
+		 */
+		//Bâti global de l'application, la montre en réalité.
+		private var Bati:Sprite = new Sprite;
+		//Le ruban en fond (un dessin d'épitrochoïde)
+		private var Ruban:Sprite = new CRuban();
+		//Le gros engrenage
+		private var Gros_Engrenage:Sprite = new CGros_Engrenage();
+		
+		//Le bras. Représentation abstraite du levier qui fait tourner la roulette.
+		private var Bras:Sprite = new Sprite;
+		//Le bras. Représentation concrète du levier qui fait tourner la roulette, centré dans la représentation abstraite pour obtenir une ortation par rapport au point voulu, et pas par rapport au point en haut à gauche.
+		private var Porteur:Sprite = new CPorteur();
+		
+		//Le petit engrenage. Représentation abstraite.
+		private var Roulette:Sprite = new Sprite();
+		//Représentation concrète de l'engrenage.
+		private var Petit_Engrenage:Sprite = new CPetit_Engrenage();
+		//Fléchette qui désigne les minutes
+		private var Flechette:Sprite = new CFleche();
+	
+
+		public function Main():void 
+		{
+			//Placer le centre de rotation au milieu
+			Bati.x = Bati.y = TAILLE / 2;
+			
+			
+			//Première étape : centrer les engrenages vectoriels à l'intérieur des formes qui les contiendront.
+			Ruban.x = Ruban.y = -TAILLE / 2;
+			Gros_Engrenage.x = Gros_Engrenage.y = -RAYON_GROS_ENGRENAGE;
+			Petit_Engrenage.x = Petit_Engrenage.y = -RAYON_PETIT_ENGRENAGE;			
+			
+			
+			
+			
+			//Position de départ de la roulette et de la fléchette (penser à utiliser la denture des engrenages)
+			Roulette.y = - RAYON_GROS_ENGRENAGE - RAYON_PETIT_ENGRENAGE + DENTURE;
+			Flechette.y = - RAYON_GROS_ENGRENAGE - RAYON_PETIT_ENGRENAGE + DENTURE;
+			
+			
+			
+			//Faire tourner les objets pendant UNITE_TEMPS, avec une accélération nulle (vitesse constante), et répéter à l'infini.
+			TweenMax.to(Roulette, UNITE_TEMPS, { ease:Linear.easeNone, repeat: -1, rotation:360 } );
+			TweenMax.to(Flechette, UNITE_TEMPS, { ease:Linear.easeNone, repeat: -1, rotation:360 } );
+			//Le bras fait un tour quand la roulette en fait 6 :
+			TweenMax.to(Bras, 6*UNITE_TEMPS, {ease:Linear.easeNone, repeat:-1, rotation:360 } );
+			
+
+			/**
+			 * Procéder au montage des pièces dans le bon ordre pour avoir un affichage cohérent (et pas le ruban au dessus de toutes les pièces !)
+			 */
+			//Partie statiques : Ruban et engrenage
+			Bati.addChild(Ruban);
+			Bati.addChild(Gros_Engrenage);
+			
+			//Monter l'engrenage externe et l'encastrer avec le bras :
+			Roulette.addChild(Petit_Engrenage);
+			Bras.addChild(Roulette);
+			Bras.addChild(Porteur);
+			Bras.addChild(Flechette);
+			
+			Bati.addChild(Bras);
+			
+			//Et enfin afficher le bati
+			addChild(Bati);
+		}
+		
+	}
+	
+}
+</pre>
+
+<p><a href="http://blog.neamar.fr/telechargement/Watch.zip">Télécharger Code et SVG</a></p>
+
+<p>Pour conclure, j'aimerais souligner à nouveau l'apparente complexité des formules mathématiques qui régissent une <a href="http://www.mathcurve.com/courbes2d/epitrochoid/epitrochoid.shtml">épitrochoïde</a> et la facilité mécanique des choses (placer un engrenage sur un autre et le faire tourner)&nbsp;; encore un bel exemple de modélisation, qui montre que selon le point de vue adopté, on obtient plus ou moins rapidement le même résultat. </p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Infinity Looping : reprogrammer une montre				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

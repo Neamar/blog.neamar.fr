@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="apostrophe, encodage, windows, utf8, unicode, cp, iso-8859-1, script" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>L'apostrophe arrondie, l'encodage et les systèmes d'exploitation</title>
+	<link href="https://blog.neamar.fr/autres-articles/54-apostrophe-arrondie-encodage-windows-linux" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				L'apostrophe arrondie, l'encodage et les systèmes d'exploitation			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=0c5d648754b189651e2b606c30545d143b58b4c4" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2009-12-13T15:10:37+00:00" itemprop="dateCreated">
+						Created: 13 December 2009					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Si vous laissez vos membres écrire des articles ou des commentaires sur votre site, un jour ou l'autre vous serez confrontés aux problème de <strong>l'apostrophe Windows</strong>.<br />
+L'apostrophe Windows ? Quoi qu'est-ce ? En fait, il s'agit de l'apostrophe "jolie", plus courbée que celle qui orne nos claviers, que Word place automatiquement lorsque vous appuyez sur votre apostrophe "standard". <a href="http://www.wolframalpha.com/input/?i=%27">Wolfram Alpha</a> nous en dit plus :</p>
+<ul>
+<li>Apostrophe Windows <img src="/images/stories/prog/Apostrophes/apowindows.gif" style="vertical-align:middle;" alt="Apostrophe Windows" /> ;</li>
+<li>Apostrophe "standard" <img src="/images/stories/prog/Apostrophes/apo.gif" style="vertical-align:middle;" alt="Apostrophe" />.</li>
+
+<p>Dans la suite de cet article, nous étudierons l'origine de ce caractère et les problèmes qu'il entraîne.</p>
+
+ 
+<p>Première question à se poser, d'où vient ce caractère étrange qui s'affiche correctement dans une page encodée en ISO-8859-1 alors qu'il ne fait pas partie du jeu de caractères ?<br />
+Il faut remonter à l'origine de Windows pour comprendre, quand Microsoft se voit obligé d'implémenter de nouveaux charsets pour couvrir une gamme de pays plus vaste. En Occident, la compagnie développe donc le charset Windows-1252 (une extension du standard "Europe de l'Ouest&nbsp;–&nbsp;ISO-8859-1").
+Le problème, c'est que Windows fait plus qu'étendre l'encodage original et modifie certains des caractères de contrôle pour les transformer en caractères imprimables.<br />
+L'idée n'est pas forcément mauvaise (sinon, le caractère € n'existerait pas en Windows "natif", sans Unicode, de même pour le <a href="http://omnilogie.fr/5T">Œ</a>)... mais cela devient une catastrophe quand on sort de Windows, pour faire du HTML par exemple. Même si la plupart des navigateurs ont compris que <tt>&amp;#128;</tt> correspondait au symbole € lorsque la page est encodé en ISO-8859-1 (puisque le caractère 128 d'ISO-8859-1 ne sert pas sur le Web), des problèmes surviennent lors du traitement des données, par exemple pour l'affichage avec une police TTF pourtant Unicode ou la recherche de caractères (le même caractère étant encodé deux fois, une fois avec le code "régulier" Unicode et une fois avec l'implémentation non normée de Microsoft [€ peut donc s'écrire <tt>&amp;#128;</tt> ou <tt>&amp;#8364;</tt>]).</p>
+
+<p>La question qui se pose est donc : comment résoudre ces problèmes ? La solution est simple, me direz-vous. Côté serveur, un simple <tt>str_replace()</tt> suffira. Oui mais non ! Juste pour vous amuser, tentez donc d'enregistrer le code suivant en ISO-8859-1 :</p>
+
+<pre xml:lang="php">
+<?php
+str_replace(" ’ "," ' ",$Texte);
+?>
+</pre>
+
+<p>Si votre éditeur n'est pas trop bête, vous aurez droit à l'erreur "impossible d'enregistrer certaines composantes de la page", logique puisque la belle apostrophe n'apparait nulle part en ISO-8859-1. Les tentatives plus abouties pour corriger le problème se solderont par un échec aussi :</p>
+
+<pre xml:lang="php">
+<?php
+str_replace(html_entity_decode('&#8217;',ENT_COMPAT,'UTF-8'),"'",$Texte);
+?>
+</pre>
+
+<p>Le problème m'a longtemps paru insoluble sans enregistrer mes pages en UTF-8, jusqu'à ce que je tombe miraculeusement sur un fichier HTML généré par Windows. Celui-ci contenait l'apostrophe maudite... et une fois le fichier ouvert sur Linux, un magnifique carré blanc s'affichait () ! Si je modifiais le fichier, je n'avais pas de remarque à l'enregistrement... la solution était donc directe :</p>
+
+<pre xml:lang="php">
+<?php
+str_replace('',"'",$Texte);
+?>
+</pre>
+
+<p>Et voilà ! Comme quoi, tout vient à point à qui sait attendre ;)</p>
+<p>Pour en savoir plus :</p>
+<ul>
+<li><a href="http://fr.wikipedia.org/wiki/ISO_8859-1">ISO-8859-1</a></li>
+<li><a href="http://fr.wikipedia.org/wiki/Windows-1252">Windows 1252</a></li>
+<li><a href="http://openweb.eu.org/articles/caracteres_illegaux/">Caractères illégaux en HTML</a></li>
+</ul>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					L'apostrophe arrondie, l'encodage et les systèmes d'exploitation				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

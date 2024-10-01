@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="linux, terminal, gnome, openSuse, raccourci, clavier, keyboard, interruption, copier, coller" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Changer la touche d'interruption sur le terminal Gnome et rétablir le copier coller</title>
+	<link href="https://blog.neamar.fr/autres-articles/71-changer-la-touche-dinterruption-sur-le-terminal-gnome-et-retablir-le-copier-coller" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Changer la touche d'interruption sur le terminal Gnome et rétablir le copier coller			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=af2084804a484d98f2e5f68befdba5bf5347aea3" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-01-25T20:01:53+00:00" itemprop="dateCreated">
+						Created: 25 January 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Ploum ploum, voilà donc votre terminal tout beau tout neuf. <br />
+
+Mais voilà&nbsp;: impossible de se débarrasser des habitudes ancestrales ; vous ne pensez pas à utiliser autre chose que <tt>ctrl + C</tt> pour un copier-coller. On peut difficilement vous en blâmer&hellip; sauf qu'en mode console, cette combinaison de touche demande l'interruption du programme&hellip; ce qui n'est pas du tout voulu&nbsp;! </p>
+
+<p>Dans cet article nous allons voir comment rétablir le copier-coller sur <tt>ctrl-C</tt> / <tt>ctrl-V</tt>, et plus important comment réaffecter la touche d'interruption clavier sur un autre raccourci. <br />
+Tout se passera sur un terminal Gnome de la distribution OpenSuse, mais la marche à suivre est relativement similaire dans les autres cas (voire directe&nbsp;: par exemple, Ubuntu affecte directement <tt>Ctrl + C</tt> au copier). </p>
+
+ 
+
+<h2>Rétablir les combinaison de touches <tt>ctrl + C</tt> et <tt>ctrl + V</tt> pour le copier-coller dans le terminal</h2>
+
+<p>Ouvrez votre terminal, puis allez dans le menu Éditions &#8594; Raccourcis Clavier&nbsp;: </p>
+
+<p style="text-align: center;"><img src="/images/stories/Prog/RaccourcisClaviers/Terminal-gnome-copier-coller.png" alt="Terminal Gnome : rétablir la combinaison de touche du copier coller" /></p>
+
+<p>Depuis la fenêtre qui s'affiche, rétablissez les raccourcis habituels&nbsp;: </p>
+
+<p style="text-align: center;"><img src="/images/stories/Prog/RaccourcisClaviers/Terminal-gnome-copier-coller_2.png" alt="Terminal Gnome : rétablir la combinaison de touche du copier coller" /></p>
+
+<p>Et voilà, c'est tout. Marquez une commande «&nbsp;bloquante&nbsp;», &ndash; <tt>firefox</tt> par exemple &ndash; pour tester et vous pourrez alors profiter de vos raccourcis habituels. </p>
+
+<h2>Changer la touche d'interruption clavier</h2>
+<p>Parfait, la combinaison <tt>Ctrl + C</tt> est maintenant interceptée par le terminal avant d'arriver au shell. Mais comment terminer votre processus alors&nbsp;? Il y a bien la solution de fermer la console ;)</p>
+
+<p>Plus proprement, on peut modifier la combinaison de touches. Cette fois c'est légèrement plus technique&nbsp;: tapez <tt>stty -a</tt> pour afficher les infos. On voit alors que la touche dédiée aux interruptions est <tt>^C</tt> (le ^ correspond, vous l'aurez deviné, au ctrl).</p>
+<p style="text-align: center;"><img src="/images/stories/Prog/RaccourcisClaviers/Terminal-gnome-interruption-clavier.png" alt="Terminal Gnome : changer la combinaison de touche des interuptions keyboard" /></p>
+
+<p>Pour modifier ce paramètre, on utilise la commande suivante&nbsp;: (ici, on utilise la touche <strong>E</strong>)</p>
+<pre xml:lang="bash">
+stty intr ^E
+</pre>
+
+<p>Attention, pensez à utiliser une touche qui ne sert pas encore&nbsp;! </p>
+
+<p>Et voilà, ça marche&nbsp;! Sauf que&hellip; cela ne dure que le temps d'une session&nbsp;; si vous quittez le terminal il faut remarquer la commande <tt>stty intr ^E</tt>. Pour rendre ce comportement persistant, ouvrez votre fichier <tt>. bashrc</tt> avec votre éditeur de texte préféré (par exemple&nbsp;: <tt> gedit ~/.bashrc </tt>) et ajoutez à la fin la commande <tt>stty intr ^E</tt>. Enregistrez, et voilà qui est fait&nbsp;! </p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Changer la touche d'interruption sur le terminal Gnome et rétablir le copier coller				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

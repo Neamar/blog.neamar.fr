@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="entretien d'embauche, questionnaire, faire passer un entretien, recruteur, stage" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Faire passer des entretiens d'embauche : l'entretien</title>
+	<link href="https://blog.neamar.fr/autres-articles/275-entretien-embauche" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Faire passer des entretiens d'embauche : l'entretien			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=5168887541e66f15c032544364c1cef302d27fc6" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2011-06-10T13:51:24+00:00" itemprop="dateCreated">
+						Created: 10 June 2011					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Voilà quelques années, j'avais lu l'excellent article de Coding Horror «&nbsp;<a href="http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html">Why Can't Programmers Program</a>&nbsp;». Que du très intéressant, et je m'étais promis de me souvenir de cet article si un jour je me retrouvais de l'autre côté du bureau à interviewer les gens pour des postes. </p>
+
+<p>Ce qui a justement été le cas voilà quelques semaines, et m'a motivé à rédiger un petit formulaire que je trouvais simple. Sévère déconvenue à venir&hellip; </p>
+
+<ul>
+<li>Premier article : l'<a href="http://blog.neamar.fr/component/content/article/14-reflexions/275-entretien-embauche">entretien</a>.</li>
+<li>Deuxième article : le <a href="http://blog.neamar.fr/component/content/article/14-reflexions/276-questionnaire-embauche">questionnaire</a>.</li>
+<li>Troisième article : les <a href="http://blog.neamar.fr/component/content/article/14-reflexions/277-entretien-embauche-reponses">réponses</a>.</li>
+</ul>
+ 
+
+<p>Commençons par l'évident&nbsp;: l'expérience aura été extrêmement enrichissante. Que ce soit sur les CV ou pendant les entretiens, on se rend compte d'une multitude de petites choses qui peuvent déplaire ou plaire au recruteur. La leçon s'avère incroyablement utile, et modifiera durablement (en bien j'espère&nbsp;! ) mes futurs entretiens «&nbsp;côté demandeur&nbsp;». </p>
+
+<p>Mais là n'est pas le but de cet article. Je voudrais plutôt vous mettre, vous lecteurs, dans la peau d'un demandeur, afin d'avoir votre opinion sur la difficulté de la chose. </p>
+
+<h3>L'entretien</h3>
+<p>Première partie&nbsp;: l'entretien. Rien d'extraordinaire, je tentais juste d'éviter les questions trop classiques du type «&nbsp;citez-moi trois de vos qualités&nbsp;». Je mettais aussi un point d'honneur à lire attentivement le CV du demandeur <strong>avant</strong> l'entretien pour orienter mes questions et me faire une idée de la personne avant &ndash; même si j'ai pu découvrir que certains n'hésitaient pas à mentir allégrement. </p>
+
+<p>Dans cette partie, je jouais le rôle du gars «&nbsp;sympa&nbsp;», ne posant pas de questions-piège et écoutant sans préjugé (j'ai même continué l'entretien avec un Apple-fan, c'est dire si j'étais ouvert d'esprit ;)). </p>
+
+<p>Parmi les questions intéressantes&nbsp;: </p>
+
+<h4>Quel est votre langage préféré et pourquoi&nbsp;? </h4>
+<p>La partie intéressante est bien évidemment le «&nbsp;pourquoi&nbsp;». Et c'est instructif&nbsp;! «&nbsp;Java, parce que j'aime le système de packages&nbsp;», «&nbsp;. NET parce que c'est puissant&nbsp;», etc. </p>
+
+<p>Ayant l'avantage de connaître la plupart des langages cités, je pouvais renchérir et demander plus de précisions &ndash; voire apporter des contres-arguments («&nbsp;oui, mais le système des <tt>include</tt> en C est similaire&nbsp;», «&nbsp;oui, mais c'est limité à Windows et la configuration est complexe&nbsp;», ce qui avait souvent l'avantage d'ouvrir un mini-débat. </p>
+
+<h4>Quel est votre plus gros projet informatique&nbsp;? </h4>
+<p>Malheureusement, la réponse était dans la quasi-totalité des cas un projet scolaire. </p>
+
+<p>Certes, tout le monde ne code pas des sites, des jeux ou des applications pendant son temps libre, mais on peut tout de même avoir fait des stages ou des découvertes à l'extérieur. <br />
+Ironiquement, la plupart des gens étaient inconscients («&nbsp;un énorme projet&nbsp;! Y avait 11&nbsp;tables SQL&nbsp;!&nbsp;» &ndash; j'embauchais pour un projet en contenant plus de 200) ou mentaient («&nbsp;un projet scolaire&nbsp;» «&nbsp;en quel langage&nbsp;?&nbsp;» «&nbsp;ah mais je sais pas en fait c'est pas moi qui l'ai fait j'étais juste dans le groupe.&nbsp;» oO)</p>
+
+<p>Cela dit, les réponses permettaient elles aussi d'ouvrir une conversation, et même d'amener à la question suivante&nbsp;: </p>
+
+<h4>Quel gestionnaire de versions utilisez-vous&nbsp;? </h4>
+<p>J'acceptais tout&nbsp;! CVS, Mercurial, Git, SVN&hellip; j'étais ouvert d'esprit, et en en ayant testé pas mal prêt à tout entendre. Mais la surprise est rude&nbsp;! </p>
+
+<ul>
+	<li>«&nbsp;C'est quoi ça&nbsp;?&nbsp;»</li>
+
+	<li>«&nbsp;Euh&hellip; on code sur un serveur tous ensemble&nbsp;» &ndash; «&nbsp;mais comment vous faites si vous devez modifier le même fichier&nbsp;?&nbsp;» &ndash; «&nbsp;&hellip;&nbsp;»</li>
+	<li>«&nbsp;On s'envoie les fichiers par mails&nbsp;»</li>
+
+	<li>«&nbsp;Ah ouais ça&nbsp;! Bah tu vois <em class="italique">(sic)</em> on est plus malins avant on utilisait CVN <em class="italique">(sic)</em> et maintenant on est plus malins tu vois en fait on est tous ensemble et on se parle quand on modifie un fichier ou alors y en a qu'un qu'à le clavier et comme ça on a pas de problèmes tu vois&nbsp;»</li>
+</ul>
+<p>Fort heureusement, quelques SVNistes planqués dans le lot&hellip; mais pas d'utilisateurs de DCVS (la boite dans laquelle je suis actuellement est sur Git &ndash; Github FTW&nbsp;! )</p>
+
+<h4>Que pensez-vous de votre école&nbsp;? </h4>
+<p>Comprendre&nbsp;: l'endroit où vous avez été formé. Ça permet de se faire une idée du sens critique des gens et aussi de voir ce qu'ils ont retenu.</p>
+
+<hr />
+<p>Venaient ensuite quelques questions plus en rapport avec l'offre pour lequel les gens postulaient, avec là aussi quelques moments assez <em>priceless</em>&nbsp;: </p>
+
+
+<div class="dialogue"><span class="auteur">M&nbsp;</span>:  Vous utilisez Javascript&nbsp;? <br /><span class="auteur">L&nbsp;</span>:  Oui<br /><span class="auteur">M&nbsp;</span>:  Avec un framework&nbsp;? <br /><span class="auteur">L&nbsp;</span>:  Oui oui bien sûr&nbsp;! <br /><span class="auteur">M&nbsp;</span>:  C'est bien ça&nbsp;! Et lequel&nbsp;? (on est sous jQuery)<br /><span class="auteur">L&nbsp;</span>:  &hellip; en fait je sais pas ce que c'est. <br /><br /></div>
+
+<p>Ou encore&nbsp;: </p>
+
+
+<div class="dialogue"><span class="auteur">M&nbsp;</span>:  Vous avez déjà fait de la POO&nbsp;? <br /><span class="auteur">L&nbsp;</span>:  Oui en classe. C'est un langage de Microsoft non&nbsp;? <br /><br /></div>
+
+<p>Et enfin :</p>
+<div class="dialogue">
+<span class="auteur">M&nbsp;</span>:  Qu'est ce que vous aimez en informatique&nbsp;? <br />
+<span class="auteur">L&nbsp;</span>:  Les bases de données.<br />
+<span class="auteur">M&nbsp;</span>:  Ah c'est bien ça ! (je suis moi-même un grand fan des Formes Normales :D). Et qu'est-ce qui vous plaît dans les BDD&nbsp;? <br />
+<span class="auteur">L&nbsp;</span>:  Remplir les tables, je trouve ça bien. <br />
+<span class="auteur">M&nbsp;</span>:  Ah. Écoutez, si un jour je cherche une secrétaire, je vous recontacterai ! (non, je n'ai pas dit ça, mais la réponse m'a laissé songeur...) <br />
+</div>
+
+<p>Cela dit, la plupart des gens s'en sortaient bien, et les exemples que je cite ici sont bien entendu extrêmes. Le plus souvent, cette phase orale se déroulait bien &ndash; même si quelques réponses complètement à côté de la plaque arrivaient de temps en temps, stress oblige &ndash; et me laissait confiant pour la deuxième partie&nbsp;: le questionnaire&nbsp;! </p>
+
+<p>Je distribuais alors les feuilles en informant qu'il y en avait pour une quinzaine de minutes, puis partait discuter du candidat avec un collègue ayant assisté à l'interview &ndash; l'opinion d'une personne n'ayant pas pris part au débat vaut son pesant de cacahuètes, croyez-moi&nbsp;! </p>
+
+<p>Prochaine partie&nbsp;: <a href="http://blog.neamar.fr/component/content/article/14-reflexions/276-questionnaire-embauche">le questionnaire</a>&nbsp;! Et là, ça devient intéressant (et un tout petit peu déprimant). </p>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Faire passer des entretiens d'embauche : l'entretien				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

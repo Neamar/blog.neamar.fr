@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="keywords" content="liens, jeudi, lol" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Les liens du jeudi, trente-deuxième opus</title>
+	<link href="https://blog.neamar.fr/les-liens-du-jeudi/104-liens-jeudi-neamar-tome-trente-deux" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-105">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Les liens du jeudi, trente-deuxième opus			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=8011bdbdca4ed7f8e46ab7eb7145426a50536f55" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Les liens du jeudi</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2010-04-22T13:17:02+00:00" itemprop="dateCreated">
+						Created: 22 April 2010					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2018-01-13T21:03:05+00:00" itemprop="dateModified">
+					Last Updated: 13 January 2018				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Deux semaines sans Liens du jeudi, mais Internet n'attend pas ! Bonnes visites :)</p>
+
+<p>Moisson des deux semaines : 41 liens.</p>
+ 
+
+<h1 style="clear:both;">Liens</h1>
+<p>Pressé ? <a href="#" onclick="openAllLiens()">Cliquez pour ouvrir tous les liens d'un seul coup</a> !</p>
+<script type="text/javascript">
+<!--
+	function openAllLiens()
+	{
+	window.open("http://www.holytaco.com/25-awesome-haircuts");
+	window.open("http://www.10minutesaperdre.fr/2010/04/09/solidarite-par-bddp/");
+	window.open("http://www.smashingmagazine.com/2010/04/09/dealing-with-clients-who-refuse-to-pay/");
+	window.open("http://thenextweb.com/google/2010/04/09/iphone-40-android-os-apple-lost-game/");
+	window.open("http://www.20minutes.fr/article/396796/France-Trois-personnes-avouent-avoir-tue-leur-voisin-qu-elles-soupconnaient-de-pedophilie.php");
+	window.open("http://www.koreus.com/jeu/connect-it.html");
+	window.open("http://www.zetetique.fr/index.php/dossiers/106-suaire-turin");
+	window.open("http://www.moillusions.com/2010/04/how-many-dogs-are-there.html");
+	window.open("http://www.techspot.com/guides/213-remove-avira-antivir-popup-ad/");
+	window.open("http://nioutaik.free.fr/42html/42/index.php?n=1337&p=60");
+	window.open("http://nioutaik.free.fr/42html/42/index.php?n=666&p=17");
+	window.open("http://www.pagasa.net/le-pigeon-la-mule-et-orfevre/");
+	window.open("http://www.babybacon.com/index.php/random-pictures/fridays-funny-pics/");
+	window.open("http://www.inbetweenmeals.com/2008/10/definitions-of-terms-commonly-used-in.html");
+	window.open("http://www.lazymaths.com/zlog/facts-fun/the-us-tax-system-explained-with-beer/");
+	window.open("http://www.futilitycloset.com/2007/12/02/the-kruskal-count/");
+	window.open("http://www.octuri.com/fr/avions-du-futur/l-amour-en-apesanteur/");
+	window.open("http://newslite.tv/2010/04/06/7500-shoppers-unknowingly-sold.html");
+	window.open("http://www.bodycounters.com/abc.aspx");
+	window.open("http://ubersuper.com/kayaking-the-thumb/");
+	window.open("http://www.darwin.rcuk.ac.uk/581/all/1/Grow_your_own_plant.aspx");
+	window.open("http://www.lecorbeauetlerenard.com/");
+	window.open("http://www.funnyjunk.com/funny_pictures/345273/Bedtime/");
+	window.open("http://www.boston.com/bigpicture/2010/04/more_from_eyjafjallajokull.html");
+	}
+-->
+</script>
+
+<div class="ldjvignettes" style="margin:auto">
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.holytaco.com) no-repeat">
+		<h2>25 Awesome Haircuts</h2>
+		<span class="LDJPreview"><a href="http://www.holytaco.com/25-awesome-haircuts"><img src="/images/LDJ/6ba4ccc5ff99f515370e0531d4c0f536.jpeg" alt="25 Awesome Haircuts"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.10minutesaperdre.fr) no-repeat">
+		<h2>Solidarité par BDDP | 10 minutes à  perdre</h2>
+		<span class="LDJPreview"><a href="http://www.10minutesaperdre.fr/2010/04/09/solidarite-par-bddp/"><img src="/images/LDJ/69eda2fec137f2d38153f73fa54b0573.jpeg" alt="Solidarité par BDDP | 10 minutes à  perdre"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.smashingmagazine.com) no-repeat">
+		<h2>Dealing With Clients Who Refuse To Pay - Smashing Magazine</h2>
+		<span class="LDJPreview"><a href="http://www.smashingmagazine.com/2010/04/09/dealing-with-clients-who-refuse-to-pay/"><img src="/images/LDJ/499027f57523de4e1e28bec04cc443b1.jpeg" alt="Dealing With Clients Who Refuse To Pay - Smashing Magazine"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=thenextweb.com) no-repeat">
+		<h2>iPhone OS 4 vs Android: Why Apple just lost the game.</h2>
+		<span class="LDJPreview"><a href="http://thenextweb.com/google/2010/04/09/iphone-40-android-os-apple-lost-game/"><img src="/images/LDJ/9aaf39f224346a9dd3617db071d545fb.jpeg" alt="iPhone OS 4 vs Android: Why Apple just lost the game."/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.20minutes.fr) no-repeat">
+		<h2>Trois personnes avouent avoir tué leur voisin qu'elles soupçonnaient de pédophilie - 20minutes.fr</h2>
+		<span class="LDJPreview"><a href="http://www.20minutes.fr/article/396796/France-Trois-personnes-avouent-avoir-tue-leur-voisin-qu-elles-soupconnaient-de-pedophilie.php"><img src="/images/LDJ/20c60290c53872248977f697ebfb2e3a.jpeg" alt="Trois personnes avouent avoir tué leur voisin qu'elles soupçonnaient de pédophilie - 20minutes.fr"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.koreus.com) no-repeat">
+		<h2>Connect It</h2>
+		<span class="LDJPreview"><a href="http://www.koreus.com/jeu/connect-it.html"><img src="/images/LDJ/4635454b196f08b7a9ea033364bab829.jpeg" alt="Connect It"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.zetetique.fr) no-repeat">
+		<h2>Observatoire Zététique - De la datation du suaire de Turin</h2>
+		<span class="LDJPreview"><a href="http://www.zetetique.fr/index.php/dossiers/106-suaire-turin"><img src="/images/LDJ/44ca630eea14cc62706451b1ba13da31.jpeg" alt="Observatoire Zététique - De la datation du suaire de Turin"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.moillusions.com) no-repeat">
+		<h2>How Many Dogs Are There? | Mighty Optical Illusions</h2>
+		<span class="LDJPreview"><a href="http://www.moillusions.com/2010/04/how-many-dogs-are-there.html"><img src="/images/LDJ/95c023e0c2588ce8325d372f314bb822.jpeg" alt="How Many Dogs Are There? | Mighty Optical Illusions"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.techspot.com) no-repeat">
+		<h2>Disabling Avira Antivir's Pop-up Advertisements - TechSpot</h2>
+		<span class="LDJPreview"><a href="http://www.techspot.com/guides/213-remove-avira-antivir-popup-ad/"><img src="/images/LDJ/4aeff4c53d4de5fd3e5c32b024077374.jpeg" alt="Disabling Avira Antivir's Pop-up Advertisements - TechSpot"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=nioutaik.free.fr) no-repeat">
+		<h2>Inventions (injustement) méconnues</h2>
+		<span class="LDJPreview"><a href="http://nioutaik.free.fr/42html/42/index.php?n=1337&amp;p=60"><img src="/images/LDJ/19e17d50624f8ddd77ee0476c7f661f2.jpeg" alt="Inventions (injustement) méconnues"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=nioutaik.free.fr) no-repeat">
+		<h2>La Wii ma tuer</h2>
+		<span class="LDJPreview"><a href="http://nioutaik.free.fr/42html/42/index.php?n=666&amp;p=17"><img src="/images/LDJ/c865156fb0778ad700462524b84d7806.jpeg" alt="La Wii ma tuer"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.pagasa.net) no-repeat">
+		<h2>Le pigeon, la mule et l'orfèvre</h2>
+		<span class="LDJPreview"><a href="http://www.pagasa.net/le-pigeon-la-mule-et-orfevre/"><img src="/images/LDJ/beb049b741dfe4b5ccb8c530f44e46ab.jpeg" alt="Le pigeon, la mule et l'orfèvre"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.babybacon.com) no-repeat">
+		<h2>Friday's Funny Pics</h2>
+		<span class="LDJPreview"><a href="http://www.babybacon.com/index.php/random-pictures/fridays-funny-pics/"><img src="/images/LDJ/079bb5a11d52dadc15a57633e5217f09.jpeg" alt="Friday's Funny Pics"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.inbetweenmeals.com) no-repeat">
+		<h2>In Between Meals: Definitions of Terms Commonly Used in Math</h2>
+		<span class="LDJPreview"><a href="http://www.inbetweenmeals.com/2008/10/definitions-of-terms-commonly-used-in.html"><img src="/images/LDJ/96b9c15fb840e87b56df45ab3838cd3b.jpeg" alt="In Between Meals: Definitions of Terms Commonly Used in Math"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.lazymaths.com) no-repeat">
+		<h2>The US Tax System explained with Beer!</h2>
+		<span class="LDJPreview"><a href="http://www.lazymaths.com/zlog/facts-fun/the-us-tax-system-explained-with-beer/"><img src="/images/LDJ/c850c236a8bc4e609034b108192b912c.jpeg" alt="The US Tax System explained with Beer!"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.futilitycloset.com) no-repeat">
+		<h2>The Kruskal Count | Futility Closet</h2>
+		<span class="LDJPreview"><a href="http://www.futilitycloset.com/2007/12/02/the-kruskal-count/"><img src="/images/LDJ/c26ce9944a75ff846793dbfb98a3b6a4.jpeg" alt="The Kruskal Count | Futility Closet"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.octuri.com) no-repeat">
+		<h2>L'amour en apesanteur</h2>
+		<span class="LDJPreview"><a href="http://www.octuri.com/fr/avions-du-futur/l-amour-en-apesanteur/"><img src="/images/LDJ/1f87e2ffd25a3b4d03afa4de0bd57030.jpeg" alt="L'amour en apesanteur"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=newslite.tv) no-repeat">
+		<h2>7,500 shoppers unknowingly sold their souls - Odd News | newslite.tv</h2>
+		<span class="LDJPreview"><a href="http://newslite.tv/2010/04/06/7500-shoppers-unknowingly-sold.html"><img src="/images/LDJ/ad266d534a604a7928c6e70aeba8914f.jpeg" alt="7,500 shoppers unknowingly sold their souls - Odd News | newslite.tv"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.bodycounters.com) no-repeat">
+		<h2>We count bodies, so you don't have to.</h2>
+		<span class="LDJPreview"><a href="http://www.bodycounters.com/abc.aspx"><img src="/images/LDJ/677add5c5d451876dddbca702b34d3db.jpeg" alt="We count bodies, so you don't have to."/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=ubersuper.com) no-repeat">
+		<h2>Kayaking the Thumb | Ubersuper</h2>
+		<span class="LDJPreview"><a href="http://ubersuper.com/kayaking-the-thumb/"><img src="/images/LDJ/be4f2a317d9939eae5398f986cb93b83.jpeg" alt="Kayaking the Thumb | Ubersuper"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.darwin.rcuk.ac.uk) no-repeat">
+		<h2>Extinct! - Darwin Today</h2>
+		<span class="LDJPreview"><a href="http://www.darwin.rcuk.ac.uk/581/all/1/Grow_your_own_plant.aspx"><img src="/images/LDJ/0f2999513049964d3690c8d77ffbf5b6.jpeg" alt="Extinct! - Darwin Today"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.lecorbeauetlerenard.com) no-repeat">
+		<h2>Le corbeau et le renard - Jean de La Fontaine - Fable 2.0</h2>
+		<span class="LDJPreview"><a href="http://www.lecorbeauetlerenard.com/"><img src="/images/LDJ/0027d9ffbeb0160a116b5e1982508af2.jpeg" alt="Le corbeau et le renard - Jean de La Fontaine - Fable 2.0"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.funnyjunk.com) no-repeat">
+		<h2>Bedtime</h2>
+		<span class="LDJPreview"><a href="http://www.funnyjunk.com/funny_pictures/345273/Bedtime/"><img src="/images/LDJ/87880f4bac2a671f59013e3cd0bd8aff.jpeg" alt="Bedtime"/></a></span>
+
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.boston.com) no-repeat">
+		<h2>More from Eyjafjallajokull - The Big Picture - Boston.com</h2>
+		<span class="LDJPreview"><a href="http://www.boston.com/bigpicture/2010/04/more_from_eyjafjallajokull.html"><img src="/images/LDJ/81299bd7b3c4ca23a2e15d9623829e40.jpeg" alt="More from Eyjafjallajokull - The Big Picture - Boston.com"/></a></span>
+	</div>
+
+<h1 style="clear:both;">Images</h1>
+<p>Pressé ? <a href="#" onclick="openAllImages()">Cliquez pour ouvrir tous les liens d'un seul coup</a> !</p>
+
+<script type="text/javascript">
+<!--
+	function openAllImages()
+	{
+	window.open("http://twitpic.com/1e8b40");
+	window.open("http://twitpic.com/1eagcb");
+	window.open("http://twitpic.com/1ear64");
+	window.open("http://www.presidiacreative.com/40-crazy-bizzare-and-awesome-photomanipulations/");
+	window.open("http://mathworld.wolfram.com/images/gifs/FoxTrotMathTest.jpg");
+	window.open("http://abstrusegoose.com/23");
+	window.open("http://www.noupe.com/photography/45-astonishing-long-exposure-photos.html");
+	window.open("http://www.sacbee.com/static/weblogs/photos/2010/04/shuttle-discoverys-15-day-miss.html");
+	window.open("http://www.flickr.com/photos/baldvinh/sets/72157623876808932/show/");
+	window.open("http://gizmodo.com/5519660/time-traveler-captured-in-museum-photograph");
+	}
+-->
+</script>
+
+<div class="ldjvignettes" style="margin:auto">
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=twitpic.com) no-repeat">
+		<h2>Un message bien représentatif du niveau des forums de Commen... on Twitpic</h2>
+		<span class="LDJPreview"><a href="http://twitpic.com/1e8b40"><img src="/images/LDJ/783f8f33c5f2ad29fbd9a821ac4541a9.jpeg" alt="Un message bien représentatif du niveau des forums de Commen... on Twitpic"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=twitpic.com) no-repeat">
+		<h2>Enfin l'explication : comment sont fait les nuages on Twitpic</h2>
+
+		<span class="LDJPreview"><a href="http://twitpic.com/1eagcb"><img src="/images/LDJ/033afdcacd798596a4e021c7b703a73d.jpeg" alt="Enfin l'explication : comment sont fait les nuages on Twitpic"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=twitpic.com) no-repeat">
+		<h2>on a utilisé des animaux pour tester ce vêtement... on Twitpic</h2>
+		<span class="LDJPreview"><a href="http://twitpic.com/1ear64"><img src="/images/LDJ/d84929b0eef552350e99d5c71a5a8b27.jpeg" alt="on a utilisé des animaux pour tester ce vêtement... on Twitpic"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.presidiacreative.com) no-repeat">
+		<h2>40 Crazy, Bizzare and Awesome Photomanipulations | Presidia Creative</h2>
+
+		<span class="LDJPreview"><a href="http://www.presidiacreative.com/40-crazy-bizzare-and-awesome-photomanipulations/"><img src="/images/LDJ/6ee660324f22ba5fce9d85cf4860ced4.jpeg" alt="40 Crazy, Bizzare and Awesome Photomanipulations | Presidia Creative"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=mathworld.wolfram.com) no-repeat">
+		<h2>Test mathématiques</h2>
+		<span class="LDJPreview"><a href="http://mathworld.wolfram.com/images/gifs/FoxTrotMathTest.jpg"><img src="/images/LDJ/445c18108e298363e6dd0bd88cc44f27.jpeg" alt="Test mathématiques"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=abstrusegoose.com) no-repeat">
+		<h2>Pi</h2>
+
+		<span class="LDJPreview"><a href="http://abstrusegoose.com/23"><img src="/images/LDJ/d710126a98c6e4864eebd34fa57f2e7a.jpeg" alt="Pi"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.noupe.com) no-repeat">
+		<h2>45 Astonishing Examples of Long Exposure Photography - Noupe</h2>
+		<span class="LDJPreview"><a href="http://www.noupe.com/photography/45-astonishing-long-exposure-photos.html"><img src="/images/LDJ/562a6d4bf5f401055bc9a6d395fee8d2.jpeg" alt="45 Astonishing Examples of Long Exposure Photography - Noupe"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.sacbee.com) no-repeat">
+		<h2>The Frame: Shuttle Discovery's 15-day mission to the space station</h2>
+
+		<span class="LDJPreview"><a href="http://www.sacbee.com/static/weblogs/photos/2010/04/shuttle-discoverys-15-day-miss.html"><img src="/images/LDJ/8729ef696c694de9827dae5ded172366.jpeg" alt="The Frame: Shuttle Discovery's 15-day mission to the space station"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.flickr.com) no-repeat">
+		<h2>Volcanic Eruption in Eyjafjallajökull (Glacier)</h2>
+		<span class="LDJPreview"><a href="http://www.flickr.com/photos/baldvinh/sets/72157623876808932/show/"><img src="/images/LDJ/00a4a7b50dda26ad5bcc0dc63adb8995.jpeg" alt="Volcanic Eruption in Eyjafjallajökull (Glacier)"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=gizmodo.com) no-repeat">
+		<h2>Time Traveler Captured In Museum Photograph - TimeTravel - Gizmodo</h2>
+
+		<span class="LDJPreview"><a href="http://gizmodo.com/5519660/time-traveler-captured-in-museum-photograph"><img src="/images/LDJ/a07cdde45ed713060b00d772ccfdf858.jpeg" alt="Time Traveler Captured In Museum Photograph - TimeTravel - Gizmodo"/></a></span>
+	</div>
+
+<h1 style="clear:both;">Vidéos</h1>
+<p>Pressé ? <a href="#" onclick="openAllVidéos()">Cliquez pour ouvrir tous les liens d'un seul coup</a> !</p>
+<script type="text/javascript">
+<!--
+	function openAllVidéos()
+	{
+	window.open("http://www.koreus.com/video/professeur-musique-casse-violon.html");
+	window.open("http://www.koreus.com/video/regis-sort-caravane.html");
+	window.open("http://www.koreus.com/video/chatons-roomba.html");
+	window.open("http://www.dailymotion.com/video/xcxiu8_reportage-piratage-ina_tech?start=164");
+	window.open("http://vimeo.com/9411892");
+	window.open("http://www.dailymotion.com/video/xcv6dv_pixels-by-patrick-jean_music");
+	}
+-->
+</script>
+
+<div class="ldjvignettes" style="margin:auto">
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.koreus.com) no-repeat">
+		<h2>Un prof de musique pète un câble</h2>
+		<span class="LDJPreview"><a href="http://www.koreus.com/video/professeur-musique-casse-violon.html"><img src="/images/LDJ/e5ba25fac8c92b7b59021b720c99b83f.jpeg" alt="Un prof de musique pète un câble"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.koreus.com) no-repeat">
+		<h2>Régis sort sa caravane</h2>
+		<span class="LDJPreview"><a href="http://www.koreus.com/video/regis-sort-caravane.html"><img src="/images/LDJ/856084af0bd3115de502261de3444fab.jpeg" alt="Régis sort sa caravane"/></a></span>
+	</div>
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.koreus.com) no-repeat">
+		<h2>Chatons sur un roomba</h2>
+		<span class="LDJPreview"><a href="http://www.koreus.com/video/chatons-roomba.html"><img src="/images/LDJ/73fce1e7caa1ca9d350a55e23444cf7c.jpeg" alt="Chatons sur un roomba"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.dailymotion.com) no-repeat">
+		<h2>Reportage Piratage INA</h2>
+		<span class="LDJPreview"><a href="http://www.dailymotion.com/video/xcxiu8_reportage-piratage-ina_tech?start=164"><img src="/images/LDJ/6f69cd73b8c06cbceebe8040316763a1.jpeg" alt="Reportage Piratage INA"/></a></span>
+	</div>
+
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=vimeo.com) no-repeat">
+		<h2>Satellite Car Chase on Vimeo</h2>
+		<span class="LDJPreview"><a href="http://vimeo.com/9411892"><img src="/images/LDJ/31b7c49cdd44e0f3e927e1274746fc64.jpeg" alt="Satellite Car Chase on Vimeo"/></a></span>
+	</div>
+	<div class="ldjbox" style="background:url(http://www.google.com/s2/favicons?domain=www.dailymotion.com) no-repeat">
+		<h2>PIXELS</h2>
+		<span class="LDJPreview"><a href="http://www.dailymotion.com/video/xcv6dv_pixels-by-patrick-jean_music"><img src="/images/LDJ/ede6660123eb96bad8ae7da685fcfba9.jpeg" alt="PIXELS"/></a></span>
+	</div><p style="clear:both">Rendez-vous la semaine prochaine pour de nouvelles aventures !</p>
+</div>	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/les-liens-du-jeudi" class="pathway"><span itemprop="name">Les liens du jeudi</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Les liens du jeudi, trente-deuxième opus				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105 current active"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>

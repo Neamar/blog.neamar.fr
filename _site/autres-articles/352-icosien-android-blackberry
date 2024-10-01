@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+	<base href="https://blog.neamar.fr" />
+	<meta name="author" content="Neamar" />
+	<meta name="description" content="Distributeur de liens !" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Icosien en version mobile</title>
+	<link href="https://blog.neamar.fr/autres-articles/352-icosien-android-blackberry" rel="canonical" />
+	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/templates/protostar/css/template.css?4847224b99c9894da868618d8285f3c1" rel="stylesheet" />
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+	<style>
+
+	h1, h2, h3, h4, h5, h6, .site-title {
+		font-family: 'Open Sans', sans-serif;
+	}
+	body.site {
+		border-top: 3px solid #0088cc;
+		background-color: #f4f6f7;
+	}
+	a {
+		color: #0088cc;
+	}
+	.nav-list > .active > a,
+	.nav-list > .active > a:hover,
+	.dropdown-menu li > a:hover,
+	.dropdown-menu .active > a,
+	.dropdown-menu .active > a:hover,
+	.nav-pills > .active > a,
+	.nav-pills > .active > a:hover,
+	.btn-primary {
+		background: #0088cc;
+	}
+	</style>
+	<script src="/media/jui/js/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/media/system/js/caption.js"></script>
+	<script src="/media/jui/js/bootstrap.min.js"></script>
+	<script src="/templates/protostar/js/template.js?4847224b99c9894da868618d8285f3c1"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+	</script>
+
+	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+</head>
+<body class="site com_content view-article no-layout no-task itemid-103">
+	<!-- Body -->
+	<div class="body">
+		<div class="container">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
+					<div class="header-search pull-right">
+						
+					</div>
+				</div>
+			</header>
+						
+			<div class="row-fluid">
+								<main id="content" role="main" class="span9">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="en-GB" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Icosien en version mobile			</h2>
+									</div>
+							
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
+								<ul class="dropdown-menu">
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=d6e59504695385f08688396119c963c14f432713" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+			
+				<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Details							</dt>
+
+							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
+					Written by <span itemprop="name">Neamar</span>	</dd>
+			
+			
+										<dd class="category-name">
+													Category: <span itemprop="genre">Articles du blog</span>							</dd>			
+					
+												<dd class="create">
+					<span class="icon-calendar"></span>
+					<time datetime="2012-04-20T12:46:10+00:00" itemprop="dateCreated">
+						Created: 20 April 2012					</time>
+			</dd>			
+										<dd class="modified">
+				<span class="icon-calendar"></span>
+				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
+					Last Updated: 06 August 2013				</time>
+			</dd>			
+						</dl>
+	
+	
+				
+								<div itemprop="articleBody">
+		<p>Bonjour à tous&nbsp;! </p>
+
+<p>Bien que les liens du jeudi continuent à paraître avec une régularité finalement assez forte (quelques 24&nbsp;heures de délais une fois de temps en temps, vous admettrez que c'est humain pour un rendez-vous hebdomadaire&nbsp;! ), ce blog a abandonné sa dimension «&nbsp;programmation&nbsp;». </p>
+
+<p>Aujourd'hui, je modifie légèrement cela. Par le présent billet, je vous informe de la sortie d'Icosien en version mobile – Android et Blackberry pour l'instant. </p>
+
+<p style="text-align:center"><img src="http://market.android.com/publish/images/PQAAAAGeXaBPW0hUYsKQch2IUs94FjWt8AAzWCM-FKxLRtHdcc9ako5uVBZZ4uuMIeRjZ8h4Ak_51hHbK_EojgYZq6sAzfqVaTNDyPrSnsxgQ-YvpwYnxmwd19yy.png" alt="Icosien"></p>
+
+<p>Capitalisant sur le succès de la première version (près de deux millions de joueurs – je n'en reviens personnellement pas), l'application rajoute de nombreux niveaux et rafraîchit le gameplay en l'adaptant au tactile. L'application coûte moins d'un euro (moins que le prix d'une baguette de pain, et pourtant elle vous durera plus longtemps… Même en connaissant tous les niveaux il me faut plus d'une heure pour finir le jeu), et une version Lite est même disponible pour Android. </p>
+
+<p>Alors, qu'attendez-vous&nbsp;? Saisissez votre Android (ou votre tablette Playbook) et cliquez sur le lien qui va bien&nbsp;: </p>
+
+<ul>
+	<li><a href="https://play.google.com/store/apps/details?id=air.neamar.Icosien">Icosien sur le Google Play Store (Android)</a></li>
+	<li><a href="http://appworld.blackberry.com/webstore/content/104908/">Icosien pour Blackberry</a></li>
+</ul>
+<p>L'avantage des versions mobiles centralisées étant la facilité de les mettre à jour à distance, attendez-vous à voir arriver régulièrement de nouveaux niveaux. <br />
+J'attends vos retours et remarques&nbsp;! </p>
+
+<p>Oh, et s'il y a des possesseurs d'iPhone qui lisent ce blog (nul n'est parfait)&nbsp;: Icosien paraîtra sous peu sur l'App Store. </p>
+
+<p>Bon jeu à tous&nbsp;! </p>
+
+<p>(dans un autre registre, et depuis quelques mois, il existe aussi <a href="http://omnilogie.fr/App">des applications pour Omnilogie</a>)</p> 	</div>
+
+	
+							</div>
+
+					
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+			<li>
+			You are here: &#160;
+		</li>
+	
+				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Icosien en version mobile				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
+<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			<hr />
+			
+			<p class="pull-right">
+				<a href="#" id="back-top">
+					Back to Top				</a>
+			</p>
+			<p>
+				&copy; 2024 Blog de Neamar			</p>
+		</div>
+	</footer>
+	
+</body>
+</html>
