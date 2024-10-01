@@ -1,141 +1,200 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="linux, caps lock, xmodmap, add, remove, capitalize, lower case, minuscule, majuscule, ubuntu, commande, bash, crontab, unset, disable, désactiver" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Désactiver la touche Caps Lock sous Linux</title>
-	<link href="https://blog.neamar.fr/autres-articles/36-disable-caps-lock-linux-xmodmap" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta
+      name="keywords"
+      content="linux, caps lock, xmodmap, add, remove, capitalize, lower case, minuscule, majuscule, ubuntu, commande, bash, crontab, unset, disable, désactiver"
+    />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Désactiver la touche Caps Lock sous Linux</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/36-disable-caps-lock-linux-xmodmap"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">
+                  Désactiver la touche Caps Lock sous Linux
+                </h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Désactiver la touche Caps Lock sous Linux			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=a77a00ff2c93b75e9ee0ed22ab6685e0fa87cc46" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2009-10-31T12:34:19+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 31 October 2009
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  Au risque d'exprimer mon opinion personnelle et de sortir de
+                  la masse, je tiens à profiter de ce billet pour exprimer ma
+                  haine envers la touche <strong>CAPS_LOCK</strong>. Combien de
+                  fois vous êtes vous fait avoir à taper un texte avec ce
+                  modifieur, et à ne pas pouvoir le repasser en lower-case ?<br />
+                  Certes, si l'on utilise un éditeur de texte tel Word, Kate,
+                  Notepad++ ou autres, des raccourcis existent (respectivement
+                  ctrl+F3 et ctrl-U), mais dans la plupart des cas on est bon
+                  pour retaper le texte. Horreur et damnation, la hantise de
+                  tout fainéant qui se respecte.
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Sérieusement, qui se sert de cette touche, à part les Kikoolol
+                  qui aiment hurler leur incompétence sur tous les forums et
+                  autres skymerdes ?<br />
+                  Au pire, il faut marquer un mot en majuscule (pour le SQL par
+                  exemple), et la touche majuscule suffit amplement. Voyons donc
+                  comment désactiver ce reliquat inexpugnable des temps
+                  anciens...
+                </p>
 
+                <p>
+                  <img
+                    src="/images/stories/capslock.jpg"
+                    alt="Caps Lock : pas forcément tout le temps"
+                    title="Caps Lock : pas forcément tout le temps"
+                  />
+                </p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                <h2>Désactiver Caps Lock</h2>
+                <p>
+                  Il existe un petit utilitaire fort sympathique sous Linux qui
+                  gère tous les modifieurs du clavier. Si vous travaillez sur
+                  des serveurs distants, vous le connaissez peut être : il
+                  s'agit de <tt>xmodmap</tt>.<br />
+                  Ouvrez un terminal et marquez <tt>xmodmap</tt>, vous devriez
+                  avoir quelque chose de ce genre qui s'affiche :
+                </p>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2009-10-31T12:34:19+00:00" itemprop="dateCreated">
-						Created: 31 October 2009					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-								<div itemprop="articleBody">
-		<p>Au risque d'exprimer mon opinion personnelle et de sortir de la masse, je tiens à profiter de ce billet pour exprimer ma haine envers la touche <strong>CAPS_LOCK</strong>. Combien de fois vous êtes vous fait avoir à taper un texte avec ce modifieur, et à ne pas pouvoir le repasser en lower-case ?<br />
-Certes, si l'on utilise un éditeur de texte tel Word, Kate, Notepad++ ou autres, des raccourcis existent (respectivement ctrl+F3 et ctrl-U), mais dans la plupart des cas on est bon pour retaper le texte. Horreur et damnation, la hantise de tout fainéant qui se respecte.</p>
-
-<p>Sérieusement, qui se sert de cette touche, à part les Kikoolol qui aiment hurler leur incompétence sur tous les forums et autres skymerdes ?<br />
-Au pire, il faut marquer un mot en majuscule (pour le SQL par exemple), et la touche majuscule suffit amplement. Voyons donc comment désactiver ce reliquat inexpugnable des temps anciens...</p>
-
-
-
-<p><img src="/images/stories/capslock.jpg" alt="Caps Lock : pas forcément tout le temps" title="Caps Lock : pas forcément tout le temps" /></p>
-
-<h2>Désactiver Caps Lock</h2>
-<p>Il existe un petit utilitaire fort sympathique sous Linux qui gère tous les modifieurs du clavier. Si vous travaillez sur des serveurs distants, vous le connaissez peut être : il s'agit de <tt>xmodmap</tt>.<br />
-Ouvrez un terminal et marquez <tt>xmodmap</tt>, vous devriez avoir quelque chose de ce genre qui s'affiche :</p>
-
-<pre xml:lang="Bash">
+                <pre xml:lang="Bash">
 neamar@neamar-laptop:~$ xmodmap
 xmodmap:  up to 2 keys per modifier, (keycodes in parentheses):
 
@@ -147,100 +206,178 @@ mod2        Num_Lock (0x4d)
 mod3
 mod4        Super_L (0xce),  Hyper_L (0xcf)
 mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)
-</pre>
+</pre
+                >
 
-<p>Vous l'aurez compris, le but va être de supprimer la ligne <em>lock Caps_Lock (0x42)</em>.<br />
-<tt>xmodmap</tt> permet, comme vous vous en doutez, de modifier ces mappings de touche. Il faut pour cela utiliser l'option <strong>-e</strong> suivie de la commande à exécuter. Je vous laisse vous reporter à <tt>man xmodmap</tt> pour plus de détails.</p>
+                <p>
+                  Vous l'aurez compris, le but va être de supprimer la ligne
+                  <em>lock Caps_Lock (0x42)</em>.<br />
+                  <tt>xmodmap</tt> permet, comme vous vous en doutez, de
+                  modifier ces mappings de touche. Il faut pour cela utiliser
+                  l'option <strong>-e</strong> suivie de la commande à exécuter.
+                  Je vous laisse vous reporter à <tt>man xmodmap</tt> pour plus
+                  de détails.
+                </p>
 
-<p>Exécutons donc la commande pour supprimer Caps Lock :</p>
+                <p>Exécutons donc la commande pour supprimer Caps Lock :</p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 neamar@neamar-laptop:~$ xmodmap -e "remove Lock = Caps_Lock"
-</pre>
+</pre
+                >
 
-<p>Et voilà ! Appuyez maintenant sur votre touche... miracle ! La petite LED ne s'allume plus, et vous continuez d'écrire comme une personne civilisée !</p>
+                <p>
+                  Et voilà ! Appuyez maintenant sur votre touche... miracle ! La
+                  petite LED ne s'allume plus, et vous continuez d'écrire comme
+                  une personne civilisée !
+                </p>
 
-<h2>Désactiver Caps Lock définitivement</h2>
-<p>Fin de la tyrannie du Caps Lock ? Hélas, non ! Car le modifieur que nous venons de faire ne s'applique que pour cette section. Pour le rendre permanent, il va donc falloir l'exécuter en début de session.</p>
+                <h2>Désactiver Caps Lock définitivement</h2>
+                <p>
+                  Fin de la tyrannie du Caps Lock ? Hélas, non ! Car le
+                  modifieur que nous venons de faire ne s'applique que pour
+                  cette section. Pour le rendre permanent, il va donc falloir
+                  l'exécuter en début de session.
+                </p>
 
-<p>Ici, chacun pourra utiliser la méthode qu'il souhaite. Personnellement, j'ai un faible pour le <tt>@REBOOT</tt> du <tt>crontab</tt>, c'est donc la méthode que je détaillerai ici.</p>
+                <p>
+                  Ici, chacun pourra utiliser la méthode qu'il souhaite.
+                  Personnellement, j'ai un faible pour le <tt>@REBOOT</tt> du
+                  <tt>crontab</tt>, c'est donc la méthode que je détaillerai
+                  ici.
+                </p>
 
-<p>Pour ceux qui ne le savent pas, <tt>crontab</tt> est un utilitaire pour planifier des tâches régulières ; par exemple la sauvegarde d'un dossier tous les jours à 18h, et à 12h les samedis et dimanche. Un outil puissant, qui peut aussi exécuter des scripts au reboot.<br />
-Pour commencer, tapez la commande suivante : </p>
-<pre xml:lang="bash">
+                <p>
+                  Pour ceux qui ne le savent pas, <tt>crontab</tt> est un
+                  utilitaire pour planifier des tâches régulières ; par exemple
+                  la sauvegarde d'un dossier tous les jours à 18h, et à 12h les
+                  samedis et dimanche. Un outil puissant, qui peut aussi
+                  exécuter des scripts au reboot.<br />
+                  Pour commencer, tapez la commande suivante :
+                </p>
+                <pre xml:lang="bash">
 neamar@neamar-laptop:~$ crontab -e
-</pre>
+</pre
+                >
 
-<p>Rajoutez le code suivant à l'intérieur du fichier :</p>
-<pre xml:lang="bash">
+                <p>Rajoutez le code suivant à l'intérieur du fichier :</p>
+                <pre xml:lang="bash">
 #Désactiver cette saleté de caps lock dès le démarrage.
 #La touche reste quand même active, elle n'a juste plus l'effet capitalize
 @reboot xmodmap -e "remove Lock = Caps_Lock" >>/dev/null/
-</pre>
+</pre
+                >
 
-<p>Un petit Ctrl-X, "O" pour enregistrer... et voilà ! Vérifiez que tout a bien été sauvegardé avec <tt>crontab -l</tt>, et cette fois c'en est fini de la touche maudite ! Supprimé, le Caps Lock, enfin !</p>
+                <p>
+                  Un petit Ctrl-X, "O" pour enregistrer... et voilà ! Vérifiez
+                  que tout a bien été sauvegardé avec <tt>crontab -l</tt>, et
+                  cette fois c'en est fini de la touche maudite ! Supprimé, le
+                  Caps Lock, enfin !
+                </p>
 
-<h2>Pour aller plus loin...</h2>
-<p>Comme précisé dans les commentaires, seul l'effet Lock est désactivé : la touche reste donc parfaitement viable. Vous pouvez par exemple vous en servir comme raccourci clavier (ça fait une touche gratuite), comme touche hôte pour une machine virtualisée...<br />
-Et si de temps en temps vous avez vraiment besoin d'un caps_lock, vous pouvez affecter une autre touche à l'effet Lock : faite juste attention à choisir une touche que vous n'enclencherez pas par erreur (il suffit de remplacer le <em>remove</em> par <em>add</em>) !</p>
+                <h2>Pour aller plus loin...</h2>
+                <p>
+                  Comme précisé dans les commentaires, seul l'effet Lock est
+                  désactivé : la touche reste donc parfaitement viable. Vous
+                  pouvez par exemple vous en servir comme raccourci clavier (ça
+                  fait une touche gratuite), comme touche hôte pour une machine
+                  virtualisée...<br />
+                  Et si de temps en temps vous avez vraiment besoin d'un
+                  caps_lock, vous pouvez affecter une autre touche à l'effet
+                  Lock : faite juste attention à choisir une touche que vous
+                  n'enclencherez pas par erreur (il suffit de remplacer le
+                  <em>remove</em> par <em>add</em>) !
+                </p>
 
-<p><img src="/images/stories/capslock2.jpg" alt="Caps Lock : libérez le démon" title="Caps Lock : libérez le démon" /></p>	</div>
+                <p>
+                  <img
+                    src="/images/stories/capslock2.jpg"
+                    alt="Caps Lock : libérez le démon"
+                    title="Caps Lock : libérez le démon"
+                  />
+                </p>
+              </div>
+            </div>
 
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
-							</div>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name">
+                  Désactiver la touche Caps Lock sous Linux
+                </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Désactiver la touche Caps Lock sous Linux				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

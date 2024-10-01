@@ -1,164 +1,249 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="sms, google, agenda, calendar, php, cron, notification, rappel" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Recevoir gratuitement par SMS les nouvelles de son site : côté serveur</title>
-	<link href="https://blog.neamar.fr/autres-articles/51-sms-gratuit-notification-rss-google-calendar-16541700" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta
+      name="keywords"
+      content="sms, google, agenda, calendar, php, cron, notification, rappel"
+    />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>
+      Recevoir gratuitement par SMS les nouvelles de son site : côté serveur
+    </title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/51-sms-gratuit-notification-rss-google-calendar-16541700"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">
+                  Recevoir gratuitement par SMS les nouvelles de son site : côté
+                  serveur
+                </h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Recevoir gratuitement par SMS les nouvelles de son site : côté serveur			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=3da1b4cf50921553e6ae5512a4dead94c650c903" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2009-11-25T19:11:22+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 25 November 2009
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  <a
+                    href="http://blog.neamar.fr/component/content/article/4-web-pour-webmatser/49-sms-gratuit-notification-rss-google-calendar"
+                    >Dans le premier article</a
+                  >, j'indiquais comment configurer son compte Google pour
+                  pouvoir recevoir des notifications par SMS.<br />
+                  Maintenant que cette partie est faite, nous allons pouvoir
+                  entrer dans le vif du sujet et commencer à coder ce qui
+                  déclenchera l'envoi du rappel par SMS pour vous tenir au
+                  courant des mises à jour de votre site.
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Je suppose donc que vous avez configuré tout ce qui est décrit
+                  <a
+                    href="http://blog.neamar.fr/component/content/article/4-web-pour-webmatser/49-sms-gratuit-notification-rss-google-calendar"
+                    >dans le premier article "Côté Google"</a
+                  >, à savoir : un compte Google d'aide, le partage des agendas,
+                  et l'ajout des notifications par défaut.
+                </p>
 
+                <p>Ok ? Allons-y !</p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                <p>
+                  Avant de rentrer dans le vif du sujet, mettons les choses à
+                  plat : nous souhaitons juste ajouter des événements dans
+                  l'agenda Google. Les événements seront mis avec une date dans
+                  le futur de une minute, ce qui déclenchera l'envoi immédiat du
+                  SMS de rappel.<br />
+                  Le bon côté des choses, c'est que Google fournit une API toute
+                  faite pour manipuler ses données. Le mauvais côté, c'est qu'il
+                  s'agit d'une bonne grosse usine à gaz...<br />
+                  Ce qui m'amène à rappeler les conditions :
+                </p>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
+                <ul>
+                  <li>Un serveur web hébergeant PHP 5.2.4 ou supérieur ;</li>
+                  <li>
+                    Les extensions PHP suivantes : ctype, dom, libxml, spl,
+                    standard, openssl (normalement inclues par défaut dans la
+                    plupart des configurations, même gratuites).
+                  </li>
+                </ul>
 
+                <p>
+                  Et comme on aime bien savoir où on va, voici le plan que je
+                  vais suivre :
+                </p>
 
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+                <ol>
+                  <li>Télécharger l'API Google ;</li>
+                  <li>Configurer une page du serveur pour utiliser l'API ;</li>
+                  <li>Tester ;</li>
+                  <li>Insertion d'un événement ;</li>
+                  <li>Tester le final.</li>
+                </ol>
 
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2009-11-25T19:11:22+00:00" itemprop="dateCreated">
-						Created: 25 November 2009					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
+                <p>Rien de bien compliqué, on est parti !</p>
 
+                <h2>1. Télécharger l'API Google</h2>
+                <p>
+                  Rendez-vous sur
+                  <a href="http://framework.zend.com/download/gdata"
+                    >http://framework.zend.com/download/gdata</a
+                  >
+                  et téléchargez la dernière version de la librairie.
+                  Décompressez le tout, et envoyez l'intégralité du dossier
+                  <tt>library</tt> sur votre FTP (de façon à avoir un chemin du
+                  type <tt>chemin/vers/library/Zend/</tt>, j'insiste sur la
+                  présence du <tt>library</tt> dans l'arborescence.<br />
+                  Et voilà pour la première étape, on a connu pire.
+                </p>
 
+                <h2>2. Configurer une page du serveur pour utiliser l'API</h2>
+                <p>
+                  Comme je le disais (et comme vous avez pu le constater en
+                  uploadant les fichiers), l'API est relativement lourde et il
+                  ne parait pas utile de l'inclure à chaque fois. Je vous
+                  conseille donc de créer une page <tt>notifier.php</tt> que
+                  vous inclurez quand vous souhaiterez communiquer avec Google.
+                </p>
 
-								<div itemprop="articleBody">
-		<p><a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmatser/49-sms-gratuit-notification-rss-google-calendar">Dans le premier article</a>, j'indiquais comment configurer son compte Google pour pouvoir recevoir des notifications par SMS.<br />
-Maintenant que cette partie est faite, nous allons pouvoir entrer dans le vif du sujet et commencer à coder ce qui déclenchera l'envoi du rappel par SMS pour vous tenir au courant des mises à jour de votre site.</p>
-
-<p>Je suppose donc que vous avez configuré tout ce qui est décrit <a href="http://blog.neamar.fr/component/content/article/4-web-pour-webmatser/49-sms-gratuit-notification-rss-google-calendar">dans le premier article "Côté Google"</a>, à savoir : un compte Google d'aide, le partage des agendas, et l'ajout des notifications par défaut.</p>
-
-<p>Ok ? Allons-y !</p>
-
-
-<p>Avant de rentrer dans le vif du sujet, mettons les choses à plat : nous souhaitons juste ajouter des événements dans l'agenda Google. Les événements seront mis avec une date dans le futur de une minute, ce qui déclenchera l'envoi immédiat du SMS de rappel.<br />
-Le bon côté des choses, c'est que Google fournit une API toute faite pour manipuler ses données. Le mauvais côté, c'est qu'il s'agit d'une bonne grosse usine à gaz...<br />
-Ce qui m'amène à rappeler les conditions :</p>
-
-<ul>
-<li>Un serveur web hébergeant PHP 5.2.4 ou supérieur ;</li>
-<li>Les extensions PHP suivantes : ctype, dom, libxml, spl, standard, openssl (normalement inclues par défaut dans la plupart des configurations, même gratuites).</li>
-</ul>
-
-<p>Et comme on aime bien savoir où on va, voici le plan que je vais suivre :</p>
-
-<ol>
-<li>Télécharger l'API Google ;</li>
-<li>Configurer une page du serveur pour utiliser l'API ;</li>
-<li>Tester ;</li>
-<li>Insertion d'un événement ;</li>
-<li>Tester le final.</li>
-</ol>
-
-<p>Rien de bien compliqué, on est parti !</p>
-
-<h2>1. Télécharger l'API Google</h2>
-<p>Rendez-vous sur <a href="http://framework.zend.com/download/gdata">http://framework.zend.com/download/gdata</a> et téléchargez la dernière version de la librairie. Décompressez le tout, et envoyez l'intégralité du dossier <tt>library</tt> sur votre FTP (de façon à avoir un chemin du type <tt>chemin/vers/library/Zend/</tt>, j'insiste sur la présence du <tt>library</tt> dans l'arborescence.<br />
-Et voilà pour la première étape, on a connu pire.</p>
-
-<h2>2. Configurer une page du serveur pour utiliser l'API</h2>
-<p>Comme je le disais (et comme vous avez pu le constater en uploadant les fichiers), l'API est relativement lourde et il ne parait pas utile de l'inclure à chaque fois. Je vous conseille donc de créer une page <tt>notifier.php</tt> que vous inclurez quand vous souhaiterez communiquer avec Google.</p>
-
-<p>Dans cette page, il va falloir inclure l'ensemble de l'API Google. Pour cela, il faut indiquer au serveur où se trouve la librairie : un peu comme la variable $PATH sous Linux en fait.</p>
-<pre xml:lang="php">
+                <p>
+                  Dans cette page, il va falloir inclure l'ensemble de l'API
+                  Google. Pour cela, il faut indiquer au serveur où se trouve la
+                  librairie : un peu comme la variable $PATH sous Linux en fait.
+                </p>
+                <pre xml:lang="php">
 //1 : régler le chemin vers la librairie Google
 $clientLibraryPath = substr(__FILE__,0,strrpos(__FILE__,'/')) . '/library';
 set_include_path(get_include_path() . PATH_SEPARATOR . $clientLibraryPath);
@@ -168,22 +253,56 @@ require_once 'Zend/Loader.php';//Adresse connue grâce à l'ajout de la ligne pr
 Zend_Loader::loadClass('Zend_Gdata');
 Zend_Loader::loadClass('Zend_Gdata_ClientLogin');
 Zend_Loader::loadClass('Zend_Gdata_Calendar');
-</pre>
-<p>ATTENTION, ce code suppose que votre page <tt>notifier.php</tt> est au même niveau que votre dossier <tt>library/</tt>. Ajustez le code si nécessaire, mais pensez à utiliser un chemin absolu.</p>
+</pre
+                >
+                <p>
+                  ATTENTION, ce code suppose que votre page
+                  <tt>notifier.php</tt> est au même niveau que votre dossier
+                  <tt>library/</tt>. Ajustez le code si nécessaire, mais pensez
+                  à utiliser un chemin absolu.
+                </p>
 
-<h2>3. Tester</h2>
-<p>À ce point, <a href="http://code.google.com/intl/fr/apis/gdata/articles/php_client_lib.html">Google recommande de tester</a> pour vérifier si votre serveur est vraiment compatible. Collez-donc à la suite de votre code le code suivant (sans le <tt>&lt;?php</tt>, évidemment) <a href="http://framework.zend.com/svn/framework/standard/trunk/demos/Zend/Gdata/InstallationChecker.php">le contenu de cette page</a>.<br />
-Vous devriez obtenir le résultat suivant :<br />
-<img src="http://code.google.com/intl/fr/apis/gdata/images/install_checker_ok.png" alt="Installation de Google API OK" /><br />
-Si ce n'est pas le cas, effectuez les modifications demandées.</p>
+                <h2>3. Tester</h2>
+                <p>
+                  À ce point,
+                  <a
+                    href="http://code.google.com/intl/fr/apis/gdata/articles/php_client_lib.html"
+                    >Google recommande de tester</a
+                  >
+                  pour vérifier si votre serveur est vraiment compatible.
+                  Collez-donc à la suite de votre code le code suivant (sans le
+                  <tt>&lt;?php</tt>, évidemment)
+                  <a
+                    href="http://framework.zend.com/svn/framework/standard/trunk/demos/Zend/Gdata/InstallationChecker.php"
+                    >le contenu de cette page</a
+                  >.<br />
+                  Vous devriez obtenir le résultat suivant :<br />
+                  <img
+                    src="http://code.google.com/intl/fr/apis/gdata/images/install_checker_ok.png"
+                    alt="Installation de Google API OK"
+                  /><br />
+                  Si ce n'est pas le cas, effectuez les modifications demandées.
+                </p>
 
-<h2>4. Insertion d'un événement</h2>
-<p>Parfait, ne reste plus qu'à insérer un élément. À l'aide de <a href="http://code.google.com/intl/fr/apis/calendar/data/1.0/developers_guide_php.html">la documentation de Google Calendar</a>, on arrive assez rapidement à créer le code correct que je détaille ici.</p>
+                <h2>4. Insertion d'un événement</h2>
+                <p>
+                  Parfait, ne reste plus qu'à insérer un élément. À l'aide de
+                  <a
+                    href="http://code.google.com/intl/fr/apis/calendar/data/1.0/developers_guide_php.html"
+                    >la documentation de Google Calendar</a
+                  >, on arrive assez rapidement à créer le code correct que je
+                  détaille ici.
+                </p>
 
-<h3>4.1. Connexion au compte Google</h3>
-<p>On touche ici à l'intérêt d'avoir crée un compte helper : il va falloir entrer en clair le mot de passe dans la page. Et pour ce genre de situations, mieux vaut n'offrir au hacker potentiel que votre compte inutile !</p>
+                <h3>4.1. Connexion au compte Google</h3>
+                <p>
+                  On touche ici à l'intérêt d'avoir crée un compte helper : il
+                  va falloir entrer en clair le mot de passe dans la page. Et
+                  pour ce genre de situations, mieux vaut n'offrir au hacker
+                  potentiel que votre compte inutile !
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 //3 : connexion
 $user='<span id="cloakfb8a0aa937eba54109b8d3f3afb4828f">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
 				document.getElementById('cloakfb8a0aa937eba54109b8d3f3afb4828f').innerHTML = '';
@@ -199,11 +318,21 @@ $service = Zend_Gdata_Calendar::AUTH_SERVICE_NAME;
 $client = Zend_Gdata_ClientLogin::getHttpClient($user,$pass,$service);
 </pre>
 
-<h3>4.2. Insertion de l'élément</h3>
-<p>Une fois connecté, reste à insérer un élément. On va se servir de la fonction <tt>time()</tt> qui renvoie le <a href="http://blog.neamar.fr/component/content/article/9-evenements-internet/10-timestamp-et-date">timestamp actuel</a> et de la fonction <tt>date()</tt> qui permet de formater ce nombre à la manière voulue.<br />
-Il faut aussi préciser le fuseau horaire sur lequel on se situe, "+01" en France.</p>
+                <h3>4.2. Insertion de l'élément</h3>
+                <p>
+                  Une fois connecté, reste à insérer un élément. On va se servir
+                  de la fonction <tt>time()</tt> qui renvoie le
+                  <a
+                    href="http://blog.neamar.fr/component/content/article/9-evenements-internet/10-timestamp-et-date"
+                    >timestamp actuel</a
+                  >
+                  et de la fonction <tt>date()</tt> qui permet de formater ce
+                  nombre à la manière voulue.<br />
+                  Il faut aussi préciser le fuseau horaire sur lequel on se
+                  situe, "+01" en France.
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 //4 : Insertion de l'élément
 
 $start=time()+130;
@@ -222,20 +351,50 @@ $when = $gdataCal->newWhen();
 $when->startTime = "{$startDate}T{$startTime}:00.000{$tzOffset}:00";
 $newEvent->when = array($when);
 $event = $gdataCal->insertEvent($newEvent);
-</pre>
+</pre
+                >
 
-<p>(<em>Bien évidemment, à vous de régler correctement les variables <tt>$notifTitre</tt> et <tt>$notifDesc</tt> qui contiennent respectivement le titre et la description de l'évènement à ajouter.<br />
-Précisons que le titre ne doit pas dépasser 60 caractères pour recevoir le SMS valide, et que la description ne sera pas visible dans la notification.</em>)</p>
-<p>Normalement, vous devriez vous demander : pourquoi ce +130 dans le code ?<br />
-En fait, il faut ajouter au moins 60 secondes puisque la notification sera déclenchée une minute avant l'évènement : si on mettait la date exacte, le rappel ne serait pas envoyé.<br />
-À ces 60 secondes viennent s'ajouter 10 secondes "de latence", qui prennent en compte la possibilité d'un lag du serveur google / de votre serveur / des échanges réseaux : déjà 70 secondes.<br />
-Enfin, vous aurez remarqué que la définition de la date se fait sans les secondes : en conséquence, si on en est à 59 secondes de la minute actuelle, on a 59 secondes de retard pour l'évènement... et une nouvelle fois, la notification ne sera pas envoyée car l'évènement n'est pas enregistré assez loin dans le futur. Au final, 60 + 10 + 60 = 130.<br />
-J'ajoute que le deuxième 60 n'est pas utile dans tous les cas (en théorie, on pourrait donc faire <tt>130 - date('s')</tt>) ; c'est son utilisation qui fait que vous ne recevrez pas instantanément le SMS (latence d'une minute).</p>
+                <p>
+                  (<em
+                    >Bien évidemment, à vous de régler correctement les
+                    variables <tt>$notifTitre</tt> et <tt>$notifDesc</tt> qui
+                    contiennent respectivement le titre et la description de
+                    l'évènement à ajouter.<br />
+                    Précisons que le titre ne doit pas dépasser 60 caractères
+                    pour recevoir le SMS valide, et que la description ne sera
+                    pas visible dans la notification.</em
+                  >)
+                </p>
+                <p>
+                  Normalement, vous devriez vous demander : pourquoi ce +130
+                  dans le code ?<br />
+                  En fait, il faut ajouter au moins 60 secondes puisque la
+                  notification sera déclenchée une minute avant l'évènement : si
+                  on mettait la date exacte, le rappel ne serait pas envoyé.<br />
+                  À ces 60 secondes viennent s'ajouter 10 secondes "de latence",
+                  qui prennent en compte la possibilité d'un lag du serveur
+                  google / de votre serveur / des échanges réseaux : déjà 70
+                  secondes.<br />
+                  Enfin, vous aurez remarqué que la définition de la date se
+                  fait sans les secondes : en conséquence, si on en est à 59
+                  secondes de la minute actuelle, on a 59 secondes de retard
+                  pour l'évènement... et une nouvelle fois, la notification ne
+                  sera pas envoyée car l'évènement n'est pas enregistré assez
+                  loin dans le futur. Au final, 60 + 10 + 60 = 130.<br />
+                  J'ajoute que le deuxième 60 n'est pas utile dans tous les cas
+                  (en théorie, on pourrait donc faire <tt>130 - date('s')</tt>)
+                  ; c'est son utilisation qui fait que vous ne recevrez pas
+                  instantanément le SMS (latence d'une minute).
+                </p>
 
-<h2>5. Tester le final</h2>
-<p>Je vous conseille d'ajouter <strong>tout en haut</strong> de votre script la ligne suivante, qui vous permettra de réaliser des tests et aussi de vérifier la cohérence de vos appels :</p>
+                <h2>5. Tester le final</h2>
+                <p>
+                  Je vous conseille d'ajouter <strong>tout en haut</strong> de
+                  votre script la ligne suivante, qui vous permettra de réaliser
+                  des tests et aussi de vérifier la cohérence de vos appels :
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 //0 : Avant d'appeler le script, penser à  préciser les variables
 //$notifTitre = 'Ttitre';
 //$notifDesc='Description';
@@ -246,13 +405,19 @@ if(!isset($notifTitre) || !isset($notifDesc))
 	$notifTitre="(defaut)";
 	$notifDesc='';
 }
-</pre>
+</pre
+                >
 
-<p>Il ne vous reste plus qu'à appeler la page <tt>notifier.php?test</tt> pour tester votre réalisation... sous 90 secondes, vous devriez recevoir votre SMS. Alors, on dit merci qui ?</p>
+                <p>
+                  Il ne vous reste plus qu'à appeler la page
+                  <tt>notifier.php?test</tt> pour tester votre réalisation...
+                  sous 90 secondes, vous devriez recevoir votre SMS. Alors, on
+                  dit merci qui ?
+                </p>
 
-<h2>Code complet</h2>
-<p>Pour les fainéants, voici l'intégralité du code :</p>
-<pre xml:lang="php">
+                <h2>Code complet</h2>
+                <p>Pour les fainéants, voici l'intégralité du code :</p>
+                <pre xml:lang="php">
 <?php
 //0 : Avant d'appeler le script, penser à  préciser les variables
 //$notifTitre = 'Ttitre';
@@ -305,63 +470,94 @@ $newEvent->when = array($when);
 $event = $gdataCal->insertEvent($newEvent);
 </pre>
 
-<p>Je vous laisse connecter cette page avec votre fonction d'ajout d'article / de commentaire : il suffit de régler les deux <tt>$notif</tt> et d'inclure la page.</p>	</div>
+                <p>
+                  Je vous laisse connecter cette page avec votre fonction
+                  d'ajout d'article / de commentaire : il suffit de régler les
+                  deux <tt>$notif</tt> et d'inclure la page.
+                </p>
+              </div>
+            </div>
 
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
-							</div>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name">
+                  Recevoir gratuitement par SMS les nouvelles de son site : côté
+                  serveur
+                </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Recevoir gratuitement par SMS les nouvelles de son site : côté serveur				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

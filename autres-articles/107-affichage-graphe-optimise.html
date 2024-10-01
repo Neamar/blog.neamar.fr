@@ -1,155 +1,262 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="graphe, algorithmique, eulris, algorithme" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Positionnement automatique d'un arbre</title>
-	<link href="https://blog.neamar.fr/autres-articles/107-affichage-graphe-optimise" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta name="keywords" content="graphe, algorithmique, eulris, algorithme" />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Positionnement automatique d'un arbre</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/107-affichage-graphe-optimise"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">
+                  Positionnement automatique d'un arbre
+                </h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Positionnement automatique d'un arbre			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=47f5ba304b419da8bbc361c4290e4d1c8e51dbb8" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2010-04-29T12:23:44+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 29 April 2010
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  Lors de la réalisation du jeu
+                  <a href="http://neamar.fr/Res/AGraphe/">A-Graphe</a>, je
+                  m'étais frotté à «&nbsp;la représentation graphique
+                  automatisée d'arbres mathématiques&nbsp;». Ouch, dit ainsi ça
+                  fait mal.
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Pour ceux qui ne connaîtraient pas, un
+                  <strong>arbre</strong> est une forme particulière de graphe
+                  dans lequel on n'autorise pas les cycles&nbsp;: c'est-à-dire
+                  que si on descend d'élément en élément, on atteindra forcément
+                  un nœud final (les nœuds atteints de cette façon sont nommés
+                  <strong>feuille</strong>). À l'inverse, si on remonte
+                  n'importe quel élément, on finira toujours par tomber sur le
+                  même nœud (la <strong>racine</strong> de l'arbre).
+                </p>
 
+                <p>
+                  Un arbre au sens strict est une structure mathématique
+                  abstraite de sa représentation graphique&nbsp;: si l'on veut,
+                  on peut représenter tous les nœuds (le terme nœud désigne les
+                  sommets&nbsp;; donc la racine, les feuilles, et les nœuds qui
+                  les relient) au même point (au détriment de la lisibilité) ou
+                  faire des imbroglios de «&nbsp;fils&nbsp;» en plaçant les
+                  éléments au hasard. Bien entendu, on a souvent besoin de
+                  présenter une information claire à l'internaute, et on ne peut
+                  se permettre de lui donner un pâté immonde (<a
+                    href="http://neamar.fr/Res/BGraphe"
+                    >sauf si le but du jeu est de démêler ledit pâté</a
+                  >). Le but de cet article sera d'envisager deux façons de
+                  structurer l'arbre automatiquement&nbsp;: d'abord, par un
+                  positionnement statique (le plus simple), ensuite par un
+                  positionnement dynamique (plus complexe, mais avec des
+                  meilleurs résultats).
+                </p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                <p>
+                  Allez, la partie aride est terminée, maintenant on s'amuse !
+                </p>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
+                <h2>Pré-requis</h2>
+                <p>
+                  Pour illustrer mes propos, je passerai encore une fois par le
+                  langage ActionScript3 utilisé par Flash. <br />
+                  Dans les deux cas, je ferai trois tests distincts de la
+                  méthode présentée&nbsp;:
+                </p>
 
+                <ul>
+                  <li>
+                    D'abord, sur un arbre prédéterminé (c'est un niveau extrait
+                    d'A-graphe)&nbsp;;
+                  </li>
+                  <li>
+                    Ensuite, sur un arbre généré aléatoirement à chaque
+                    lancement&nbsp;;
+                  </li>
+                  <li>
+                    Enfin, sur un gros arbre (plus de 100 nœuds) généré
+                    aléatoirement.
+                  </li>
+                </ul>
+                <p>
+                  La majorité du code source reste le même dans les deux cas
+                  (statique et dynamique), je ne détaillerai donc pas le code,
+                  juste les algorithmes.
+                </p>
 
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+                <h2>
+                  Représentation graphique d'un arbre par la méthode statique
+                </h2>
+                <p>
+                  L'approche la plus intuitive est la méthode statique. <br />
+                  Comme on ne sait pas de combien de niveaux on va devoir
+                  «&nbsp;creuser&nbsp;» dans l'arbre, on utilise une méthode
+                  récursive. Au départ, on place la racine au milieu du dessin,
+                  puis on boucle pour placer chacun de ses enfants en cercle
+                  régulier autour de lui (c'est simple, il suffit d'un minimum
+                  de trigonométrie avec un angle qui varie selon le nombre
+                  d'enfants). <br />
+                  Ensuite, on reproduit la méthode sur chacun des enfants, mais
+                  plutôt que d'accorder 360° de liberté pour le placement, on
+                  restreint l'intervalle à utiliser (on veut une impression
+                  d'éclaté, et pas des ronds&nbsp;: à chaque itération, on va
+                  donc réduire l'amplitude autorisée). Ceci se traduit par un
+                  angle initial (l'angle du parent par rapport à son maître) et
+                  une amplitude de liberté&nbsp;: autrement dit, on confine le
+                  nœud dans un espace bien déterminé et on les place
+                  régulièrement dans l'amplitude autorisée.
+                </p>
 
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-04-29T12:23:44+00:00" itemprop="dateCreated">
-						Created: 29 April 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
+                <p>
+                  Au début, l'amplitude est donc de 360°. Si on a quatre
+                  enfants, chacun des enfants d'enfants aura alors 90° de
+                  liberté. Ces 90° seront centrés autour de l'angle du
+                  parent&nbsp;: pour le premier enfant, on placera les enfants
+                  d'enfants entre -45° et 45° (ce qui donne bien une amplitude –
+                  centrée – de 90°), pour le second entre 90-45° et 90+45°, et
+                  ainsi de suite, le 90&nbsp;correspondant ici à l'angle que
+                  fait l'enfant avec la racine. <br />
+                  Ce n'est pas clair&nbsp;? La méthode suivante devrait vous
+                  aider&nbsp;:
+                </p>
 
-
-
-								<div itemprop="articleBody">
-		<p>Lors de la réalisation du jeu <a href="http://neamar.fr/Res/AGraphe/">A-Graphe</a>, je m'étais frotté à «&nbsp;la représentation graphique automatisée d'arbres mathématiques&nbsp;». Ouch, dit ainsi ça fait mal. </p>
-
-<p>Pour ceux qui ne connaîtraient pas, un <strong>arbre</strong> est une forme particulière de graphe dans lequel on n'autorise pas les cycles&nbsp;: c'est-à-dire que si on descend d'élément en élément, on atteindra forcément un nœud final (les nœuds atteints de cette façon sont nommés <strong>feuille</strong>). À l'inverse, si on remonte n'importe quel élément, on finira toujours par tomber sur le même nœud (la <strong>racine</strong> de l'arbre). </p>
-
-<p>Un arbre au sens strict est une structure mathématique abstraite de sa représentation graphique&nbsp;: si l'on veut, on peut représenter tous les nœuds (le terme nœud désigne les sommets&nbsp;; donc la racine, les feuilles, et les nœuds qui les relient) au même point (au détriment de la lisibilité) ou faire des imbroglios de «&nbsp;fils&nbsp;» en plaçant les éléments au hasard. Bien entendu, on a souvent besoin de présenter une information claire à l'internaute, et on ne peut se permettre de lui donner un pâté immonde (<a href="http://neamar.fr/Res/BGraphe">sauf si le but du jeu est de démêler ledit pâté</a>). Le but de cet article sera d'envisager deux façons de structurer l'arbre automatiquement&nbsp;: d'abord, par un positionnement statique (le plus simple), ensuite par un positionnement dynamique (plus complexe, mais avec des meilleurs résultats). </p>
-
-<p>Allez, la partie aride est terminée, maintenant on s'amuse !</p>
-
-
-<h2>Pré-requis</h2>
-<p>Pour illustrer mes propos, je passerai encore une fois par le langage ActionScript3 utilisé par Flash. <br />
-Dans les deux cas, je ferai trois tests distincts de la méthode présentée&nbsp;: </p>
-
-<ul>
-	<li>D'abord, sur un arbre prédéterminé (c'est un niveau extrait d'A-graphe)&nbsp;; </li>
-	<li>Ensuite, sur un arbre généré aléatoirement à chaque lancement&nbsp;; </li>
-	<li>Enfin, sur un gros arbre (plus de 100 nœuds) généré aléatoirement. </li>
-</ul>
-<p>La majorité du code source reste le même dans les deux cas (statique et dynamique), je ne détaillerai donc pas le code, juste les algorithmes. </p>
-
-<h2>Représentation graphique d'un arbre par la méthode statique</h2>
-<p>L'approche la plus intuitive est la méthode statique. <br />
-Comme on ne sait pas de combien de niveaux on va devoir «&nbsp;creuser&nbsp;» dans l'arbre, on utilise une méthode récursive. Au départ, on place la racine au milieu du dessin, puis on boucle pour placer chacun de ses enfants en cercle régulier autour de lui (c'est simple, il suffit d'un minimum de trigonométrie avec un angle qui varie selon le nombre d'enfants). <br />
-Ensuite, on reproduit la méthode sur chacun des enfants, mais plutôt que d'accorder 360° de liberté pour le placement, on restreint l'intervalle à utiliser (on veut une impression d'éclaté, et pas des ronds&nbsp;: à chaque itération, on va donc réduire l'amplitude autorisée). Ceci se traduit par un angle initial (l'angle du parent par rapport à son maître) et une amplitude de liberté&nbsp;: autrement dit, on confine le nœud dans un espace bien déterminé et on les place régulièrement dans l'amplitude autorisée. </p>
-
-<p>Au début, l'amplitude est donc de 360°. Si on a quatre enfants, chacun des enfants d'enfants aura alors 90° de liberté. Ces 90° seront centrés autour de l'angle du parent&nbsp;: pour le premier enfant, on placera les enfants d'enfants entre -45° et 45° (ce qui donne bien une amplitude – centrée – de 90°), pour le second entre 90-45° et 90+45°, et ainsi de suite, le 90&nbsp;correspondant ici à l'angle que fait l'enfant avec la racine. <br />
-Ce n'est pas clair&nbsp;? La méthode suivante devrait vous aider&nbsp;: </p>
-
-<pre xml:lang="actionscript3">
+                <pre xml:lang="actionscript3">
 /**
  * Permet un placement de l'arbre par une méthode récursive.
  * @param	Noeud Le noeud à placer. Ses enfants seront ensuite placés récursivement.
@@ -177,79 +284,248 @@ private function placement(Noeud:Node,Rayon:int,Amplitude:Number=2*Math.PI,Angle
 		Angle += Step;
 	}
 }
-</pre>
+</pre
+                >
 
-<p>Et le premier appel, qui déclenche la cascade d'évènements :</p>
-<pre xml:lang="actionscript3">
+                <p>
+                  Et le premier appel, qui déclenche la cascade d'évènements :
+                </p>
+                <pre xml:lang="actionscript3">
 //Placer la racine, et placer ses enfants sur un cercle de 200 de rayon.
 placement(Racine,200);
-</pre>
+</pre
+                >
 
-<p>Voilà de quoi tester. Cliquez sur le cercle noir pour faire démarrer l'animation :</p>
+                <p>
+                  Voilà de quoi tester. Cliquez sur le cercle noir pour faire
+                  démarrer l'animation :
+                </p>
 
-<object type="application/x-shockwave-flash" data="/images/stories/Prog/Arbres/ArbreStatique.swf" width="400" height="300" >
-	<param name="movie" value="/images/stories/Prog/Arbres/ArbreStatique.swf" />
-	<param name="quality" value="high" />
-	<param name="wmode" value="transparent" />
-	<p>Installez le plugin Flash pour voir l'animation : <a href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr" >Cliquez ici pour le télécharger</a></p>
-</object>
+                <object
+                  type="application/x-shockwave-flash"
+                  data="/images/stories/Prog/Arbres/ArbreStatique.swf"
+                  width="400"
+                  height="300"
+                >
+                  <param
+                    name="movie"
+                    value="/images/stories/Prog/Arbres/ArbreStatique.swf"
+                  />
+                  <param name="quality" value="high" />
+                  <param name="wmode" value="transparent" />
+                  <p>
+                    Installez le plugin Flash pour voir l'animation :
+                    <a
+                      href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr"
+                      >Cliquez ici pour le télécharger</a
+                    >
+                  </p>
+                </object>
 
-<p>Quelques exemples de rendus :</p>
-<p>
-<img src="/images/stories/Prog/Arbres/Statique/Arbre.png" alt="Exemple d'arbre obtenu par la méthode statique" /><br />
-<img src="/images/stories/Prog/Arbres/Statique/Arbre2.png" alt="Exemple d'arbre obtenu par la méthode statique" /><br />
-<img src="/images/stories/Prog/Arbres/Statique/Arbre3.png" alt="Exemple d'arbre obtenu par la méthode statique" /><br />
-<img src="/images/stories/Prog/Arbres/Statique/ExempleArbre.png" alt="Exemple d'arbre obtenu par la méthode statique" />
-</p>
+                <p>Quelques exemples de rendus :</p>
+                <p>
+                  <img
+                    src="/images/stories/Prog/Arbres/Statique/Arbre.png"
+                    alt="Exemple d'arbre obtenu par la méthode statique"
+                  /><br />
+                  <img
+                    src="/images/stories/Prog/Arbres/Statique/Arbre2.png"
+                    alt="Exemple d'arbre obtenu par la méthode statique"
+                  /><br />
+                  <img
+                    src="/images/stories/Prog/Arbres/Statique/Arbre3.png"
+                    alt="Exemple d'arbre obtenu par la méthode statique"
+                  /><br />
+                  <img
+                    src="/images/stories/Prog/Arbres/Statique/ExempleArbre.png"
+                    alt="Exemple d'arbre obtenu par la méthode statique"
+                  />
+                </p>
 
-<h2>Représentation graphique d'un arbre par la méthode dynamique</h2>
-<p>La méthode statique présente l'avantage d'être rapide et efficace dans la plupart des cas. Cependant, on peut difficilement faire des animations (dans le cas de l'ajout d'un nœud en direct, on obtient des sauts peu esthétiques), et les structures obtenues sont trop «&nbsp;mathématiques&nbsp;». Enfin, quand le nombre de nœuds augmente, on obtient un fratras incompréhensible… et pas forcément optimisé, puisque de grands vides peuvent rester si un nœud de haut niveau n'a pas d'enfants. </p>
+                <h2>
+                  Représentation graphique d'un arbre par la méthode dynamique
+                </h2>
+                <p>
+                  La méthode statique présente l'avantage d'être rapide et
+                  efficace dans la plupart des cas. Cependant, on peut
+                  difficilement faire des animations (dans le cas de l'ajout
+                  d'un nœud en direct, on obtient des sauts peu esthétiques), et
+                  les structures obtenues sont trop «&nbsp;mathématiques&nbsp;».
+                  Enfin, quand le nombre de nœuds augmente, on obtient un
+                  fratras incompréhensible… et pas forcément optimisé, puisque
+                  de grands vides peuvent rester si un nœud de haut niveau n'a
+                  pas d'enfants.
+                </p>
 
-<p>Pour pallier à ces problèmes, on va étudier une solution plus intéressante. <br />
-L'idée, c'est de maximiser en permanence les écarts entre chaque nœud&nbsp;: après tout, plus ils sont loins, plus l'utilisation de l'espace est optimisée&nbsp;! Cela ne vous rappelle rien&nbsp;? Mais si, souvenez-vous de vos cours de lycée et de la loi de l'attraction du sieur Newton&nbsp;: on a là une formule parfaitement adaptée pour modéliser le comportement de nos sommets&nbsp;! Deux nœuds très proches vont fortement se repousser, deux nœuds plus loin vont encore s'éloigner mais de façon plus poussive. On pourra intelligemment se référer à <em>AI Game&nbsp;: Programming Wisdom</em> pour une utilisation de cette méthode dans la positionnement d'agent sur un terrain. </p>
+                <p>
+                  Pour pallier à ces problèmes, on va étudier une solution plus
+                  intéressante. <br />
+                  L'idée, c'est de maximiser en permanence les écarts entre
+                  chaque nœud&nbsp;: après tout, plus ils sont loins, plus
+                  l'utilisation de l'espace est optimisée&nbsp;! Cela ne vous
+                  rappelle rien&nbsp;? Mais si, souvenez-vous de vos cours de
+                  lycée et de la loi de l'attraction du sieur Newton&nbsp;: on a
+                  là une formule parfaitement adaptée pour modéliser le
+                  comportement de nos sommets&nbsp;! Deux nœuds très proches
+                  vont fortement se repousser, deux nœuds plus loin vont encore
+                  s'éloigner mais de façon plus poussive. On pourra
+                  intelligemment se référer à
+                  <em>AI Game&nbsp;: Programming Wisdom</em> pour une
+                  utilisation de cette méthode dans la positionnement d'agent
+                  sur un terrain.
+                </p>
 
-<p>Mais il y a un problème&nbsp;: avec cette loi, les nœuds vont s'éloigner à l'infini (comme les galaxies dans l'univers). C'est vrai&nbsp;; il faut donc ajouter une contrainte pour éviter ce fâcheux comportement. Et cette contrainte, c'est justement notre arbre&nbsp;: certains nœuds doivent garder une distance faible entre eux pour modéliser le lien. On pourrait donc se contenter d'indiquer au système «&nbsp;la distance entre ces deux nœuds doit être constante&nbsp;», mais il me parait plus intéressant d'accrocher un ressort virtuel entre chaque extrémité&nbsp;; comme ça tout est représenté sous forme de forces physiques. Il ne reste plus quà y appliquer le célèbre <acronym title="Principe Fondamental de la Dynamique">PFD</acronym> (<span class="TexTexte">&Sigma; F = ma</span> [n'oublions pas que ce sont des vecteurs]) pour avoir un positionnement correct, avec animation s'il vous plaît&nbsp;! </p>
+                <p>
+                  Mais il y a un problème&nbsp;: avec cette loi, les nœuds vont
+                  s'éloigner à l'infini (comme les galaxies dans l'univers).
+                  C'est vrai&nbsp;; il faut donc ajouter une contrainte pour
+                  éviter ce fâcheux comportement. Et cette contrainte, c'est
+                  justement notre arbre&nbsp;: certains nœuds doivent garder une
+                  distance faible entre eux pour modéliser le lien. On pourrait
+                  donc se contenter d'indiquer au système «&nbsp;la distance
+                  entre ces deux nœuds doit être constante&nbsp;», mais il me
+                  parait plus intéressant d'accrocher un ressort virtuel entre
+                  chaque extrémité&nbsp;; comme ça tout est représenté sous
+                  forme de forces physiques. Il ne reste plus quà y appliquer le
+                  célèbre
+                  <acronym title="Principe Fondamental de la Dynamique"
+                    >PFD</acronym
+                  >
+                  (<span class="TexTexte">&Sigma; F = ma</span> [n'oublions pas
+                  que ce sont des vecteurs]) pour avoir un positionnement
+                  correct, avec animation s'il vous plaît&nbsp;!
+                </p>
 
-<p>Avant d'en dire plus, le résultat (comme tout à l'heure, cliquez sur le rond noir. Soyez patient, même quand les n&oelig;uds n'apparaissent plus il y a du mouvement)&nbsp;: </p>
+                <p>
+                  Avant d'en dire plus, le résultat (comme tout à l'heure,
+                  cliquez sur le rond noir. Soyez patient, même quand les
+                  n&oelig;uds n'apparaissent plus il y a du mouvement)&nbsp;:
+                </p>
 
-<object type="application/x-shockwave-flash" data="/images/stories/Prog/Arbres/ArbreDynamique.swf" width="400" height="300" >
-	<param name="movie" value="/images/stories/Prog/Arbres/ArbreDynamique.swf" />
-	<param name="quality" value="high" />
-	<param name="wmode" value="transparent" />
-	<p>Installez le plugin Flash pour voir l'animation : <a href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr" >Cliquez ici pour le télécharger</a></p>
-</object>
+                <object
+                  type="application/x-shockwave-flash"
+                  data="/images/stories/Prog/Arbres/ArbreDynamique.swf"
+                  width="400"
+                  height="300"
+                >
+                  <param
+                    name="movie"
+                    value="/images/stories/Prog/Arbres/ArbreDynamique.swf"
+                  />
+                  <param name="quality" value="high" />
+                  <param name="wmode" value="transparent" />
+                  <p>
+                    Installez le plugin Flash pour voir l'animation :
+                    <a
+                      href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr"
+                      >Cliquez ici pour le télécharger</a
+                    >
+                  </p>
+                </object>
 
-<p>Deuxième version, avec ajout d'objets en continu (placements initial aléatoire, arrêt après 150 ronds).</p>
-<object type="application/x-shockwave-flash" data="/images/stories/Prog/Arbres/ArbreDynamiqueAuto.swf" width="400" height="300" >
-	<param name="movie" value="/images/stories/Prog/Arbres/ArbreDynamiqueAuto.swf" />
-	<param name="quality" value="high" />
-	<param name="wmode" value="transparent" />
-	<p>Installez le plugin Flash pour voir l'animation : <a href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr" >Cliquez ici pour le télécharger</a></p>
-</object>
+                <p>
+                  Deuxième version, avec ajout d'objets en continu (placements
+                  initial aléatoire, arrêt après 150 ronds).
+                </p>
+                <object
+                  type="application/x-shockwave-flash"
+                  data="/images/stories/Prog/Arbres/ArbreDynamiqueAuto.swf"
+                  width="400"
+                  height="300"
+                >
+                  <param
+                    name="movie"
+                    value="/images/stories/Prog/Arbres/ArbreDynamiqueAuto.swf"
+                  />
+                  <param name="quality" value="high" />
+                  <param name="wmode" value="transparent" />
+                  <p>
+                    Installez le plugin Flash pour voir l'animation :
+                    <a
+                      href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr"
+                      >Cliquez ici pour le télécharger</a
+                    >
+                  </p>
+                </object>
 
-<p>Développons un peu… à la création d'un nœud, on ajoute une liste de contraintes&nbsp;: </p>
+                <p>
+                  Développons un peu… à la création d'un nœud, on ajoute une
+                  liste de contraintes&nbsp;:
+                </p>
 
-<ul>
-	<li>D'abord, le nœud est repoussé par tous les autres nœuds. Pour simplifier les calculs, on a mis la masse à 1&nbsp;; la formule devient alors 1/d². </li>
-	<li>Ensuite, le nœud s'accroche avec son père&nbsp;: on met un ressort entre les deux, de constante de raideur 0,2&nbsp;et de longueur à vide 40 (sauf dans le cas du nœud principal, pour lequel on donne plus de libertés avec une longueur à vide plus forte). </li>
-</ul>
-<p>Puis à chaque mise à jour de l'affichage, on calcule pour chacun des nœuds la liste des forces et on applique le PFD pour en déduire l'accélération. Comme on est dans un quanta de temps très faible, on n'intègre pas l'accélération et on se contente d'ajouter la valeur obtenue à la vitesse, puis d'ajouter la vitesse à la position. C'est brutal, mais cela permet d'accélérer énormément les calculs (intégrer numériquement peut prendre du temps… ) et donne des résultats tout à fait corrects tant qu'on calcule bien la position de tout le monde en même temps. <br />
-Accessoirement, on gère le cas des forces infinies (distance = 0) pour éviter les forces infinies&nbsp;! Et c'est tout. Comme on le voit, le résultat est agréable à regarder, relativement performant (tant qu'on reste en dessous de 500 nœuds), ajustable (l'ajout d'un nœud minimise les déplacements à effectuer) et tout cela pour un code qui reste simple. </p>
+                <ul>
+                  <li>
+                    D'abord, le nœud est repoussé par tous les autres nœuds.
+                    Pour simplifier les calculs, on a mis la masse à 1&nbsp;; la
+                    formule devient alors 1/d².
+                  </li>
+                  <li>
+                    Ensuite, le nœud s'accroche avec son père&nbsp;: on met un
+                    ressort entre les deux, de constante de raideur 0,2&nbsp;et
+                    de longueur à vide 40 (sauf dans le cas du nœud principal,
+                    pour lequel on donne plus de libertés avec une longueur à
+                    vide plus forte).
+                  </li>
+                </ul>
+                <p>
+                  Puis à chaque mise à jour de l'affichage, on calcule pour
+                  chacun des nœuds la liste des forces et on applique le PFD
+                  pour en déduire l'accélération. Comme on est dans un quanta de
+                  temps très faible, on n'intègre pas l'accélération et on se
+                  contente d'ajouter la valeur obtenue à la vitesse, puis
+                  d'ajouter la vitesse à la position. C'est brutal, mais cela
+                  permet d'accélérer énormément les calculs (intégrer
+                  numériquement peut prendre du temps… ) et donne des résultats
+                  tout à fait corrects tant qu'on calcule bien la position de
+                  tout le monde en même temps. <br />
+                  Accessoirement, on gère le cas des forces infinies (distance =
+                  0) pour éviter les forces infinies&nbsp;! Et c'est tout. Comme
+                  on le voit, le résultat est agréable à regarder, relativement
+                  performant (tant qu'on reste en dessous de 500 nœuds),
+                  ajustable (l'ajout d'un nœud minimise les déplacements à
+                  effectuer) et tout cela pour un code qui reste simple.
+                </p>
 
-<p>De plus, on est certain d'obtenir un système stable après un temps suffisament long&nbsp;: les nœuds sont alors placés sur des minimums locaux utilisant le moins d'énergie (on dit que l'ensemble minimise les contraintes, une des lubies principales de mère nature). </p>
+                <p>
+                  De plus, on est certain d'obtenir un système stable après un
+                  temps suffisament long&nbsp;: les nœuds sont alors placés sur
+                  des minimums locaux utilisant le moins d'énergie (on dit que
+                  l'ensemble minimise les contraintes, une des lubies
+                  principales de mère nature).
+                </p>
 
-<p>Quelques exemples de rendus :</p>
-<p>
-<img src="/images/stories/Prog/Arbres/Dynamique/Arbre.png" alt="Exemple d'arbre obtenu par la méthode Dynamique" /><br />
-<img src="/images/stories/Prog/Arbres/Dynamique/Arbre2.png" alt="Exemple d'arbre obtenu par la méthode Dynamique" /><br />
-<img src="/images/stories/Prog/Arbres/Dynamique/Arbre3.png" alt="Exemple d'arbre obtenu par la méthode Dynamique" /><br />
-<img src="/images/stories/Prog/Arbres/Dynamique/Arbre4.png" alt="Exemple d'arbre obtenu par la méthode Dynamique" /><br />
-<img src="/images/stories/Prog/Arbres/Dynamique/ExempleArbre.png" alt="Exemple d'arbre obtenu par la méthode Dynamique" /><br />
-Et pour les amateurs, <a href="/images/stories/Prog/Arbres/Dynamique/Omnilogie.png" title="Structure des catégories d'Omnilogie sous forme d'arbre">la structure de l'arbre des catégories d'Omnilogie</a>, pour donner un exemple d'application pratique :)
-</p>
+                <p>Quelques exemples de rendus :</p>
+                <p>
+                  <img
+                    src="/images/stories/Prog/Arbres/Dynamique/Arbre.png"
+                    alt="Exemple d'arbre obtenu par la méthode Dynamique"
+                  /><br />
+                  <img
+                    src="/images/stories/Prog/Arbres/Dynamique/Arbre2.png"
+                    alt="Exemple d'arbre obtenu par la méthode Dynamique"
+                  /><br />
+                  <img
+                    src="/images/stories/Prog/Arbres/Dynamique/Arbre3.png"
+                    alt="Exemple d'arbre obtenu par la méthode Dynamique"
+                  /><br />
+                  <img
+                    src="/images/stories/Prog/Arbres/Dynamique/Arbre4.png"
+                    alt="Exemple d'arbre obtenu par la méthode Dynamique"
+                  /><br />
+                  <img
+                    src="/images/stories/Prog/Arbres/Dynamique/ExempleArbre.png"
+                    alt="Exemple d'arbre obtenu par la méthode Dynamique"
+                  /><br />
+                  Et pour les amateurs,
+                  <a
+                    href="/images/stories/Prog/Arbres/Dynamique/Omnilogie.png"
+                    title="Structure des catégories d'Omnilogie sous forme d'arbre"
+                    >la structure de l'arbre des catégories d'Omnilogie</a
+                  >, pour donner un exemple d'application pratique :)
+                </p>
 
-<p>Quelques preuves que le codage n'est pas si complexe :</p>
-<pre xml:lang="actionscript3">
+                <p>Quelques preuves que le codage n'est pas si complexe :</p>
+                <pre xml:lang="actionscript3">
 /* CALCUL DE LA FORCE D'UN RESSORT*/
 
 //Mettre à jour la force.
@@ -269,9 +545,10 @@ AttractionAutreBout.y = - AttractionBout.y;
 //Et appliquer la force aux objets pour le prochain calcul du PFD
 Bout.applyForce(AttractionBout);
 AutreBout.applyForce(AttractionAutreBout);
-</pre>
+</pre
+                >
 
-<pre xml:lang="actionscript3">
+                <pre xml:lang="actionscript3">
 /* APPLICATION DU PFD */
 
 //Calcul de la somme des forces
@@ -294,69 +571,113 @@ this.y += Vitesse.y;
 //Vidage de la liste des forces pour le prochain calcul
 Forces.splice(0,Forces.length);
 Resultante.reset();
-</pre>
+</pre
+                >
 
-<hr class="court">
+                <hr class="court" />
 
-<p>Bref, encore un exemple de modélisation simple d'un système complexe… en voulant extraire les paramètres macroscopiques, on devait affronter des équations mathématiques et des cas particuliers de plus en plus retors pour améliorer le système initial&nbsp;; avec des contraintes microscopiques (atomiques au sens étymologique) on se contente de donner des règles simples à satisfaire qui permettent d'obtenir un comportement complexe. Une sorte de jeu de la vie… qui montre l'importance de la réflexion avant le codage. </p>
+                <p>
+                  Bref, encore un exemple de modélisation simple d'un système
+                  complexe… en voulant extraire les paramètres macroscopiques,
+                  on devait affronter des équations mathématiques et des cas
+                  particuliers de plus en plus retors pour améliorer le système
+                  initial&nbsp;; avec des contraintes microscopiques (atomiques
+                  au sens étymologique) on se contente de donner des règles
+                  simples à satisfaire qui permettent d'obtenir un comportement
+                  complexe. Une sorte de jeu de la vie… qui montre l'importance
+                  de la réflexion avant le codage.
+                </p>
 
-<p><a href="/images/stories/Prog/Arbres/Arbre.zip">Télécharger les codes</a>. Le code statique n'est pas optimisé du tout car il incorpore aussi les ressorts et les interactions (sans les afficher bien entendu). Pour passer en mode auto, changez la variable "MODE" avant de compiler.</p>	</div>
+                <p>
+                  <a href="/images/stories/Prog/Arbres/Arbre.zip"
+                    >Télécharger les codes</a
+                  >. Le code statique n'est pas optimisé du tout car il
+                  incorpore aussi les ressorts et les interactions (sans les
+                  afficher bien entendu). Pour passer en mode auto, changez la
+                  variable "MODE" avant de compiler.
+                </p>
+              </div>
+            </div>
 
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
-							</div>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name">
+                  Positionnement automatique d'un arbre
+                </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Positionnement automatique d'un arbre				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,204 +1,316 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="message post mortem, blog, décès" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Message post mortem : tome 0</title>
-	<link href="https://blog.neamar.fr/autres-articles/31-message-post-mortem-0" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta name="keywords" content="message post mortem, blog, décès" />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Message post mortem : tome 0</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/31-message-post-mortem-0"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">Message post mortem : tome 0</h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Message post mortem : tome 0			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=1d51c1dff0ea1e0d14d73e19b142633588e5f8f2" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2009-10-28T16:45:43+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 28 October 2009
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  Une fois n'est pas coutume, nous allons parler geek. Mais pas
+                  un peu geek, beaucoup geek.<br />
+                  En effet, nous allons tenter de voir comment faire survivre
+                  votre œuvre virtuelle à travers le temps... et même après
+                  votre mort.
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Ne nous voilons pas la face (c'est interdit dans les lieux
+                  publics, rappelons-le) : l'espérance de vie d'Internet est
+                  largement supérieure à la vôtre. Et on n'est jamais à l'abri
+                  d'un quelconque accident... d'où l'intérêt d'un système
+                  post-mortem qui se déclenchera automatiquement à votre décès
+                  et enverra par mail à vos principaux amis les clés pour
+                  pouvoir faire un minimum de maintenance sur vos œuvres. Cela
+                  peut aller de l'envoi d'un message d'amour posthume à
+                  l'expédition sécurisée de l'intégralité de vos mots de passe
+                  pour accéder à vos mails, compte ftp, systèmes
+                  d'exploitation... après tout, de là où vous serez, il n'y aura
+                  plus grand chose à cacher.
+                </p>
 
+                <p>
+                  Certes, on espère tous que ce système ne se déclenchera
+                  jamais. Mais qui sait ! Un jour peut être, vos successeurs
+                  seront heureux que vous ayez mis ce système en place. Et puis
+                  ne nous voilons pas la face : ça fait classe aussi de prévoir
+                  aussi froidement son décès.
+                </p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                <h2>Étape n°0 : réfléchir.</h2>
+                <p>
+                  On ne le répétera jamais assez : en informatique, plus le
+                  système est réfléchi, moins on passe de temps à le coder. En
+                  plus, ici le but est d'expliquer, donc autant mettre à plat ce
+                  que l'on va faire.
+                </p>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
+                <p>
+                  Le script s'exécutera une fois chaque premier du mois. Il va
+                  vous envoyer un mail qui contiendra une clé permettant
+                  d'indiquer que vous êtes encore vivant ce mois-ci (alléluia
+                  !). Si vous ne cliquez pas sur la clé, le prochain mois, le
+                  script s'en apercevra et décrétera l'état d'urgence en
+                  envoyant tous les mails nécessaires.
+                </p>
 
+                <p>Cela se résume donc aux étapes (difficultés) suivantes :</p>
+                <ol>
+                  <li>
+                    Le script ne doit s'exécuter qu'une fois par mois. De plus ,
+                    son appel doit être sécurisé, histoire qu'on ne puisse pas
+                    demander à l'exécuter extérieurement pour éviter l'envoi des
+                    infos sensibles : après tout, le mail n'est pas du tout
+                    <a href="http://neamar.fr/Res/Mail"
+                      >un protocole sécurisé</a
+                    >
+                    !
+                    <a
+                      href="http://blog.neamar.fr/component/content/article/4-prog/32-message-post-mortem-1"
+                      >C'est l'objet du premier article</a
+                    >
+                  </li>
+                  <li>
+                    Le script doit envoyer un mail de confirmation pour valider
+                    votre présence sur cette Terre si le dernier mois, vous avez
+                    bien validé votre existence.
+                  </li>
+                  <li>
+                    Le script doit envoyer un mail à toutes les personnes
+                    demandées si vous n'avez pas donné signe de vie.
+                    <a
+                      href="http://blog.neamar.fr/component/content/article/4-prog/35-message-post-mortem-2"
+                      >Ces deux dernières étapes sont dans la deuxième partie</a
+                    >.
+                  </li>
+                </ol>
 
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+                <p>
+                  Bien entendu, dans ces articles la date sera fixée à un mois,
+                  mais rien ne vous empêche d'augmenter ou réduire le délai.
+                </p>
+              </div>
+            </div>
 
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2009-10-28T16:45:43+00:00" itemprop="dateCreated">
-						Created: 28 October 2009					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-								<div itemprop="articleBody">
-		<p>Une fois n'est pas coutume, nous allons parler geek. Mais pas un peu geek, beaucoup geek.<br />
-En effet, nous allons tenter de voir comment faire survivre votre œuvre virtuelle à travers le temps... et même après votre mort.</p>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name"> Message post mortem : tome 0 </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-<p>Ne nous voilons pas la face (c'est interdit dans les lieux publics, rappelons-le) : l'espérance de vie d'Internet est largement supérieure à la vôtre. Et on n'est jamais à l'abri d'un quelconque accident... d'où l'intérêt d'un système post-mortem qui se déclenchera automatiquement à votre décès et enverra par mail à vos principaux amis les clés pour pouvoir faire un minimum de maintenance sur vos œuvres. Cela peut aller de l'envoi d'un message d'amour posthume à l'expédition sécurisée de l'intégralité de vos mots de passe pour accéder à vos mails, compte ftp, systèmes d'exploitation... après tout, de là où vous serez, il n'y aura plus grand chose à cacher.</p>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-<p>Certes, on espère tous que ce système ne se déclenchera jamais. Mais qui sait ! Un jour peut être, vos successeurs seront heureux que vous ayez mis ce système en place. Et puis ne nous voilons pas la face : ça fait classe aussi de prévoir aussi froidement son décès.</p>
-
-
-
-<h2>Étape n°0 : réfléchir.</h2>
-<p>On ne le répétera jamais assez : en informatique, plus le système est réfléchi, moins on passe de temps à le coder. En plus, ici le but est d'expliquer, donc autant mettre à plat ce que l'on va faire.</p>
-
-<p>Le script s'exécutera une fois chaque premier du mois. Il va vous envoyer un mail qui contiendra une clé permettant d'indiquer que vous êtes encore vivant ce mois-ci (alléluia !). Si vous ne cliquez pas sur la clé, le prochain mois, le script s'en apercevra et décrétera l'état d'urgence en envoyant tous les mails nécessaires.</p>
-
-<p>Cela se résume donc aux étapes (difficultés) suivantes :
-<ol>
-<li>Le script ne doit s'exécuter qu'une fois par mois. De plus , son appel doit être sécurisé, histoire qu'on ne puisse pas demander à l'exécuter extérieurement pour éviter l'envoi des infos sensibles : après tout, le mail n'est pas du tout <a href="http://neamar.fr/Res/Mail">un protocole sécurisé</a> ! <a href="http://blog.neamar.fr/component/content/article/4-prog/32-message-post-mortem-1">C'est l'objet du premier article</a></li>
-<li>Le script doit envoyer un mail de confirmation pour valider votre présence sur cette Terre si le dernier mois, vous avez bien validé votre existence.</li>
-<li>Le script doit envoyer un mail à toutes les personnes demandées si vous n'avez pas donné signe de vie. <a href="http://blog.neamar.fr/component/content/article/4-prog/35-message-post-mortem-2">Ces deux dernières étapes sont dans la deuxième partie</a>.</li>
-</ol>
-
-<p>Bien entendu, dans ces articles la date sera fixée à un mois, mais rien ne vous empêche d'augmenter ou réduire le délai.</p>	</div>
-
-
-							</div>
-
-
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
-
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Message post mortem : tome 0				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

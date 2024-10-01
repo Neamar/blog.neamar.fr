@@ -1,153 +1,236 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="stats, statistiques, mysql, php, google, chart, api" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Faire des statistiques faciles avec des graphiques</title>
-	<link href="https://blog.neamar.fr/autres-articles/12-stats-faciles-graphiques-sql-php" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta
+      name="keywords"
+      content="stats, statistiques, mysql, php, google, chart, api"
+    />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Faire des statistiques faciles avec des graphiques</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/12-stats-faciles-graphiques-sql-php"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">
+                  Faire des statistiques faciles avec des graphiques
+                </h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Faire des statistiques faciles avec des graphiques			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=c8cddaf0f2647b31f405e9f2befc591bed6cb513" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2009-09-12T10:23:49+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 12 September 2009
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  J'ai déjà déjà parlé dans ces colonnes de
+                  <a
+                    href="http://blog.neamar.fr/component/content/article/4-prog/8-google-chart-api-tool-graphique"
+                    >Google Chart API</a
+                  >
+                  qui permet de créer des graphiques simples, puissants et
+                  personnalisés avec une simple URL.<br />
+                  Plus récemment, j'ai donné mon opinion pour
+                  <a
+                    href="http://blog.neamar.fr/component/content/article/4-prog/9-stats-facile"
+                    >faire des statistiques faciles avec MySQL et afficher le
+                    résultat sous forme de texte</a
+                  >. Cette fois, nous allons donc voir comment afficher le
+                  résultat sous forme de graphiques !
+                </p>
+                <p>
+                  <img
+                    src="http://chart.apis.google.com/chart?1&cht=p3&chtt=Actions&chs=470x150&chco=FF0000,00FF00,88AAD6&chl=Correction%20des%20erreurs|Chargement%20des%20donnees|Modification%20des%20mots%20cles|ACCEPTE|Ajout%20d%27une%20accroche|Creation%20de%20l%27omnilogisme|Parution%20de%20l%27omnilogisme|Generation%20mots%20cles|A_CORRIGER|INDETERMINE|Chargemen%20local|REFUSE&chd=s:9TQPLKIFCBBA"
+                    alt="Exemple de graphique générés"
+                  />
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Encore une fois, nous allons tenter de réaliser une solution
+                  élégante et polyvalente.<br />
+                  Nous allons donc développer une fonction qui prendra deux
+                  paramètres :
+                </p>
+                <ul>
+                  <li>
+                    Le premier sera la requête SQL à exécuter. Elle renverra
+                    deux champs, auxquels nous donnerons les alias
+                    <strong>Abscisse</strong> et <strong>Ordonnee</strong>, et
+                    qui représenteront les données à afficher.
+                  </li>
+                  <li>
+                    Le second sera un tableau contenant les paramètres à
+                    utiliser pour l'affichage du graphique : son type bien
+                    entendu (camembert, ligne, histogramme, diagramme de
+                    Venn,...), et toutes informations utiles. Afin de simplifier
+                    la fonction, le tableau sera pré-rempli avec certaines
+                    valeurs par défaut (voir section suivante).
+                  </li>
+                </ul>
 
-
-			<dt class="article-info-term">
-									Details							</dt>
-
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2009-09-12T10:23:49+00:00" itemprop="dateCreated">
-						Created: 12 September 2009					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-								<div itemprop="articleBody">
-		<p>J'ai déjà déjà parlé dans ces colonnes de <a href="http://blog.neamar.fr/component/content/article/4-prog/8-google-chart-api-tool-graphique">Google Chart API</a> qui permet de créer des graphiques simples, puissants et personnalisés avec une simple URL.<br />
-Plus récemment, j'ai donné mon opinion pour <a href="http://blog.neamar.fr/component/content/article/4-prog/9-stats-facile">faire des statistiques faciles avec MySQL et afficher le résultat sous forme de texte</a>. Cette fois, nous allons donc voir comment afficher le résultat sous forme de graphiques !</p>
-<p><img src="http://chart.apis.google.com/chart?1&cht=p3&chtt=Actions&chs=470x150&chco=FF0000,00FF00,88AAD6&chl=Correction%20des%20erreurs|Chargement%20des%20donnees|Modification%20des%20mots%20cles|ACCEPTE|Ajout%20d%27une%20accroche|Creation%20de%20l%27omnilogisme|Parution%20de%20l%27omnilogisme|Generation%20mots%20cles|A_CORRIGER|INDETERMINE|Chargemen%20local|REFUSE&chd=s:9TQPLKIFCBBA" alt="Exemple de graphique générés" /></p>
-
-<p>Encore une fois, nous allons tenter de réaliser une solution élégante et polyvalente.<br />
-Nous allons donc développer une fonction qui prendra deux paramètres :</p>
-<ul>
-<li>Le premier sera la requête SQL à exécuter. Elle renverra deux champs, auxquels nous donnerons les alias <strong>Abscisse</strong> et <strong>Ordonnee</strong>, et qui représenteront les données à afficher.</li>
-<li>Le second sera un tableau contenant les paramètres à utiliser pour l'affichage du graphique : son type bien entendu (camembert, ligne, histogramme, diagramme de Venn,...), et toutes informations utiles. Afin de simplifier la fonction, le tableau sera pré-rempli avec certaines valeurs par défaut (voir section suivante).</li>
-</ul>
-
-<h2>Les paramètres</h2>
-<p>Je vois déjà des sourcils qui se lèvent quant à la dernière phrase, je vais donc l'éclaircir tout de suite.<br />
-PHP nous laisse utiliser des arguments facultatifs : si ils ne sont pas spécifiés lors de l'appel de la fonction, ils sont remplacés par leur valeur par défaut. Malheureusement, ici cela ne nous aide pas...<br />
-Nous allons donc construire un tableau qui contiendra les valeurs "standards" pour un graphique "de base" :</p>
-<pre xml:lang="php">
+                <h2>Les paramètres</h2>
+                <p>
+                  Je vois déjà des sourcils qui se lèvent quant à la dernière
+                  phrase, je vais donc l'éclaircir tout de suite.<br />
+                  PHP nous laisse utiliser des arguments facultatifs : si ils ne
+                  sont pas spécifiés lors de l'appel de la fonction, ils sont
+                  remplacés par leur valeur par défaut. Malheureusement, ici
+                  cela ne nous aide pas...<br />
+                  Nous allons donc construire un tableau qui contiendra les
+                  valeurs "standards" pour un graphique "de base" :
+                </p>
+                <pre xml:lang="php">
 $Default=array(
 'cht'=>'lc',
 'chtt'=>'Statistiques',
 'chs'=>'750x200',
 'chco'=>'88AAD6',
 );
-</pre>
+</pre
+                >
 
-<p>L'astuce va consister à fusionner ce tableau avec le tableau fourni, la priorité de conservation allant bien entendu au tableau spécifié lors de l'appel (autrement dit, si les deux tableaux ont une clé "cht", c'est la valeur du second tableau qui sera retenue). Ceci est réalisable très simplement avec <tt>array_merge</tt> ; nous avons donc dès maintenant la base complète de notre fonction.
+                <p>
+                  L'astuce va consister à fusionner ce tableau avec le tableau
+                  fourni, la priorité de conservation allant bien entendu au
+                  tableau spécifié lors de l'appel (autrement dit, si les deux
+                  tableaux ont une clé "cht", c'est la valeur du second tableau
+                  qui sera retenue). Ceci est réalisable très simplement avec
+                  <tt>array_merge</tt> ; nous avons donc dès maintenant la base
+                  complète de notre fonction.
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 function GraphIt($SQL,$Settings)
 {
 	//Explication de la ligne suivante dans la section suivante
@@ -164,11 +247,15 @@ function GraphIt($SQL,$Settings)
 
 
 	$Ds=mysql_query($SQL) or die(mysql_error());//Récupérer les données
-</pre>
+</pre
+                >
 
-<h2>L'enregistrement des données</h2>
-<p>Comme la dernière fois, nous allons passer la ressource SQL dans un tableau afin de pouvoir manipuler tout ça facilement :
-<pre xml:lang="php">
+                <h2>L'enregistrement des données</h2>
+                <p>
+                  Comme la dernière fois, nous allons passer la ressource SQL
+                  dans un tableau afin de pouvoir manipuler tout ça facilement :
+                </p>
+                <pre xml:lang="php">
 	$Tab=array();
 	$Abscisses=array();
 	while($D=mysql_fetch_assoc($Ds))
@@ -179,12 +266,35 @@ function GraphIt($SQL,$Settings)
 
 	//Normaliser le tableau
 	$Max=Normalize($Tab);
-</pre>
-<p>N'oubliez pas la fonction <tt>Normalize</tt>, qui permet de s'assurer que toutes les données sont dans la bonne plage de valeurs. Ce qui m'amène tout naturellement à un petit problème : l'encodage des données.</p>
+</pre
+                >
+                <p>
+                  N'oubliez pas la fonction <tt>Normalize</tt>, qui permet de
+                  s'assurer que toutes les données sont dans la bonne plage de
+                  valeurs. Ce qui m'amène tout naturellement à un petit problème
+                  : l'encodage des données.
+                </p>
 
-<h3>L'encodage</h3>
-<p>Afin de gagner de la place, nous n'allons pas utiliser l'encodage brut que je préconise dans <a href="http://blog.neamar.fr/component/content/article/4-prog/8-google-chart-api-tool-graphique">l'article sur les graphiques</a> : en effet celui-ci nécessite des URL assez longues, et le service de Google a une limite qui s'atteint plus rapidement qu'on ne le croit. Par défaut, les données sont <em>comma-separated</Em> : 0,15,10,28,50,12,... mais une autre solution consiste à encoder chaque valeur par une lettre afin de gagner de la place (<a href="http://code.google.com/apis/chart/mappings.html">0:A,1:B,...,26:a,27:b,...,36:0,...</a>) ; autrement dit toutes les valeurs doivent être comprises entre 0 et 61, d'où notre fonction <tt>Normalize</tt> :</p>
-<pre xml:lang="php">
+                <h3>L'encodage</h3>
+                <p>
+                  Afin de gagner de la place, nous n'allons pas utiliser
+                  l'encodage brut que je préconise dans
+                  <a
+                    href="http://blog.neamar.fr/component/content/article/4-prog/8-google-chart-api-tool-graphique"
+                    >l'article sur les graphiques</a
+                  >
+                  : en effet celui-ci nécessite des URL assez longues, et le
+                  service de Google a une limite qui s'atteint plus rapidement
+                  qu'on ne le croit. Par défaut, les données sont
+                  <em>comma-separated</em> : 0,15,10,28,50,12,... mais une autre
+                  solution consiste à encoder chaque valeur par une lettre afin
+                  de gagner de la place (<a
+                    href="http://code.google.com/apis/chart/mappings.html"
+                    >0:A,1:B,...,26:a,27:b,...,36:0,...</a
+                  >) ; autrement dit toutes les valeurs doivent être comprises
+                  entre 0 et 61, d'où notre fonction <tt>Normalize</tt> :
+                </p>
+                <pre xml:lang="php">
 function Normalize(&$Tab)
 {
 	$Max=max($Tab);
@@ -193,19 +303,25 @@ function Normalize(&$Tab)
 
 	return $Max;
 }
-</pre>
+</pre
+                >
 
-<p>L'encodage se fait ensuite très simplement :</p>
-<pre xml:lang="php">
+                <p>L'encodage se fait ensuite très simplement :</p>
+                <pre xml:lang="php">
 	//Rentrer les données
 	$Settings['chd']='s:';
 	foreach($Tab as $Cell)
 		$Settings['chd'] .=$Encodage[$Cell];
-</pre>
+</pre
+                >
 
-<h2>URL de l'image</h2>
-<p>Maintenant, tout est prêt. Il ne reste plus qu'à mettre tout ça ensemble en créant l'adresse de l'image à partir des données du tableau $Settings.</p>
-<pre xml:lang="php">
+                <h2>URL de l'image</h2>
+                <p>
+                  Maintenant, tout est prêt. Il ne reste plus qu'à mettre tout
+                  ça ensemble en créant l'adresse de l'image à partir des
+                  données du tableau $Settings.
+                </p>
+                <pre xml:lang="php">
 	$Abscisses=implode('|',$Abscisses);
 
 	//Générer l'URL à partir des Settings
@@ -218,11 +334,18 @@ function Normalize(&$Tab)
 	echo '<p class="centre"><img class="nonflottant" src="' . $URL . '"/></p>';
 </pre>
 
-<p>On notera que la fonction remplace $MAX par la valeur Maximum, et $ABSCISSES par la liste des abscisses, ce qui permet d'utiliser les données pour les axes.</p>
+                <p>
+                  On notera que la fonction remplace $MAX par la valeur Maximum,
+                  et $ABSCISSES par la liste des abscisses, ce qui permet
+                  d'utiliser les données pour les axes.
+                </p>
 
-<h2>En résumé...</h2>
-<p>Pour ceux qui n'auraient pas tout suivi, voilà le code complet :</p>
-<pre xml:lang="php">
+                <h2>En résumé...</h2>
+                <p>
+                  Pour ceux qui n'auraient pas tout suivi, voilà le code complet
+                  :
+                </p>
+                <pre xml:lang="php">
 function GraphIt($SQL,$Settings)
 {
 	$Encodage=str_split('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789');
@@ -274,88 +397,136 @@ function Normalize(&$Tab)
 }
 </pre>
 
-<h2>Utilisation</h2>
-<p>Comment utiliser la fonction ? Rien de bien compliqué, et quelques exemples aideront :</p>
+                <h2>Utilisation</h2>
+                <p>
+                  Comment utiliser la fonction ? Rien de bien compliqué, et
+                  quelques exemples aideront :
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 GraphIt('SELECT Auteurs.Auteur AS Abscisse,COUNT(*) AS Ordonnee
 FROM Omnilogismes
 LEFT JOIN OMNI_Auteurs ON (Auteurs.ID = Omnilogismes.Auteur)
 GROUP BY Auteurs.Auteur
 ORDER BY COUNT(*) DESC
 LIMIT 12',array('cht'=>'p3','chs'=>'500x200','chtt'=>'Nb Omnilogismes','chco'=>'FF0000,00FF00,88AAD6','chl'=>'$ABSCISSES'));
-</pre>
+</pre
+                >
 
-<p>Résultat : <img src="http://chart.apis.google.com/chart?1&cht=p3&chtt=Nb%20Omnilogismes&chs=500x200&chco=FF0000,00FF00,88AAD6&chl=Neamar|Anthony|Damien|Tanguy|Jogo|Domitille|Qu4l0|Ma~|Myl%C3%A8ne|Tefandil|louamel|byakkou&chd=s:9rfeOLLJJIIF" alt="Résultat" /></p>
+                <p>
+                  Résultat :
+                  <img
+                    src="http://chart.apis.google.com/chart?1&cht=p3&chtt=Nb%20Omnilogismes&chs=500x200&chco=FF0000,00FF00,88AAD6&chl=Neamar|Anthony|Damien|Tanguy|Jogo|Domitille|Qu4l0|Ma~|Myl%C3%A8ne|Tefandil|louamel|byakkou&chd=s:9rfeOLLJJIIF"
+                    alt="Résultat"
+                  />
+                </p>
 
-
-<pre xml:lang="php">
+                <pre xml:lang="php">
 GraphIt('SELECT CONCAT(HOUR(Date),"h") As Abscisse,COUNT(*) AS Ordonnee
 FROM Modifs
 GROUP BY HOUR(Date)
 ORDER BY HOUR(Date)',array('cht'=>'bvs','chtt'=>'Modifications par heure','chxt'=>'x,y','chxl'=>'0:|$ABSCISSES|1:|0|$MAX','chbh'=>'a'));
-</pre>
+</pre
+                >
 
-<p>Résultat : <img src="http://chart.apis.google.com/chart?1&cht=bvs&chtt=Modifications%20par%20heure&chs=500x200&chco=88AAD6&chxt=x,y&chxl=0:|0h|1h|2h|3h|4h|7h|8h|9h|10h|11h|12h|13h|14h|15h|16h|17h|18h|19h|20h|21h|22h|23h|1:|0|349&chbh=a&chd=s:3FBBBCBIVUhVQbWigh49xr" alt="Résultat" /></p>
+                <p>
+                  Résultat :
+                  <img
+                    src="http://chart.apis.google.com/chart?1&cht=bvs&chtt=Modifications%20par%20heure&chs=500x200&chco=88AAD6&chxt=x,y&chxl=0:|0h|1h|2h|3h|4h|7h|8h|9h|10h|11h|12h|13h|14h|15h|16h|17h|18h|19h|20h|21h|22h|23h|1:|0|349&chbh=a&chd=s:3FBBBCBIVUhVQbWigh49xr"
+                    alt="Résultat"
+                  />
+                </p>
 
+                <p>
+                  Comme vous le voyez, l'ensemble reste modulable mais facile à
+                  utiliser.
+                  <a href="http://omnilogie.fr/Stats.php"
+                    >Pour plus d'exemples, vous pouvez consulter cette page
+                    web</a
+                  >.
+                </p>
+              </div>
+            </div>
 
-<p>Comme vous le voyez, l'ensemble reste modulable mais facile à utiliser. <a href="http://omnilogie.fr/Stats.php">Pour plus d'exemples, vous pouvez consulter cette page web</a>.</p>	</div>
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
-							</div>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name">
+                  Faire des statistiques faciles avec des graphiques
+                </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Faire des statistiques faciles avec des graphiques				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

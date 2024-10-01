@@ -1,149 +1,219 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="wifi, wpa, wpa_supplicant, openSuse, ligne de commande" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Du wifi WPA sous linux, depuis la ligne de commande</title>
-	<link href="https://blog.neamar.fr/autres-articles/90-terminal-linux-wifi-wpa-psk-wpasupplicant" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta
+      name="keywords"
+      content="wifi, wpa, wpa_supplicant, openSuse, ligne de commande"
+    />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Du wifi WPA sous linux, depuis la ligne de commande</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/90-terminal-linux-wifi-wpa-psk-wpasupplicant"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">
+                  Du wifi WPA sous linux, depuis la ligne de commande
+                </h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Du wifi WPA sous linux, depuis la ligne de commande			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=aa97c6411e4fa31d2d10124ec935451e1443e6b8" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2010-02-26T18:41:23+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 26 February 2010
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  La carte graphique de mon ordinateur ayant malencontreusement
+                  rendu l'âme (on le saura !), j'ai dû survivre quelques temps à
+                  partir du mode <em>failsafe</em> d'OpenSuse, une ligne de
+                  commande standard.
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Ayant pas mal ramé avant de pouvoir configurer mon wifi WPA,
+                  je vous livre ici la séquence qui fait tout ;)
+                </p>
 
+                <p>Pré requis&nbsp;:</p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                <ul>
+                  <li>
+                    une carte wifi compatible (c'est la grande majorité des cas
+                    maintenant)&nbsp;;
+                  </li>
+                  <li>
+                    une ligne de commande (ça peut paraître évident, mais qui
+                    sait&nbsp;! )
+                  </li>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
+                  <li>
+                    Un noyau linux «&nbsp;normal&nbsp;», et l'utilitaire
+                    <tt>wpa_supplicant</tt>. Sur certaines distributions, il se
+                    peut que <tt>wpa_supplicant</tt> ne soit pas installé par
+                    défaut&nbsp;: dans ce cas-là il faudra se débrouiller pour
+                    l'installer en local. Pour savoir si
+                    <tt>wpa_supplicant</tt> est présent, vérifiez si vous avez
+                    accès à la commande <tt>wpa_passphrase</tt>&nbsp;: si oui,
+                    pas de problème&nbsp;!
+                  </li>
 
+                  <li>
+                    Un émetteur Wifi WPA. Ici, on l'appellera
+                    <strong>MaBox</strong> et le mot de passe sera
+                    <strong>MonMDP</strong>.
+                  </li>
+                </ul>
+                <p>C'est bon&nbsp;? On est parti&nbsp;!</p>
 
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+                <p>
+                  <strong>Note</strong>&nbsp;: la quasi-totalité des commandes
+                  ci-dessous nécessitent d'être lancées en tant que super
+                  utilisateur.
+                </p>
 
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-02-26T18:41:23+00:00" itemprop="dateCreated">
-						Created: 26 February 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
+                <h2>Préparation</h2>
+                <p>
+                  Le WPA n'est pas géré nativement par Linux, il faut passer par
+                  <tt>wpa_supplicant</tt> qui se chargera des échanges et du
+                  protocole de connexion. La configuration se fait par un
+                  fichier. <br />
+                  Avec votre éditeur de texte préféré, créez
+                  <tt>wpa.conf</tt> avec les informations qui suivent. Pensez à
+                  remplacer les exemples par vos valeurs&nbsp;!
+                </p>
 
-
-
-								<div itemprop="articleBody">
-		<p>La carte graphique de mon ordinateur ayant malencontreusement rendu l'âme (on le saura !), j'ai dû survivre quelques temps à partir du mode <em>failsafe</em> d'OpenSuse, une ligne de commande standard. </p>
-
-<p>Ayant pas mal ramé avant de pouvoir configurer mon wifi WPA, je vous livre ici la séquence qui fait tout ;)</p>
-
-<p>Pré requis&nbsp;: </p>
-
-<ul>
-	<li>une carte wifi compatible (c'est la grande majorité des cas maintenant)&nbsp;; </li>
-	<li>une ligne de commande (ça peut paraître évident, mais qui sait&nbsp;! )</li>
-
-	<li>Un noyau linux «&nbsp;normal&nbsp;», et l'utilitaire <tt>wpa_supplicant</tt>. Sur certaines distributions, il se peut que <tt>wpa_supplicant</tt> ne soit pas installé par défaut&nbsp;: dans ce cas-là il faudra se débrouiller pour l'installer en local. Pour savoir si <tt>wpa_supplicant</tt> est présent, vérifiez si vous avez accès à la commande <tt>wpa_passphrase</tt>&nbsp;: si oui, pas de problème&nbsp;! </li>
-
-	<li>Un émetteur Wifi WPA. Ici, on l'appellera <strong>MaBox</strong> et le mot de passe sera <strong>MonMDP</strong>. </li>
-</ul>
-<p>C'est bon&nbsp;? On est parti&nbsp;! </p>
-
-<p><strong>Note</strong>&nbsp;: la quasi-totalité des commandes ci-dessous nécessitent d'être lancées en tant que super utilisateur. </p>
-
- <h2>Préparation</h2>
-<p>Le WPA n'est pas géré nativement par Linux, il faut passer par <tt>wpa_supplicant</tt> qui se chargera des échanges et du protocole de connexion. La configuration se fait par un fichier. <br />
-Avec votre éditeur de texte préféré, créez <tt>wpa.conf</tt> avec les informations qui suivent. Pensez à remplacer les exemples par vos valeurs&nbsp;! </p>
-
-<pre>
+                <pre>
 ctrl_interface=/var/run/wpa_supplicant
 eapol_version=1
 ap_scan=1
@@ -157,83 +227,193 @@ network={
 	psk="MonMDP"
 	priority=5
 }
-</pre>
+</pre
+                >
 
-<h2>Initialisation du wifi</h2>
-<p>Première étape, activer la carte wifi&nbsp;: </p>
+                <h2>Initialisation du wifi</h2>
+                <p>Première étape, activer la carte wifi&nbsp;:</p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 ip link set wlan0 up
-</pre>
+</pre
+                >
 
-<p>Ensuite, on va récupérer la liste des émetteurs wifi captés&nbsp;: </p>
+                <p>
+                  Ensuite, on va récupérer la liste des émetteurs wifi
+                  captés&nbsp;:
+                </p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 iwlist scan 2>/dev/null | grep ESSID
-</pre>
+</pre
+                >
 
+                <p>
+                  Vous devriez avoir trouvé votre point d'accès&nbsp;; il va
+                  ensuite falloir dire chez qui vous souhaitez vous connecter
+                  (peu importe la clé pour le moment ; ne mettez pas de
+                  guillemets autour du SSID)&nbsp;:
+                </p>
 
-<p>Vous devriez avoir trouvé votre point d'accès&nbsp;; il va ensuite falloir dire chez qui vous souhaitez vous connecter (peu importe la clé pour le moment ; ne mettez pas de guillemets autour du SSID)&nbsp;: </p>
-
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 iwconfig wlan0 essid MaBox && iwconfig wlan0 | grep ESSID
-</pre>
+</pre
+                >
 
-<p><strong>Note</strong>&nbsp;: la deuxième commande permet de vérifier que la modification est enregistrée. </p>
+                <p>
+                  <strong>Note</strong>&nbsp;: la deuxième commande permet de
+                  vérifier que la modification est enregistrée.
+                </p>
 
-<p>Avant de continuer, il faut tuer sauvagement toutes les instances de <tt>wpa_supplicant</tt> qui tournent en fond. On ne peut pas se contenter d'un simple <tt>killall wpa_supplicant</tt> car le processus est automatiquement relancé par défaut. Après de multiples essais, je me suis fixé sur la commande suivante qui tue le groupe de processus&nbsp;: </p>
+                <p>
+                  Avant de continuer, il faut tuer sauvagement toutes les
+                  instances de <tt>wpa_supplicant</tt> qui tournent en fond. On
+                  ne peut pas se contenter d'un simple
+                  <tt>killall wpa_supplicant</tt> car le processus est
+                  automatiquement relancé par défaut. Après de multiples essais,
+                  je me suis fixé sur la commande suivante qui tue le groupe de
+                  processus&nbsp;:
+                </p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 killall -g -s SIGTERM wpa_supplicant
-</pre>
+</pre
+                >
 
-<p>On peut ensuite lancer notre instance (remplacez <tt>/root/wpa.conf</tt> par le chemin <strong>absolu</strong> vers votre fichier, mais ne rajoutez <strong>pas</strong> d'espace entre l'option <tt>c</tt> et le <em>path</em>)&nbsp;: </p>
-<p>Pensez à l'esperluette à la fin, pour récupérer une console utilisable malgé la tâche de fond :D</p>
+                <p>
+                  On peut ensuite lancer notre instance (remplacez
+                  <tt>/root/wpa.conf</tt> par le chemin
+                  <strong>absolu</strong> vers votre fichier, mais ne rajoutez
+                  <strong>pas</strong> d'espace entre l'option <tt>c</tt> et le
+                  <em>path</em>)&nbsp;:
+                </p>
+                <p>
+                  Pensez à l'esperluette à la fin, pour récupérer une console
+                  utilisable malgé la tâche de fond :D
+                </p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 wpa_supplicant -dddt -iwlan0 -c/root/wpa. conf -Dwext -f /var/log/wpa_supplicant.log &
-</pre>
+</pre
+                >
 
-<p>Concernant le driver, j'ai mis le choix générique. Si vous n'avez aucune idée de votre driver, vous êtes en <tt>wext</tt> (c'est le cas dans la commande). Sinon, consultez l'aide de <tt>wpa_supplicant</tt> pour une liste des pilotes supportés. </p>
+                <p>
+                  Concernant le driver, j'ai mis le choix générique. Si vous
+                  n'avez aucune idée de votre driver, vous êtes en
+                  <tt>wext</tt> (c'est le cas dans la commande). Sinon,
+                  consultez l'aide de <tt>wpa_supplicant</tt> pour une liste des
+                  pilotes supportés.
+                </p>
 
-<p><strong>Note</strong>&nbsp;: j'ai redirigé la sortie avec l'option <tt>f</tt>. Si les commandes qui suivent ne marchent pas, il est probable que le fichier de log contienne les erreurs (par exemple, et de façon non exhaustive&nbsp;: mauvais protocole, fichier de configuration invalide, mauvais mot de passe, SSID introuvable, instance de <tt>wpa_supplicant</tt> déjà lancée&hellip; ). Vous pouvez aussi lancer la commande en enlevant l'option <tt>-f</tt> et l'esperluette à la fin pour avoir les erreurs en direct&hellip; même si ça défile vite&nbsp;! </p>
+                <p>
+                  <strong>Note</strong>&nbsp;: j'ai redirigé la sortie avec
+                  l'option <tt>f</tt>. Si les commandes qui suivent ne marchent
+                  pas, il est probable que le fichier de log contienne les
+                  erreurs (par exemple, et de façon non exhaustive&nbsp;:
+                  mauvais protocole, fichier de configuration invalide, mauvais
+                  mot de passe, SSID introuvable, instance de
+                  <tt>wpa_supplicant</tt> déjà lancée&hellip; ). Vous pouvez
+                  aussi lancer la commande en enlevant l'option <tt>-f</tt> et
+                  l'esperluette à la fin pour avoir les erreurs en
+                  direct&hellip; même si ça défile vite&nbsp;!
+                </p>
 
-<p>Patientez quelques secondes avant d'effectuer la suite, histoire que <tt>wpa_supplicant</tt> ait le temps de scanner et d'initier la connexion. <br />
-À cette étape vous avez établi la liaison avec le point d'accès (mais tout n'est pas encore fini&nbsp;! ). Vous pouvez vérifier cela si vous disposez d'un accès administrateur sur le routeur&nbsp;: dans la liste des appareils connectés votre adresse mac est normalement apparue (et elle n'a, pour l'instant, aucune IP associée). </p>
+                <p>
+                  Patientez quelques secondes avant d'effectuer la suite,
+                  histoire que <tt>wpa_supplicant</tt> ait le temps de scanner
+                  et d'initier la connexion. <br />
+                  À cette étape vous avez établi la liaison avec le point
+                  d'accès (mais tout n'est pas encore fini&nbsp;! ). Vous pouvez
+                  vérifier cela si vous disposez d'un accès administrateur sur
+                  le routeur&nbsp;: dans la liste des appareils connectés votre
+                  adresse mac est normalement apparue (et elle n'a, pour
+                  l'instant, aucune IP associée).
+                </p>
 
-<h2>Connexion</h2>
-<p>Voilà, on dialogue maintenant avec la box&hellip; mais pas encore avec Internet. On va demander une adresse IP au routeur, histoire de pouvoir surfer&nbsp;: </p>
+                <h2>Connexion</h2>
+                <p>
+                  Voilà, on dialogue maintenant avec la box&hellip; mais pas
+                  encore avec Internet. On va demander une adresse IP au
+                  routeur, histoire de pouvoir surfer&nbsp;:
+                </p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 dhclient wlan0
-</pre>
+</pre
+                >
 
-<p><strong>Note</strong>&nbsp;: votre routeur doit être compatible DHCP. Si ce n'est pas le cas, vous pouvez activer ce protocole dans les paramètres d'administration, référez-vous à la documentation de votre matériel. </p>
-<p><strong>Note</strong>&nbsp;: Si tout va bien, la commande devrait vous renvoyer votre nouvelle adresse IP, ainsi que le temps avant son expiration. Bienvenue sur Internet&nbsp;! En revanche, si vous avez plusieurs requêtes qui échouent pour finir sur un «&nbsp;no working leases in persistant database&nbsp;», c'est que vous avez mal configuré <tt>wpa_supplicant</tt>. Consultez <tt>/var/log/wpa_supplicant.log</tt> pour les détails&hellip; bonne chance&nbsp;; )</p>
+                <p>
+                  <strong>Note</strong>&nbsp;: votre routeur doit être
+                  compatible DHCP. Si ce n'est pas le cas, vous pouvez activer
+                  ce protocole dans les paramètres d'administration,
+                  référez-vous à la documentation de votre matériel.
+                </p>
+                <p>
+                  <strong>Note</strong>&nbsp;: Si tout va bien, la commande
+                  devrait vous renvoyer votre nouvelle adresse IP, ainsi que le
+                  temps avant son expiration. Bienvenue sur Internet&nbsp;! En
+                  revanche, si vous avez plusieurs requêtes qui échouent pour
+                  finir sur un «&nbsp;no working leases in persistant
+                  database&nbsp;», c'est que vous avez mal configuré
+                  <tt>wpa_supplicant</tt>. Consultez
+                  <tt>/var/log/wpa_supplicant.log</tt> pour les détails&hellip;
+                  bonne chance&nbsp;; )
+                </p>
 
-<p>Enfin, on va indiquer à notre ordinateur par où passer pour les communications «&nbsp;extérieures&nbsp;»&nbsp;: </p>
+                <p>
+                  Enfin, on va indiquer à notre ordinateur par où passer pour
+                  les communications «&nbsp;extérieures&nbsp;»&nbsp;:
+                </p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 route add default gw 192.168.1.1
-</pre>
+</pre
+                >
 
-<p>Note&nbsp;: Remplacez 192.168.1.1 par l'adresse IP de votre routeur. </p>
+                <p>
+                  Note&nbsp;: Remplacez 192.168.1.1 par l'adresse IP de votre
+                  routeur.
+                </p>
 
-<p>Et voilà&nbsp;! <br />
+                <p>
+                  Et voilà&nbsp;! <br />
 
-Essayez de <em>pinger</em> google.fr pour savoir si tout marche&nbsp;: </p>
+                  Essayez de <em>pinger</em> google.fr pour savoir si tout
+                  marche&nbsp;:
+                </p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 ping google.fr
-</pre>
+</pre
+                >
 
-<p>(J'en profite pour remercier <a href="http://www.commentcamarche.net/faq/11210-configurer-le-wifi-sous-linux">cet article de CCM</a> qui m'a bien aidé pour le fichier de configuration, et <a href="http://en.opensuse.org/WiFi_HOWTO">le site officiel de la distribution</a> qui donne des pistes de départ&nbsp;! )</p>
+                <p>
+                  (J'en profite pour remercier
+                  <a
+                    href="http://www.commentcamarche.net/faq/11210-configurer-le-wifi-sous-linux"
+                    >cet article de CCM</a
+                  >
+                  qui m'a bien aidé pour le fichier de configuration, et
+                  <a href="http://en.opensuse.org/WiFi_HOWTO"
+                    >le site officiel de la distribution</a
+                  >
+                  qui donne des pistes de départ&nbsp;! )
+                </p>
 
-<h2>En bonus</h2>
-<p>Pour les fainéants, voilà le script bash pour se connecter directement. Attention, cela ne vous dispense pas de configurer <tt>wpa.conf</tt>&nbsp;! Je ne peux malheureusement pas deviner votre point d'accès et son mot de passe&hellip; <br />
-Enregistrez le fichier (<tt>connectWifi.sh</tt> par exemple), ajoutez-lui les droits d'exécutable (<tt>chmod +x connectWifi.sh</tt>)&hellip; et c'est parti (<tt>./connectWifi.sh</tt>). </p>
+                <h2>En bonus</h2>
+                <p>
+                  Pour les fainéants, voilà le script bash pour se connecter
+                  directement. Attention, cela ne vous dispense pas de
+                  configurer <tt>wpa.conf</tt>&nbsp;! Je ne peux malheureusement
+                  pas deviner votre point d'accès et son mot de passe&hellip;
+                  <br />
+                  Enregistrez le fichier (<tt>connectWifi.sh</tt> par exemple),
+                  ajoutez-lui les droits d'exécutable (<tt
+                    >chmod +x connectWifi.sh</tt
+                  >)&hellip; et c'est parti (<tt>./connectWifi.sh</tt>).
+                </p>
 
-<pre xml:lang="bash">
+                <pre xml:lang="bash">
 echo "->Démarrage de la carte wifi"
 ip link set wlan0 up
 
@@ -258,63 +438,90 @@ echo "->Mise en place des routes de transfert"
 route add default gw 192.168.1.1
 
 echo "===Bienvenue sur Internet==="
-</pre>	</div>
+</pre
+                >
+              </div>
+            </div>
 
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
-							</div>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name">
+                  Du wifi WPA sous linux, depuis la ligne de commande
+                </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Du wifi WPA sous linux, depuis la ligne de commande				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

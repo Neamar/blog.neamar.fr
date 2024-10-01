@@ -1,546 +1,829 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Articles du blog</title>
-	<link href="/autres-articles?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
-	<link href="/autres-articles?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
-	<link href="https://blog.neamar.fr/autres-articles--start=80" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
-
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
-
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-category layout-blog no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
-
-					</div>
-				</div>
-			</header>
-
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
-
-					<div id="system-message-container">
-	</div>
-
-					<div class="blog" itemscope itemtype="https://schema.org/Blog">
-
-			<h2> 					</h2>
-
-
-			<div class="category-desc clearfix">
-								</div>
-
-
-				<div class="items-leading clearfix">
-							<div class="leading-0"
-					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-
-
-	<div class="page-header">
-					<h2 itemprop="name">
-									<a href="/autres-articles/66-accelerer-contenu-php-fonction" itemprop="url">
-						Accélerer l'envoi des pages en PHP en délocalisant les fonctions lourdes					</a>
-							</h2>
-
-
-
-			</div>
-
-
-<div class="icons">
-
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=978109eb04b2e9454d387448f247f387db6cf722" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
-
-	</div>
-
-
-
-		<dl class="article-info muted">
-
-
-			<dt class="article-info-term">
-									Details							</dt>
-
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-01-18T12:47:46+00:00" itemprop="dateCreated">
-						Created: 18 January 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-
-<p>Il s'agit de l'un des nouveaux fers de lance de Google, mais au delà de ça c'est un problème de sens commun&nbsp;: plus une page est rapide à s'afficher, moins le visiteur patiente et plus il est heureux. </p>
-
-<p>Même si on peut difficilement influer sur certains paramètres (comme le délai de connexion à l'hôte), on peut minimiser l'appel de fonctions lourdes en les délocalisant à la fin du script. Pas besoin de copier coller un à un les appels de fonction en bas de page, non seulement cela est inutile (il est très probable que vous ayez une page footer. php qui renverra encore du code, ruinant votre tentative d'accélérer la fin de page) mais en plus cela ne facilite pas la maintenance du code. </p>
-
-<p>En fait, PHP met à votre disposition une «&nbsp;méta-fonction&nbsp;» qui permet de paramétrer des appels à d'autres fonctions en fin de script. Son nom&nbsp;? <tt>register_shutdown_function()</tt>. Dans la suite de l'article, nous verrons un exemple d'utilisation&hellip; </p>
-
-
-
-
-
-<p class="readmore">
-	<a class="btn" href="/autres-articles/66-accelerer-contenu-php-fonction" itemprop="url">
-		<span class="icon-chevron-right"></span>
-		Read more ...	</a>
-</p>
-
-
-
-				</div>
-									</div><!-- end items-leading -->
-
-
-																	<div class="items-row cols-2 row-0 row-fluid clearfix">
-						<div class="span6">
-				<div class="item column-1"
-					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-
-
-	<div class="page-header">
-					<h2 itemprop="name">
-									<a href="/autres-articles/65-administrer-mysql-chez-1and1-avec-phpmyadmin-et-eviter-le-session-id-missing" itemprop="url">
-						Administrer MySQL chez 1and1 avec phpmyadmin et éviter le session id missing					</a>
-							</h2>
-
-
-
-			</div>
-
-
-<div class="icons">
-
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=de85f7bba7e0d6ac921434dc4d54a53e855ac2f6" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
-
-	</div>
-
-
-
-		<dl class="article-info muted">
-
-
-			<dt class="article-info-term">
-									Details							</dt>
-
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-01-15T12:17:40+00:00" itemprop="dateCreated">
-						Created: 15 January 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-
-<p>Clients de 1&amp;1, vous avez sûrement déjà pesté contre l'interface d'administration fournie. <br />
-Difficilement accessible (il faut trois pages pour y accéder, inadmissible quand on veut aller vite&nbsp;! ), la session a tendance à se terminer vite&hellip; et toujours au moment le moins propice, c'est-à-dire à l'enregistrement de données (le mal aimé <strong>Session ID Missing</strong>&nbsp;! )<br />
-
-Ajoutons enfin que la version de <tt>phpmyadmin</tt> fournie commence à dater un peu (la 2.6.4, la version actuelle est la 3.2.5), et vous aurez toutes les raisons pour chercher une alternative. </p>
-
-<p>Par exemple, celle que je présente ici. </p>
-
-<p>Nous allons donc installer nous même phpmyadmin. Plutôt que d'utiliser l'adresse bancale <a href="http://phpmyadmin.1and1.fr">http://phpmyadmin.1and1.fr</a>, nous créerons notre propre installation configurée selon nos souhaits. </p>
-
-<ul>
-	<li>Durée estimée&nbsp;: 30 minutes. </li>
-</ul>
-
-
-
-
-
-<p class="readmore">
-	<a class="btn" href="/autres-articles/65-administrer-mysql-chez-1and1-avec-phpmyadmin-et-eviter-le-session-id-missing" itemprop="url">
-		<span class="icon-chevron-right"></span>
-		Read more ...	</a>
-</p>
-
-
-
-				</div>
-				<!-- end item -->
-							</div><!-- end span -->
-														<div class="span6">
-				<div class="item column-2"
-					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-
-
-	<div class="page-header">
-					<h2 itemprop="name">
-									<a href="/autres-articles/62-rebond-analytics-bounce-rate" itemprop="url">
-						Le taux de rebond : explications et enjeux					</a>
-							</h2>
-
-
-
-			</div>
-
-
-<div class="icons">
-
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=12dfd97273569f8b61447af4282c23359edbae7b" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
-
-	</div>
-
-
-
-		<dl class="article-info muted">
-
-
-			<dt class="article-info-term">
-									Details							</dt>
-
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-01-05T18:02:26+00:00" itemprop="dateCreated">
-						Created: 05 January 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-
-<p>Voilà un terme que l'on retrouve dans tous les (bons) outils de statistiques&nbsp;: taux de rebond, ou <em>bounce rate</em> en version originale. <br />
-
-Exprimé en pourcentage, souvent de valeur élevée, que représente donc ce mystérieux indicateur&nbsp;? </p>
-
-<p style="text-align:center;"><img src="/images/stories/bounce.png" alt="Taux de Rebond Google Analytics" /></p>
-
-
-
-
-<p class="readmore">
-	<a class="btn" href="/autres-articles/62-rebond-analytics-bounce-rate" itemprop="url">
-		<span class="icon-chevron-right"></span>
-		Read more ...	</a>
-</p>
-
-
-
-				</div>
-				<!-- end item -->
-							</div><!-- end span -->
-							</div><!-- end row -->
-																			<div class="items-row cols-2 row-1 row-fluid clearfix">
-						<div class="span6">
-				<div class="item column-1"
-					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-
-
-	<div class="page-header">
-					<h2 itemprop="name">
-									<a href="/autres-articles/61-insert-sql-automatiques" itemprop="url">
-						Insertions mySQL faciles					</a>
-							</h2>
-
-
-
-			</div>
-
-
-<div class="icons">
-
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=fcd4a11b4297cc35126c24463e3ff7966dfbb059" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
-
-	</div>
-
-
-
-		<dl class="article-info muted">
-
-
-			<dt class="article-info-term">
-									Details							</dt>
-
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-01-02T22:56:47+00:00" itemprop="dateCreated">
-						Created: 02 January 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-
-<p>Mettons-nous bien d'accord, réaliser un formulaire d'insertion pour une table SQL peut très vite devenir lassant. <br />
-C'est marrant une fois, deux fois&hellip; après, on se fatigue de devoir gérer manuellement les <tt>form</tt>, <tt>input</tt> et autres <tt>label</tt>. </p>
-
-<p>Il y a des fois pour lesquelles on est obligé de faire un formulaire personnalisé, mais dans la grande majorité des cas on peut se contenter d'un formulaire générique. </p>
-
-<p>Dans cet article, nous supposerons que l'on ne connaît que le nom de la table dans laquelle on veut insérer des données. <br />
-Il faudra donc récupérer la structure de la table, afficher un formulaire en fonction des différents types et si nécessaire préparer les jointures sur les clés étrangères. </p>
-
-<p>Afin de simplifier le problème, on se fixera quelques conventions&nbsp;: pas de <tt>tinytext</tt> mais des <tt>varchar</tt>, pas d'<tt>enum</tt> (même si les gérer n'est pas difficile), une clé primary <tt>auto_increment</tt> nommée <tt>ID</tt>, et une convention claire pour les clés étrangères (le nom de la clé correspond à la table «&nbsp;mère&nbsp;» suivie d'un underscore et de la clé, par exemple <strong>Auteurs_Pseudo</strong>). </p>
-
-
-
-
-
-<p class="readmore">
-	<a class="btn" href="/autres-articles/61-insert-sql-automatiques" itemprop="url">
-		<span class="icon-chevron-right"></span>
-		Read more ...	</a>
-</p>
-
-
-
-				</div>
-				<!-- end item -->
-							</div><!-- end span -->
-														<div class="span6">
-				<div class="item column-2"
-					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-
-
-	<div class="page-header">
-					<h2 itemprop="name">
-									<a href="/autres-articles/59-presentation-de-la-semantique-web" itemprop="url">
-						Présentation de la sémantique Web					</a>
-							</h2>
-
-
-
-			</div>
-
-
-<div class="icons">
-
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=7698b74b42dcae9d227ee80767a51afebd8db37f" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
-
-	</div>
-
-
-
-		<dl class="article-info muted">
-
-
-			<dt class="article-info-term">
-									Details							</dt>
-
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2009-12-24T17:48:15+00:00" itemprop="dateCreated">
-						Created: 24 December 2009					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-
-<p>Petite introduction à l'importance de la sémantique.</p>
-
-<p>Qu'on s'y entende bien&nbsp;: tenter de résumer en quelques lignes la sémantique serait comme de vouloir expliquer à un aveugle un panorama somptueux avec trente mots. <br />
-
-La notion de sémantique se construit au fur et à mesure des expériences, s'apprend souvent sur le tas et se conceptualise difficilement. </p>
-
-<p>Mais qu'importe, je vais ici tenter d'en faire une présentation. Je n'ai ni la prétention, ni l'ambition d'en faire plus, mais j'espère que le peu que j'en dirai sera compréhensible. </p>
-
-
-
-
-
-<p class="readmore">
-	<a class="btn" href="/autres-articles/59-presentation-de-la-semantique-web" itemprop="url">
-		<span class="icon-chevron-right"></span>
-		Read more ...	</a>
-</p>
-
-
-
-				</div>
-				<!-- end item -->
-							</div><!-- end span -->
-							</div><!-- end row -->
-
-
-				<div class="pagination">
-							<p class="counter pull-right"> Page 17 of 26 </p>
-						<ul class="pagination-list"><li><a title="Start" href="/autres-articles" class="pagenav"><span class="icon-first"></span></a></li><li><a title="Prev" href="/autres-articles--start=75" class="pagenav"><span class="icon-previous"></span></a></li><li class="hidden-phone"><a title="12" href="/autres-articles--start=55" class="pagenav">12</a></li><li class="hidden-phone"><a title="13" href="/autres-articles--start=60" class="pagenav">13</a></li><li class="hidden-phone"><a title="14" href="/autres-articles--start=65" class="pagenav">...</a></li><li class="hidden-phone"><a title="15" href="/autres-articles--start=70" class="pagenav">15</a></li><li class="hidden-phone"><a title="16" href="/autres-articles--start=75" class="pagenav">16</a></li><li class="active hidden-phone"><a>17</a></li><li class="hidden-phone"><a title="18" href="/autres-articles--start=85" class="pagenav">18</a></li><li class="hidden-phone"><a title="19" href="/autres-articles--start=90" class="pagenav">19</a></li><li class="hidden-phone"><a title="20" href="/autres-articles--start=95" class="pagenav">...</a></li><li class="hidden-phone"><a title="21" href="/autres-articles--start=100" class="pagenav">21</a></li><li><a title="Next" href="/autres-articles--start=85" class="pagenav"><span class="icon-next"></span></a></li><li><a title="End" href="/autres-articles--start=125" class="pagenav"><span class="icon-last"></span></a></li></ul> </div>
-	</div>
-
-
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
-
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Articles du blog				</span>
-				<meta itemprop="position" content="2">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Articles du blog</title>
+    <link
+      href="/autres-articles?format=feed&amp;type=rss"
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS 2.0"
+    />
+    <link
+      href="/autres-articles?format=feed&amp;type=atom"
+      rel="alternate"
+      type="application/atom+xml"
+      title="Atom 1.0"
+    />
+    <link
+      href="https://blog.neamar.fr/autres-articles--start=80"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
+
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-category layout-blog no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
+
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
+
+            <div id="system-message-container"></div>
+
+            <div class="blog" itemscope itemtype="https://schema.org/Blog">
+              <h2></h2>
+
+              <div class="category-desc clearfix"></div>
+
+              <div class="items-leading clearfix">
+                <div
+                  class="leading-0"
+                  itemprop="blogPost"
+                  itemscope
+                  itemtype="https://schema.org/BlogPosting"
+                >
+                  <div class="page-header">
+                    <h2 itemprop="name">
+                      <a
+                        href="/autres-articles/66-accelerer-contenu-php-fonction"
+                        itemprop="url"
+                      >
+                        Accélerer l'envoi des pages en PHP en délocalisant les
+                        fonctions lourdes
+                      </a>
+                    </h2>
+                  </div>
+
+                  <div class="icons">
+                    <div class="btn-group pull-right">
+                      <a
+                        class="btn dropdown-toggle"
+                        data-toggle="dropdown"
+                        href="#"
+                      >
+                        <span class="icon-cog"></span
+                        ><span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu"></ul>
+                    </div>
+                  </div>
+
+                  <dl class="article-info muted">
+                    <dt class="article-info-term">Details</dt>
+
+                    <dd
+                      class="createdby"
+                      itemprop="author"
+                      itemscope
+                      itemtype="https://schema.org/Person"
+                    >
+                      Written by <span itemprop="name">Neamar</span>
+                    </dd>
+
+                    <dd class="category-name">
+                      Category: <span itemprop="genre">Articles du blog</span>
+                    </dd>
+
+                    <dd class="create">
+                      <span class="icon-calendar"></span>
+                      <time
+                        datetime="2010-01-18T12:47:46+00:00"
+                        itemprop="dateCreated"
+                      >
+                        Created: 18 January 2010
+                      </time>
+                    </dd>
+                    <dd class="modified">
+                      <span class="icon-calendar"></span>
+                      <time
+                        datetime="2013-08-06T23:18:27+00:00"
+                        itemprop="dateModified"
+                      >
+                        Last Updated: 06 August 2013
+                      </time>
+                    </dd>
+                  </dl>
+
+                  <p>
+                    Il s'agit de l'un des nouveaux fers de lance de Google, mais
+                    au delà de ça c'est un problème de sens commun&nbsp;: plus
+                    une page est rapide à s'afficher, moins le visiteur patiente
+                    et plus il est heureux.
+                  </p>
+
+                  <p>
+                    Même si on peut difficilement influer sur certains
+                    paramètres (comme le délai de connexion à l'hôte), on peut
+                    minimiser l'appel de fonctions lourdes en les délocalisant à
+                    la fin du script. Pas besoin de copier coller un à un les
+                    appels de fonction en bas de page, non seulement cela est
+                    inutile (il est très probable que vous ayez une page footer.
+                    php qui renverra encore du code, ruinant votre tentative
+                    d'accélérer la fin de page) mais en plus cela ne facilite
+                    pas la maintenance du code.
+                  </p>
+
+                  <p>
+                    En fait, PHP met à votre disposition une
+                    «&nbsp;méta-fonction&nbsp;» qui permet de paramétrer des
+                    appels à d'autres fonctions en fin de script. Son nom&nbsp;?
+                    <tt>register_shutdown_function()</tt>. Dans la suite de
+                    l'article, nous verrons un exemple d'utilisation&hellip;
+                  </p>
+
+                  <p class="readmore">
+                    <a
+                      class="btn"
+                      href="/autres-articles/66-accelerer-contenu-php-fonction"
+                      itemprop="url"
+                    >
+                      <span class="icon-chevron-right"></span>
+                      Read more ...
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <!-- end items-leading -->
+
+              <div class="items-row cols-2 row-0 row-fluid clearfix">
+                <div class="span6">
+                  <div
+                    class="item column-1"
+                    itemprop="blogPost"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <div class="page-header">
+                      <h2 itemprop="name">
+                        <a
+                          href="/autres-articles/65-administrer-mysql-chez-1and1-avec-phpmyadmin-et-eviter-le-session-id-missing"
+                          itemprop="url"
+                        >
+                          Administrer MySQL chez 1and1 avec phpmyadmin et éviter
+                          le session id missing
+                        </a>
+                      </h2>
+                    </div>
+
+                    <div class="icons">
+                      <div class="btn-group pull-right">
+                        <a
+                          class="btn dropdown-toggle"
+                          data-toggle="dropdown"
+                          href="#"
+                        >
+                          <span class="icon-cog"></span
+                          ><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu"></ul>
+                      </div>
+                    </div>
+
+                    <dl class="article-info muted">
+                      <dt class="article-info-term">Details</dt>
+
+                      <dd
+                        class="createdby"
+                        itemprop="author"
+                        itemscope
+                        itemtype="https://schema.org/Person"
+                      >
+                        Written by <span itemprop="name">Neamar</span>
+                      </dd>
+
+                      <dd class="category-name">
+                        Category: <span itemprop="genre">Articles du blog</span>
+                      </dd>
+
+                      <dd class="create">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2010-01-15T12:17:40+00:00"
+                          itemprop="dateCreated"
+                        >
+                          Created: 15 January 2010
+                        </time>
+                      </dd>
+                      <dd class="modified">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2013-08-06T23:18:27+00:00"
+                          itemprop="dateModified"
+                        >
+                          Last Updated: 06 August 2013
+                        </time>
+                      </dd>
+                    </dl>
+
+                    <p>
+                      Clients de 1&amp;1, vous avez sûrement déjà pesté contre
+                      l'interface d'administration fournie. <br />
+                      Difficilement accessible (il faut trois pages pour y
+                      accéder, inadmissible quand on veut aller vite&nbsp;! ),
+                      la session a tendance à se terminer vite&hellip; et
+                      toujours au moment le moins propice, c'est-à-dire à
+                      l'enregistrement de données (le mal aimé
+                      <strong>Session ID Missing</strong>&nbsp;! )<br />
+
+                      Ajoutons enfin que la version de
+                      <tt>phpmyadmin</tt> fournie commence à dater un peu (la
+                      2.6.4, la version actuelle est la 3.2.5), et vous aurez
+                      toutes les raisons pour chercher une alternative.
+                    </p>
+
+                    <p>Par exemple, celle que je présente ici.</p>
+
+                    <p>
+                      Nous allons donc installer nous même phpmyadmin. Plutôt
+                      que d'utiliser l'adresse bancale
+                      <a href="http://phpmyadmin.1and1.fr"
+                        >http://phpmyadmin.1and1.fr</a
+                      >, nous créerons notre propre installation configurée
+                      selon nos souhaits.
+                    </p>
+
+                    <ul>
+                      <li>Durée estimée&nbsp;: 30 minutes.</li>
+                    </ul>
+
+                    <p class="readmore">
+                      <a
+                        class="btn"
+                        href="/autres-articles/65-administrer-mysql-chez-1and1-avec-phpmyadmin-et-eviter-le-session-id-missing"
+                        itemprop="url"
+                      >
+                        <span class="icon-chevron-right"></span>
+                        Read more ...
+                      </a>
+                    </p>
+                  </div>
+                  <!-- end item -->
+                </div>
+                <!-- end span -->
+                <div class="span6">
+                  <div
+                    class="item column-2"
+                    itemprop="blogPost"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <div class="page-header">
+                      <h2 itemprop="name">
+                        <a
+                          href="/autres-articles/62-rebond-analytics-bounce-rate"
+                          itemprop="url"
+                        >
+                          Le taux de rebond : explications et enjeux
+                        </a>
+                      </h2>
+                    </div>
+
+                    <div class="icons">
+                      <div class="btn-group pull-right">
+                        <a
+                          class="btn dropdown-toggle"
+                          data-toggle="dropdown"
+                          href="#"
+                        >
+                          <span class="icon-cog"></span
+                          ><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu"></ul>
+                      </div>
+                    </div>
+
+                    <dl class="article-info muted">
+                      <dt class="article-info-term">Details</dt>
+
+                      <dd
+                        class="createdby"
+                        itemprop="author"
+                        itemscope
+                        itemtype="https://schema.org/Person"
+                      >
+                        Written by <span itemprop="name">Neamar</span>
+                      </dd>
+
+                      <dd class="category-name">
+                        Category: <span itemprop="genre">Articles du blog</span>
+                      </dd>
+
+                      <dd class="create">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2010-01-05T18:02:26+00:00"
+                          itemprop="dateCreated"
+                        >
+                          Created: 05 January 2010
+                        </time>
+                      </dd>
+                      <dd class="modified">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2013-08-06T23:18:27+00:00"
+                          itemprop="dateModified"
+                        >
+                          Last Updated: 06 August 2013
+                        </time>
+                      </dd>
+                    </dl>
+
+                    <p>
+                      Voilà un terme que l'on retrouve dans tous les (bons)
+                      outils de statistiques&nbsp;: taux de rebond, ou
+                      <em>bounce rate</em> en version originale. <br />
+
+                      Exprimé en pourcentage, souvent de valeur élevée, que
+                      représente donc ce mystérieux indicateur&nbsp;?
+                    </p>
+
+                    <p style="text-align: center">
+                      <img
+                        src="/images/stories/bounce.png"
+                        alt="Taux de Rebond Google Analytics"
+                      />
+                    </p>
+
+                    <p class="readmore">
+                      <a
+                        class="btn"
+                        href="/autres-articles/62-rebond-analytics-bounce-rate"
+                        itemprop="url"
+                      >
+                        <span class="icon-chevron-right"></span>
+                        Read more ...
+                      </a>
+                    </p>
+                  </div>
+                  <!-- end item -->
+                </div>
+                <!-- end span -->
+              </div>
+              <!-- end row -->
+              <div class="items-row cols-2 row-1 row-fluid clearfix">
+                <div class="span6">
+                  <div
+                    class="item column-1"
+                    itemprop="blogPost"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <div class="page-header">
+                      <h2 itemprop="name">
+                        <a
+                          href="/autres-articles/61-insert-sql-automatiques"
+                          itemprop="url"
+                        >
+                          Insertions mySQL faciles
+                        </a>
+                      </h2>
+                    </div>
+
+                    <div class="icons">
+                      <div class="btn-group pull-right">
+                        <a
+                          class="btn dropdown-toggle"
+                          data-toggle="dropdown"
+                          href="#"
+                        >
+                          <span class="icon-cog"></span
+                          ><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu"></ul>
+                      </div>
+                    </div>
+
+                    <dl class="article-info muted">
+                      <dt class="article-info-term">Details</dt>
+
+                      <dd
+                        class="createdby"
+                        itemprop="author"
+                        itemscope
+                        itemtype="https://schema.org/Person"
+                      >
+                        Written by <span itemprop="name">Neamar</span>
+                      </dd>
+
+                      <dd class="category-name">
+                        Category: <span itemprop="genre">Articles du blog</span>
+                      </dd>
+
+                      <dd class="create">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2010-01-02T22:56:47+00:00"
+                          itemprop="dateCreated"
+                        >
+                          Created: 02 January 2010
+                        </time>
+                      </dd>
+                      <dd class="modified">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2013-08-06T23:18:27+00:00"
+                          itemprop="dateModified"
+                        >
+                          Last Updated: 06 August 2013
+                        </time>
+                      </dd>
+                    </dl>
+
+                    <p>
+                      Mettons-nous bien d'accord, réaliser un formulaire
+                      d'insertion pour une table SQL peut très vite devenir
+                      lassant. <br />
+                      C'est marrant une fois, deux fois&hellip; après, on se
+                      fatigue de devoir gérer manuellement les <tt>form</tt>,
+                      <tt>input</tt> et autres <tt>label</tt>.
+                    </p>
+
+                    <p>
+                      Il y a des fois pour lesquelles on est obligé de faire un
+                      formulaire personnalisé, mais dans la grande majorité des
+                      cas on peut se contenter d'un formulaire générique.
+                    </p>
+
+                    <p>
+                      Dans cet article, nous supposerons que l'on ne connaît que
+                      le nom de la table dans laquelle on veut insérer des
+                      données. <br />
+                      Il faudra donc récupérer la structure de la table,
+                      afficher un formulaire en fonction des différents types et
+                      si nécessaire préparer les jointures sur les clés
+                      étrangères.
+                    </p>
+
+                    <p>
+                      Afin de simplifier le problème, on se fixera quelques
+                      conventions&nbsp;: pas de <tt>tinytext</tt> mais des
+                      <tt>varchar</tt>, pas d'<tt>enum</tt> (même si les gérer
+                      n'est pas difficile), une clé primary
+                      <tt>auto_increment</tt> nommée <tt>ID</tt>, et une
+                      convention claire pour les clés étrangères (le nom de la
+                      clé correspond à la table «&nbsp;mère&nbsp;» suivie d'un
+                      underscore et de la clé, par exemple
+                      <strong>Auteurs_Pseudo</strong>).
+                    </p>
+
+                    <p class="readmore">
+                      <a
+                        class="btn"
+                        href="/autres-articles/61-insert-sql-automatiques"
+                        itemprop="url"
+                      >
+                        <span class="icon-chevron-right"></span>
+                        Read more ...
+                      </a>
+                    </p>
+                  </div>
+                  <!-- end item -->
+                </div>
+                <!-- end span -->
+                <div class="span6">
+                  <div
+                    class="item column-2"
+                    itemprop="blogPost"
+                    itemscope
+                    itemtype="https://schema.org/BlogPosting"
+                  >
+                    <div class="page-header">
+                      <h2 itemprop="name">
+                        <a
+                          href="/autres-articles/59-presentation-de-la-semantique-web"
+                          itemprop="url"
+                        >
+                          Présentation de la sémantique Web
+                        </a>
+                      </h2>
+                    </div>
+
+                    <div class="icons">
+                      <div class="btn-group pull-right">
+                        <a
+                          class="btn dropdown-toggle"
+                          data-toggle="dropdown"
+                          href="#"
+                        >
+                          <span class="icon-cog"></span
+                          ><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu"></ul>
+                      </div>
+                    </div>
+
+                    <dl class="article-info muted">
+                      <dt class="article-info-term">Details</dt>
+
+                      <dd
+                        class="createdby"
+                        itemprop="author"
+                        itemscope
+                        itemtype="https://schema.org/Person"
+                      >
+                        Written by <span itemprop="name">Neamar</span>
+                      </dd>
+
+                      <dd class="category-name">
+                        Category: <span itemprop="genre">Articles du blog</span>
+                      </dd>
+
+                      <dd class="create">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2009-12-24T17:48:15+00:00"
+                          itemprop="dateCreated"
+                        >
+                          Created: 24 December 2009
+                        </time>
+                      </dd>
+                      <dd class="modified">
+                        <span class="icon-calendar"></span>
+                        <time
+                          datetime="2013-08-06T23:18:27+00:00"
+                          itemprop="dateModified"
+                        >
+                          Last Updated: 06 August 2013
+                        </time>
+                      </dd>
+                    </dl>
+
+                    <p>Petite introduction à l'importance de la sémantique.</p>
+
+                    <p>
+                      Qu'on s'y entende bien&nbsp;: tenter de résumer en
+                      quelques lignes la sémantique serait comme de vouloir
+                      expliquer à un aveugle un panorama somptueux avec trente
+                      mots. <br />
+
+                      La notion de sémantique se construit au fur et à mesure
+                      des expériences, s'apprend souvent sur le tas et se
+                      conceptualise difficilement.
+                    </p>
+
+                    <p>
+                      Mais qu'importe, je vais ici tenter d'en faire une
+                      présentation. Je n'ai ni la prétention, ni l'ambition d'en
+                      faire plus, mais j'espère que le peu que j'en dirai sera
+                      compréhensible.
+                    </p>
+
+                    <p class="readmore">
+                      <a
+                        class="btn"
+                        href="/autres-articles/59-presentation-de-la-semantique-web"
+                        itemprop="url"
+                      >
+                        <span class="icon-chevron-right"></span>
+                        Read more ...
+                      </a>
+                    </p>
+                  </div>
+                  <!-- end item -->
+                </div>
+                <!-- end span -->
+              </div>
+              <!-- end row -->
+
+              <div class="pagination">
+                <p class="counter pull-right">Page 17 of 26</p>
+                <ul class="pagination-list">
+                  <li>
+                    <a title="Start" href="/autres-articles" class="pagenav"
+                      ><span class="icon-first"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      title="Prev"
+                      href="/autres-articles--start=75"
+                      class="pagenav"
+                      ><span class="icon-previous"></span
+                    ></a>
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="12"
+                      href="/autres-articles--start=55"
+                      class="pagenav"
+                      >12</a
+                    >
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="13"
+                      href="/autres-articles--start=60"
+                      class="pagenav"
+                      >13</a
+                    >
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="14"
+                      href="/autres-articles--start=65"
+                      class="pagenav"
+                      >...</a
+                    >
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="15"
+                      href="/autres-articles--start=70"
+                      class="pagenav"
+                      >15</a
+                    >
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="16"
+                      href="/autres-articles--start=75"
+                      class="pagenav"
+                      >16</a
+                    >
+                  </li>
+                  <li class="active hidden-phone"><a>17</a></li>
+                  <li class="hidden-phone">
+                    <a
+                      title="18"
+                      href="/autres-articles--start=85"
+                      class="pagenav"
+                      >18</a
+                    >
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="19"
+                      href="/autres-articles--start=90"
+                      class="pagenav"
+                      >19</a
+                    >
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="20"
+                      href="/autres-articles--start=95"
+                      class="pagenav"
+                      >...</a
+                    >
+                  </li>
+                  <li class="hidden-phone">
+                    <a
+                      title="21"
+                      href="/autres-articles--start=100"
+                      class="pagenav"
+                      >21</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      title="Next"
+                      href="/autres-articles--start=85"
+                      class="pagenav"
+                      ><span class="icon-next"></span
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      title="End"
+                      href="/autres-articles--start=125"
+                      class="pagenav"
+                      ><span class="icon-last"></span
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
+
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
+
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name"> Articles du blog </span>
+                <meta itemprop="position" content="2" />
+              </li>
+            </ul>
+
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
+
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,160 +1,236 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="administration, administrer, mysql, sql, phpmyadmin, pma, 1and1, 1&amp;1" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Administrer MySQL chez 1and1 avec phpmyadmin et éviter le session id missing</title>
-	<link href="https://blog.neamar.fr/autres-articles/65-administrer-mysql-chez-1and1-avec-phpmyadmin-et-eviter-le-session-id-missing" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta
+      name="keywords"
+      content="administration, administrer, mysql, sql, phpmyadmin, pma, 1and1, 1&amp;1"
+    />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>
+      Administrer MySQL chez 1and1 avec phpmyadmin et éviter le session id
+      missing
+    </title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/65-administrer-mysql-chez-1and1-avec-phpmyadmin-et-eviter-le-session-id-missing"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">
+                  Administrer MySQL chez 1and1 avec phpmyadmin et éviter le
+                  session id missing
+                </h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Administrer MySQL chez 1and1 avec phpmyadmin et éviter le session id missing			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=de85f7bba7e0d6ac921434dc4d54a53e855ac2f6" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2010-01-15T12:17:40+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 15 January 2010
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  Clients de 1&amp;1, vous avez sûrement déjà pesté contre
+                  l'interface d'administration fournie. <br />
+                  Difficilement accessible (il faut trois pages pour y accéder,
+                  inadmissible quand on veut aller vite&nbsp;! ), la session a
+                  tendance à se terminer vite&hellip; et toujours au moment le
+                  moins propice, c'est-à-dire à l'enregistrement de données (le
+                  mal aimé <strong>Session ID Missing</strong>&nbsp;! )<br />
 
-				<dl class="article-info muted">
+                  Ajoutons enfin que la version de <tt>phpmyadmin</tt> fournie
+                  commence à dater un peu (la 2.6.4, la version actuelle est la
+                  3.2.5), et vous aurez toutes les raisons pour chercher une
+                  alternative.
+                </p>
 
+                <p>Par exemple, celle que je présente ici.</p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                <p>
+                  Nous allons donc installer nous même phpmyadmin. Plutôt que
+                  d'utiliser l'adresse bancale
+                  <a href="http://phpmyadmin.1and1.fr"
+                    >http://phpmyadmin.1and1.fr</a
+                  >, nous créerons notre propre installation configurée selon
+                  nos souhaits.
+                </p>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
+                <ul>
+                  <li>Durée estimée&nbsp;: 30 minutes.</li>
+                </ul>
 
+                <h2>Téléchargement de phpmyadmin</h2>
 
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+                <p>
+                  Première étape&nbsp;:
+                  <a href="http://www.phpmyadmin.net">télécharger phpmyadmin</a
+                  >. <br />
+                  Dézippez le fichier obtenu et uploadez-le sur votre (s)ftp. Il
+                  y a beaucoup de fichiers (près de 600&nbsp;! ), vous avez le
+                  temps de vous faire un petit café. <br />
+                  Phpmyadmin recommande de l'installer à la racine du serveur
+                  (pour qu'il soit disponible sur l'adresse /phpmyadmin), mais
+                  je vous recommande de le cacher dans l'arborescence de
+                  dossiers &ndash; <q>pour vivre heureux, vivons caché</q>.
+                </p>
 
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-01-15T12:17:40+00:00" itemprop="dateCreated">
-						Created: 15 January 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
+                <p>C'est bon&nbsp;? Nous pouvons commencer.</p>
 
+                <h2>Configuration</h2>
+                <p>
+                  Vous devriez avoir un fichier <tt>config.sample.inc.php</tt>.
+                  Renommez-le en <tt>config.inc.php</tt>, puis modifiez son
+                  contenu selon la logique et le bon sens. Si vous n'avez ni
+                  l'un ni l'autre, lisez la suite&nbsp;!
+                </p>
 
+                <h3>Type d'authentification</h3>
+                <p>
+                  Vous pouvez choisir entre plusieurs types de connexions&nbsp;:
+                  par <em>cookie</em>, par <em>http</em>, ou par
+                  <em>connexion directe</em>. <br />
 
-								<div itemprop="articleBody">
-		<p>Clients de 1&amp;1, vous avez sûrement déjà pesté contre l'interface d'administration fournie. <br />
-Difficilement accessible (il faut trois pages pour y accéder, inadmissible quand on veut aller vite&nbsp;! ), la session a tendance à se terminer vite&hellip; et toujours au moment le moins propice, c'est-à-dire à l'enregistrement de données (le mal aimé <strong>Session ID Missing</strong>&nbsp;! )<br />
+                  L'avantage de la connexion directe, c'est que votre session
+                  restera indéfiniment ouverte&hellip; <br />
+                  L'inconvénient, c'est que n'importe qui aura accès à vos
+                  fichiers (à moins que vous n'ayez protégé le fichier via
+                  Apache, j'en reparle juste après).
+                </p>
 
-Ajoutons enfin que la version de <tt>phpmyadmin</tt> fournie commence à dater un peu (la 2.6.4, la version actuelle est la 3.2.5), et vous aurez toutes les raisons pour chercher une alternative. </p>
+                <p>
+                  Personnellement, j'ai choisi cette dernière méthode. À titre
+                  d'exemple, voici la configuration de base que j'utilise&nbsp;:
+                </p>
 
-<p>Par exemple, celle que je présente ici. </p>
-
-<p>Nous allons donc installer nous même phpmyadmin. Plutôt que d'utiliser l'adresse bancale <a href="http://phpmyadmin.1and1.fr">http://phpmyadmin.1and1.fr</a>, nous créerons notre propre installation configurée selon nos souhaits. </p>
-
-<ul>
-	<li>Durée estimée&nbsp;: 30 minutes. </li>
-</ul>
-
-
-<h2>Téléchargement de phpmyadmin</h2>
-
-<p>Première étape&nbsp;: <a href="http://www.phpmyadmin.net">télécharger phpmyadmin</a>. <br />
-Dézippez le fichier obtenu et uploadez-le sur votre (s)ftp. Il y a beaucoup de fichiers (près de 600&nbsp;! ), vous avez le temps de vous faire un petit café. <br />
-Phpmyadmin recommande de l'installer à la racine du serveur (pour qu'il soit disponible sur l'adresse /phpmyadmin), mais je vous recommande de le cacher dans l'arborescence de dossiers &ndash; <q>pour vivre heureux, vivons caché</q>. </p>
-
-<p>C'est bon&nbsp;? Nous pouvons commencer. </p>
-
-<h2>Configuration</h2>
-<p>Vous devriez avoir un fichier <tt>config.sample.inc.php</tt>. Renommez-le en <tt>config.inc.php</tt>, puis modifiez son contenu selon la logique et le bon sens. Si vous n'avez ni l'un ni l'autre, lisez la suite&nbsp;! </p>
-
-<h3>Type d'authentification</h3>
-<p>Vous pouvez choisir entre plusieurs types de connexions&nbsp;: par <em>cookie</em>, par <em>http</em>, ou par <em>connexion directe</em>. <br />
-
-L'avantage de la connexion directe, c'est que votre session restera indéfiniment ouverte&hellip; <br />
-L'inconvénient, c'est que n'importe qui aura accès à vos fichiers (à moins que vous n'ayez protégé le fichier via Apache, j'en reparle juste après). </p>
-
-<p>Personnellement, j'ai choisi cette dernière méthode. À titre d'exemple, voici la configuration de base que j'utilise&nbsp;: </p>
-
-<pre xml:lang="php">
+                <pre xml:lang="php">
 /* Paramétrage de l'identification */
 $cfg['Servers'][$i]['user']          = 'login_bdd';
 $cfg['Servers'][$i]['password']      = 'mdp';
@@ -163,102 +239,191 @@ $cfg['Servers'][$i]['auth_type']     = 'config';
 $cfg['Servers'][$i]['host'] = 'serveur.1and1.fr';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['compress'] = false;
-</pre>
+</pre
+                >
 
-<h3>Sécurisation</h3><p>Le problème de l'authentification <em>config</em>, c'est que n'importe qui peut modifier vos bases de données. <br />
-<p style="color:red;">Je répète : cette solution ne doit être utilisée que couplée avec un dispositif de sécurité empêchant l'accès aux pages !<br />
-Je recommande par exemple <a href="http://www.siteduzero.com/tutoriel-3-14649-proteger-un-dossier-avec-un-htaccess.html">la protection par fichier .htaccess</a>.</p>
+                <h3>Sécurisation</h3>
+                <p>
+                  Le problème de l'authentification <em>config</em>, c'est que
+                  n'importe qui peut modifier vos bases de données. <br />
+                </p>
+                <p style="color: red">
+                  Je répète : cette solution ne doit être utilisée que couplée
+                  avec un dispositif de sécurité empêchant l'accès aux pages
+                  !<br />
+                  Je recommande par exemple
+                  <a
+                    href="http://www.siteduzero.com/tutoriel-3-14649-proteger-un-dossier-avec-un-htaccess.html"
+                    >la protection par fichier .htaccess</a
+                  >.
+                </p>
 
-<hr />
-<p>Vous avez maintenant un client phpmyadmin fonctionnel&nbsp;! Rendez-vous sur la page à laquelle vous l'avez installé pour en profiter. </p>
+                <hr />
+                <p>
+                  Vous avez maintenant un client phpmyadmin fonctionnel&nbsp;!
+                  Rendez-vous sur la page à laquelle vous l'avez installé pour
+                  en profiter.
+                </p>
 
-<h2>Optimisation</h2>
-<p>Avant de finir ce tutoriel, quelques petites astuces pour vous faciliter la vie. </p>
+                <h2>Optimisation</h2>
+                <p>
+                  Avant de finir ce tutoriel, quelques petites astuces pour vous
+                  faciliter la vie.
+                </p>
 
-<h3>Extension</h3>
-<p>Plutôt que d'utiliser <tt>mysql</tt>, vous pouvez passer par <tt>mysqli</tt> qui est plus rapide (inclus par défaut dans PHP 5). <br />
+                <h3>Extension</h3>
+                <p>
+                  Plutôt que d'utiliser <tt>mysql</tt>, vous pouvez passer par
+                  <tt>mysqli</tt> qui est plus rapide (inclus par défaut dans
+                  PHP 5). <br />
 
-Il suffit de remplacer <tt>$cfg['Servers'][$i]['extension'] = 'mysql';</tt> par <tt>$cfg['Servers'][$i]['extension'] = 'mysqli';</tt></p>
+                  Il suffit de remplacer
+                  <tt>$cfg['Servers'][$i]['extension'] = 'mysql';</tt> par
+                  <tt>$cfg['Servers'][$i]['extension'] = 'mysqli';</tt>
+                </p>
 
-<h3>Masquer certaines base de données</h3>
-<p>Par défaut, phpmyadmin liste toutes les bases de données, y compris celles qui ne vous servent pas tous les jours. Vous pouvez modifier ce comportement en spécifiant un tableau (ou un string s'il n'y a qu'une seule possibilité) des bases à afficher, afin d'accélérer l'accès aux données. </p>
+                <h3>Masquer certaines base de données</h3>
+                <p>
+                  Par défaut, phpmyadmin liste toutes les bases de données, y
+                  compris celles qui ne vous servent pas tous les jours. Vous
+                  pouvez modifier ce comportement en spécifiant un tableau (ou
+                  un string s'il n'y a qu'une seule possibilité) des bases à
+                  afficher, afin d'accélérer l'accès aux données.
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 $cfg['Servers'][$i]['only_db'] = "nom_db";
-</pre>
+</pre
+                >
 
-<h3>Simuler de multiples bases de données</h3>
-<p>1&amp;1&nbsp;a tendance à limiter le nombre de bases de données disponibles, ce qui peut vous forcer à créer de multiples projets dans la même base, simplement séparés par un préfixe. Par exemple, Blog_Articles, Blog_Commentaires, mais aussi Site_Liens et Ressources_Pages. Plutôt que d'afficher une colonne indigeste dans le panneau de gauche, vous pouvez regrouper vos tables par préfixe en spécifiant le séparateur. Extrêmement pratique pour les installations lourdes&nbsp;!</p>
+                <h3>Simuler de multiples bases de données</h3>
+                <p>
+                  1&amp;1&nbsp;a tendance à limiter le nombre de bases de
+                  données disponibles, ce qui peut vous forcer à créer de
+                  multiples projets dans la même base, simplement séparés par un
+                  préfixe. Par exemple, Blog_Articles, Blog_Commentaires, mais
+                  aussi Site_Liens et Ressources_Pages. Plutôt que d'afficher
+                  une colonne indigeste dans le panneau de gauche, vous pouvez
+                  regrouper vos tables par préfixe en spécifiant le séparateur.
+                  Extrêmement pratique pour les installations lourdes&nbsp;!
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 $cfg['LeftFrameTableSeparator']='_';//Remplacez le _ par votre séparateur de table ;)
-</pre>
+</pre
+                >
 
-<h3>Pour finir&hellip; </h3>
-<p>Ajoutons en <em><a href="http://lachal.neamar.fr/Bonus_track">bonus track</a></em> une instruction pour ne pas répéter les en-têtes de tableau (je suppose que vous connaissez la structure de vos tables et de vos requêtes, pas besoin de l'afficher tous les 50 enregistrements) et un petit bout de code pour masquer le logo et gagner quelques précieux pixels dans la frame de gauche.</p>
+                <h3>Pour finir&hellip;</h3>
+                <p>
+                  Ajoutons en
+                  <em
+                    ><a href="http://lachal.neamar.fr/Bonus_track"
+                      >bonus track</a
+                    ></em
+                  >
+                  une instruction pour ne pas répéter les en-têtes de tableau
+                  (je suppose que vous connaissez la structure de vos tables et
+                  de vos requêtes, pas besoin de l'afficher tous les 50
+                  enregistrements) et un petit bout de code pour masquer le logo
+                  et gagner quelques précieux pixels dans la frame de gauche.
+                </p>
 
-<pre xml:lang="php">
+                <pre xml:lang="php">
 $cfg['LeftDisplayLogo']=false;
 $cfg['RepeatCells']=0;
-</pre>
+</pre
+                >
 
-<p>Pour plus d'informations, il reste bien sûr <a href="http://www.phpmyadmin.net/documentation/">la page officielle de documentation</a> !</p>	</div>
+                <p>
+                  Pour plus d'informations, il reste bien sûr
+                  <a href="http://www.phpmyadmin.net/documentation/"
+                    >la page officielle de documentation</a
+                  >
+                  !
+                </p>
+              </div>
+            </div>
 
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
-							</div>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name">
+                  Administrer MySQL chez 1and1 avec phpmyadmin et éviter le
+                  session id missing
+                </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Administrer MySQL chez 1and1 avec phpmyadmin et éviter le session id missing				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

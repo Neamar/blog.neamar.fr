@@ -1,147 +1,224 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="array, as3, ArrayPlus, actionscript3, flash, actionscript 3, action script 3" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Améliorer la classe Array en AS3</title>
-	<link href="https://blog.neamar.fr/autres-articles/45-array-remove-action-script-3" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta
+      name="keywords"
+      content="array, as3, ArrayPlus, actionscript3, flash, actionscript 3, action script 3"
+    />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Améliorer la classe Array en AS3</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/45-array-remove-action-script-3"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">Améliorer la classe Array en AS3</h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Améliorer la classe Array en AS3			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=e0ee5e0300dce7701f71871d35aa773d1b31a580" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2009-11-19T20:02:29+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 19 November 2009
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  Si vous faites un peu de programmation Flash en AS3, vous
+                  aurez remarqué que la classe <tt>Array</tt>, certes bien
+                  fournie, n'est pas parfaite : certaines opérations de base ne
+                  sont pas intégrées dedans, ce qui oblige à recoder à chaque
+                  fois des fonctionnalités aussi simples que la suppression d'un
+                  élément ou son clonage.
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  En fait, on peut faire mieux : en créant une classe qui hérite
+                  de <tt>Array</tt>, on peut ajouter toutes les méthodes
+                  nécessaires. La seule restriction étant qu'on ne peut plus
+                  utiliser la syntaxe des crochets pour déclarer un nouvel
+                  élément (comme <tt>[1,2,3]</tt>).<br />
+                  Dans mon cas j'ai nommé cette classe <tt>ArrayPlus</tt>, le
+                  code est juste en-dessous.
+                </p>
 
+                <p>Fonctionnalité d'ArrayPlus :</p>
+                <ul>
+                  <li>
+                    Reprise de la quasi totalité des fonctions de la classe
+                    <tt>Array</tt> de base&nbsp;;
+                  </li>
+                  <li>
+                    <tt>uniquePush(item:*):void</tt> : ajoute un item uniquement
+                    s'il n'est pas déjà présent dans le tableau&nbsp;;
+                  </li>
+                  <li>
+                    <tt>clone():ArrayPlus</tt> : renvoie une copie de l'objet.
+                    Attention, seul le tableau est cloné, pas le contenu des
+                    cellules qui continuent de pointer vers le même objet ;
+                  </li>
+                  <li>
+                    <tt>contains(item:*):Boolean</tt> : renvoie true si l'objet
+                    passé en paramètre se trouve dans le tableau&nbsp;;
+                  </li>
+                  <li>
+                    <tt>remove(item:*):void</tt> : la fonction la plus utile !
+                    Supprime l'objet du tableau, lance une erreur s'il n'existe
+                    pas&nbsp;;
+                  </li>
+                  <li>
+                    <tt>replace(search:*,replace:*):void</tt> : remplace la
+                    première occurrence de <tt>search</tt> par <tt>replace</tt>.
+                    Si search n'est pas trouvé, une erreur est générée.
+                  </li>
+                  <li>
+                    <tt>swap(item:*,item2:*)</tt> : inverse la position de deux
+                    éléments dans le tableau&nbsp;;
+                  </li>
+                  <li>
+                    <tt>static concat(a:ArrayPlus,b:ArrayPlus):ArrayPlus</tt> :
+                    renvoie un ArrayPlus composé de l'intégralité des éléments
+                    de <tt>a</tt> et de <tt>b</tt>&nbsp;;
+                  </li>
+                  <li>
+                    <tt>static dictionary2Array(d:DictionaryPlus):ArrayPlus</tt>
+                    : transforme un <tt>ArrayPlus</tt> en
+                    <tt>DictionaryPlus</tt>. Si vous n'utilisez pas
+                    <tt>DictionaryPlus</tt>, vous pouvez le remplacer par un
+                    simple <tt>Dictionary</tt>.
+                  </li>
+                </ul>
 
-			<dt class="article-info-term">
-									Details							</dt>
-
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
-
-
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
-
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2009-11-19T20:02:29+00:00" itemprop="dateCreated">
-						Created: 19 November 2009					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
-
-
-
-								<div itemprop="articleBody">
-		<p>Si vous faites un peu de programmation Flash en AS3, vous aurez remarqué que la classe <tt>Array</tt>, certes bien fournie, n'est pas parfaite : certaines opérations de base ne sont pas intégrées dedans, ce qui oblige à recoder à chaque fois des fonctionnalités aussi simples que la suppression d'un élément ou son clonage.</p>
-
-<p>En fait, on peut faire mieux : en créant une classe qui hérite de <tt>Array</tt>, on peut ajouter toutes les méthodes nécessaires. La seule restriction étant qu'on ne peut plus utiliser la syntaxe des crochets pour déclarer un nouvel élément (comme <tt>[1,2,3]</tt>).<br />
-Dans mon cas j'ai nommé cette classe <tt>ArrayPlus</tt>, le code est juste en-dessous.</p>
-
-
-<p>Fonctionnalité d'ArrayPlus :</p>
-<ul>
-<li>Reprise de la quasi totalité des fonctions de la classe <tt>Array</tt> de base&nbsp;;</li>
-<li><tt>uniquePush(item:*):void</tt> : ajoute un item uniquement s'il n'est pas déjà présent dans le tableau&nbsp;;</li>
-<li><tt>clone():ArrayPlus</tt> : renvoie une copie de l'objet. Attention, seul le tableau est cloné, pas le contenu des cellules qui continuent de pointer vers le même objet ;</li>
-<li><tt>contains(item:*):Boolean</tt> : renvoie true si l'objet passé en paramètre se trouve dans le tableau&nbsp;;</li>
-<li><tt>remove(item:*):void</tt> : la fonction la plus utile ! Supprime l'objet du tableau, lance une erreur s'il n'existe pas&nbsp;;</li>
-<li><tt>replace(search:*,replace:*):void</tt> : remplace la première occurrence de <tt>search</tt> par <tt>replace</tt>. Si search n'est pas trouvé, une erreur est générée.</li>
-<li><tt>swap(item:*,item2:*)</tt> : inverse la position de deux éléments dans le tableau&nbsp;;</li>
-<li><tt>static concat(a:ArrayPlus,b:ArrayPlus):ArrayPlus</tt> : renvoie un ArrayPlus composé de l'intégralité des éléments de <tt>a</tt> et de <tt>b</tt>&nbsp;;</li>
-<li><tt>static dictionary2Array(d:DictionaryPlus):ArrayPlus</tt> : transforme un <tt>ArrayPlus</tt> en <tt>DictionaryPlus</tt>. Si vous n'utilisez pas <tt>DictionaryPlus</tt>, vous pouvez le remplacer par un simple <tt>Dictionary</tt>.</li>
-</ul>
-
-<h2>ArrayPlus.as</h2>
-<pre xml:lang="actionscript3">
+                <h2>ArrayPlus.as</h2>
+                <pre xml:lang="actionscript3">
 /**
  * ARRAYPLUS || Neamar
  * La classe ArrayPlus tente de pallier aux déficits de la classe Array interne à ActionScript.
@@ -306,63 +383,88 @@ package Utilitaires
 		}
 	}
 }
-</pre>	</div>
+</pre
+                >
+              </div>
+            </div>
 
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
-							</div>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name"> Améliorer la classe Array en AS3 </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Améliorer la classe Array en AS3				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

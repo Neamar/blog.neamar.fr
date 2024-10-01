@@ -1,268 +1,551 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="qui a tué le duc de densmore, mathématiques, graphe, logique, compréhension, lutin, ogre, densmore, assassinat, meutre, oulipo" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Qui a tué le duc de Densmore ?</title>
-	<link href="https://blog.neamar.fr/autres-articles/39-qui-a-tue-le-duc-de-densmore" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta
+      name="keywords"
+      content="qui a tué le duc de densmore, mathématiques, graphe, logique, compréhension, lutin, ogre, densmore, assassinat, meutre, oulipo"
+    />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Qui a tué le duc de Densmore ?</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/39-qui-a-tue-le-duc-de-densmore"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">Qui a tué le duc de Densmore ?</h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Qui a tué le duc de Densmore ?			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=03c83045fe1288336b85960d95b62277d717d45f" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2009-11-03T18:54:24+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 03 November 2009
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  <em
+                    >Cet article est récupéré la de 10<sup>ème</sup> énigme de
+                    l'histoire «&nbsp;<a href="http://neamar.fr/Res/Enigmes_2"
+                      >Les dix plus belles énigmes, tome 2</a
+                    >&nbsp;»</em
+                  >
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Je l'intègre sur ce site pour qu'elle ait une page à elle
+                  toute seul ; l'énigme étant assez complexe et peu présente sur
+                  Internet. Pour être franc, je n'en ai trouvé nulle part une
+                  solution clairement expliquée... je ne sais pas si le texte
+                  qui suit comble cette lacune, mais j'aurais au moins essayé.
+                </p>
 
+                <div
+                  style="color: black; background-color: white; padding: 4px"
+                >
+                  <h2>Énoncé du problème "Qui a tué le duc de Densmore"</h2>
+                  <p>
+                    &mdash; Bien&hellip; bien. Il est maintenant temps de
+                    conclure cette expérience. Encore une épreuve, et nous
+                    pourrons envoyer sur Tair notre lutin le plus facétieux.
+                    Cependant, la dernière épreuve s'avérera éprouvante&hellip;
+                    et pour éviter des défaillances, nous avons décidé de vous
+                    offrir quelques journées de repos dans un hôtel de luxe.
+                    Pour sept d'entre vous, ce sera vos dernières journées. Je
+                    vous souhaite à tous de bien vous reposer&hellip;
+                  </p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                  <hr class="court" />
+                  <p>
+                    Quelques jours plus tard, nos lutins sont de retour dans la
+                    grotte qui s'est rétrécie au fur et à mesure des différentes
+                    pièces, et qui ne comporte plus maintenant qu'assez d'espace
+                    pour une dizaine de lutins et un ogre. L'instructeur reprend
+                    la parole, et pour une fois il n'a pas l'air très à l'aise.
+                  </p>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
+                  <p>
+                    &mdash; Je ne sais pas trop par où commencer&hellip; alors
+                    je vais être direct. Comme je vous le disais lors de notre
+                    première rencontre, vous avez été sélectionnées pour votre
+                    intuition. Et vous êtes dangereux&hellip; le but officiel de
+                    ce programme est d'envoyer un lutin sur Tair, mais
+                    officieusement nous cherchons simplement à éradiquer dans
+                    l'&oelig;uf tout possibilité de révolte en supprimant les
+                    individus intelligents à forte personnalité. Puisque nous
+                    sommes dans les confidences, sachez que Tair n'existe plus
+                    depuis de nombreuses années &ndash; un cataclysme l'a
+                    détruit. Chaque année, nous continuons cependant d'organiser
+                    ce concours, en premier lieu pour supprimer toute
+                    dissidence, mais aussi pour renouveler notre gouvernement
+                    qui a bien besoin de sang neuf. En injectant tous les ans
+                    dans la machine diplomatique un petit nouveau, nous sommes à
+                    même de maintenir une politique forte et innovante. Cela
+                    vous parait horrifiant&nbsp;? Réflechissez-y
+                    cependant&nbsp;: si vous réussissez, vous n'avez pas à être
+                    parachuté dans un pays étranger et hostile&nbsp;; vous
+                    continuez de travailler dans un environnement qui vous est
+                    adapté, et vous avez une place supérieure dans notre
+                    organisation. Vous commencez à comprendre que ce n'est pas
+                    un marché de dupes&nbsp;? Vous, vous y êtes gagnants.
+                    Cependant, il vaut mieux que l'opinion publique ne soit pas
+                    au courant que nous massacrons ses meilleurs enfants&nbsp;;
+                    d'où la raison officielle de ce «&nbsp;concours&nbsp;».
+                  </p>
 
+                  <p>
+                    Il reprit sa respiration, aucun lutin ne réagit&nbsp;: pour
+                    une fois, ils étaient réellement surpris.
+                  </p>
 
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+                  <p>
+                    &mdash; Vous vous demandez sûrement pourquoi je parle de
+                    tout cela. D'habitude, je ne dévoile cela que quand il n'en
+                    reste plus qu'un afin de ne prendre aucun risque &ndash;
+                    conscience professionnelle. Mais cette année, nous sommes
+                    placés face à un dilemne. Pendant notre séjour à l'hôtel, le
+                    premier jour, l'un de vous s'est introduit dans ma chambre
+                    en mon absence pour voler le dossier contenant la liste des
+                    énigmes. Plus important encore, il est aussi allé chez Péage
+                    pour récupérer la solution de ces énigmes. Autrement dit, si
+                    nous ne faisons rien, c'est un tricheur qui
+                    triomphera&nbsp;! Cela parait peut-être normal si l'on
+                    comptait aller sur Tair pour faire des tours pendables
+                    &ndash; gamins&nbsp;! &ndash; mais vous comprendrez que
+                    notre gouvernement ne peut tolérer une telle ingérence dans
+                    ses affaires internes. Si vous êtes embauchés, vous ferez ce
+                    qu'on vous dit de faire&nbsp;; et vous n'irez pas voler un
+                    dossier confidentiel. Nous avons donc décidé de remplacer la
+                    dixième énigme par un cluedo géant&nbsp;: le premier qui
+                    trouvera le coupable aura la place. Les autres&hellip; qui
+                    s'en soucie&nbsp;?
+                  </p>
 
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2009-11-03T18:54:24+00:00" itemprop="dateCreated">
-						Created: 03 November 2009					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
+                  <p>
+                    Commenca alors une longue audition, pendant laquelle chaque
+                    lutin ramena à ses souvenirs le premier jour de repos (le
+                    jour pendant lequel la consultation des documents avait eu
+                    lieu)&nbsp;: le but étant de se souvenir qui avait eu des
+                    contacts avec qui. À la fin des entretiens, aucun lutin
+                    n'avait craqué et avoué qu'il était le coupable&nbsp;; en
+                    revanche l'instructeur tenait une liste des contacts entre
+                    les lutins dans le salon (pièce adjointe à la chambre de
+                    l'ogre et de l'instructeur).
+                  </p>
 
+                  <div
+                    style="
+                      -webkit-column-count: 3;
+                      -moz-column-count: 3;
+                      -moz-column-gap: 1em;
+                      -moz-column-rule: 1px solid gray;
+                      column-count: 3;
+                      column-gap: 1em;
+                      column-rule: 1px solid gray;
+                    "
+                  >
+                    <ul>
+                      <li>1&nbsp;a vu 2</li>
+                      <li>1&nbsp;a vu 5</li>
+                      <li>2&nbsp;a vu 3</li>
+                      <li>2&nbsp;a vu 4</li>
+                      <li>2&nbsp;a vu 5</li>
+                      <li>3&nbsp;a vu 4</li>
+                      <li>4&nbsp;a vu 5</li>
+                      <li>4&nbsp;a vu 6</li>
+                      <li>4&nbsp;a vu 8</li>
+                      <li>5&nbsp;a vu 7</li>
+                      <li>5&nbsp;a vu 6</li>
+                      <li>6&nbsp;a vu 8</li>
+                      <li>7&nbsp;a vu 8</li>
+                    </ul>
+                  </div>
+                  <p>
+                    <img
+                      src="http://neamar.fr/Res/Enigmes_2/Images/Densmore.png"
+                      alt="Qui a tué le Duc de Densmore&nbsp;? Claude Berge"
+                      title="Qui a tué le Duc de Densmore&nbsp;? Claude Berge"
+                    />
+                  </p>
 
+                  <p>
+                    &mdash; Je suis content de voir qu'aucun lutin n'a menti et
+                    que chaque relation a bien été réciproque (ce n'est pas
+                    marqué dans la liste, mais si 1&nbsp;a vu 2, 2&nbsp;a aussi
+                    dit avoir vu 1). Mettons un peu d'ordre dans ce tas de
+                    chiffres, traçons les liens entre chacun de vous (cf.
+                    schéma).
+                  </p>
 
-								<div itemprop="articleBody">
-		<p><em>Cet article est récupéré la de 10<sup>ème</sup> énigme de l'histoire «&nbsp;<a href="http://neamar.fr/Res/Enigmes_2">Les dix plus belles énigmes, tome 2</a>&nbsp;»</em></p>
+                  <p>
+                    &mdash; Parfait&nbsp;! Eh bien monsieur, en supposant que
+                    personne ne nous a menti directement &ndash; ce qui parait
+                    une hypothèse raisonnable puisque chaque affirmation a été
+                    réciproque &ndash;, et en sachant que personne n'a quitté
+                    l'hôtel, pourriez-vous me donner le nom du coupable&nbsp;?
+                    Je vous laisse quelques minutes&hellip; oh, j'allais
+                    oublier&nbsp;: l'accueil nous a confirmé qu'aucun lutin
+                    n'était venu plus d'une fois dans le salon. Ça n'a l'air de
+                    rien, et pourtant c'est important&hellip;
+                  </p>
 
-<p>Je l'intègre sur ce site pour qu'elle ait une page à elle toute seul ; l'énigme étant assez complexe et peu présente sur Internet. Pour être franc, je n'en ai trouvé nulle part une solution clairement expliquée... je ne sais pas si le texte qui suit comble cette lacune, mais j'aurais au moins essayé.</p>
+                  <p>
+                    <em
+                      >Note&nbsp;: pour résoudre cette énigme, il faut préciser
+                      que les lutins n'étaient pas tous logés au même endroit.
+                      L'instructeur et Péage partageaient une suite et le salon
+                      qui servait de lieu de rencontre, tandis que les lutins
+                      avaient été dispatchés dans différents hôtels de la ville.
+                      Le salon étant le lieu de rendez-vous, les lutins s'y sont
+                      rencontrés de temps en temps (d'où le graphe plus haut).
+                      Mettons de l'emphase sur l'accueil qui a affirmé qu'aucun
+                      lutin n'était entré plus d'une fois dans l'hôtel pour
+                      aller dans le salon. <br />
+                      Signalons aussi qu'il n'y a pas de pièges ou d'indices
+                      dissimulés dans les neuf énigmes précédentes&nbsp;: il
+                      s'agit de déduction pure et dure. Ajoutons aussi
+                      l'hypothèse qu'un seul lutin a fait le coup&hellip;
+                    </em>
+                  </p>
 
+                  <h2>Solution du problème "Qui a tué le duc de Densmore"</h2>
 
-<div style="color:black; background-color:white; padding:4px;">
-<h2>Énoncé du problème "Qui a tué le duc de Densmore"</h2>
-<p>&mdash; Bien&hellip; bien. Il est maintenant temps de conclure cette expérience. Encore une épreuve, et nous pourrons envoyer sur Tair notre lutin le plus facétieux. Cependant, la dernière épreuve s'avérera éprouvante&hellip; et pour éviter des défaillances, nous avons décidé de vous offrir quelques journées de repos dans un hôtel de luxe. Pour sept d'entre vous, ce sera vos dernières journées. Je vous souhaite à tous de bien vous reposer&hellip; </p>
+                  <p>
+                    Pour le profane, il est difficile de concevoir que l'on peut
+                    résoudre une telle affaire avec un simple graphe. Et
+                    pourtant&nbsp;!
+                  </p>
 
-<hr class="court" /><p>Quelques jours plus tard, nos lutins sont de retour dans la grotte qui s'est rétrécie au fur et à mesure des différentes pièces, et qui ne comporte plus maintenant qu'assez d'espace pour une dizaine de lutins et un ogre. L'instructeur reprend la parole, et pour une fois il n'a pas l'air très à l'aise. </p>
+                  <p>
+                    <img
+                      src="http://neamar.fr/Res/Enigmes_2/Images/DensmorePresence.png"
+                      alt="Présence des différentes personnes à travers le temps"
+                      title="Présence des différentes personnes à travers le temps"
+                    /><br />
 
-<p>&mdash; Je ne sais pas trop par où commencer&hellip; alors je vais être direct. Comme je vous le disais lors de notre première rencontre, vous avez été sélectionnées pour votre intuition. Et vous êtes dangereux&hellip; le but officiel de ce programme est d'envoyer un lutin sur Tair, mais officieusement nous cherchons simplement à éradiquer dans l'&oelig;uf tout possibilité de révolte en supprimant les individus intelligents à forte personnalité. Puisque nous sommes dans les confidences, sachez que Tair n'existe plus depuis de nombreuses années &ndash; un cataclysme l'a détruit. Chaque année, nous continuons cependant d'organiser ce concours, en premier lieu pour supprimer toute dissidence, mais aussi pour renouveler notre gouvernement qui a bien besoin de sang neuf. En injectant tous les ans dans la machine diplomatique un petit nouveau, nous sommes à même de maintenir une politique forte et innovante. Cela vous parait horrifiant&nbsp;? Réflechissez-y cependant&nbsp;: si vous réussissez, vous n'avez pas à être parachuté dans un pays étranger et hostile&nbsp;; vous continuez de travailler dans un environnement qui vous est adapté, et vous avez une place supérieure dans notre organisation. Vous commencez à comprendre que ce n'est pas un marché de dupes&nbsp;? Vous, vous y êtes gagnants. Cependant, il vaut mieux que l'opinion publique ne soit pas au courant que nous massacrons ses meilleurs enfants&nbsp;; d'où la raison officielle de ce «&nbsp;concours&nbsp;». </p>
+                    Analysons par exemple la boucle formée par 4, 5, 7&nbsp;et
+                    8&nbsp;: un simple carré. Si on analyse finement ce
+                    graphique, on peut découvrir qu'il y a forcément quelqu'un
+                    qui s'est absenté parmi ces quatre personnes. <br />
+                    Imaginons par exemple que 4&nbsp;soit dans le salon dès le
+                    début. De deux choses l'une&nbsp;: soit 5&nbsp;entre
+                    ensuite, soit 8&nbsp;; mais pas les deux en même temps
+                    puisque 5 n'a pas vu 8.
+                  </p>
 
-<p>Il reprit sa respiration, aucun lutin ne réagit&nbsp;: pour une fois, ils étaient réellement surpris. </p>
+                  <ol>
+                    <li>
+                      <p>
+                        Premier cas&nbsp;: 5&nbsp;entre et rejoint 4. <br />
 
-<p>&mdash; Vous vous demandez sûrement pourquoi je parle de tout cela. D'habitude, je ne dévoile cela que quand il n'en reste plus qu'un afin de ne prendre aucun risque &ndash; conscience professionnelle. Mais cette année, nous sommes placés face à un dilemne. Pendant notre séjour à l'hôtel, le premier jour, l'un de vous s'est introduit dans ma chambre en mon absence pour voler le dossier contenant la liste des énigmes.  Plus important encore, il est aussi allé chez Péage pour récupérer la solution de ces énigmes. Autrement dit, si nous ne faisons rien, c'est un tricheur qui triomphera&nbsp;! Cela parait peut-être normal si l'on comptait aller sur Tair pour faire des tours pendables &ndash; gamins&nbsp;! &ndash; mais vous comprendrez que notre gouvernement ne peut tolérer une telle ingérence dans ses affaires internes. Si vous êtes embauchés, vous ferez ce qu'on vous dit de faire&nbsp;; et vous n'irez pas voler un dossier confidentiel. Nous avons donc décidé de remplacer la dixième énigme par un cluedo géant&nbsp;: le premier qui trouvera le coupable aura la place. Les autres&hellip; qui s'en soucie&nbsp;? </p>
+                        4 est ensuite parti et 7&nbsp;est rentré (5 et 7&nbsp;se
+                        sont vus, mais pas 4&nbsp;et 7). 5&nbsp;est sorti,
+                        8&nbsp;est rentré (contact entre 7&nbsp;et 8). Il reste
+                        une liaison à effectuer pour boucler la boucle&nbsp;:
+                        4&nbsp;et 8. Or 4&nbsp;est sorti auparavant (et on sait
+                        qu'aucun lutin n'a fait plus d'un aller retour dans le
+                        salon le premier jour)&nbsp;: il y a donc eu une absence
+                        pendant laquelle il a pu avoir l'occasion d'effectuer
+                        son méfait.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Deuxième cas&nbsp;: 8&nbsp;entre et rejoint 4&nbsp;tout
+                        au début. <br />
 
-<p>Commenca alors une longue audition, pendant laquelle chaque lutin ramena à ses souvenirs le premier jour de repos (le jour pendant lequel la consultation des documents avait eu lieu)&nbsp;: le but étant de se souvenir qui avait eu des contacts avec qui. À la fin des entretiens, aucun lutin n'avait craqué et avoué qu'il était le coupable&nbsp;; en revanche l'instructeur tenait une liste des contacts entre les lutins dans le salon (pièce adjointe à la chambre de l'ogre et de l'instructeur). </p>
+                        Cela revient au cas précédent&nbsp;: 8&nbsp;voit 7 qui
+                        ne voit pas 4, donc 4&nbsp;a dû s'absenter à un moment
+                        du salon avant de revenir.
+                      </p>
+                    </li>
+                  </ol>
 
+                  <p>
+                    Peut-on pour autant en déduire que 4&nbsp;est
+                    coupable&nbsp;? Non, car ce raisonnement s'applique pour
+                    4,5, 7&nbsp;et 8&nbsp;: tout dépend de celui qui est là le
+                    premier. Comme nous n'avons pas d'information d'ordres,
+                    retenons simplement que le coupable appartient à l'ensemble
+                    <img
+                      src="http://neamar.fr/Latex/TEX.php?m=%5C%7B4%2C5%2C7%2C8%5C%7D"
+                      alt="\{4,5,7,8\}"
+                      class="TexPic"
+                    />.
+                  </p>
 
-<div style="-webkit-column-count: 3; -moz-column-count: 3; -moz-column-gap: 1em; -moz-column-rule:1px solid gray; column-count: 3; column-gap: 1em; column-rule:1px solid gray;">
-<ul>
-	<li>1&nbsp;a vu 2</li>
-	<li>1&nbsp;a vu 5</li>
-	<li>2&nbsp;a vu 3</li>
-	<li>2&nbsp;a vu 4</li>
-	<li>2&nbsp;a vu 5</li>
-	<li>3&nbsp;a vu 4</li>
-	<li>4&nbsp;a vu 5</li>
-	<li>4&nbsp;a vu 6</li>
-	<li>4&nbsp;a vu 8</li>
-	<li>5&nbsp;a vu 7</li>
-	<li>5&nbsp;a vu 6</li>
-	<li>6&nbsp;a vu 8</li>
-	<li>7&nbsp;a vu 8</li>
-</ul>
+                  <p>
+                    On peut réduire cette liste de coupable en remarquant que
+                    cette disposition «&nbsp;en carré&nbsp;» s'applique aussi
+                    dans la boucle <span class="TexTexte">5-6-7-8</span> (même
+                    raisonnement). Les coupables potentiels sont donc à
+                    l'intersection de ces deux groupes (puisqu'on suppose qu'il
+                    n'y a qu'un seul coupable, il fait forcément partie des deux
+                    configurations)&nbsp;:
+                    <img
+                      src="http://neamar.fr/Latex/TEX.php?m=%5C%7B4%2C5%2C7%2C8%5C%7D%5C%2C%5Cbigcap%5C%2C%5C%7B5%2C6%2C7%2C8%5C%7D%5C%2C%3D%5C%2C%5C%7B5%2C7%2C8%5C%7D"
+                      alt="\{4,5,7,8\} \bigcap \{5,6,7,8\} = \{5,7,8\}"
+                      class="TexPic"
+                    />.
+                  </p>
 
-</div>
-<p><img src="http://neamar.fr/Res/Enigmes_2/Images/Densmore.png" alt="Qui a tué le Duc de Densmore&nbsp;? Claude Berge" title="Qui a tué le Duc de Densmore&nbsp;? Claude Berge" /></p>
+                  <p>
+                    Pour terminer, il va falloir identifier une nouvelle
+                    «&nbsp;boucle impossible&nbsp;». Après quelques
+                    tâtonnements, on s'aperçoit que le graphe formé par
+                    <img
+                      src="http://neamar.fr/Latex/TEX.php?m=%5C%7B5%2C1%2C2%2C3%2C4%2C6%5C%7D"
+                      alt="\{5,1,2,3,4,6\}"
+                      class="TexPic"
+                    />
+                    est lui aussi impossible. Le raisonnement est
+                    similaire&nbsp;: si 5 était là en premier, il y a vu
+                    1&nbsp;et 2. 5&nbsp;et 1 sont ensuite sortis, et 2&nbsp;a pu
+                    rencontrer 3&nbsp;et 4. Cependant, 6&nbsp;et 4 ont vus
+                    5&nbsp;: il faut donc que celui-ci se soit absenté pour
+                    aller dans la chambre voler le document. Encore une fois, le
+                    premier présent a pu dérober le document.
+                  </p>
 
-<p>&mdash; Je suis content de voir qu'aucun lutin n'a menti et que chaque relation a bien été réciproque (ce n'est pas marqué dans la liste, mais si 1&nbsp;a vu 2, 2&nbsp;a aussi dit avoir vu 1). Mettons un peu d'ordre dans ce tas de chiffres, traçons les liens entre chacun de vous (cf. schéma). </p>
+                  <p>
+                    Il ne reste plus qu'à déterminer l'intersection de tous ces
+                    coupables potentiels&nbsp;:
+                  </p>
 
-<p>&mdash; Parfait&nbsp;! Eh bien monsieur, en supposant que personne ne nous a menti directement &ndash; ce qui parait une hypothèse raisonnable puisque chaque affirmation a été réciproque &ndash;, et en sachant que personne n'a quitté l'hôtel, pourriez-vous me donner le nom du coupable&nbsp;? Je vous laisse quelques minutes&hellip; oh, j'allais oublier&nbsp;: l'accueil nous a confirmé qu'aucun lutin n'était venu plus d'une fois dans le salon. Ça n'a l'air de rien, et pourtant c'est important&hellip; </p>
+                  <p class="displaymath">
+                    <img
+                      src="http://neamar.fr/Latex/TEX.php?m=%5C%7B4%2C5%2C7%2C8%5C%7D%5C%2C%5Cbigcap%5C%2C%5C%7B5%2C6%2C7%2C8%5C%7D%5C%2C%5Cbigcap%5C%2C%5C%2C%5C%7B5%2C1%2C2%2C3%2C4%2C6%5C%7D%5C%2C%3D%5C%2C%5C%7B5%5C%7D"
+                      alt="\{4,5,7,8\} \bigcap \{5,6,7,8\} \bigcap  \{5,1,2,3,4,6\} = \{5\}"
+                      class="TexPic"
+                    />
+                  </p>
+                  <p>
+                    En quelques secondes, Péage posa son énorme main sur le
+                    pauvre lutin n<sup>o</sup>5 qui venait d'être prouvé
+                    coupable et qui frissonnait déjà, puis le lança contre la
+                    dixième porte d'albâtre, qui s'entrouvrit devant lui.
+                    Rapidement, il fut absorbé dans un immense tourbillon. Avant
+                    que les lutins restants n'aient eu le temps de réagir, les
+                    portes 9 (en Palissandre) et 10&nbsp;se refermèrent.
+                  </p>
 
-<p><em>Note&nbsp;: pour résoudre cette énigme, il faut préciser que les lutins n'étaient pas tous logés au même endroit. L'instructeur et Péage partageaient une suite et le salon qui servait de lieu de rencontre, tandis que les lutins avaient été dispatchés dans différents hôtels de la ville. Le salon étant le lieu de rendez-vous, les lutins s'y sont rencontrés de temps en temps (d'où le graphe plus haut). Mettons de l'emphase sur l'accueil qui a affirmé qu'aucun lutin n'était entré plus d'une fois dans l'hôtel pour aller dans le salon. <br />
-Signalons aussi qu'il n'y a pas de pièges ou d'indices dissimulés dans les neuf énigmes précédentes&nbsp;: il s'agit de déduction pure et dure. Ajoutons aussi l'hypothèse qu'un seul lutin a fait le coup&hellip; </em></p>
+                  <p>L'ogre allait &ndash; enfin &ndash; pouvoir manger.</p>
 
-<h2>Solution du problème "Qui a tué le duc de Densmore"</h2>
+                  <p>
+                    Cette énigme vous a plu ? Retrouvez-la avec 9 autres, en
+                    ligne sur «&nbsp;<a href="http://neamar.fr/Res/Enigmes_2"
+                      >Les dix plus belles énigmes, tome 2</a
+                    >&nbsp;»
+                  </p>
+                </div>
+              </div>
+            </div>
 
-<p>Pour le profane, il est difficile de concevoir que l'on peut résoudre une telle affaire avec un simple graphe. Et pourtant&nbsp;! </p>
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
-<p><img src="http://neamar.fr/Res/Enigmes_2/Images/DensmorePresence.png" alt="Présence des différentes personnes à travers le temps" title="Présence des différentes personnes à travers le temps" /><br />
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
-Analysons par exemple la boucle formée par 4, 5, 7&nbsp;et 8&nbsp;: un simple carré. Si on analyse finement ce graphique, on peut découvrir qu'il y a forcément quelqu'un qui s'est absenté parmi ces quatre personnes. <br />
-Imaginons par exemple que 4&nbsp;soit dans le salon dès le début. De deux choses l'une&nbsp;: soit 5&nbsp;entre ensuite, soit 8&nbsp;; mais pas les deux en même temps puisque 5 n'a pas vu 8. </p>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name"> Qui a tué le duc de Densmore ? </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-<ol >
-<li><p>Premier cas&nbsp;: 5&nbsp;entre et rejoint 4. <br />
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-4 est ensuite parti et 7&nbsp;est rentré (5 et 7&nbsp;se sont vus, mais pas 4&nbsp;et 7). 5&nbsp;est sorti, 8&nbsp;est rentré (contact entre 7&nbsp;et 8). Il reste une liaison à effectuer pour boucler la boucle&nbsp;: 4&nbsp;et 8. Or 4&nbsp;est sorti auparavant (et on sait qu'aucun lutin n'a fait plus d'un aller retour dans le salon le premier jour)&nbsp;: il y a donc eu une absence pendant laquelle il a pu avoir l'occasion d'effectuer son méfait.</p>
-
-</li>
-<li><p>Deuxième cas&nbsp;: 8&nbsp;entre et rejoint 4&nbsp;tout au début. <br />
-
-Cela revient au cas précédent&nbsp;: 8&nbsp;voit 7 qui ne voit pas 4, donc 4&nbsp;a dû s'absenter à un moment du salon avant de revenir. </p>
-
-</li>
-</ol>
-
-<p>Peut-on pour autant en déduire que 4&nbsp;est coupable&nbsp;? Non, car ce raisonnement s'applique pour 4,5, 7&nbsp;et 8&nbsp;: tout dépend de celui qui est là le premier. Comme nous n'avons pas d'information d'ordres, retenons simplement que le coupable appartient à l'ensemble <img src="http://neamar.fr/Latex/TEX.php?m=%5C%7B4%2C5%2C7%2C8%5C%7D" alt="\{4,5,7,8\}" class="TexPic" />. </p>
-
-<p>On peut réduire cette liste de coupable en remarquant que cette disposition «&nbsp;en carré&nbsp;» s'applique aussi dans la boucle <span class="TexTexte">5-6-7-8</span> (même raisonnement). Les coupables potentiels sont donc à l'intersection de ces deux groupes (puisqu'on suppose qu'il n'y a qu'un seul coupable, il fait forcément partie des deux configurations)&nbsp;: <img src="http://neamar.fr/Latex/TEX.php?m=%5C%7B4%2C5%2C7%2C8%5C%7D%5C%2C%5Cbigcap%5C%2C%5C%7B5%2C6%2C7%2C8%5C%7D%5C%2C%3D%5C%2C%5C%7B5%2C7%2C8%5C%7D" alt="\{4,5,7,8\} \bigcap \{5,6,7,8\} = \{5,7,8\}" class="TexPic" />. </p>
-
-<p>Pour terminer, il va falloir identifier une nouvelle «&nbsp;boucle impossible&nbsp;». Après quelques tâtonnements, on s'aperçoit que le graphe formé par <img src="http://neamar.fr/Latex/TEX.php?m=%5C%7B5%2C1%2C2%2C3%2C4%2C6%5C%7D" alt="\{5,1,2,3,4,6\}" class="TexPic" /> est lui aussi impossible. Le raisonnement est similaire&nbsp;: si 5 était là en premier, il y a vu 1&nbsp;et 2. 5&nbsp;et 1 sont ensuite sortis, et 2&nbsp;a pu rencontrer 3&nbsp;et 4. Cependant, 6&nbsp;et 4 ont vus 5&nbsp;: il faut donc que celui-ci se soit absenté pour aller dans la chambre voler le document. Encore une fois, le premier présent a pu dérober le document. </p>
-
-<p>Il ne reste plus qu'à déterminer l'intersection de tous ces coupables potentiels&nbsp;: </p>
-
-
-<p class="displaymath"><img src="http://neamar.fr/Latex/TEX.php?m=%5C%7B4%2C5%2C7%2C8%5C%7D%5C%2C%5Cbigcap%5C%2C%5C%7B5%2C6%2C7%2C8%5C%7D%5C%2C%5Cbigcap%5C%2C%5C%2C%5C%7B5%2C1%2C2%2C3%2C4%2C6%5C%7D%5C%2C%3D%5C%2C%5C%7B5%5C%7D" alt="\{4,5,7,8\} \bigcap \{5,6,7,8\} \bigcap  \{5,1,2,3,4,6\} = \{5\}" class="TexPic" /></p>
-<p>En quelques secondes, Péage posa son énorme main sur le pauvre lutin n<sup>o</sup>5 qui venait d'être prouvé coupable et qui frissonnait déjà, puis le lança contre la dixième porte d'albâtre, qui s'entrouvrit devant lui. Rapidement, il fut absorbé dans un immense tourbillon. Avant que les lutins restants n'aient eu le temps de réagir, les portes 9 (en Palissandre) et 10&nbsp;se refermèrent. </p>
-
-<p>L'ogre allait &ndash; enfin &ndash; pouvoir manger. </p>
-
-<p>Cette énigme vous a plu ? Retrouvez-la avec 9 autres, en ligne sur «&nbsp;<a href="http://neamar.fr/Res/Enigmes_2">Les dix plus belles énigmes, tome 2</a>&nbsp;»</p>
-</div>	</div>
-
-
-							</div>
-
-
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
-
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Qui a tué le duc de Densmore ?				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>

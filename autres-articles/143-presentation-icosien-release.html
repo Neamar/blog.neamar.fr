@@ -1,227 +1,411 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta charset="utf-8" />
-	<base href="https://blog.neamar.fr" />
-	<meta name="keywords" content="icosien" />
-	<meta name="author" content="Neamar" />
-	<meta name="description" content="Distributeur de liens !" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
-	<title>Et voilà Icosien !</title>
-	<link href="https://blog.neamar.fr/autres-articles/143-presentation-icosien-release" rel="canonical" />
-	<link href="/templates/protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="/templates/protostar/css/template.css" rel="stylesheet" />
-	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-	<style>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <base href="https://blog.neamar.fr" />
+    <meta name="keywords" content="icosien" />
+    <meta name="author" content="Neamar" />
+    <meta name="description" content="Distributeur de liens !" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>Et voilà Icosien !</title>
+    <link
+      href="https://blog.neamar.fr/autres-articles/143-presentation-icosien-release"
+      rel="canonical"
+    />
+    <link
+      href="/templates/protostar/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link href="/templates/protostar/css/template.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <style>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .site-title {
+        font-family: "Open Sans", sans-serif;
+      }
+      body.site {
+        border-top: 3px solid #0088cc;
+        background-color: #f4f6f7;
+      }
+      a {
+        color: #0088cc;
+      }
+      .nav-list > .active > a,
+      .nav-list > .active > a:hover,
+      .dropdown-menu li > a:hover,
+      .dropdown-menu .active > a,
+      .dropdown-menu .active > a:hover,
+      .nav-pills > .active > a,
+      .nav-pills > .active > a:hover,
+      .btn-primary {
+        background: #0088cc;
+      }
+    </style>
+    <script src="/media/jui/js/jquery.min.js"></script>
+    <script src="/media/jui/js/jquery-noconflict.js"></script>
+    <script src="/media/jui/js/jquery-migrate.min.js"></script>
+    <script src="/media/system/js/caption.js"></script>
+    <script src="/media/jui/js/bootstrap.min.js"></script>
+    <script src="/templates/protostar/js/template.js"></script>
+    <script>
+      jQuery(window).on("load", function () {
+        new JCaption("img.caption");
+      });
+      jQuery(function ($) {
+        $(".hasTooltip").tooltip({ html: true, container: "body" });
+      });
+    </script>
 
-	h1, h2, h3, h4, h5, h6, .site-title {
-		font-family: 'Open Sans', sans-serif;
-	}
-	body.site {
-		border-top: 3px solid #0088cc;
-		background-color: #f4f6f7;
-	}
-	a {
-		color: #0088cc;
-	}
-	.nav-list > .active > a,
-	.nav-list > .active > a:hover,
-	.dropdown-menu li > a:hover,
-	.dropdown-menu .active > a,
-	.dropdown-menu .active > a:hover,
-	.nav-pills > .active > a,
-	.nav-pills > .active > a:hover,
-	.btn-primary {
-		background: #0088cc;
-	}
-	</style>
-	<script src="/media/jui/js/jquery.min.js"></script>
-	<script src="/media/jui/js/jquery-noconflict.js"></script>
-	<script src="/media/jui/js/jquery-migrate.min.js"></script>
-	<script src="/media/system/js/caption.js"></script>
-	<script src="/media/jui/js/bootstrap.min.js"></script>
-	<script src="/templates/protostar/js/template.js"></script>
-	<script>
-jQuery(window).on('load',  function() {
-				new JCaption('img.caption');
-			});
-jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
-	</script>
+    <!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
+  </head>
+  <body class="site com_content view-article no-layout no-task itemid-103">
+    <!-- Body -->
+    <div class="body">
+      <div class="container">
+        <!-- Header -->
+        <header class="header" role="banner">
+          <div class="header-inner clearfix">
+            <a class="brand pull-left" href="/">
+              <span class="site-title" title="Blog de Neamar"
+                >Blog de Neamar</span
+              >
+            </a>
+            <div class="header-search pull-right"></div>
+          </div>
+        </header>
 
-	<!--[if lt IE 9]><script src="/media/jui/js/html5.js"></script><![endif]-->
-</head>
-<body class="site com_content view-article no-layout no-task itemid-103">
-	<!-- Body -->
-	<div class="body">
-		<div class="container">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="/">
-						<span class="site-title" title="Blog de Neamar">Blog de Neamar</span>											</a>
-					<div class="header-search pull-right">
+        <div class="row-fluid">
+          <main id="content" role="main" class="span9">
+            <!-- Begin Content -->
 
-					</div>
-				</div>
-			</header>
+            <div id="system-message-container"></div>
 
-			<div class="row-fluid">
-								<main id="content" role="main" class="span9">
-					<!-- Begin Content -->
+            <div
+              class="item-page"
+              itemscope
+              itemtype="https://schema.org/Article"
+            >
+              <meta itemprop="inLanguage" content="en-GB" />
 
-					<div id="system-message-container">
-	</div>
+              <div class="page-header">
+                <h2 itemprop="headline">Et voilà Icosien !</h2>
+              </div>
 
-					<div class="item-page" itemscope itemtype="https://schema.org/Article">
-	<meta itemprop="inLanguage" content="en-GB" />
+              <div class="icons">
+                <div class="btn-group pull-right">
+                  <a
+                    class="btn dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                  >
+                    <span class="icon-cog"></span><span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"></ul>
+                </div>
+              </div>
 
+              <dl class="article-info muted">
+                <dt class="article-info-term">Details</dt>
 
-			<div class="page-header">
-					<h2 itemprop="headline">
-				Et voilà Icosien !			</h2>
-									</div>
+                <dd
+                  class="createdby"
+                  itemprop="author"
+                  itemscope
+                  itemtype="https://schema.org/Person"
+                >
+                  Written by <span itemprop="name">Neamar</span>
+                </dd>
 
-<div class="icons">
+                <dd class="category-name">
+                  Category: <span itemprop="genre">Articles du blog</span>
+                </dd>
 
-					<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <span class="icon-cog"></span><span class="caret"></span> </a>
-								<ul class="dropdown-menu">
-																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=protostar&amp;link=0e8901f452918bfbf9e2383cfa75abe9585f7028" title="Email this link to a friend" onclick="window.open(this.href,'win2','width=400,height=350,menubar=yes,resizable=yes'); return false;" rel="nofollow"><span class="icon-envelope"></span>Email</a> </li>
-														</ul>
-			</div>
+                <dd class="create">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2010-06-22T18:56:02+00:00"
+                    itemprop="dateCreated"
+                  >
+                    Created: 22 June 2010
+                  </time>
+                </dd>
+                <dd class="modified">
+                  <span class="icon-calendar"></span>
+                  <time
+                    datetime="2013-08-06T23:18:27+00:00"
+                    itemprop="dateModified"
+                  >
+                    Last Updated: 06 August 2013
+                  </time>
+                </dd>
+              </dl>
 
-	</div>
+              <div itemprop="articleBody">
+                <p>
+                  Tadam&nbsp;! <br />
+                  En développement depuis début juin, Icosien est maintenant
+                  terminé et prêt pour affronter le monde extérieur&nbsp;!
+                </p>
 
-				<dl class="article-info muted">
+                <p>
+                  Avant de donner le jeu, je tiens à remercier énormément
+                  <a href="http://licoti.deviantart.com/">Licoti</a> qui s'est
+                  beaucoup investi lui aussi. Plus qu'un graphiste, il s'est
+                  transformé en testeur et en consultant. Merci à lui&nbsp;!
+                  <br />
+                  Histoire de ne pas être injuste, je mentionnerai aussi les
+                  testeurs qui ont fait du bon boulot (comme d'habitude). Merci
+                  à eux&nbsp;!
+                </p>
 
+                <p>Et sans plus tarder voilà le jeu.</p>
 
-			<dt class="article-info-term">
-									Details							</dt>
+                <object
+                  type="application/x-shockwave-flash"
+                  data="http://games.mochiads.com/c/g/icosien/IcosienNP.swf"
+                  width="640"
+                  height="480"
+                >
+                  <param
+                    name="movie"
+                    value="http://games.mochiads.com/c/g/icosien/IcosienNP.swf"
+                  />
+                  <param name="quality" value="high" />
+                  <param name="wmode" value="transparent" />
+                  <p>
+                    Installez le plugin Flash pour voir l'animation :
+                    <a
+                      href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr"
+                      >Cliquez ici pour le télécharger</a
+                    >
+                  </p>
+                </object>
 
-							<dd class="createdby" itemprop="author" itemscope itemtype="https://schema.org/Person">
-					Written by <span itemprop="name">Neamar</span>	</dd>
+                <p>
+                  Vous trouverez
+                  <a href="http://neamar.fr/Res/Icosien/">sur la page dédiée</a>
+                  de nombreuses informations&nbsp;:
+                  <a href="http://neamar.fr/Res/Icosien/#Graphes_utilis%C3%A9s"
+                    >la liste des niveaux</a
+                  >,
+                  <a href="http://neamar.fr/Res/Icosien/#R%C3%A8gle_du_jeu"
+                    >les règles</a
+                  >,
+                  <a href="http://neamar.fr/Res/Icosien/#__propos_du_concept"
+                    >les concepts mathématiques sous-jacents</a
+                  >.
+                </p>
 
+                <p>
+                  Pour conclure, je mets ici la liste des niveaux du jeu avec le
+                  nom du graphe.<br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl0.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl1.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl2.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl3.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl4.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl5.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl6.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl7.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl8.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl9.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl10.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl11.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl12.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl13.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl14.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl15.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl16.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl17.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl18.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl19.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl20.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  /><br />
+                  <img
+                    src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl21.png"
+                    alt="Image de niveau d'Icosien"
+                    title="Image de niveau d'Icosien"
+                  />
+                </p>
 
-										<dd class="category-name">
-													Category: <span itemprop="genre">Articles du blog</span>							</dd>
+                <p>
+                  À suivre&nbsp;:
+                  <a
+                    href="http://blog.neamar.fr/component/content/article/15-as3/137-images-icosien"
+                    >les étapes de la création du jeu, de rien du tout à la
+                    version finale</a
+                  >.
+                </p>
+              </div>
+            </div>
 
-												<dd class="create">
-					<span class="icon-calendar"></span>
-					<time datetime="2010-06-22T18:56:02+00:00" itemprop="dateCreated">
-						Created: 22 June 2010					</time>
-			</dd>
-										<dd class="modified">
-				<span class="icon-calendar"></span>
-				<time datetime="2013-08-06T23:18:27+00:00" itemprop="dateModified">
-					Last Updated: 06 August 2013				</time>
-			</dd>
-						</dl>
+            <ul
+              itemscope
+              itemtype="https://schema.org/BreadcrumbList"
+              class="breadcrumb"
+            >
+              <li>You are here: &#160;</li>
 
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/" class="pathway"
+                  ><span itemprop="name">Home</span></a
+                >
 
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="1" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+              >
+                <a itemprop="item" href="/autres-articles" class="pathway"
+                  ><span itemprop="name">Articles du blog</span></a
+                >
 
-								<div itemprop="articleBody">
-		<p>Tadam&nbsp;! <br />
-En développement depuis début juin, Icosien est maintenant terminé et prêt pour affronter le monde extérieur&nbsp;! </p>
+                <span class="divider">
+                  <img src="/media/system/images/arrow.png" alt="" />
+                </span>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                itemprop="itemListElement"
+                itemscope
+                itemtype="https://schema.org/ListItem"
+                class="active"
+              >
+                <span itemprop="name"> Et voilà Icosien ! </span>
+                <meta itemprop="position" content="3" />
+              </li>
+            </ul>
 
-<p>Avant de donner le jeu, je tiens à remercier énormément <a href="http://licoti.deviantart.com/">Licoti</a> qui s'est beaucoup investi lui aussi. Plus qu'un graphiste, il s'est transformé en testeur et en consultant. Merci à lui&nbsp;! <br />
-Histoire de ne pas être injuste, je mentionnerai aussi les testeurs qui ont fait du bon boulot (comme d'habitude). Merci à eux&nbsp;! </p>
+            <!-- End Content -->
+          </main>
+          <div id="aside" class="span3">
+            <!-- Begin Right Sidebar -->
+            <div class="well _menu">
+              <h3 class="page-header">Main Menu</h3>
+              <ul class="nav menu">
+                <li class="item-104 default"><a href="/">Blog de Neamar</a></li>
+                <li class="item-103 current active">
+                  <a href="/autres-articles">Articles du blog</a>
+                </li>
+                <li class="item-105">
+                  <a href="/les-liens-du-jeudi">Les liens du jeudi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End Right Sidebar -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <hr />
 
-<p>Et sans plus tarder voilà le jeu. </p>
-
-<object type="application/x-shockwave-flash" data="http://games.mochiads.com/c/g/icosien/IcosienNP.swf" width="640" height="480" >
-
-	<param name="movie" value="http://games.mochiads.com/c/g/icosien/IcosienNP.swf" />
-	<param name="quality" value="high" />
-	<param name="wmode" value="transparent" />
-	<p>Installez le plugin Flash pour voir l'animation : <a href="http://www.adobe.com/go/gntray_dl_getflashplayer_fr" >Cliquez ici pour le télécharger</a></p>
-</object>
-
-
-<p>Vous trouverez <a href="http://neamar.fr/Res/Icosien/">sur la page dédiée</a> de nombreuses informations&nbsp;: <a href="http://neamar.fr/Res/Icosien/#Graphes_utilis%C3%A9s">la liste des niveaux</a>, <a href="http://neamar.fr/Res/Icosien/#R%C3%A8gle_du_jeu">les règles</a>, <a href="http://neamar.fr/Res/Icosien/#__propos_du_concept">les concepts mathématiques sous-jacents</a>. </p>
-
-<p>Pour conclure, je mets ici la liste des niveaux du jeu avec le nom du graphe.<br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl0.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl1.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl2.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl3.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl4.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl5.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl6.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl7.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl8.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl9.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl10.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl11.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl12.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl13.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl14.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl15.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl16.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl17.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl18.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl19.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl20.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien"><br />
-<img src="http://neamar.fr/Res/Icosien/Images/Lvl/Lvl21.png" alt="Image de niveau d'Icosien" title="Image de niveau d'Icosien">
-</p>
-
-<p>À suivre&nbsp;: <a href="http://blog.neamar.fr/component/content/article/15-as3/137-images-icosien">les étapes de la création du jeu, de rien du tout à la version finale</a>.</p>	</div>
-
-
-							</div>
-
-
-<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
-			<li>
-			You are here: &#160;
-		</li>
-
-				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Home</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="1">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-									<a itemprop="item" href="/autres-articles" class="pathway"><span itemprop="name">Articles du blog</span></a>
-
-									<span class="divider">
-						<img src="/media/system/images/arrow.png" alt="" />					</span>
-								<meta itemprop="position" content="2">
-			</li>
-					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-				<span itemprop="name">
-					Et voilà Icosien !				</span>
-				<meta itemprop="position" content="3">
-			</li>
-		</ul>
-
-					<!-- End Content -->
-				</main>
-									<div id="aside" class="span3">
-						<!-- Begin Right Sidebar -->
-						<div class="well _menu"><h3 class="page-header">Main Menu</h3><ul class="nav menu">
-<li class="item-104 default"><a href="/" >Blog de Neamar</a></li><li class="item-103 current active"><a href="/autres-articles" >Articles du blog</a></li><li class="item-105"><a href="/les-liens-du-jeudi" >Les liens du jeudi</a></li></ul>
-</div>
-						<!-- End Right Sidebar -->
-					</div>
-							</div>
-		</div>
-	</div>
-	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
-		<div class="container">
-			<hr />
-
-			<p class="pull-right">
-				<a href="#" id="back-top">
-					Back to Top				</a>
-			</p>
-			<p>
-				&copy; 2024 Blog de Neamar			</p>
-		</div>
-	</footer>
-
-</body>
+        <p class="pull-right">
+          <a href="#" id="back-top"> Back to Top </a>
+        </p>
+        <p>&copy; 2024 Blog de Neamar</p>
+      </div>
+    </footer>
+  </body>
 </html>
